@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/face_layout"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="@dimen/compose_face_top_margin"
+    android:layout_height="188dip"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:id="@+id/face_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <GridView
+            android:id="@+id/tweet_pub_faces"
+            android:layout_width="fill_parent"
+            android:layout_height="180dip"
+            android:background="@drawable/share_add_bg"
+            android:columnWidth="50dip"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:scrollingCache="false"
+            android:stretchMode="columnWidth" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cursor_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-90dp"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@id/face_container"
+        android:background="@drawable/share_cursor" />
+
+</RelativeLayout>

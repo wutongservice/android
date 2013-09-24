@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/qiupu_bg_color" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+
+    <include
+        android:id="@+id/search_span"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/inline_search_span_view"
+        android:visibility="gone" />
+
+  <!--   <ListView 
+        android:id="@+id/from_list_view"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" /> 
+
+     <TextView 
+        android:id="@+id/recomment_view"
+        android:layout_height="@dimen/recommend_text_height"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:textAppearance="?android:attr/textAppearance"
+        android:text="@string/recommend_friends"
+        android:background="@color/recommend_friends_bg_color"/> -->
+
+    <ListView 
+        android:id="@+id/recommend_list_view"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+</LinearLayout>

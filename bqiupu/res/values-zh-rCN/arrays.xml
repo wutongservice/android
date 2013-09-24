@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Copyright (C) 2007 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ -->
+<resources>
+    <string-array name="entries_week">
+        <item>星期日 </item>
+        <item>星期一 </item>
+        <item>星期二 </item>
+        <item>星期三 </item>
+        <item>星期四 </item>  
+        <item>星期五 </item>  
+        <item>星期六 </item>
+    </string-array>
+    
+    <string-array name="entries_notification_list_preference">
+        <item>24 小时</item>
+        <item>12 小时</item>
+        <item>6 小时</item>
+        <item>1 小时</item>
+        <item>30 分钟</item>
+        <item>10 分钟</item>  
+    </string-array>
+
+    <!--<string-array name="stream_type_list">-->
+        <!--<item>纯文本动态</item>-->
+        <!--<item>图片动态</item>-->
+        <!--<item>视频动态</item>-->
+        <!--<item>音频动态</item>-->
+        <!--<item>图书动态</item>-->
+        <!--<item>应用分享</item>-->
+        <!--<item>链接分享</item>-->
+        <!--<item>应用链接</item>-->
+        <!--<item>应用评论</item>-->
+        <!--<item>应用的赞</item>-->
+        <!--<item>图书的赞</item>-->
+        <!--<item>图书的评论</item>-->
+        <!--<item>朋友圈动态</item>-->
+        <!--<item>音乐动态</item>-->
+        <!--<item>音乐评论</item>-->
+        <!--<item>音乐赞</item>-->
+    <!--</string-array>-->
+
+    <string-array name="stream_app_key_list">
+        <item>全部动态</item>
+        <item>状态更新</item>
+        <item>图片</item>
+        <item>应用</item>
+        <item>图书</item>
+        <item>音乐</item>
+        <item>链接</item>
+    </string-array>
+    
+    <string-array name="birthday_dialog_pick">
+        <item>编辑生日</item>
+        <item>清除已存生日</item>
+    </string-array>
+
+    <!-- Qiupu app category -->
+    <string-array name="app_category_name">
+        <item name="personal">个性</item>
+        <item name="traffic">交通</item>
+        <item name="sport">体育</item>
+        <item name="health ">健身</item>
+        <item name="corp">公司</item>
+        <item name="wallpaper">壁纸</item>
+        <item name="animation">动漫</item>
+        <item name="medicine">医药</item>
+        <item name="book">图书</item>
+        <item name="weather">天气</item>
+        <item name="entertainment">娱乐</item>
+        <item name="video">视频</item>
+        <item name="toolkit">工具</item>
+        <item name="photograph">摄影</item>
+        <item name="efficiency">效率</item>
+        <item name="education">教育</item>
+        <item name="news">新闻</item>
+        <item name="tour">旅游</item>
+        <item name="life">生活</item>
+        <item name="sns">社交</item>
+        <item name="widget">部件</item>
+        <item name="finance">财经</item>
+        <item name="shopping">购物</item>
+        <item name="communication">通信</item>
+        <item name="music">音乐</item>
+        <item name="collect">收藏</item>
+        <item name="default">其它</item>
+        <item name="match">比赛</item>
+        <item name="game">游戏</item>
+        <item name="leasure">休闲</item>
+        <item name="sportgame">体育</item>
+        <!-- <item name="gwallpaper">动态</item> -->
+        <item name="longelligence">益智</item>
+        <!-- <item name="gwidget">窗口</item> -->
+        <item name="card">纸牌</item>
+    </string-array>
+
+    <string-array name="apps_category">
+        <item name="personal">个性</item>
+        <item name="traffic">交通</item>
+        <item name="sport">体育</item>
+        <item name="health ">健身</item>
+        <item name="corp">公司</item>
+        <item name="wallpaper">壁纸</item>
+        <item name="animation">动漫</item>
+        <item name="medicine">医药</item>
+        <item name="book">图书</item>
+        <item name="weather">天气</item>
+        <item name="entertainment">娱乐</item>
+        <item name="video">视频</item>
+        <item name="toolkit">工具</item>
+        <item name="photograph">摄影</item>
+        <item name="efficiency">效率</item>
+        <item name="education">教育</item>
+        <item name="news">新闻</item>
+        <item name="tour">旅游</item>
+        <item name="life">生活</item>
+        <item name="sns">社交</item>
+        <item name="widget">部件</item>
+        <item name="finance">财经</item>
+        <item name="shopping">购物</item>
+        <item name="communication">通信</item>
+        <item name="music">音乐</item>
+        <item name="collect">收藏</item>
+        <item name="default">其它</item>
+    </string-array>
+
+    <string-array name="games_category">
+        <item name="match">比赛</item>
+        <item name="game">游戏</item>
+        <item name="leasure">休闲游戏</item>
+        <item name="sportgame">体育游戏</item>
+        <item name="gwallpaper">动态壁纸</item>
+        <item name="longelligence">益智游戏</item>
+        <item name="gwidget">窗口部件</item>
+        <item name="card">纸牌游戏</item>
+    </string-array>
+
+    <string-array name="special_category">
+        <item name="tencent">腾讯专区</item>
+        <item name="borqs">播思专区</item>
+        <item name="install">装机必备</item>
+        <item name="sns">社区交友</item>
+    </string-array>
+
+    <string-array name="daren_category">
+        <item name="borqs_daren">播思达人</item>
+        <item name="game_daren">游戏达人</item>
+        <item name="tools_daren">工具达人</item>
+    </string-array>
+
+    <string-array name="visibility_name">
+        <item name="visibility_compose_anyone">所有人</item>
+        <item name="visibility_dialog_contact">仅限收件人</item>
+    </string-array>
+    
+        <string-array name="apk_permission">
+        <item name="visibility_all">所有人</item>
+        <item name="visibility_friends">仅好友可见</item>
+        <item name="visibility_none">不可见</item>
+    </string-array>
+
+    <string-array name="add_friends_title">
+        <item name="from_fans_title">粉丝</item>
+        <item name="from_contact_title">联系人</item>
+        <item name="from_invite_title">邀请</item>
+    </string-array>
+
+    <string-array name="add_friends_detail">
+        <item name="from_fans_detail">从你的粉丝中添加好友。</item>
+        <item name="from_contact_detail">从你的联系人中添加好友。</item>
+        <item name="from_invite_detail">通过电话和邮箱邀请好友。</item>
+    </string-array>
+    
+    <string-array name="dialog_date_pick">
+        <item>编辑日期</item>
+        <item>清除日期</item>
+    </string-array>
+    
+        <string-array name="bind_error_message">
+        <item name="bind_errormessage">绑定失败</item>
+        <item name="bind_hasbind_errormessage">该电话或邮箱已经被绑定</item>
+        <item name="bind_bindmany_errormessage">最多只能绑定3个电话或邮箱</item>
+        </string-array>
+
+    <!-- left menu -->
+    <string-array name="left_menu_item_title">
+        <item name="dynamic_friends">动态</item>
+        <!-- <item name="personal_infomation">个人信息</item> -->
+        <item name="album">相册</item>
+        <!-- <item name="message_center">消息中心</item> -->
+        <!-- <item name="company">@string/company</item> -->
+        <item name="friends">@string/tab_friends</item>
+        <item name="friends_circle">圈子</item>
+        <item name="event">事件</item>
+        <item name="poll">投票</item>
+        <item name="find_friends">找人</item>
+        <!-- <item name="exchange_card">名片交换</item> -->
+        <!--<item name="dynamic_public">公共动态</item>-->
+        <!-- <item name="application_recomment">应用推荐</item> -->
+        <!-- <item name="options">选项</item> -->
+    </string-array>
+    
+    <string-array name="user_detail_action">
+        <item name="request_concern">求关注</item>
+    	<item name="say_hi">打招呼</item>
+    </string-array>
+
+    <string-array name="comment_setting">
+        <item name="comment_item">评论</item>
+        <item name="like_item">赞</item>
+        <item name="reshare_item">重新分享</item>
+    </string-array>
+
+    <string-array name="media_play_selection">
+        <item name="play_item">播放</item>
+        <item name="download_item">下载</item>
+    </string-array>
+
+    <string-array name="public_circle_user_status">
+        <item>组员</item>
+        <item>邀请过未处理</item>
+        <item>申请过未处理</item>
+    </string-array>
+    
+    <string-array name="privacy_set_title">
+        <item name="privacy_set_open">公开</item>
+        <item name="privacy_set_closed">熟人</item>
+        <item name="privacy_set_secret">私密</item>
+    </string-array>
+    
+     <string-array name="privacy_set_summary">
+        <item name="privacy_set_open_summary">任何人能查看信息,动态.</item>
+        <item name="privacy_set_closed_summary">任何人能查看信息,仅成员能查看动态.</item>
+        <item name="privacy_set_secret_summary">仅成员能查看信息,动态.</item>
+    </string-array>
+    
+     <string-array name="member_approve">
+         <item name="members_applyed_circle">任何成员可以添加或批准</item>
+         <item name="members_invited_circle">仅管理员可以添加或批准</item>
+     </string-array>
+
+     <string-array name="join_permission">
+        <item name="join_permission_verified">验证加入</item>
+        <item name="join_permission_to_join">直接加入</item>
+        <item name="join_permission_forbid">不允许申请加入</item>
+    </string-array>
+    
+     <string-array name="join_permission_summary">
+        <item name="join_permission_verified_summary">申请人发出申请需管理员通过</item>
+        <item name="join_permission_to_join_summary">申请人可直接加入</item>
+        <item name="join_permission_forbid_summary">只能通过管理员邀请加入</item>
+    </string-array>
+     
+     <string-array name="ordinal_labels">
+    <item >"第一个"</item>
+    <item >"第二个"</item>
+    <item >"第三个"</item>
+    <item >"第四个"</item>
+    <item >"最后一个"</item>
+  </string-array>
+  
+     <string-array name="reminder_minutes_labels">
+    <item>"0 分钟"</item>
+    <item>"1 分钟"</item>
+    <item>"5 分钟"</item>
+    <item>"10 分钟"</item>
+    <item>"15 分钟"</item>
+    <item>"20 分钟"</item>
+    <item>"25 分钟"</item>
+    <item>"30 分钟"</item>
+    <item>"45 分钟"</item>
+    <item>"1 小时"</item>
+    <item>"2 小时"</item>
+    <item>"3 小时"</item>
+    <item>"12 小时"</item>
+    <item>"24 小时"</item>
+    <item>"2 天"</item>
+    <item>"1 周"</item>
+  </string-array>
+
+    <string-array name="default_smiley_texts">
+      <item>":-)"</item>
+      <item>":-("</item>
+      <item>";-)"</item>
+      <item>":-寻呼"</item>
+      <item>"=-其他"</item>
+      <item>":-*"</item>
+      <item>":其他"</item>
+      <item>"B-)"</item>
+      <item>":-$"</item>
+      <item>":-!"</item>
+      <item>":-["</item>
+      <item>"其他:-)"</item>
+      <item>":-\\"</item>
+      <item>":\'("</item>
+      <item>":-X"</item>
+      <item>":-D"</item>
+      <item>"o_O"</item>
+      <item>"&lt;3"</item>
+      <item>"x-("</item>
+      <item>":-/"</item>
+      <item>":-I"</item>
+    </string-array>
+    <string-array name="default_smiley_names">
+      <item>"开心"</item>
+      <item>"忧伤"</item>
+      <item>"眨眼"</item>
+      <item>"吐舌"</item>
+      <item>"惊讶"</item>
+      <item>"亲吻"</item>
+      <item>"叫喊"</item>
+      <item>"酷"</item>
+      <item>"财迷"</item>
+      <item>"说错了话"</item>
+      <item>"尴尬"</item>
+      <item>"天使"</item>
+      <item>"犹豫"</item>
+      <item>"哭泣"</item>
+      <item>"保密"</item>
+      <item>"大笑"</item>
+      <item>"困惑"</item>
+      <item>"欢喜"</item>
+      <item>"抓狂"</item>
+      <item>"傻笑"</item>
+      <item>"一本正经"</item>
+    </string-array>
+    
+     <string-array name="page_sub_title">
+        <item name="sub_type_company">公司</item>
+        <item name="sub_type_school">学校</item>
+    </string-array>
+</resources>

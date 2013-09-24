@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <com.borqs.common.view.EsTextView
+        android:id="@+id/poster_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/stream_row_margin_horizontal"
+        android:paddingTop="@dimen/stream_row_margin_vertical"
+        android:paddingBottom="@dimen/stream_row_margin_vertical"
+        android:textAppearance="@style/sns_stream_row_header_username" />
+
+    <com.borqs.common.view.EsTextView
+        android:id="@+id/post_privacy_property"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/poster_name"
+        android:drawablePadding="@dimen/default_text_padding_left"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/stream_row_margin_horizontal"
+        android:paddingTop="@dimen/stream_row_margin_vertical"
+        android:paddingBottom="@dimen/stream_row_margin_vertical"
+        android:textAppearance="@style/sns_stream_row_header_username" />
+
+    <!-- <ImageView android:id="@+id/img_pic_ui" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_margin="5dip" -->
+    <!-- android:layout_toRightOf="@id/post_privacy_property" -->
+    <!-- android:layout_alignTop="@id/post_privacy_property" -->
+    <!-- android:background="@drawable/stream_row_privacy" -->
+    <!-- android:visibility="gone" -->
+    <!-- /> -->
+
+    <TextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poster_name"
+        android:layout_toRightOf="@id/user_icon"
+        android:drawablePadding="@dimen/small_text_margin_left"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical|left"
+        android:layout_marginLeft="@dimen/stream_row_margin_horizontal"
+        android:singleLine="true"
+        android:textAppearance="@style/sns_time" />
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:icon="@drawable/ic_bpc_launcher"
+        android:title="@string/app_title">
+
+    <PreferenceCategory android:title="@string/pref_user_base_setting">
+        <Preference
+                android:key="key_update_password"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:title="@string/update_password"/>
+
+        <CheckBoxPreference android:key="key_data_flow_auto_save_mode"
+                            android:title="@string/pref_enable_data_flow_saved_mode_title"
+                            android:summary="@string/pref_enable_data_flow_saved_mode_summary"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_request_setting">
+        <CheckBoxPreference
+                android:key="key_request_enable"
+                android:title="@string/request_notification_enable"
+                android:singleLine="false"/>
+
+        <ListPreference android:key="key_notification_list"
+                        android:title="@string/request_list_title"
+                        android:entries="@array/entries_notification_list_preference"
+                        android:entryValues="@array/entryvalues_notification_list_preference"
+                        android:defaultValue="60"
+                        android:dialogTitle="@string/request_list_title"/>
+
+        <CheckBoxPreference
+                android:key="key_notification_vibrate"
+                android:title="@string/pref_request_vibrate"
+                android:summary="@string/pref_request_vibrate_desc"
+                android:singleLine="false"/>
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_notification_setting">
+        <CheckBoxPreference
+                android:key="key_notification_enable"
+                android:title="@string/pref_notification_enable"
+                android:singleLine="false"/>
+
+        <Preference
+                android:key="key_notification_set"
+                android:title="@string/notification_set"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_push_service_setting">
+        <CheckBoxPreference
+                android:key="key_push_service_enable"
+                android:title="@string/pref_string_push_service_enable_title"
+                android:summary="@string/pref_string_push_service_enable_summary"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_user_privacy_setting">
+        <Preference
+                android:key="key_clear_cache"
+                android:title="@string/pref_string_clear_cache"
+                android:summary="@string/pref_string_clear_cache_summary"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_specific_category">
+        <!--<EditTextPreference-->
+                <!--android:dialogTitle="@string/stream_view_timeout_title"-->
+                <!--android:title="@string/stream_view_timeout_title"-->
+                <!--android:key="key_stream_view_timeout"-->
+                <!--android:singleLine="true"-->
+                <!--android:inputType="number"/>-->
+
+        <EditTextPreference
+                android:dialogTitle="@string/friends_view_timeout_title"
+                android:title="@string/friends_view_timeout_title"
+                android:key="key_friends_view_timeout"
+                android:singleLine="true"
+                android:inputType="number"/>
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory android:title="@string/pref_adv_setting">-->
+        <!--<Preference-->
+                <!--android:key="key_configure_debug_option"-->
+                <!--android:title="@string/configure_debug_option_title"-->
+                <!--android:summary="@string/configure_debug_option_summary"/>-->
+        <!--&lt;!&ndash;<CheckBoxPreference android:key="key_borqs_debug_log"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:title="@string/pref_borqs_debug_log"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:summary="@string/pref_borqs_debug_log_summary"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<CheckBoxPreference android:key="key_select_borqs_url"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:title="@string/pref_borqs_url_select"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:summary="@string/pref_borqs_url_select_summary"/>&ndash;&gt;-->
+
+    <!--</PreferenceCategory>-->
+
+    <Preference
+                    android:key="key_app_about"
+                    android:singleLine="true"
+                    android:title="@string/about_title"/>
+</PreferenceScreen>

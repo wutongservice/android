@@ -1,0 +1,84 @@
+{
+    "majorVersion":"1",
+    "minorVersion":"0",
+    "description":"",
+
+    "template":[
+        {
+            "name":"formal",
+            "title":{"zh_CN":"组织机构", "en":"Organization"},
+            "description":{"zh_CN":"公司,学校 创建一个属于组织的圈子", "en":"Company,School create an organization"},
+            "icon_url":""
+        },
+        {
+            "name":"free_circle",
+            "title":{"zh_CN":"兴趣圈", "en":"Generic"},
+            "description":{"zh_CN":"摄影,旅游 创建一个属于自己的圈子", "en":"Photography,tourism create an owner circle"},
+            "icon_url":""
+        }
+    ],
+    
+    "template.formal":[
+        {
+            "name":"school",
+            "formal":1,
+            "title":{"zh_CN":"学校", "en":"School"},
+            "icon_url":""
+        },
+        {
+            "name":"company",
+            "formal":1,
+            "title":{"zh_CN":"公司", "en":"Company"},
+            "icon_url":""
+        }
+    ],
+    
+    "template.formal.school":[
+        {
+            "name":"class",
+            "formal":2,
+            "title":{"zh_CN":"班级", "en":"Class"},
+            "description":{"zh_CN":"新增一个班级", "en":"Add a class"},
+            "icon_url":""
+        },
+        {
+            "name":"free_circle",
+            "formal":0,
+            "title":{"zh_CN":"兴趣组", "en":"Generic"},
+            "description":{"zh_CN":"摄影,旅游 创建一个属于自己的兴趣小组", "en":"Photography,tourism create an owner circle"},
+            "icon_url":""
+        }
+    ],
+    
+    "template.formal.company":[
+        {
+            "name":"department",
+            "formal":2,
+            "title":{"zh_CN":"部门", "en":"Department"},
+            "description":{"zh_CN":"新增一个部门", "en":"Add a department"},
+            "icon_url":""
+        },
+        {
+            "name":"project",
+            "formal":2,
+            "title":{"zh_CN":"项目组", "en":"Project"},
+            "description":{"zh_CN":"创建公司项目组", "en":"create a project team"},
+            "icon_url":""
+        },
+        {
+            "name":"application",
+            "formal":2,
+            "title":{"zh_CN":"应用开发组", "en":"Application"},
+            "description":{"zh_CN":"创建应用开发组", "en":"create an application team"},
+            "icon_url":""
+        },
+        {
+            "name":"free_circle",
+            "formal":0,
+            "title":{"zh_CN":"兴趣组", "en":"Generic"},
+            "description":{"zh_CN":"摄影,旅游 创建一个属于自己的兴趣小组", "en":"Photography,tourism create an owner circle"},
+            "icon_url":""
+        }
+        
+    ],
+}

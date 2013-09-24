@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/profile_span"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dip"
+                android:background="#dfebfb">
+
+    <RelativeLayout android:id="@+id/profile_span_left"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/picture_bg">
+
+        <ImageView android:id="@+id/profile_img_ui"
+                   android:layout_width="fill_parent"
+                   android:layout_height="80dp"
+                   android:layout_centerHorizontal="true"/>
+
+        <TextView android:id="@+id/profile_edit_img"
+                  android:layout_width="fill_parent"
+                  android:layout_height="16dp"
+                  android:gravity="center"
+                  android:layout_centerHorizontal="true"
+                  android:layout_alignBottom="@id/profile_img_ui"
+                  android:text="@string/user_detail_edit_image"
+                  android:textSize="12dip"
+                  android:textColor="#c6c7c6"
+                  android:textStyle="bold"
+                  android:background="#70000000"
+                  android:visibility="gone"/>
+
+        <RelativeLayout android:id="@+id/id_circle_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_img_ui"
+                        android:paddingBottom="4dip"
+                        android:background="@drawable/circle_info_bg">
+
+            <ImageView android:id="@+id/circle_icon"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="4dip"
+                       android:src="@drawable/icon_ingroups"/>
+
+            <TextView android:id="@+id/id_user_circle"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="2dip"
+                      android:layout_toRightOf="@id/circle_icon"
+                      android:textAppearance="@style/sns_time"
+                      android:maxLines="2"
+                      android:ellipsize="end"/>
+
+        </RelativeLayout>
+
+        <ImageView android:id="@+id/edit_circle_icon"
+                   android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:layout_marginBottom="-2dip"
+                   android:layout_alignBottom="@id/id_circle_info"
+                   android:layout_alignRight="@id/profile_img_ui"
+                   android:src="@drawable/btn_more"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_span_left"
+            android:layout_margin="5dip"
+            android:layout_alignTop="@id/profile_span_left">
+
+        <TextView android:id="@+id/profile_username"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="top"
+                  android:linksClickable="false"
+                  android:textAppearance="@style/sns_username"/>
+
+        <TextView android:id="@+id/request_concern"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/request_concern"
+                  android:layout_alignParentRight="true"
+                  android:gravity="center"
+                  android:drawableLeft="@drawable/friends_recommend"
+                  android:visibility="gone"/>
+        
+        <TextView android:id="@+id/say_hi"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/say_hi"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="5dip"
+                  android:textSize="12dp"
+                  android:gravity="center"
+                  android:background="@drawable/say_hi_btn_bg" />
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_username"
+                android:layout_marginTop="10dip"
+                android:layout_marginRight="5dip"
+                android:layout_alignTop="@id/profile_span_left">
+
+            <TextView android:id="@+id/profile_user_status"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/profile_username"
+                      android:gravity="center_vertical"
+                      android:linksClickable="false"
+                      android:layout_marginBottom="10dip"
+                      android:maxLines="3"
+                      android:textAppearance="@style/sns_link"/>
+
+            <TextView android:id="@+id/user_detail_borqsid"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentLeft="true"
+                      android:textSize="12sp"
+                      android:layout_below="@id/profile_user_status"
+                      android:text="@string/user_detail_borqsid"/>
+
+            <TextView android:id="@+id/profile_publish_time"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="right"
+                      android:textSize="12sp"
+                      android:layout_below="@id/profile_user_status"
+                      android:layout_alignParentRight="true"
+                      android:layout_toRightOf="@id/user_detail_borqsid"
+                      android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

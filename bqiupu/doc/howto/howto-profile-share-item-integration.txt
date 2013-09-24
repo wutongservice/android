@@ -1,0 +1,93 @@
+
+1. update BpcApiUtils.java to your project.
+
+2. provide a receiver
+a) in AndroidManifext.xml
+        <receiver
+            android:name=".ShareSourceReceiver">
+            <intent-filter>
+                <action android:name="com.borqs.bpc.action.SHARE_SOURCE" />
+            </intent-filter>
+        </receiver>
+
+b) in Java code, you could qury the ID of user by:
+        long userId = intent.getLongExtra(BpcApiUtils.User.USER_ID, 0);
+
+   You need to collect the amount of share item from the user in you application, and then wrap all the necessary data within a bundle: package name, label you want to display in user profile, and the amount of share item.
+
+   finally, you need to send the other broadcast to notify Bpc Profile UI to update the screen display for your data.
+
+   Here is the sample code use in application share:
+
+ 26         Intent i = new Intent(BpcApiUtils.Action.SHARE_SOURCE_RESULT);
+ 27         Bundle bundle = new Bundle();
+ 28         bundle.putString(BpcApiUtils.Result.PACKAGE_NAME, context.getPackageName());
+ 29         bundle.putString(BpcApiUtils.Result.SOURCE_LABEL, context.getString(R.string.app_title));
+ 30 
+ 31         long userId = intent.getLongExtra(BpcApiUtils.User.USER_ID, 0);
+ 32         if (0 == userId) {
+ 33             userId = AccountServiceUtils.getBorqsAccountID();
+ 34         }
+ 35 
+ 36         QiupuORM orm = QiupuORM.getInstance(context);
+ 37         Cursor cursor = orm.getUserApplications(String.valueOf(userId));
+ 38         final int count;
+ 39         if (null == cursor) {
+ 40             count = 0;
+ 41         } else {
+ 42             count = cursor.getCount();
+ 43             cursor.close();
+ 44         }
+ 45 
+ 46         bundle.putInt(BpcApiUtils.Result.SOURCE_COUNT, count);
+ 47 
+ 48         bundle.putString(BpcApiUtils.Result.CALLBACK_SCHEME, "borqs://application/mylist");
+            bundle.putString(BpcApiUtils.Result.TARGET_PACKAGE, "com.borqs.appbox");
+ 49         i.putExtra(BpcApiUtils.Action.SHARE_SOURCE_RESULT, bundle);
+ 50 
+ 51         try{
+ 52             context.sendBroadcast(i);
+ 53         }catch(Exception ne)
+ 54         {
+ 55             ne.printStackTrace();
+ 56         }
+
+
+c) Note for the sample code:
+   Line 26, instance an Intent that will be used for broadcasting back, it can simply copy to use.
+   Line 27,28 instance a Bundle, and wrap the package name within it, KEEP the code in your project.
+   Line 29, wrap the displaying label of your project in Bpc Profile, you could pass text string as you will.
+   Line 31, query the user id of the user.
+   Line 32-45, query the shared count, you need to do this in your busyness.
+   Line 46, wrap the count of the share item of the user
+   Line 48, wrap your scheme which will be invoked when your item is click.
+   Line 49-56, send the broadcast to notify Bpc Profile screen update.
+
+3. Respond to the 'click' action, which will try to start your activity with given scheme.
+   e.g. in Application share app (Qiupu)
+   a) AndroidManifest.xml
+        <activity android:name=".ui.UserApplicationsActivity"
+                  android:launchMode="singleTask"
+                  android:configChanges="orientation"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="application"
+                      android:path="/mylist">
+                </data>
+            </intent-filter>
+        </activity>
+   b) Java code, you could parse the user id, possible user name and the circle name of the user.
+            String uid = BpcApiUtils.parseSchemeValue(intent, BpcApiUtils.SEARCH_KEY_UID);
+            if (TextUtils.isEmpty(uid)) {
+                uid = parseOutdatedUid(url);
+            }
+
+        Bundle bundle = intent.getExtras();
+        if (null != bundle) {
+            mUserid = bundle.getLong(BpcApiUtils.User.USER_ID);
+            mUserName = bundle.getString(BpcApiUtils.User.USER_NAME);
+            mCircleName = bundle.getString(BpcApiUtils.User.USER_CIRCLE);
+        }

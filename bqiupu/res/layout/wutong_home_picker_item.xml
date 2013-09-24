@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/circleListView">
+    <ImageView
+            android:id="@+id/id_circle_icon"
+            android:layout_width="@dimen/stream_row_size_profile_icon"
+            android:layout_height="@dimen/stream_row_size_profile_icon"
+            android:src="@drawable/ic_bpc_launcher"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+    <RelativeLayout android:id="@+id/id_layout_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/id_circle_icon"
+                    android:paddingLeft="@dimen/default_text_padding_left"
+                    android:gravity="center_vertical">
+
+        <TextView
+                android:id="@+id/id_circle_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/wutong_home_classical_view"
+                android:textAppearance="@style/users_circles_name"
+                />
+        <TextView
+                android:id="@+id/tv_member_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_circle_name"
+                android:layout_marginTop="4dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/lightgrey"
+                android:visibility="gone"
+                android:textSize="14dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+
+<resources> 
+    <dimen name="like_span">50dip</dimen>
+     <!-- edit profile -->
+     <dimen name="text_width">40dip</dimen>
+     <dimen name="text_height">46dip</dimen>
+</resources>

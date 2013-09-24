@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/photo_preview_select_album_layout_bg"
+    android:orientation="vertical" >
+	<LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="3.0dip"
+                android:gravity="center_horizontal" >
+
+                <!-- <LinearLayout
+                    android:id="@+id/photo_preview_select_album_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28.0dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginTop="9.0dip"
+                    android:background="@drawable/poi_checkin_button"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8.0dip" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:text="@string/v5_0_1_the_upload_photo_edited_layout_1"
+                        android:textColor="#ff333333"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8.0dip"
+                        android:background="@drawable/photo_edit_alumb_select_separator" />
+
+                    <TextView
+                        android:id="@+id/photo_preview_select_album_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8.0dip"
+                        android:gravity="center"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:text="@string/v5_0_1_the_upload_photo_edited_layout_2"
+                        android:textColor="@color/light_blue"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/photo_edit_alumb_select_arrow" />
+                </LinearLayout> -->
+
+            <!--     <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" /> -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="9.0dip"
+                    android:paddingTop="9.0dip" >
+
+                    <TextView
+                        android:id="@+id/photo_preview_select_quality_originalbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28.0dip"
+                        android:background="@drawable/photo_edit_quality_normal_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:text="@string/photo_original_quality"
+                        android:textSize="14.0sp"
+                         />
+                    <TextView
+                        android:id="@+id/photo_preview_select_quality_highbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28.0dip"
+                        android:background="@drawable/photo_edit_quality_normal_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:text="@string/photo_high_quality"
+                        android:textSize="14.0sp" />
+
+                    <TextView
+                        android:id="@+id/photo_preview_select_quality_lowbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28.0dip"
+                        android:background="@drawable/photo_edit_quality_normal_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:text="@string/photo_normal_quality"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/photo_preview_select_quality_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="  "
+                android:textColor="@android:color/white"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingBottom="20.0dip" >
+
+            <ImageView
+                android:id="@+id/photo_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:paddingBottom="6.0dip"
+                android:paddingLeft="6.0dip"
+                android:paddingRight="6.0dip"
+                android:paddingTop="6.0dip"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/photo_edit_bottom_action"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/flipper_head_height"
+        android:background="@drawable/bottom_black_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/photo_preview_left_rotate"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_button_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/photo_edit_left_rotate" />
+
+        <ImageView
+            android:id="@+id/photo_preview_rigth_rotate"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_button_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/photo_edit_right_rotate" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/header"
+	android:layout_width="fill_parent"
+	android:layout_height="46dip"
+	android:background="@drawable/acl_title_bar_bg"
+	android:gravity="center_vertical"
+	android:orientation="horizontal" >
+    <View android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:background="@drawable/contact_title_repeat"/>
+
+	<TextView
+		android:id="@+id/head_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="14dip"
+       android:layout_alignParentLeft="true"
+       android:textColor="@android:color/white"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       android:maxLines="1"
+        />
+</RelativeLayout>

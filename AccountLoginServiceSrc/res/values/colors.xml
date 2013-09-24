@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="acl_transparent">#00000000</color>    
+    <color name="acl_bg_color">#00ffffff</color>
+    <color name="acl_white">#ffffffff</color>
+    <color name="acl_black">#FF000000</color>
+    <color name="acl_light_black">#333333</color>    
+    <color name="acl_backgroud">#edf3fd</color>
+    <color name="acl_darker_gray">#aaa</color>
+</resources>

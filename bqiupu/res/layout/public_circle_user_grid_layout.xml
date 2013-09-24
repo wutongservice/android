@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/in_member_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/public_circle_info_people_bg" >
+
+        <TextView
+            android:id="@+id/tv_in_member"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:textSize="15.0sp"
+            android:textStyle="bold" />
+
+        <com.borqs.common.view.ExpandGridView
+            android:id="@+id/grid_in_member"
+            style="@style/simple_people_grid"
+            android:layout_below="@id/tv_in_member"
+            android:layout_marginLeft="12.0dip"
+            android:minHeight="20dip"
+            android:paddingBottom="12.0dip" />
+
+        <ImageView
+            android:id="@+id/icon_in_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/apply_member_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/public_circle_info_people_bg" >
+
+        <TextView
+            android:id="@+id/tv_apply_member"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:textSize="15.0sp"
+            android:textStyle="bold" />
+
+        <com.borqs.common.view.ExpandGridView
+            android:id="@+id/grid_apply_member"
+            style="@style/simple_people_grid"
+            android:layout_below="@id/tv_apply_member"
+            android:layout_marginLeft="12.0dip"
+            android:minHeight="20dip"
+            android:paddingBottom="12.0dip" />
+
+        <ImageView
+            android:id="@+id/icon_apply_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/invite_member_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/public_circle_info_people_bg" >
+
+        <TextView
+            android:id="@+id/tv_invite_member"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:textSize="15.0sp"
+            android:textStyle="bold" />
+
+        <com.borqs.common.view.ExpandGridView
+            android:id="@+id/grid_invite_member"
+            style="@style/simple_people_grid"
+            android:layout_below="@id/tv_invite_member"
+            android:layout_marginLeft="12.0dip"
+            android:minHeight="20dip"
+            android:paddingBottom="12.0dip" />
+
+        <ImageView
+            android:id="@+id/icon_invite_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/child_circle_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/public_circle_info_people_bg" >
+
+        <TextView
+            android:id="@+id/tv_child_circle"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:textSize="15.0sp"
+            android:textStyle="bold" />
+
+        <com.borqs.common.view.ExpandGridView
+            android:id="@+id/grid_child_circle"
+            style="@style/simple_people_grid"
+            android:layout_below="@id/tv_child_circle"
+            android:layout_marginLeft="12.0dip"
+            android:minHeight="20dip"
+            android:paddingBottom="12.0dip" />
+
+        <ImageView
+            android:id="@+id/icon_child_circle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+</LinearLayout>

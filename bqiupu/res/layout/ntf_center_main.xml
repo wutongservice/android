@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebar_container" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/request_span"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/people_span_bg"
+                android:gravity="left|bottom"
+                android:paddingBottom="4dip"
+                android:paddingLeft="@dimen/people_item_padding_left"
+                android:text="Request"
+                android:textColor="@color/atoz_font"
+                android:textStyle="bold" />
+
+            <GridView
+                android:id="@+id/main_gv"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_below="@id/request_span"
+                android:numColumns="2" />
+
+            <TextView
+                android:id="@+id/ntf_span"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_gv"
+                android:background="@drawable/people_span_bg"
+                android:gravity="left|bottom"
+                android:paddingBottom="4dip"
+                android:paddingLeft="@dimen/people_item_padding_left"
+                android:text="Ntf"
+                android:textColor="@color/atoz_font"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ntf_span" >
+
+                <RelativeLayout
+                    android:id="@+id/ntf_for_me_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/app_icon_size"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/for_me_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/commit_button_margin_left"
+                        android:scaleType="center"
+                        android:src="@drawable/composer_app" />
+
+                    <com.borqs.common.view.MissingNumberView
+                        android:id="@+id/for_me_count"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_alignRight="@id/for_me_icon"
+                        android:layout_alignTop="@id/for_me_icon"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="@dimen/left_menu_text_size" />
+
+                    <TextView
+                        android:id="@+id/ntf_for_me_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/commit_button_margin_left"
+                        android:layout_toRightOf="@id/for_me_icon"
+                        android:gravity="center_vertical"
+                        android:text="@string/ntf_forme_label"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ntf_share_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/app_icon_size"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/ntf_share_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/commit_button_margin_left"
+                        android:scaleType="center"
+                        android:src="@drawable/composer_app" />
+                    
+                    <com.borqs.common.view.MissingNumberView
+                        android:id="@+id/ntf_share_count"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_alignRight="@id/ntf_share_icon"
+                        android:layout_alignTop="@id/ntf_share_icon"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="@dimen/left_menu_text_size" />
+
+                    <TextView
+                        android:id="@+id/ntf_share_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/commit_button_margin_left"
+                        android:layout_toRightOf="@id/ntf_share_icon"
+                        android:gravity="center_vertical"
+                        android:text="@string/ntf_share_label"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

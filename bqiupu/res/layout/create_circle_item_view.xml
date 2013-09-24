@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dip"
+    android:background="@drawable/bg_tacos"  >
+
+    <ImageView
+        android:id="@+id/circle_cover"
+        android:layout_width="@dimen/circle_profile_icon_width"
+        android:layout_height="@dimen/circle_profile_icon_height"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/formal_circle_default_photo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/circle_cover"
+        android:layout_marginLeft="@dimen/large_text_margin_left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/circle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/organization_circle_label"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/circle_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/page_card_fans_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

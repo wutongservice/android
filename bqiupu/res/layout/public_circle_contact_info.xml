@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/group_phone_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right" >
+
+        <RelativeLayout
+            android:id="@+id/layout_phone"
+            style="@style/edit_public_circle_profile_style"
+            android:layout_marginTop="@dimen/default_text_margin_top"
+            android:background="@drawable/above" >
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textAppearance="@style/edit_user_profiles_style" />
+
+            <EditText
+                android:id="@+id/group_phone"
+                style="@style/edit_public_circle_edittext"
+                android:layout_marginLeft="@dimen/default_text_margin_left"
+                android:layout_below="@id/tv_phone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_email"
+            style="@style/edit_public_circle_profile_style"
+            android:background="@drawable/below" >
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_address"
+                android:textAppearance="@style/edit_user_profiles_style" />
+
+            <EditText
+                android:id="@+id/group_email"
+                style="@style/edit_public_circle_edittext"
+                android:layout_marginLeft="@dimen/default_text_margin_left"
+                android:layout_below="@id/tv_email" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

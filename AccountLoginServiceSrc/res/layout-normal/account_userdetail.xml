@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+<LinearLayout style="@style/acl_user_detail_outer_layout">
+    <include layout="@layout/account_titlebar" />
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+         <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/acl_uerdetail_top_img" />
+         </LinearLayout>          
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="30dp"
+             android:layout_marginTop="50dp">
+             <ImageView
+                 android:id="@+id/acl_edit_photo"
+                 android:layout_width="80dp"
+                 android:layout_height="80dp"
+                 android:scaleType="centerCrop"                 
+                 android:src="@drawable/acl_default_img" />
+
+             <TextView
+                 android:id="@+id/acl_edit_photo_prompt_tv"
+                 android:layout_width="80dp"
+                 android:layout_height="16dp"
+                 android:layout_alignBottom="@id/acl_edit_photo"
+                 android:layout_alignLeft="@id/acl_edit_photo"
+                 android:background="#70000000"
+                 android:gravity="center"
+                 android:text="@string/acl_edit_image"
+                 android:textColor="#c6c7c6"
+                 android:textSize="12dip"
+                 android:visibility="gone"
+                 android:textStyle="bold" />
+         </RelativeLayout>
+    </FrameLayout>
+    
+     <LinearLayout 
+         style="@style/acl_input_layout"
+         android:background="@drawable/acl_tv_above">
+        <TextView
+                style="@style/acl_tv_prompt_style"
+                android:text="@string/acl_user_id" />
+
+        <TextView
+                android:id="@+id/acl_detail_user_id_tv"
+                style="@style/acl_tv_prompt_style"/>
+    </LinearLayout>
+
+    <LinearLayout 
+        style="@style/acl_input_layout"
+        android:background="@drawable/acl_tv_below"
+        >
+        <TextView
+                style="@style/acl_tv_prompt_style"
+                android:text="@string/acl_user_password" />
+        <EditText
+                android:id="@+id/acl_register_passwd_tv"
+                style="@style/acl_input_tv_style"  
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                android:maxLength="16">
+                <requestFocus/> 
+        </EditText>
+         <ImageView android:layout_width="wrap_content"
+           android:layout_height="wrap_content"   
+           android:layout_marginLeft="20dp"        
+           android:src="@drawable/acl_must_input" />
+    </LinearLayout> 
+    
+    <CheckBox
+          android:id="@+id/acl_show_pwd_box"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:focusable="false"
+          android:button="@drawable/acl_btn_checkbox"
+          android:layout_marginLeft="@dimen/acl_layout_padding_left"
+          android:textColor="@color/acl_light_black"
+          android:text="@string/acl_show_password" />
+    <LinearLayout 
+        style="@style/acl_input_layout"
+        android:background="@drawable/acl_tv_above">
+        <TextView
+                style="@style/acl_tv_prompt_style"               
+                android:text="@string/acl_user_name" />
+        <EditText
+                android:id="@+id/acl_detail_user_name_tv"
+                android:hint="@string/acl_user_real_name_hint"
+                style="@style/acl_input_tv_style"
+                android:imeOptions="actionNext"
+                />
+        <ImageView android:layout_width="wrap_content"
+           android:layout_height="wrap_content" 
+           android:layout_marginLeft="20dp"
+           android:src="@drawable/acl_must_input" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/acl_input_layout"
+                android:background="@drawable/acl_tv_mid">
+        <TextView
+                style="@style/acl_tv_prompt_style"              
+                android:text="@string/acl_user_phone" />
+        <EditText
+                android:id="@+id/acl_user_phone_tv"
+                style="@style/acl_input_tv_style"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="14"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="20dp"
+                   android:src="@drawable/acl_must_input" />
+    </LinearLayout>        
+    <LinearLayout style="@style/acl_input_layout"
+                android:id="@+id/acl_user_birthday_layout"
+                android:background="@drawable/acl_tv_mid">
+        <TextView
+                style="@style/acl_tv_prompt_style"              
+                android:text="@string/acl_user_birthday" />
+        <TextView                
+                style="@style/acl_tv_prompt_style" 
+                android:id="@+id/acl_user_birthday_tv"/>
+    </LinearLayout>
+    <LinearLayout style="@style/acl_input_layout"
+                android:background="@drawable/acl_tv_below">
+        <TextView
+                style="@style/acl_tv_prompt_style"               
+                android:text="@string/acl_user_address" />
+        <EditText
+                android:id="@+id/acl_user_address_tv"
+                style="@style/acl_input_tv_style"
+                android:imeOptions="actionDone"/>
+    </LinearLayout>
+    
+     <Button
+             android:id="@+id/acl_detail_done_btn"
+             android:layout_marginTop="5dip"
+             android:text="@string/acl_done"
+             style="@style/acl_button_style_new"
+             android:layout_marginLeft="@dimen/acl_item_margin_space_left"
+             android:layout_marginRight="@dimen/acl_item_margin_space_right" />
+</LinearLayout>        
+</ScrollView>

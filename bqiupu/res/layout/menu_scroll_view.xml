@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+            android:id="@+id/list_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/navigation_bg"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+        <com.borqs.common.view.LeftMenuListView
+                android:id="@+id/left_memu_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@drawable/list_selector_left_menu"
+                android:divider="@drawable/navigation_bg_line"
+                android:scrollbars="none"/>
+
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@drawable/navigation_bg_line"/>
+    </LinearLayout>
+
+    <com.borqs.common.view.MenuHorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:background="#00ffffff" 
+        android:fadingEdge="none" 
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_height="fill_parent" 
+            android:layout_width="fill_parent"
+            android:orientation="horizontal" 
+            android:background="#00ffffff">
+        </LinearLayout>
+    </com.borqs.common.view.MenuHorizontalScrollView>
+
+    <!--<include-->
+            <!--android:id="@+id/menu"-->
+            <!--layout="@layout/dummy_menu"-->
+            <!--android:visibility="invisible"/>-->
+</merge>

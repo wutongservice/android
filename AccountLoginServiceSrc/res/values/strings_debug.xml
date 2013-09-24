@@ -1,0 +1,11 @@
+<resources>
+    <string name="account_pref_adv_setting">Setting</string>
+    <string name="account_pref_borqs_debug_log">log output</string>
+    <string name="account_pref_borqs_debug_log_summary">print debug log</string>
+    <string name="account_pref_borqs_url_select">Change Server</string>
+    <string name="account_pref_borqs_url_select_summary">select different account will delete current account setting</string>
+    <string name="account_dialog_local_config_message">find local setting, use it? \n%1$s</string>
+    <string name="account_pref_borqs_url_current_setting">current setting</string>
+    <string name="account_config_name">Borqs apk server setting</string>
+    <string name="account_have_account_alert">you have loged in, pls log out first then delete your account</string>
+</resources>

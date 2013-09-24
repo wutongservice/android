@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WuTong</string>
+    <string name="app_title">WuTong</string>
+    <string name="share_to_wutong">Share to WuTong</string>
+    <string name="login_ok">Login</string>
+    <string name="sign_up">Register</string>
+    <string name="username_hint">Phone/Email/ID</string>
+    <string name="pwd_hint">Password</string>
+    <string name="login_error_msg">Login error, try again!</string>
+    <string name="loading">Loading</string>
+   
+    <string name="username_txt">Login Name:</string>
+    <string name="register_username_hint">Type Email address</string>
+    <string name="password_txt">Password:</string>
+    <string name="register_password_hint">6~20 alpha or number</string>
+    
+
+    <string name="nickname_txt">Nickname:</string>
+     <string name="register_nickname_hint">Nickname</string>
+
+    
+
+    <string name="label_ok">OK</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_done">Done</string>
+    <string name="label_save">Save</string>
+    <string name="label_skip">Skip</string>
+
+    <string name="share">share</string>
+    <string name="share_title">Share applications</string>
+    <string name="share_desc">Sharing</string>
+    
+    <string name="to">to:</string>
+    
+    <string name="comment">comment:</string>
+    
+    <string name="delete_apk_file">Delete apk file</string>
+    
+    <string name="load_posts_failed">Load posts failed</string>
+    
+    <string name="share_apk_ok">share ok</string>
+    
+    <string name="nickname_error_msg">Please input nickname</string>
+    <string name="pwd_error_msg">Invalid Password</string>
+    <string name="username_error_msg">Please input valid Email address</string>
+    <string name="user_exist_error_msg">Username has been used</string>
+    <string name="verify_txt">Verify code:(Type verify code to complete register)</string>
+    <string name="phonenumber_txt">Phone Number:(Optional)</string>
+     <string name="register_phonenumber_hint">Input valid phone number</string>
+    <string name="verify_code_error">Incorrect verify code</string>
+           
+
+
+
+
+
+
+    <string name="label_refresh">Refresh</string>
+    <string name="menu_title_search">Search</string>
+    <string name="menu_title_home">Home</string>
+    
+
+    <string name="backup_suc">Backup successfully</string>
+    <string name="backup_fail">Backup failed</string>
+
+    
+
+
+
+    <string name="user_info">Info</string>
+    <string name="registe_failed_msg">register failed, try again</string>
+    <string name="verify_failed_msg">verify failed, try again</string>
+
+    
+    <string name="home_market">Pool</string>
+    <string name="home_steam">Stream</string>
+    <string name="home_application">App Share</string>
+    <string name="home_album">Album</string>
+    <string name="home_book">Brook</string>
+    <string name="home_music">Music</string>
+    <string name="home_account_service">Wutong Account</string>
+    <string name="home_settings">Settings</string>
+    <string name="home_friends">Friends</string>
+    <string name="home_exchange">Exchange Profile</string>
+    <string name="home_requests">Requests</string>
+    <string name="home_my_profile">My Profile</string>
+    <string name="home_msg">Message</string>
+    <string name="home_advise">Advise</string>
+    <string name="home_calling">Calling</string>
+    <string name="home_others">Others</string>
+    
+	<string name="app">Application</string>
+	<string name="app_intro">Introduction</string>
+    <string name="app_pics">Pictures</string>
+
+    <string name="app_open">Open</string>
+    <string name="app_delete">Delete</string>
+    
+    <string name="apk_download_finish">downloaded</string>
+    <string name="apk_download">DownLoad</string>
+    <string name="apk_download_short">Load</string>
+    <string name="apk_download_ok">Install</string>
+    <string name="apk_download_failed">Download failed</string>
+    <string name="apk_downloading">Downloading</string>
+    <string name="apk_uploading">Uploading</string>
+    <string name="apk_download_msg">"Would you like to download the application: %1$s?"</string>
+    <string name="apk_install_download_msg">"%1$s package found, install with it, or download the latest version?"</string>
+
+    <string name="app_comments">Comments</string>  
+    <string name="string_posts">Post</string>
+    
+    <string name="confirm_delete_apkfile">Really delete downloaded file?</string>
+    
+
+    <string name="user_followers">Fans</string>
+    
+    <string name="apk_wait_install">To Install</string>
+	
+
+
+	
+	<string name="friend_add">Add</string>
+
+	
+
+    <string name="confirm_logout">Logout?</string>
+	<string name="label_logout">Logout</string>
+    <string name="label_login">Login</string>
+
+    
+    <string name="apk_installed">Installed</string>
+
+    <string name="search_recommend">please input search key</string>
+
+
+
+
+
+    
+
+    <string name="label_upload">Backup</string>
+
+
+    
+    <string name="apk_update_failed">Update Failed</string>
+    
+
+     <string name="share_app">Share %1$s</string>
+     <string name="recommend_qiupu">Share WuTong</string>
+     <string name="about_title">About</string>
+     <string name="close_about">Close</string>
+     <string name="install_app">Install</string>
+     <string name="uninstall_app">Uninstall</string>
+
+
+
+     <string name="get_password_up">Get Password</string>
+
+     <string name="string_notifications">Notifications</string>   
+
+     <string name="apk_pravicy_setting">Privacy setting</string>
+     <string name="share_app_all_user">Everyone</string>
+     <string name="share_app_all_friends">Friends Only</string>
+     <string name="share_app_all_own">Hide</string>
+     
+     <string name="no_sdcard_no_download">No sdcard available</string>
+     <string name="no_enough_space_sdcard_download">No enough space</string>
+
+      
+     <string name="bottom_btn_update">Update</string>
+
+
+     
+     <string name="home_downloadmanager">Download</string>
+     <string name="pref_adv_setting">Advanced settings</string>
+     <string name="pref_specific_category">Interval settings</string>
+     <string name="pref_user_base_setting">Base settings</string>
+     
+     <string name="string_downloading_finished">Finish downloading</string>
+     <string name="string_downloading_fail">Download fail</string>
+     <string name="string_downloading">Downloading</string>
+     <string name="string_installing">Installing</string>
+     
+     <string name="toast_input_email">Input valid email address!</string>
+     <string name="toast_get_password_success">Go to your email and confirm the link, then the new password will be sent to the mail!</string>
+     <string name="toast_get_password_failed">Get password failed, please check!</string>
+     <string name="dialog_get_password_toast">Click ok,then the password will send to your email !</string>
+
+     <string name="add_friends">Add Friends</string>
+     
+
+
+
+
+
+    
+
+    <string name="new_password">New password</string>
+    <string name="old_password">Old password</string>
+    <string name="update_password">Update password</string>
+    <string name="update_password_ok">Update password successfully</string>
+    <string name="update_password_failed">Update password failed, try later!</string>
+    <string name="input_new_password_tutorial">New password is incorrect,Please reset</string>
+    <string name="input_old_password_tutorial">Old password is incorrect,Please reset</string>
+    <string name="same_password_tutorial">New password is same as old password, please reset</string>
+    <string name="update_apk_permission">Set app permission</string>
+
+
+
+    <string name="user_news">Wall</string>
+    <string name="profile">Profile</string>
+
+
+
+    <string name="textview_default" translatable="false">0</string>
+
+	<string name="apk_needupdate">Update</string>
+	<string name="apk_updating">Updating</string>
+
+	
+
+    <string name="friends_streams">Friends</string>
+    <string name="public_streams">Public</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="news_feed_comment">Comment</string>
+    <string name="news_feed_like">Like</string>
+    <string name="news_feed_unlike">Unlike</string>
+    <string name="news_feed_reshare_hint">"First posted by: "</string>
+    <string name="news_feed_reshare">Reshare</string>
+    <string name="you_may_know">May Know</string>
+    <string name="processbar_loading">loading...</string>
+    <string name="processbar_login_in">login...</string>
+
+
+    
+    <string name="facebook_time_tracte_min">about a minute ago</string>
+	<string name="facebook_time_tracte_hour">about an hour ago</string>
+	<string name="facebook_time_tracte_td">Today at </string>
+	<string name="facebook_time_tracte_yd">Yesterday at</string>
+    <string name="facebook_time_tracte_at">at</string>
+    
+    <string name="min">minutes ago</string>
+    <string name="sec">seconds ago</string>
+
+    <string name="hour">hours ago at %1$s</string>
+
+
+
+
+    <string name="list_view_more">More</string>
+    <string name="hint_more">More:</string>
+    <string name="selectAll">Select all</string>
+
+    <!-- Item on EditText context menu.  This action is used to cut selected the text into the clipboard.  -->
+    <string name="cut">Cut</string>
+
+    <!-- Item on EditText context menu. This action is used to cut all the text into the clipboard.
+-->
+    <string name="cutAll">Cut all</string>
+
+    <!-- Item on EditText context menu. This action is used to cut selected the text into the clipboard.
+-->
+    <string name="copy">Copy</string>
+    <string name="address_pad_edit">Edit</string>
+    <string name="address_pad_delete">Delete</string>
+    <string name="address_pad_view_contact">View contact</string>
+    <string name="address_pad_add_contact">Add contact</string>
+    <string name="paste">Paste</string>
+    <string name="cannot_send_message_reason">Ivalid recipients.</string>
+    <string name="address_hint">Who are you with?</string>
+    <string name="type_to_compose_text_enter_to_send">Write something...</string>
+    <string name="show_password">show password</string>
+
+
+    
+    <string name="stream_view_timeout_title">Stream interval(sec)</string>
+    <string name="friends_view_timeout_title">Friends interval(days)</string>
+    <string name="address_view_timeout_title">Contact interval(days)</string>
+
+    <string name="no_update_apk_tips">All local apps are up to date</string>
+    
+    <string name="app_info_new_version_code_title">Latest Version: %1$s</string>
+	<string name="app_info_version_code_title">Version: %1$s</string>
+	<string name="app_info_version_size_title">Size: %1$s</string>
+
+	<string name="menu_title_logout">Logout</string>
+
+
+	<string name="status_update_compose">What\'s on your mind?</string>
+	<string name="status_share">Share</string>    	
+	<string name="status_update">Status update</string>
+	<string name="status_update_summary">Posting</string>	
+	<string name="post_to_wall">Wall</string>
+    <string name="post_to_wall_summary">Posting</string>
+    <string name="input_content">Please input content!</string>   
+    <string name="friend_recomm">Recommend</string>
+    <string name="string_in_processing">Processing request...</string>
+    <string name="string_in_calculating">Calculating...</string>
+    <string name="who_like">%1$s like.</string>
+    <string name="i_like">I</string>
+    <string name="string_select">Select</string>
+    <string name="hint_username">User name</string>
+    <string name="hint_contact_name">Contact name</string>
+    <string name="hint_appname">Application name</string>    
+    <string name="string_select_user">User Select</string>    
+    
+    <string name="share_to_qiupu">Share to friends</string>
+    <string name="share_by_phone">Share by phone</string>
+    <string name="share_to_my_wall">Share to my wall</string>    
+    <string name="pref_string_clear_cache">Clear Cache</string>
+    <!--<string name="pref_ui_select">Main Presentation</string>-->
+    <string name="pref_borqs_url_select">Change Server</string>
+    <string name="pref_borqs_url_select_summary">After changing server, it needs register again or sign up with a valid account.</string>
+    <string name="pref_string_clear_cache_summary">Clear phone memory, release more space.</string>
+    <!--<string name="pref_ui_select_summary">Select it, will show main UI with DashBoard style.</string>-->
+    <string name="download_url_format">Recommended application, download from link: %1$s, find more applications from %2$s</string>
+    <string name="latest_app">Latest</string>
+
+
+    <string name="install_download_times">download: %1$s(%2$s) </string>
+
+    <string name="in_loading_app">Loading data from server, please wait.</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="edit_profile">Edit</string>
+
+    <string name="upload_from">Backup from %1$s</string>
+    <string name="qiupu_login_public">WuTong square</string>
+    <string name="qiupu_login_casual_look">Casual look</string>
+    <string name="qiupu_login_hot_app">Hot application</string>
+    <string name="qiupu_login_input_username">Please input user name</string>
+    <string name="qiupu_login_input_password">Please input password</string>
+    <string name="app_used_users">Who are using the application.</string>
+    <string name="app_liked_users">Who are liked the application.</string>
+    <string name="user_sex">Sex:</string>
+     <string name="user_sex_man">Male</string>
+     <string name="user_sex_woman">Female</string>
+     <string name="user_sex_unknow">UnKnow</string>
+    <string name="fail_to_get_intalled_users">Fail to get installed users.</string>
+    <string name="sync_apk_failed">Sync apks failed</string>
+    <string name="tab_app">Lib</string>
+    <string name="tab_feed">Feeds</string>
+    <string name="tab_friends">Friends</string>
+    <string name="tab_backup">Me</string>
+    <string name="tab_more">More</string>
+    <string name="user_detail_address">Address: %1$s</string>   
+    <string name="user_detail_login_name">Login name: %1$s</string>
+    <string name="user_detail_nick_name">Name: %1$s</string>
+    <string name="user_detail_phone_number">Phone: %1$s</string>
+    <string name="user_detail_email">Email: %1$s</string>
+    <string name="user_detail_company">Company: %1$s</string>
+    <string name="user_detail_department">Department: %1$s</string>
+	<string name="user_detail_job">JobTitle: %1$s</string>
+
+    <string name="user_detail_birthday">Birthday: %1$s</string>
+    <string name="user_detail_concern">Friends: %1$s</string>
+    <string name="user_detail_follower">Fans: %1$s</string>
+    <string name="user_detail_favourite">App Favorites: %1$s</string>
+    <string name="user_detail_share">Photo: %1$s</string>
+    <string name="user_detail_borqsid">BorqsID: %1$s</string>
+    <string name="user_detail_gender">Gender: %1$s</string>
+    <string name="user_detail_jobtitle">Job Title: %1$s</string>
+
+    <string name="user_detail_edit_image">Edit image</string>
+    <string name="feedback_qiupu">Feedback</string>
+    <string name="version_check_qiupu">Check update</string>
+
+    <string name="string_show">Show</string>    
+    <string name="feedback_submit">Submit</string>
+     <string name="feedback_hint">Say something...</string>
+     <string name="version_checking">Checking....</string>
+     <string name="check_back">The version is up to date!</string>
+     <string name="feedback_submission">Feed back submission...</string>
+     <string name="feedback_submission_successful">Feedback successfully</string>
+	<string name="feedback_submission_failed">Feedback failed</string>
+     <string name="add_favorites">Add favorites</string>
+     <string name="remove_favorites">Unfavorite</string>
+     <string name="edit_profile_address">Edit address</string>
+	<string name="edit_profile_phone_number">Edit phone number</string>
+	<string name="edit_profile_company">Edit company</string>
+	<string name="edit_profile_nick_name">Edit name</string>
+
+	 <string name="edit_profile_address_hint">Input address</string>
+	 <string name="edit_profile_nick_name_hint">Input name </string>
+	<string name="edit_profile_phone_number_hint">Input phone number</string>
+	<string name="edit_profile_emmail_hint">Input Email</string>
+	<string name="edit_profile_company_hint">Input company</string>
+	<string name="edit_profile_update_dialog">Updating to server</string>
+	<string name="edit_profile_input_null">Content can not be empty</string>
+	<string name="edit_profile_update_suc">Update successfully</string>
+
+     
+     
+     <string name="operate_succeed">Operate successfully</string>
+     <string name="already_in_favorite">Already in favorites.</string>
+     <string name="edit_profile_img_location">Choose photo</string>
+	<string name="edit_profile_img_camera">Take photo</string>
+	<string name="take_photo">Take Photo</string>
+    <string name="phone_album">Choose Existing</string>
+	<string name="others_favorites">%1$s favorites</string>
+     <string name="qiupu_exit_title">Exit</string>
+     <string name="qiupu_exit_message">Are you sure to exit?</string>
+     <string name="recommend_success">Recommend friends successfully</string>
+     <string name="recommend_failed">Recommend friends failed</string>
+     
+     
+     <string name="recommend_from_user">Recommend from %1$s</string>
+     <string name="user_suggest_attention">request attention</string>    
+     <string name="user_suggest_both_know">mutual friend(s)</string>
+    <string name="user_suggest_from_my_addressbook">In my contact list</string>
+    <string name="user_suggest_from_both_addressbook">Mutual person in contact list</string>
+    <string name="user_suggest_have_my_contact">Own my contact info</string>
+    <string name="user_suggest_from_work_info">Mutual work background</string>
+    <string name="user_suggest_from_education_info">Mutual education background</string>
+    <string name="user_suggest_from_server">Recommend from system</string>
+    
+    <string name="recommend_from_title">Recommend from</string>
+    
+    
+     <string name="pref_pic_show">Show screen snaps</string>
+     <string name="pref_pic_show_summary">Enable to show screen snaps</string>
+     	
+     <string name="qiupu_invite">Invite</string>
+     <string name="qiupu_abandon">Abandon</string>
+     <string name="invite_contact">Invite contact</string>
+     <string name="select_all">Select all</string>
+     <string name="download_from_mm">Download from mobile market</string>
+     <string name="send_message_successful">Send successfully</string>
+     <string name="send_sms_success">Send message success.</string>
+     <string name="send_email_success">Send email success.</string>
+     <string name="send_message_failed">Send failed</string>
+     <string name="qiupu_invite_message_content">(%1$s) %5$sappreciates you as %2$s buddy, approve by:%4$saccount/invite?info=%3$s</string>
+     <string name="qiupu_invite_message_exchange_vcard_content">(%1$s) %5$sappreciates you exchange profile in %2$s, approve by:%4$saccount/invite?info=%3$s</string>
+     <string name="to_say">says：</string>
+     <string name="send_invitation_dialog_title">Invitation Buddy</string>
+     <string name="message_invite_dialog_message">Send Message to: </string>
+     <string name="email_invite_dialog_message">Send Email to: </string>
+     <string name="stream_filter">Filter</string>
+     <string name="send_action_title">Send</string>
+     <string name="string_post_towall">Post to Wall</string>    
+     <string name="select_one_user">Please select one contact</string>
+     <string name="address_hint_share">Recipient(default everyone) </string>
+     <string name="share_secretly">share secretly</string>
+     <string name="phone_action">Phone</string>
+     <string name="phonebook_call">Call:</string>
+     <string name="phonebook_message">Message:</string>
+
+     <string name="contact_select">Send(%1$s)</string>
+     <string name="email_comefrom_qiupu">Email from application share</string>
+     <string name="clear_cache">Confirm clear cache</string>    
+     <string name="privacy_show">It is need to enter the recipient with secretly share</string>
+     <string name="common_know">Both know</string>
+     <string name="users_inline_search_hint">Name/Phone/Email</string>    
+     <string name="comments_remove">Remove comment</string>     
+     <string name="stream_remove">Remove sharing</string>
+     <string name="application_serch_hint">Type searching Apps</string>
+     <string name="operate_failed">"Operate failed! %1$s"</string>
+     <string name="activity_not_found">Application is not installed.</string>
+     <string name="application_not_found_title">Application is not found</string>
+     <string name="application_not_found_message">Click OK to search via the android market</string>
+     <string name="pref_link_market">Link to android market</string>
+    <string name="pref_link_market_summary">Have no relevant applications, links to search for android market</string>
+
+     <string name="pref_auto_install">Auto Install</string>
+     <string name="pref_auto_install_summary">Auto install application after download.</string>
+     <string name="pref_market_page">Application page</string>
+     <string name="pref_market_page_summary">Show application details information in Google market.</string>
+
+
+
+    <string name="qiupu_delete_apks">Delete backups</string>
+    <string name="select_one_app">You did not choose any app</string>
+    <string name="qiupu_delete_apks_message">Click OK to delete the selected apps</string>
+    <string name="qiupu_delete_apks_message_detail">Click OK to delete the app has been backed up</string>
+    <string name="qiupu_deleting_apks">Deleting, please wait...</string>
+    <string name="string_select_app">Application select</string>
+    <string name="string_click_onemore_exit">Click back key again to exit.</string>
+    <string name="apk_current_version">Version: %1$s</string>
+    <!-- string name="install_apk_to_post_stream">%1$s installed %2$s, Everybody comes together and play~</string
+-->
+    <string name="install_apk_to_post_stream">安装了%1$s,大家一起来玩吧~</string>
+    <string name="post_message_last_index_of">安装了</string>
+    <string name="post_message_index_of">,大家一起来玩吧</string>
+    
+    <string name="install_app_share_title">Auto share</string>
+    <string name="install_app_share_summary">Auto post a stream after application installation</string>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="category_app">Category</string>
+
+    <string name="qiupu_update_all">Update all</string>
+    <string name="qiupu_backup_all">Backup all</string>
+    
+    <string name="qiupu_my_apk_local">Installed</string>
+    <string name="qiupu_my_apk_server">Absent</string>
+    
+    <string name="send_email_dialog_title">Send Email</string>
+    <string name="send_email_dialog_message">Invite friends via Email</string>
+    <string name="email_invite_title">Email inviting</string>
+    <string name="phone_invite_title">Message inviting</string>
+    <string name="email_invite_summary">Sending...</string>
+    <string name="sub_category_title_application">Applications</string>
+    <string name="sub_category_title_topic">App topic</string>
+    <string name="sub_category_title_game">Games</string>
+
+    <string name="post_prompt">点击获取:</string>
+     <string name="app_type_hot">Hot</string>
+      <string name="invite_dialog_name">Name:</string>
+     <string name="invite_dialog_phone">Phone:</string>
+     <string name="invite_dialog_email">Email:</string>
+     <string name="invite_dialog_toast">Please enter name and contact info</string>
+    <string name="qiupu_my_apk_all">All</string>
+     <string name="tutorial_goto_login">Together, should not be so lonely!\n\nJoin now.</string>
+     <string name="relative_apps">Other versions</string>
+
+    <string name="pref_user_privacy_setting">Privacy settings</string>
+
+
+
+    <string name="sub_category_title_master">Apps master</string>
+    <string name="download_current_version">Download %1$s version</string>
+
+    <string name="account_service_deny">Invalid account</string>
+    <string name="account_service_deny_msg">Failed to get account from Borqs Account service, it properly causes by signature conflict. You could cancel the dialog, and run without account.</string>
+
+    <string name="version_outdate">Invalid version</string>
+    <string name="version_outdate_msg">The current version is too old, MUST update to latest version. </string>
+
+    <string name="version_update">New version available</string>
+    <string name="version_update_msg">There is a new version, please update. </string>
+    <string name="installing_package">Installing %1$s</string>
+    <string name="check_voice_app">You do not have voice Search app. Please download and install it.</string>
+    <string name="voice_dialog_title">Select content</string>
+    <string name="app_intro_out">Expand</string>
+    <string name="app_intro_in">Close</string>
+    <!-- <string name="from_device">"\nfrom %1$s, %2$s"</string> --> 
+    <string name="from_device_single">"\n %1$s</string>
+    <string name="from_device">"\n %1$s, %2$s</string>    
+    <string name="confirm_app_install">Install application</string>
+    <string name="dlg_msg_app_install">Start to download and install the necessary application.</string>
+
+    <string name="user_circles">Circles</string>
+
+
+
+    <string name="title_request_account_login">Need login</string>
+    <string name="dlg_msg_request_account_login">Please login with a Borqs account.</string>
+     <string name="circle_detail_people">People</string>
+    <string name="circle_detail_post">Posts</string>
+
+    <string name="add_to_circle">Add Friends</string>
+    <string name="create_new_circle">Create Group</string>
+    <string name="new_circle_dialog_title">Create Group</string>
+
+    <string name="create_circle_process">Doing, please wait...</string>
+    <string name="circle_exists">The group already exists</string>
+    <string name="set_friends_circle">Doing, please wait...</string>
+    <string name="delete_user_from_circle_title">Remove user</string>
+    <string name="delete_user_from_circle_message">You have not selected any circle, the user will be removed from your circles</string>
+    <string name="privacy_settings">Set privacy</string>
+    <string name="privacy_settings_phonebook_title">Contact info</string>
+    <string name="privacy_settings_phonebook_summary">set privacy to phone number/email</string>
+    <string name="privacy_settings_other_info_title">Other info</string>
+    <string name="privacy_settings_other_info_summary">Set privacy to base info </string>
+    <string name="share_to_circle">Select circle(Default to all circles)</string>
+     <string name="share_to_default_setting">Default settings</string>
+     <string name="update_phonebook_permission">Set phoneBook Privacy</string>
+     <string name="share_compose_title">Share</string>
+
+
+     <string name="detail_grid_book">Book</string>
+    <string name="detail_grid_app">App</string>
+    <string name="detail_grid_music">Music</string>
+    <string name="install_inconsistent_certificates">Found inconsistent certificates, please uninstall previous applications and re-install.</string>
+    <string name="recommend_qiupu_desc">Find more fun applications from your friends, recommend you download WuTong, click the url to download, %1$s</string>
+    <string name="title_my_app">Apps</string>
+    <string name="invite_sim">Sim</string>
+    <string name="invite_phone">Phone(%1$s)</string>
+    <string name="invite_email">Email(%1$s)</string>
+    <string name="bolcked_circle">Block</string>
+    <string name="address_book_circle">Exchange profile</string>
+    <string name="default_circle">Following</string>
+    <string name="family_circle">Family</string>
+    <string name="close_friends_circle">Friends</string>
+    <string name="acquaintance_circle">Acquaintances</string>
+    <string name="delete_circle_process">Deleting, please wait...</string>
+    <string name="delete_post_title">Delete stream</string>
+    <string name="delete_circle_title">Delete group</string>
+    <string name="delete_circle_message">Do you want to delete the group? </string>
+    <string name="location_at">My location</string>    
+    <string name="title_no_connectivity">Unable to connect</string>
+    <string name="dlg_msg_no_active_connectivity">No valid network, check the settings and retry.</string>
+
+    <string name="signup_application_upload_title">Instance Backup</string>
+    <string name="signup_application_upload_header">Automatically backup those applications (.apk) in your device that is newer than those in remote server.</string>
+    <string name="signup_application_upload_desc">Backup the applications (.apk) to a remote server. You can choose to restore them at any time to any of your phone or pad.</string>
+    <string name="signup_application_upload_warning">Backup over mobile network will use your data connection.  You can turn this off at any time in Settings.</string>
+    <string name="signup_application_upload_radio_1">Over Wi-Fi or mobile network</string>
+    <string name="signup_application_upload_radio_2">Over Wi-Fi only</string>
+    <string name="signup_application_upload_radio_3">Disable Instant Backup</string>
+    <string name="title_people">People</string>
+    <string name="title_my_fans">My Fans</string>
+    <string name="Privacy_circle_summary">People allowed to view my profile</string>
+    <string name="people_circle_summary">Allow to view my profile.</string>
+
+    <string name="pref_borqs_debug_log">Http Log</string>
+    <string name="pref_borqs_debug_log_summary">Print http response log</string>
+    <string name="refuse_user_title">Ignore recommend</string>
+    <string name="refuse_user_message">Sure ignore this user?</string>
+    <string name="add_friends_to_privacy_circle">Allow more people to view my profile </string>
+
+
+    <string name="empty_notification">There is no notification yet, click to refresh.</string>
+    <string name="new_notification_content">You get %d unread notification, click to view.</string>
+    <string name="update_notification_note">You have %d notification updated.</string>
+    <string name="notification_unread_count">(%d Unread)</string>
+    <string name="notification_download_failed">Network issue, failed to update notifications.</string>
+    <string name="notification_none">No new notification</string>
+    <string name="delete_user_title">Delete User</string>
+    <string name="delete_user_from_privacy_circle">Not allow the user to view my profile?</string>
+    <string name="request_see_profile">request to exchange profile with you.</string>
+    <string name="other_more_people">" and %1$s others"</string>
+    <string name="request_to_concern">Request to join your circle</string>
+    <string name="request_to_add_friends">Added you into his circle.</string>
+    <string name="request_to_change_phone">Suggest to update your phone：%1$s to %2$s</string>
+    <string name="request_to_change_email">Suggest to update your email：%1$s to %2$s</string>
+    <string name="request_event_invite">Invite you to join event %1$s</string>
+    <string name="request_event_join">Applied to join your event %1$s</string>
+    <string name="request_circle_invite">Invite you to join circle %1$s</string>
+    <string name="request_circle_join">Applied to join your circle %1$s</string>
+    <string name="request_exchange_info">Request to exchange info with you</string>
+    <string name="string_settings">Settings</string>    
+    
+    <string name="pref_notification_setting">Notifications settings</string>
+	<string name="pref_notification_enable">Receive notifications</string>
+    
+    <string name="pref_request_setting">Requests settings</string>
+    <string name="request_notification_enable">Time to receive</string>
+	<string name="pref_request_vibrate">Vibrate</string>
+	<string name="pref_request_vibrate_desc">Vibrate on incoming notifications</string>
+	<string name="request_list_title">Refresh interval</string>
+    <string name="requset_summary">Refresh interval</string>
+	
+
+	
+    <string name="privacy_circle_select_summary">please select one group.</string>
+    <string name="request_process_title">Requesting...</string>
+    <string name="request_ok">send successfully</string>
+    <string name="set_user_process_title">Setting, please wait...</string>
+    <string name="add_people_to_circle">Add people</string>
+    <string name="request_concern">Attention</string>
+    <string name="say_hi">Say Hi!</string>
+    <string name="change_request_phone">Request to modify phone</string>
+    <string name="change_request_email">Request to modify email</string>
+    <string name="menu_bpc_post_msg">Send message</string>
+    <string name="menu_add_shortcut">Add as favorites</string>
+    <string name="menu_remove_shortcut">Remove from favorites</string>
+    <string name="menu_remove_all_shortcut">Remove all favorites</string>
+    <string name="register_ok_tutorial">Registered, please enter mail to confirmation.</string>
+    <string name="main_page">Main Page</string>
+    <string name="main_page_may_know">Suggestions</string>
+    <string name="history_people">Favorites</string>
+    <string name="request_see_user_profile">Request to view profile</string>
+    <string name="qiupu_delete_people">Delete people</string>
+    
+    <string name="menu_exchange_profile">Request exchange profile.</string>
+    <string name="menu_exchange_profile_desc">Request exchange profile.</string>
+    <string name="set_contact_info_title">Set contact info</string>
+    <string name="set_profile_phone">Phone:</string>
+    <string name="set_profile_email">Email:</string>
+    <string name="set_profile_summary">Complete your contact info,you can find more friends</string>
+
+
+    <string name="update_contact_info">Update info</string>
+    <string name="already_send_request">request sent</string>
+    <string name="already_exchange_info">exchanged profile</string>
+    <string name="stream_make_friends"> added %1$s as friends.</string>
+    <string name="already_bind">Verified</string>
+    <string name="add_more_info">Add more Info</string>
+    <string name="add_more_item_phone">Phone</string>
+    <string name="add_more_item_email">Email</string>    
+    <string name="network_exception">Network issue, check data connection and try later.</string>
+
+    <string name="user_share_item">Seed</string>
+    <string name="apk_shared_item_label">Apps</string>
+
+    <string name="add_info_title">Add info</string>
+    <string name="add_info_email">Save and send validation email</string>
+    <string name="add_info_phone">Save and send validation message</string>
+    <string name="add_email_title">Bind Email</string>
+    <string name="add_phone_title">Add Phone</string>
+    <string name="add_email_edit_hint">Please input email</string>
+    <string name="add_phone_edit_hint">Please input phone</string>
+    <string name="add_phone_summary">Add detailed info can help you to search friends</string>
+    <string name="add_email_summary">Register detailed info can help you to login,reset password and search friends</string>
+    <string name="add_info_failed">add failed</string>
+    <string name="add_info_process">Is updated to the server</string>
+    <string name="geo_location_at">at %1$s</string>
+    <string name="geo_location_on">, on %1$s</string>
+    <string name="geo_location_in">, in %1$s</string>
+    <string name="get_location_failed">Get location failed</string>
+    <string name="add_info_bind_email_summary">Bound email</string>
+    <string name="add_info_bind_phone_summary">Bound phone</string>
+    <string name="delete_bind">Unbind and remove</string>
+    <string name="resend_message_verify">Re-send the verify message</string>
+    <string name="resend_email_verify">Re-send the verify email</string>
+    <string name="update_info_phone">update phone</string>
+    <string name="update_info_email">update email</string>
+    <string name="delete_info_email">delete email</string>
+    <string name="delete_info_phone">delete phone</string>
+    <string name="not_delete_last_bind">can not delete the last bound item</string>
+    <string name="have_no_change">No changes found</string>
+    <string name="add_email_suc">Add successfully, please check your email</string>
+    <string name="add_phone_suc">Add successfully</string>
+    <string name="update_contact_info_btn">Update</string>
+    <string name="delete_email_message">Sure to delete the email</string>
+    <string name="delete_phone_message">Sure to delete the phone</string>
+    <string name="selected_one_user">Please select a user</string>
+    <string name="notification_set">Notifications settings</string>
+    
+    <string name="notification_title_mention_me">mention me</string>
+    <string name="notification_title_stream">stream</string>
+    <string name="notification_set_failed">Notification set failed</string>
+    
+    <string name="notification_accept_suggest">Becoming friends based on my recommendation</string>
+    <string name="notification_my_app_comment">Commented app from my share</string>
+    <string name="notification_my_app_like">Liked app from my share</string>
+    <string name="notification_new_follower">Have new follower</string>
+    <string name="notification_profile_update">My friends updated his profile</string>
+    <string name="notification_app_share">Share app to me</string>
+    <string name="notification_other_share">Share other info to me</string>
+    <string name="notification_my_stream_comment">Commented on my post</string>
+    <string name="notification_my_stream_like">Add like to my post</string>
+    <string name="notification_my_stream_retweet">Forward my post</string>
+    <string name="notification_suggest_user">Some friends recommended to me</string>
+     <string name="input_valid_email">Please enter a valid email</string>
+    <string name="input_valid_phone">Please enter a valid phone</string>
+    <string name="circle_select_title">Add friend to group(s)</string>
+    <string name="have_no_request_info">All requests were responded.</string>
+    <string name="request_exchange">Agree</string>
+    <string name="friends_item_request_exchange">exchange</string>
+    <string name="request_exchange_card_again">Exchange again</string>
+    <string name="request_ignore">Ignore</string>
+    <string name="have_no_suggest_user">All candidates were responded.</string>
+
+    <string name="stream_head_refresh">drop down to refresh</string>
+    <string name="stream_head_refreshing">Refreshing, please wait...</string>
+    <string name="stream_head_Last_updated">Last updated:%1$s</string>
+    <string name="stream_head_release">Release to refresh...</string>
+    <string name="post_toggle_location">Toggle location</string>
+    <string name="post_add_app">attach app</string>
+    <string name="post_add_book">attach book</string>
+    <string name="post_add_music">attach music</string>
+
+    <!-- Clings -->
+    <!-- The title text for the workspace cling [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_title">Let\'s do better</string>
+    <!-- The description of how to use the workspace [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_hint_item">Better serve after you sign up.</string>
+    <!-- The description of how to open all apps from the workspace [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_sign_up">To tell us who you are, touch the circle.</string>
+    <!-- The title text for the All Apps cling [CHAR_LIMIT=none] -->
+    <!--<string name="all_apps_cling_title">Choose some apps</string>-->
+    <!-- The description of how to pick up and add an item to the workspace [CHAR_LIMIT=none] -->
+    <!--<string name="all_apps_cling_add_item">To add an app to your home screen, touch &amp; hold it.</string>-->
+    <!-- The title text for the Folder cling [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_title">Organize your apps with folders</string>-->
+    <!-- The description of how to move an app [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_move_item">To move an app, touch &amp; hold it.</string>-->
+    <!-- The description of how to create a folder [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_create_folder">To make a new folder on your home screen, stack one app on top of another.</string>-->
+    <!-- The text on the button to dismiss a cling [CHAR_LIMIT=none] -->
+    <string name="cling_dismiss">OK</string>
+
+    <string name="search_from_net_title">Network</string>
+    <string name="search_input_tutorial">Please input at least two characters</string>
+    <string name="app_search_have_no_change">input key has no change</string>
+    
+    <string name="top_category_app">Applications</string>
+    <string name="top_category_game">Games</string>
+
+    <string name="all_app_header">All</string>
+    <string name="app_header">Applications</string>
+    <string name="game_header">Game</string>
+    
+    <string name="set_apk_permission_ok">Operate successfully</string>
+    <string name="set_apk_permission_failed">Fail to set permission</string>
+    
+    <string name="tutorial_uninstall">For new version update, you need uninstall previous install borqs sync application</string>
+    <string name="tutorial_uninstall_notification">For new version update, you need uninstall previous install borqs notification service.</string>
+    <string name="other_profile_have_no_status">This guy is lazy,did not say anything...</string>
+    <string name="my_profile_have_no_status">Say something...</string>
+    <string name="phone_email_title">Phone and Email</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="base_info_title">Base Info</string>    
+    
+    <string name="sim_state_absent">Please insert SIM card</string>
+
+    <string name="home_appbox">AppMan</string>
+    <string name="edit_profile_title">Edit profile</string>
+    
+    <string name="title_about_me">About_Me</string>
+    <string name="update_profile_sex_title">Gender</string>
+    <string name="update_profile_name_hint">Name</string>
+    <string name="update_profile_address_hint">Address</string>
+    <string name="update_profile_address_hint_en">English Address</string>
+    <string name="update_profile_company_hint">Company</string>
+    <string name="update_profile_department_hint">Department</string>
+    <string name="update_profile_job_hint">JobTitle</string>
+    <string name="update_profile_birthday_hint">Birthday</string>
+    <string name="set_birthday_title">Set birthday</string>
+    
+    <string name="app_box_up_to_date">"    All applications were up to date.\n\n    We are hungry for your voice."</string>
+    <string name="app_box_empty_backup">"    Auto backup apps were restored.\n\n    We are hungry for your voice."</string>
+    <string name="update_my_status_title">Update status</string>
+    <string name="my_status_title">My status</string>
+    <string name="update_my_status_hint">your thoughts...</string>
+
+    <string name="test_server_url_set_exchange">Switch</string>
+    <string name="test_server_url_set_warning">Existing Borqs Account will be remove while switching to the other server. Please activate a valid account on the server later.</string>
+    <string name="test_server_url_current_release">Release server was in use, switch to internal debug server now?</string>
+    <string name="test_server_url_current_debug">Debug server was in use, switch to formal release server?</string>
+
+    <string name="guest_nickname">Guest</string>
+
+    <string name="pref_dev_feature">Try developing feature</string>
+    <string name="pref_dev_feature_summary">Have a try for SNS share platform，extra Bpc icon will show in all apps list of Launcher.</string>
+
+    <string name="configure_debug_option_title">Wutong Debug Options</string>
+    <string name="configure_debug_option_summary">Configure HTTP log, Switch servers, Enable developing feature try.</string>
+
+    <string name="dialog_title_formal_server_migration">Migration To Formal Server</string>
+    <string name="dialog_message_formal_server_migration">The formal server is ready for use, let\'s go and play there.（The current account on test server will be kept, and could be switched back via Setting option）</string>
+
+    <string name="pref_string_version_check_title">Check New Version</string>
+    <string name="pref_string_version_check_summary">Current version %1$s, check latest version</string>
+
+        <string name="create_circle_hint">Name</string>
+
+    <string name="key_stream_reforming_feature_title">Try The Reforming Stream View</string>
+    <string name="key_stream_reforming_feature_summary">Stream presentation is on going，any comments and suggestion are welcome.</string>
+    <string name="key_tabui_feature_title">Tab style UI</string>
+    <string name="key_tabui_feature_summary">Select this, will show tab style. Need restart the application</string>
+    
+    <string name="friends_exchenge_info_allow">(Allow to view my profile)</string>
+    <string name="friends_exchenge_already_send_request">Already send exchange request</string>
+    <string name="friends_exchenge_already_exchange_info">Exchanged profile</string>    
+    <string name="key_download_feature_title">Use system download manager</string>
+    <string name="key_download_feature_summary">System download service take responsibility to download applications</string>
+    
+        <string name="exchange_request_title">Exchange</string>
+        <string name="suggest_request_title">Suggest</string>
+
+    <string name="menu_mute_post">Mute</string>
+    <string name="menu_mute_all_his_post">Mute him or her</string>
+    <string name="mute_object_suc">Mute successfully</string>
+    <string name="mute_object_failed">Mute failed</string>
+    <string name="menu_report_abuse">Report abuse</string>
+    <string name="report_abuse_suc">Report abuse successfully</string>
+    <string name="report_abuse_failed">Report abuse failed</string>
+    <string name="menu_delete_comment">Delete</string>
+    <string name="menu_remove_post">Delete</string>
+
+    <string name="menu_like_people">Like By</string>
+
+    <string name="pref_string_privacy_info_title">Privacy Info</string>
+    <string name="pref_string_privacy_info_summary">How do you store and share my info?</string>
+    <string name="pref_string_privacy_info_description">You agree that Borqs may use your application information to improve Borqs\'s products and services. Borqs use of your information is subject to Borqs\'s Privacy Policy - http://www.borqs.com. Borqs may share the information you provide with the third party developer(s) of this application. Such third party developer(s) use of your information will be subject to its own privacy policy.</string>
+
+    <string name="context_menu_comment_title">%1$s\'s comment</string>
+	<string name="context_menu_stream_title">%1$s\'s post</string>
+    <string name="context_menu_stream_title_readonly">%1$s\'s set the post as READ-ONLY</string>
+
+    <string name="pref_push_service_setting">Instance Push Service</string>
+    <string name="pref_string_push_service_enable_title">Enable Instance Push Service</string>
+    <string name="pref_string_push_service_enable_summary">To receive notifications, request and others info instantly, please enable this service, which might consume some battery energy</string>
+
+    <!-- compose visibility -->
+    <string name="visibility_compose_anyone">Visibility(Anyone)</string>
+    <string name="visibility_compose_contact">Visibility(Recipient only)</string>
+    <string name="visibility_dialog_title">Visibility</string>
+    <string name="location_text">No location attached</string>
+    <string name="location_progress_bar_text">Getting location...</string>
+    <string name="location_empty_text">Can\'t get locations.</string>
+    <!--<string name="location_position">I\'m here：</string>-->
+    <string name="location_title">Location</string>
+    <string name="history_location">History Location</string>
+    <string name="location_message">Can\'t determine your location. Do you want to adjust your settings now?</string>
+    <string name="add_attachment">Attachment</string>
+    <string name="compose_replace">Replace</string>
+    <string name="compose_delete">Delete</string>
+    <string name="attach_link">Link</string>
+    <string name="replace_message">Only support one %1$s, select a new %2$s to replace the current one?</string>
+    <string name="delete_message">Delete this %1$s?</string>
+    <string name="share_message">Do you openly share this contact?</string>
+    <string name="share_message2">Must have a recipient and share secretly!</string>
+    <string name="import_vcard_failed">Import contact failed!</string>
+    <string name="import_vcard_success">Import contact success!</string>
+    <string name="nfc_text">Exchange profile by NFC</string>
+    <string name="has_vcard_tips">You have selected contact(s), so it must be shared secretly.</string>
+    <string name="attach_app">Application</string>
+    <string name="attach_photo">Photo</string>
+    <string name="attach_people">Contacts</string>
+    <string name="attach_file">File</string>
+    <string name="tmp_photo_toast">It will support in the future.</string>
+    <string name="have_select_link">You have selected one link.</string>
+    <string name="have_select_app">You have selected one application.</string>
+    <string name="have_select_photo">You have selected one photo.</string>
+    <string name="phone_way">phone：</string>
+    <string name="email_way">email：</string>
+    <string name="import_vcard">Import info</string>
+    <string name="exchange_vcard_by_nfc">Exchange profile</string>
+    <string name="import_vcard_message">Do you want to import this contact？</string>
+    <string name="nfc_exchange_vcard_succeed">Send profile success.</string>
+    
+    <string name="my_card">My info</string>
+    <string name="received_card">Received info</string>
+    <string name="no_available_nfc">NFC is not available on this device.</string>
+    
+    <string name="nfc_tip_title">Tips：</string>
+    <string name="nfc_tip_content1">1.Enter settings，set NFC on.</string>
+    <string name="nfc_tip_content2">2.Back-to-back with phone and exchange.</string>
+    <string name="no_vcard_in_box">Not receive info.</string>
+    <string name="no_vcard_out_box">Not send info.</string>
+    <string name="commments_tips_title">Share post</string>
+    <string name="comments_tips_message">This post was originally shared with a limited audience. Remember to be thoughtful about who you share it with.</string>
+
+    <!-- add friends activity -->
+    <string name="add_friend_title">Add Friends</string>
+    <string name="recommend_friends">Recommend friends</string>
+    <string name="email_address">Email</string>
+    <string name="phone_number">Phone</string>
+    <string name="invite_friends">Invitation</string>
+    <string name="or">or</string>
+    <string name="friends">Friend</string>
+    <string name="invite_input_null_tip">Please input email or phone number.</string>
+    <string name="invite_tip">Invite a friend to enjoy Path too! Just type their email address or phone number and send...</string>
+    <string name="people_in_qiupu">People on WuTong</string>
+    <string name="people_out_qiupu">Invite to WuTong</string>
+    <string name="no_people_in_qiupu">No contacts in WuTong.</string>
+    <string name="no_people_in_contact">No contacts.</string>
+    <string name="invite_message">Do you invite this Contact ?</string>
+    <string name="send_sms_to">Send  sms  to：</string>
+    <string name="send_email_to">Send email to：</string>
+    <string name="invite_hint_text">Say a word to %1$s</string>
+    <string name="reach_max_length">The content has reached maximum(70 letters).</string>
+    <string name="feedback_hint_text">You can enter 70 letters</string>
+
+    <string name="from_fans_title">Fans</string>
+    <string name="from_contact_title">Contact</string>
+    <string name="from_invite_title">Invite</string>
+    <string name="from_suggestion_title">Suggestion</string>
+
+    <string name="from_fans_detail">Add friends from your fans.</string>
+    <string name="from_contact_detail">Add friends from your contacts.</string>
+    <string name="from_invite_detail">Invite friends to join by email or phone.</string>
+
+    <string name="bpc_tab_label">AppBox</string>
+    <string name="tab_app_feed">Play</string>
+    <string name="tab_message">Messages</string>
+    <string name="tab_lobby">Square</string>
+
+    <string name="menu_comment_attribute_enable">Enable comments</string>
+    <string name="menu_comment_attribute_disable">Disable comments</string>
+    <string name="menu_like_attribute_enable">Enable like</string>
+    <string name="menu_like_attribute_disable">Disable like</string>
+    <string name="menu_share_attribute_enable">Enable Reshare</string>
+    <string name="menu_share_attribute_disable">Disable ReShare</string>
+    
+        <string name="progressdialog_loading">loading...</string>
+    <string name="key_simple_ui_feature_title">Show Recommendation and Favorites</string>
+    <string name="key_simple_ui_feature_summary">Not choose, will show just one dashboard</string>
+    
+        
+    <string name="dialog_like_user_title">+1\'ed by</string>
+    <string name="userdetail_title_from_share">set to my profile icon</string>
+    
+     <string name="pull_to_refresh_pull_label">drop down to refresh</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Refreshing, please wait...</string>
+    <string name="pull_to_refresh_tap_label">Refreshing, please wait...</string>
+
+    <string name="key_monthly_sprint_feature_title">Try sprint feature</string>
+    <string name="key_monthly_sprint_feature_summary">Try developing monthly sprint feature</string>
+    
+        <string name="key_monthly_new_platform_feature_title">Try new platform feature</string>
+        <string name="key_use_contact_edit_title">try ics contact edit</string>
+        <string name="key_show_album_title">try show user album</string>
+    
+    <string name="current_work">Current_Work</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="add_work_history">Add Work History</string>
+    <string name="add_edu">Add Education</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="confirm_delete_work">Really delete Work Experience?</string>
+    <string name="confirm_delete_record">Really delete this Record?</string>
+    <string name="set_begin_date">Set Begin Date</string>
+    <string name="set_end_date">Set End Date</string>
+    <string name="begin_end_date">Date</string>
+    <string name="begin_date">Begin Date</string>
+    <string name="end_date">End Date</string>
+    <string name="begin_date_not_null">Begin Date is not null</string>
+    <string name="end_date_not_null">End Date is not null</string>
+    <string name="job_description">Job Description</string>
+    <string name="education">Education</string>
+    <string name="school">School</string>
+    <string name="school_type">Type</string>
+    <string name="school_location">Address</string>
+    <string name="school_class">Class</string>
+    <string name="degree">Degree</string>
+    <string name="major">Major</string>
+     <string name="user_gender">Gender</string>
+	<string name="user_address">Address</string>
+	<string name="nickname">Nick Name</string>
+	<string name="user_birthday">Birthday</string>
+	<string name="user_borqsid">BorqsID</string>
+
+    <string name="delete_comment_title">Delete Comment</string>
+    <string name="delete_comment_message">The comment will be permanently removed, are you sure to do that?</string>
+
+    <string name="add_contact_title">Contacts</string>
+    <string name="add_contact_message">Send my contacts to our server to find family and friends</string>
+
+    <string name="disable_data_flow_saved_mode_title">Enable High Quality Mode</string>
+    <string name="disable_data_flow_saved_mode_message">Enable high quality mode with WIFI network condition, which might load possible high quality data from server, e.g., picture.</string>
+
+    <string name="enable_data_flow_saved_mode_title">Enable Auto Saved Data Mode</string>
+    <string name="enable_data_flow_saved_mode_message">Enable auto saved data flow mode with mobile network condition in order to limit the data usage.</string>
+
+    <string name="pref_enable_data_flow_saved_mode_title">Enable Auto Saved Data Mode</string>
+    <string name="pref_enable_data_flow_saved_mode_summary">To save data usage, enable this mode, so some huge data won\'t be loaded</string>
+
+    <string name="borqs_contact_title">People</string>
+    <string name="local_contact_title">Local Contacts</string>
+    <string name="local_circle_title">Manage circles</string>
+    <string name="search_hint">Search apps</string>
+    
+    <string name="search_people">People</string>
+    <string name="search_apps">Apps</string>
+    <string name="string_enter_background_share">Sharing in background task.</string>
+    <string name="string_enter_background_share_link">Sharing link in background task.</string>    
+    <string name="string_enter_background_share_app">Sharing application %1$s in background task.</string>
+    <string name="string_enter_background_share_photo">Sharing picture %1$s in background task.</string>
+    
+    <string name="say_hi_content">Hi！</string>
+    <string name="left_navigationView_search_hint">Click to search</string>
+        
+    <string name="about_version_info">Android version of WuTong\n %1$s</string>
+    <string name="about_intro">梧桐雌雄双株, 梧为雄, 桐为雌; 凤凰雌雄相像, 雄曰凤, 雌曰凰, 有诗云非醴泉不饮, 非梧桐不栖.</string>     
+    <string name="about_official_website">Official WebSite: %1$s</string>
+    <string name="about_official_weibo">Official WeiBo: %1$s</string>
+    <string name="about_copyright">梧桐工作室 版权所有 \n\n Copyright 2012 Borqs Technology Ltd, All rights reserved</string>
+    
+    <string name="resource_share_apps">Apps</string>
+    <string name="resource_share_photos">Photos</string>
+    <string name="resource_share_links">Links</string>
+    <string name="resource_share_books">Books</string>
+    <string name="resource_share_text">Text</string>
+    <string name="resource_share_static_file">Files</string>
+    <string name="resource_share_audio">Audio</string>
+    <string name="resource_share_video">Video</string>
+    
+    <string name="about_expansion">...</string>
+    <string name="contact_friends_activated">您的联系人好友: <a href="borqs://profile/details?id=%2$s">\"%1$s\"</a>已经开通了梧桐账号，赶快关注他吧</string>
+    <string name="loading_failed">Loading Failed</string>
+
+    <string name="discard_dialog_title">Post %1$s</string>
+    <string name="discard_dialog_message">Would you want to discard this %1$s?</string>
+    <string name="invite_contact_dialog_title">which Phone(Mail)?</string>
+
+    <string name="stream_choose_circle">Choose circles</string>
+    <string name="instructions">Tap screen to skip.\nSwipe left or right to view more.</string>
+    <string name="startup_header_instructions">Build connections with the people in our life</string>
+    <string name="startup_contributor_prefix">Startup photo come from: </string>
+    <string name="startup_appreciation_prefix">Appreciation to:\n  </string>
+    <string name="no_name">Unknown Name</string>
+
+    <string name="exchange_nfc_header_title">NFC exchange profile</string>
+    <string name="exchange_request_header_title">Requests for exchange profile</string>
+    <string name="exchange_send_header_title">Send info\'s friends</string>
+    <string name="exchange_shake_header_title">Shake to exchange profile</string>
+    <string name="shaking_friends">Shaking Friends</string>
+    <string name="exchange_card_holder">Exchange profile</string>
+
+    <string name="send_card_title">Sent profile</string>
+
+    <string name="circle_id_all">Friends</string>
+    <string name="circle_id_hot">What\'s Hot</string>
+    <string name="circle_id_nearby">Near By</string>
+    <string name="circle_id_public">Public</string>
+    <string name="recommend_friends_progress">Posting...</string>
+    <string name="ic_lable_photo_share">Photo Share</string>
+    <string name="repeat_select">Repeat select</string>
+    <string name="re_try_dialog_title">Notice</string>
+    <string name="re_try_button">Retry</string>
+    <string name="re_try_dialog_msg">Send failed, Retry or not?</string>
+    <string name="repeat_message">You have selected this %1$s.</string>
+    <string name="search_people_result_null">related people are not found</string>
+
+    <!-- new design -->
+    <string name="personal_infomation">Profile</string>
+    <string name="dynamic_friends">Feeds</string>
+    <string name="message_center">Message Center</string>
+    <string name="friends_circle">Circles</string>
+    <string name="event">Events</string>
+    <string name="poll">Poll</string>
+    <string name="whose_poll">%1$s\'s poll</string>
+    <string name="find_friends">Find Friends</string>
+    <string name="exchange_card">Exchange profile</string>
+    <string name="dynamic_public">Public Feed</string>
+    <string name="application_recomment">App Box</string>
+    <string name="options">Options</string>
+    <string name="public_dynamic">Public Feed</string>
+    <string name="common_item">Favorites</string>
+    <string name="plugin_item">Apps</string>
+    <string name="operation_item">Actions</string>
+
+    <string name="request_conversion">Initiate a session</string>
+    <string name="add_to_circles">Add to group(s)</string>
+    <string name="view_bpc_profile">View Personal Information</string>
+    <string name="toast_invalid_input_content">Invalid input</string>
+
+    <string name="dialog_recipient_title">Recipient List</string>
+    <string name="recipient_limit">Limit.Recipient</string>
+    <string name="recipient_public">Public.Recipient</string>
+    <string name="anonymous_public">Public</string>
+
+    <string name="add_connection">Connect</string>
+
+    <string name="prompt_mention_typing_start">Start type recipient name here.</string>
+
+    <string name="favour">Like</string>
+    <string name="cancel_favour">UnLike</string>
+    <string name="favour_people">See who liked this comment</string>
+    <string name="delete_comment">Delete</string>
+    <string name="reply">Reply</string>
+
+    <!-- absent apk category title name -->
+    <string name="in_one_week">In 1 Week </string>
+    <string name="between_week_and_month">In 1 month</string>
+    <string name="before_one_month">1 month ago</string>
+
+    <string name="profile_remark">remark</string>
+    <string name="update_remark">Edit remark</string>    
+    <string name="update_remark_title">Remark</string>
+    <string name="message_have_no_share_message">The user does not have to share Photos</string>
+    <string name="message_have_no_favorite">The user has no favorite apps</string>
+    
+    <string name="new_versioninfo_title">New version features:</string>
+    <string name="update_version_ok">Upgrade</string>
+    <string name="update_version_cancel">Not now</string>
+    <string name="update_version_info_size">version:%1$s, size:%2$s</string>
+    <string name="send_to_post">share to post</string>
+    <string name="no_user_in_circle">You have not added contacts.</string>
+
+    <string name="invalid_recipient">Invalid recipient</string>
+
+    <string name="prompt_stream_property_readonly">Read only setting items.</string>
+    <string name="prompt_stream_property_settings">Modify such setting items via option MENU.</string>
+
+    <string name="ntf_label_all_messages">All</string>
+    <string name="ntf_label_friend_suggestion">Friendship</string>
+    <string name="ntf_label_comment_to_me">Comments</string>
+    <string name="ntf_label_like_to_me">Likes</string>
+    <string name="ntf_label_share_to_me">Shares</string>
+    <string name="ntf_label_reshare_mine">Reshare</string>
+    <string name="ntf_label_profile_update">Profile update</string>
+    <string name="ntf_label_others">Misc</string>
+
+    <string name="exception_stream_removed">The message was removed or hidden.</string>
+    <string name="stream_setting">Settings</string>
+    <string name="media_play_error">Player can\'t open this file.</string>
+    <string name="play_title">Tips</string>
+    <string name="play_msg">No wifi connected, do you want to continue?</string>
+    <string name="wifi_play_msg">Wifi connected, what do you want?</string>
+    <string name="no_wifi_mobile">No valid connection.</string>
+    <string name="play_pos_button">Play</string>
+    <string name="play_neu_button">Download</string>
+
+    <string name="dialog_local_config_title">Local Configuration</string>
+    <string name="dialog_local_config_message">A local configuration found, prefer to use it? \n%1$s</string>
+    <string name="view_current_configuration">View Current Configuration</string>
+
+    <string name="public_circle_span">Circles</string>
+    <string name="local_circle_span">Friends</string>
+    <string name="recommend_people_title">recommends from wutong</string>
+    
+    
+    <string name="create_public_circle">created as a public circle</string>
+    <string name="public_circle_member_limit">member limit</string>
+    
+     <string name="public_circle_is_stream_public">publicly dynamic ?</string>
+    <string name="public_circle_can_search">can be searched ?</string>
+    <string name="public_circle_can_view_members">can see the members ?</string>
+    <string name="public_circle_can_join">Can be allowed to apply to join the circle ?</string>
+    
+    <string name="Invalid_recipient">Invalid recipient</string>
+    <string name="edit_string">Edit</string>
+    <string name="create_public_circle_title">Create Circle</string>
+    <string name="public_circle_manager_people">Manager people</string>
+    
+    <string name="public_circle_name_hint">circle name (Required)</string>
+    <string name="public_circle_des_hint">description</string>
+    
+    <string name="name_isnull_toast">name can not be null</string>
+    
+    <string name="public_circle_create_suc">Created</string>
+    <string name="public_circle_invite_message">invite friends together and play~</string>
+    <string name="public_circle_member_count">Members: %1$s</string>
+    <string name="label_description">Description</string>
+    <string name="label_description_en">English Description</string>
+    <string name="label_bulletin">Bulletin</string>
+    <string name="public_circle_special_set">Special Settings</string>
+    
+    <string name="label_name">Name</string>
+    <string name="label_name_en">English Name</string>
+    <string name="max_file_size_tip">Your uploading file has been more than %1$sM.</string>
+    
+    <string name="key_use_public_circle_ui">Open Group UI</string>
+    <string name="public_circle_add_people_hint">members</string>
+
+    <string name="edit_base_info">Circle Info</string>
+    <string name="edit_base_set_label">Circle Settings</string>
+    <string name="edit_contact_info">Contacts Info</string>
+    <string name="edit_circle_people_manager">People Manager</string>
+    <string name="edit_circle_dialog_member">Members</string>
+    
+
+    <string name="hint_search_people">Search people</string>
+    <string name="edit_base_info_title">Edit circle info</string>
+    <string name="edit_base_set_title">Edit circle settings</string>
+    <string name="edit_contact_info_title">Edit contact info</string>
+    <string name="set_image_icon">Set icon</string>
+    
+    <string name="privacy_set_title">Privacy</string>
+    <string name="privacy_set_open">Open</string>
+    <string name="privacy_set_open_summary">Anyone can see the group, who\'s in it, and what members post.</string>
+    <string name="privacy_set_closed">Closed</string>
+    <string name="privacy_set_closed_summary">Anyone can see the group and who\'s in it. Only members see posts.</string>
+    <string name="privacy_set_secret">Secret</string>
+    <string name="privacy_set_secret_summary">Only members see the group, who\'s in it, and what members post.</string>
+    
+    <string name="members_in_circle">members in circles</string>
+    <string name="members_applyed_circle">members which applyed to join</string>
+    <string name="members_invited_circle">memebers which invited</string>
+    
+     <string name="public_circle_address">Address</string>
+    <string name="public_des_info">Description</string>
+    <string name="hide_location">Hide Location</string>
+
+    <string name="send_im_message">Send Message</string>
+    <string name="im_title">Chating to %1$s</string>
+    <string name="im_tmp_title">Chat</string>
+    <string name="notification_msg">You got a new message, please have a look.</string>
+    <string name="im_more">More...</string>
+    
+    <string name="public_circle_tip_content">The following user more than one contact, select the way you want to invite.</string>
+    <string name="public_circle_role_manager">Manager</string>
+    <string name="public_circle_role_creator">Creator</string>
+    <string name="public_circle_invite_by">Invited by:%1$s</string>
+    
+    <string name="user_profile_concern">Friends</string>
+	<string name="user_profile_follower">Fans</string>
+	<string name="user_profile_favourite">Favorites</string>    
+	<string name="online_title">online</string>
+    <string name="offline_title">offline</string>
+
+    <string name="lbs_card_desc_11">Near, shaking mobile phone</string>
+    <string name="lbs_card_desc_22">exchange profile with nearby friends</string>
+
+    <string name="lbs_card_desc_1">Shaking mobile phone</string>
+    <string name="lbs_card_desc_2">exchange profile with friends</string>
+
+    <string name="shaking_distance_remote">%1$s kilometers apart</string>
+    <string name="shaking_distance_near">Within %1$s meters</string>
+    <string name="shaking_but_find_no_body">Sorry, you didn\'t find friends by shaking this time.</string>
+    <string name="shaking_progress_msg">Searching，please wait...</string>
+    <string name="shaking_exchange_apply">Exchange apply</string>
+    <string name="shaking_nothing_toast">No result, please try again...</string>
+    <string name="shaking_to_find_friends">Shaking, find your friends</string>
+    <string name="find_friends_title">Find friends</string>
+    <string name="shaking_find_friends">Shaking</string>
+    <string name="near_by_people_tips">finding near by people...</string>
+    <string name="find_no_nearby_people">Now we find nobody who also uses this function, please try again later...</string>
+    <string name="near_by_people_tab_title">Nearby people</string>
+    <string name="finding_your_friends">Finding you contact in Wutong, please wait...</string>
+
+    <string name="stream_content_share_photo">Share %1$s photos</string>
+    
+    <string name="public_circle_invite">Invite</string>
+    <string name="public_circle_apply">Join</string>
+    <string name="public_circle_apply_add">Apply to join</string>
+    <string name="find_circle_title">Find circles</string>
+    <string name="search_null_toast">Find no relevant content</string>
+
+    <string name="invite_friends_exchange_vcard">Exchange profile by inviting friends</string>
+    <string name="nfc_exchange_vcard">Exchange profile by NFC</string>
+    <string name="shaking_exchange_vcard">Exchange profile by shaking</string>
+    <string name="check_exchanged_vcard_friends">Check friends who have exchanged profile</string>
+    <string name="check_needing_handled_vcard_request">Check exchange profile request </string>
+    <string name="exchanged_vcard_people_title">Exchanged profile\'s friends</string>
+    <string name="received_card_friends">Received profile\'s friends</string>
+    <string name="card_holder_title">Exchanged profile\'s friends</string>
+    <string name="title_select_count">%1$s selected</string>
+    <string name="public_circle_remove_member_msg">Are you sure to remove the user from this group?</string>
+    <string name="public_circle_grant_title">Management authority</string>
+    <string name="public_circle_grant_manager_message">Will advanced %1$s to manager?</string>
+    <string name="public_circle_grant_member_message">Will set %1$s as member?</string>
+    <string name="apply_to_public_circle">Joining, please wait...</string>
+
+    <string name="approve_set_title">Membership Approval</string>
+     <string name="approve_set_all">Any member can add or approve members.</string>
+    <string name="approve_set_manager">Any member can add members, but an admin must approve them.</string>
+    
+   <string name="join_permission_title">Join the way</string>
+    <string name="join_permission_verified">Verify the join</string>
+    <string name="join_permission_verified_summary">the apply need administrators approved</string>
+    <string name="join_permission_to_join">Directly</string>
+    <string name="join_permission_to_join_summary">Applicants can directly add</string>
+    <string name="join_permission_forbid">Not allowed to apply to join</string>
+    <string name="join_permission_forbid_summary">Only by Administrator invited to join</string>
+
+    <string name="find_friends_intro_header">Find your phone contacts on Wutong</string>
+    <string name="find_friends_intro_continuous_footer">"We'll check your contacts on an ongoing basis to suggest new friends for you."</string>
+    <string name="find_friends_intro_skip">Skip</string>
+
+    <string name="photo_write_comments">Write some comments</string>
+    <string name="user_no_album">The User Have No Albums</string>
+    <string name="last_stream_item_load">"The oldest item loaded"</string>
+    <string name="add_other_info">Add Other Info</string>
+    
+    <string name="get_info_failed">get info failed, please refresh...</string>
+    <string name="public_circle_exit">Exit</string>
+    <string name="circle_exit_label">Exit the circle</string>
+    <string name="public_circle_exit_message">Exit?</string>
+    <string name="event_exit_message">Exit this event?</string>
+    
+    <string name="public_circle_shortcut">Create shortcut</string>
+    
+    <string name="public_circle_exit_toast">Alarm</string>
+    <string name="public_circle_exit_prompt">As the last adminstrator in the circle, you could dimiss the circle or transfer to other members while exiting?</string>
+    <string name="event_exit_prompt">As the last adminstrator in the event, you could dimiss the event or transfer to other members while exiting?</string>
+    <string name="public_circle_exit_dialog">Dismiss</string>
+    <string name="public_circle_exit_dialog_grant_mamanger">Transfer</string>
+
+    
+    <string name="invite_people_title">Invite friends</string>
+    <string name="invite_contact_with_phone">Phone contacts</string>
+    <string name="invite_contact_with_email">Email contacts</string>
+    <string name="invite_have_no_select_toast">Please select one people</string>
+    <string name="invite_progress_dialog_message">Inviting,please wait...</string>
+    
+    <string name="search_from_internet">Search all users named \"%1$s\"</string>
+    <string name="search_circle_people">Search users named \"%1$s\"</string>
+    <string name="undefind_app_id">Unknown object </string>
+    
+    <string name="request_circle_apply_label">Requests for join to circle</string>
+    <string name="request_circle_invited_label"> Requests for invited to circle </string>
+    
+    
+    <string name="photo_original_quality">Original</string>
+    <string name="photo_high_quality">HD</string>
+    <string name="photo_normal_quality">Normal</string>
+    
+    <string name="photo_user_action_save">Save photo</string>
+    <string name="photo_loading_wait">Loading,please waiting...</string>
+    <string name="photo_save_success">Saved to </string>
+    <string name="delete_photo">delete the photo</string>
+    <string name="sure_delete_photo">Sure to delete the photo</string>
+    <string name="photo_del_all">delete photo from receiver</string>
+    <string name="del_success">delete success</string>
+    <string name="del_failed">delte failed</string>
+    
+    <string name="profile_detail_info_title">Detail Info</string>
+    
+    <string name="toast_update_failed">update failed</string>
+    
+    <string name="share_album_mame">Sharing Pictures</string>
+    
+    <string name="circle_notification_set_label">Notification settings</string>
+    <string name="circle_receive_enable_label">SMS or Email Subscribe</string>
+    <string name="circle_add_receive_phone">Phone</string>
+    <string name="circle_add_receive_phone_summary">add receive phone</string>
+    
+    <string name="circle_add_receive_email">Email</string>
+    <string name="circle_add_receive_email_summary">add receive email</string>
+    
+    <string name="toast_setting">Doing, please wait...</string>
+    
+    <string name="public_circle_receive_set">Subscribe Settings</string>
+    
+    <string name="error_toast_get_failed">get failed, please try again</string>
+    <string name="open_label">Open</string>
+    <string name="close_label">Close</string>
+    <string name="create_group_label">Create Group</string>
+
+    <string name="wutong_service">WuTong Service</string>
+    <string name="wutong_account_service">WuTong Account</string>
+    <string name="location_progress_title">checking your location...</string>
+    <string name="share_source_label">Share</string>
+    <string name="public_circle_contact_info_label">Contact Info</string>
+    <string name="circle_profile_member_limit">member limit:%1$s</string>
+    <string name="empty_tip_title">You have exchanged profile with all friends</string>
+    
+    <string name="have_no_event">No events found.</string>
+    
+    <string name="event_start_date">Start date</string>
+    <string name="event_start_time">Start time</string>
+    
+    <string name="event_end_date">End date(optional)</string>
+    <string name="event_end_time">End time</string>
+    
+    <string name="clear">Clear</string>
+    <string name="create">Create</string>
+    
+    <string name="create_new_event_title">New Event</string>
+    <string name="event_change_theme_title">CHANGE THEME</string>
+    <string name="event_title_hint">Title (dinner,party…)</string>
+    <string name="event_title_upcoming">Upcoming</string>
+    <string name="event_title_past">Past</string>
+    <string name="delete_public_circle_message">Do you want to delete this circle?</string>
+    <string name="delete_event_message">Do you want to delete this event?</string>
+    <string name="no_such_user">User doesn\'t exist.</string>
+    
+    <string name="edit_event_title">Edit event</string>
+    <string name="select_theme">Select theme</string>
+    <string name="poll_title">Poll</string>
+    <string name="restrict_msg">you have only %1$s ticket(s)</string>
+    <string name="no_choice_msg">You have not select anything</string>
+    <string name="can_vote_msg">Poll is end</string>
+    <string name="has_voted_msg">You have voted</string>
+    <string name="poll_header_title">Poll title</string>
+    <string name="poll_header_status">Status</string>
+    <string name="poll_incoming_title">Incoming</string>
+    <string name="poll_going_title">Going</string>
+    <string name="poll_ending_title">End</string>
+    <string name="detail_poll_tip_title">Please tick your supported work and vote!</string>
+    <string name="no_deadline">No deadline</string>
+    <string name="sponsor_msg">Sponsor:%1$s</string>
+    <string name="left_time">%1$sDay</string>
+    <string name="attend_count">Attendee:%1$s</string>
+    <string name="voted_poll">I voted</string>
+    <string name="public_poll">Public poll</string>
+    <string name="poll_by_me">Poll by me</string>
+    <string name="invited_me_poll">Poll of invited me</string>
+    <string name="attend_friends_title">Friends who attended poll</string>
+    <string name="no_friend_vote">Your friends didn\'t vote</string>
+    <string name="confirm_delete_poll">Really delete the poll?</string>
+    <string name="delete_poll">Delete poll</string>
+    
+    <string name="event_in_member_title">Went</string>
+    <string name="event_waiting_title">Awaiting reply</string>
+        <string name="invite_more">Invite more</string>
+        <string name="i_am_going">i\'m going</string>
+        
+        <string name="import_to_calender">Export to calendar</string>
+        <string name="import_to_calender_successful">Export successfully</string>
+     <string name="already_import">Already export this event to calendar</string>
+        
+        <string name="view_top">Top topics</string>
+        <string name="voting_progress_mes">Voting,please wait…</string>
+        
+        <string name="vote_successfully">Vote successfully</string>
+        <string name="create_vote_successfully">Create poll successfully</string>
+        
+        <string name="vote_left_time">%1$s days left</string>
+        
+        <string name="vote_left_ticket_count">Your ticket(s): %1$s</string>
+         <string name="vote_left_ticket_zero">Your vote has finished</string>
+         
+         <string name="vote_finished">Vote done</string>
+         
+         <string name="vote_left_ticket_voted">You have voted:%1$s</string>
+    <string name="vote_left_ticket_unvote">You didn\'t vote</string>
+    <string name="top_list_title">Update title</string>
+    <string name="set_top">Set top</string>
+    <string name="cancel_top">Calcel top</string>
+    <string name="no_top_stream">No stream.</string>
+    <string name="clear_all_notification">Do you want to clear all notification?</string>
+    <string name="clear_notification_failed">Clear notification failed</string>
+    
+    <string name="invite_set_title">Whether directly add invitees</string>
+    <string name="comment_count_title">Comments:%1$s</string>
+    
+    <string name="link_title">Link</string>
+    <string name="save_link_label">Save to bookmarks</string>
+    <string name="share_link_label">Share page</string>
+    <string name="open_with_browser">Open with Browser</string>
+    
+    <string name="already_import_link">Already export this link to bookmarks</string>
+
+    <string name="post_delete_question">Do you want to delete this post?</string>
+    <string name="post_mute_question">Do you want to mute this post?</string>
+    <string name="post_report_question">Do you want to report this post?</string>
+    
+    <string name="company">Company</string>
+    <string name="my_company">My company</string>
+    <string name="company_person_count">Person count:%1$s</string>
+    <string name="department_list">Department list</string>
+    <string name="department_in_company">departments in company</string>
+    
+    <string name="does_not_repeat">One-time event</string>
+    <string name="daily">Daily</string>
+    <string name="every_weekday">Every weekday (Mon\u2013Fri)</string>
+    <string name="weekly">Weekly (every %1$s)</string>
+    <string name="monthly_on_day_count">Monthly (every %1$s %2$s)</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly_plain">Yearly</string>
+    <string name="monthly_on_day">Monthly (on day %1$s)</string>
+    <string name="yearly">"Yearly (on %1$s)</string>
+    <string name="compose_top_title">Share top news</string>
+    <string name="share_photo_title">Share photos</string>
+    <string name="other_text">Other</string>
+    <string name="add_item_title">Add poll item</string>
+    <string name="add_one_item">Add one item</string>
+
+    <string name="me">me</string>
+    <string name="back_to_top">TOP</string>
+    <string name="comment_count_label">%1$s comments</string>
+    
+    <string name="profile_control_label">Profile control</string>
+
+    <string name="insert_smiley_title">Insert smiley</string>
+    <string name="item_copy">Copy message</string>
+    <string name="content_copy">Content copy to clipboard.</string>
+    <string name="ntf_forme_label">For me</string>
+    <string name="ntf_share_label">Information share</string>
+    <string name="create_poll">Create poll</string>
+    <string name="poll_title_hint">Title(less than 25 words)</string>
+    <string name="poll_item_hint">Poll item(25字以内)</string>
+    <string name="can_poll_count_title">Can vote %1$s items</string>
+    <string name="allow_add_item_title">Allow attendee to add item</string>
+    <string name="invite_poll_attendee">invite attendee</string>
+    <string name="send_email_title">Send email to attendees</string>
+    <string name="send_email_tips">Send email</string>
+    <string name="send_sms_tips">Send message</string>
+    <string name="add_poll_item">Add poll item</string>
+    <string name="private_poll_toast">Private poll, need to add attendees</string>
+    <string name="poll_title_toast">Poll needs to add title</string>
+    <string name="poll_item_toast">Poll needs to add 2 items at least</string>
+    <string name="poll_creating_dialog_msg">In creating，please wait…</string>
+    <string name="poll_quit_dialog_msg">Do you want to discard this poll?</string>
+    <string name="poll_mode_single">One-time poll</string>
+    <string name="poll_mode_pending">Increment poll</string>
+    <string name="poll_mode_revert">Back poll</string>
+    <string name="add_poll_item_tip">You can add %1$s item.</string>
+    <string name="revert_poll_add_item_msg">You can remove the selected and add new item.</string>
+
+    <string name="invitation_message_hint">Leave a message here.</string>
+    <string name="invitation_also_send">Invitation also sends to</string>
+    <string name="invitation_also_send_none">Not send</string>
+    <string name="invitation_also_send_sms">SMS</string>
+    <string name="invitation_also_send_email">Email</string>
+    <string name="invitation_also_send_both">Both</string>
+    <string name="invitation_message_title">Inviting message</string>
+    <string name="invitation_discard_title">Discard and send</string>
+    <string name="invitation_discard_message">Discard typing message and send the invitation.</string>
+    
+    <string name="page_label">Page</string>
+    
+    <string name="create_page_label">Create Page</string>
+    <string name="page_fans_count">%1$s fans</string>
+    <string name="edit_page">Edit page</string>
+    <string name="label_fax">Fax</string>
+      <string name="label_website">Website</string>
+      
+      <string name="select_cover_photo">Select cover</string>
+      <string name="select_profile_photo">Select profile photo</string>
+      <string name="select_circle_photo">Select logo</string>
+      
+       <string name="friends_all">All friends</string>
+       <string name="group_management">Group management</string>
+       <string name="str_people">"%1$s people"</string>
+      
+      <string name="have_no_page">you have no page。</string>
+      
+      <string name="organization_circle_label">Organization</string>
+      <string name="organization_circle_summary">Company,School create an organization</string>
+      <string name="interested_circle_label">Interested Circle</string>
+      <string name="interested_circle_summary">Photography,tourism create an owner circle</string>
+      <string name="create_organization">Create Organization</string>
+      <string name="delete_page_message">Sure to delete this page?</string>
+      <string name="following">Following</string>
+      <string name="un_follow">Unfollow</string>
+      <string name="circle_as_page">As page</string>
+    <string name="item_tags">Add tag</string>
+      
+        <string name="create_class_title">Create class</string>
+      <string name="create_department_title">Create department</string>
+      <string name="create_organization_title">Create orgaization</string>
+      <string name="child_circle_label_department">Department</string>
+      <string name="child_circle_label_class">Class</string>
+      
+      <string name="child_circle_label_project">create a project team</string>
+      <string name="child_circle_label_application">create an application team</string>
+      <string name="class_list">Class list</string>
+      <string name="search_page_result_null">related page are not found</string>
+      <string name="searchview_description_search">Search</string>
+      <string name="searchview_description_voice">Voice search</string>
+      <string name="searchview_description_submit">Submit query</string>
+      <string name="searchview_description_clear">Clear query</string>
+      <string name="searchview_description_query">Search query</string>
+
+    <string name="view_all_comment">View all %1$s comments</string>
+    <string name="create_event_label">Create event</string>
+    <string name="create_poll_label">Create poll</string>
+
+    <string name="dlg_message_add_recipient">Go to pick some people now.</string>
+    
+    <string name="circle_have_no_poll_label">this circle has no poll</string>
+    <string name="create_poll_msg_label">The circle has no poll, come to create a poll~</string>
+    <string name="create_event_msg_label">The circle has no event, go to create a event right now~</string>
+    
+    <string name="circle_have_no_event_label">this circle has no event</string>
+    
+    <string name="create_as_page_msg_label">The circle has no page, as page now?</string>
+    <string name="have_no_permission_to_seePage">You can\'t view page of the circle</string>
+    
+    <string name="whose_event">%1$s\'s event</string>
+    <string name="create_circle_msg_label">The circle has no circle, go to create a circle right now~</string>
+    
+    <string name="check_follow_msg_label">Follow now, then you can see it ~</string>
+    <string name="page_have_no_circle_label">The page have no circle</string>
+
+    <string name="app_share_force_upgrade">"App Share is outdated, need to upgrade first."</string>
+
+    <string name="wutong_home_picker_header">Choose Home Option</string>
+    <string name="wutong_home_classical_view">Classical Home</string>
+    <string name="resources_label">Resources</string>
+
+    <string name="download_app_title">Click to install \"App Share\"</string>
+    <string name="download_app_description">\"App Share\" is an application focuses on apps shared between people. Install it to view the detail of any apps.</string>
+
+    <string name="share_my_location">Share my location</string>
+    
+    <string name="invalid_url">Invalid URL</string>
+    <string name="comment_referred_text">Replied to %1$s %2$s</string>
+    
+    <string name="frequently_contacted_label">Frequently contacted</string>
+    <string name="frequently_circle_label">Frequently Circles</string>
+
+    <string name="search_title">Search Results</string>
+    <string name="search_circles_title">Search Circle</string>
+    <string name="search_pages_title">Search Page</string>
+    <string name="search_people_title">Search People</string>
+    <string name="search_post_title">Search Post</string>
+    <string name="format_location_distance">%1$sm</string>
+    
+    <string name="no_category">No category</string>
+    
+    <string name="all_category_label">All</string>
+    <string name="add_category_label">Add category</string>
+    
+    <string name="category_exist_message">the category is already exists</string>
+    
+    <string name="ntf_label_tome">To Me</string>
+    <string name="ntf_label_other">Others</string>
+    
+    <string name="ntf_see_all">See Old</string>
+    <string name="circle_member_label">Member</string>
+    
+    <string name="email_label">Email</string>
+    <string name="phone_label">Phone</string>
+    
+    <string name="sync_default_top_circle">is loading default circle, please wait</string>
+    
+    <string name="more_action">Action</string>
+    
+    <string name="just_saying_label">Public</string>
+    <string name="privacy_saying_label">Privacy</string>
+    <string name="home_label">Home</string>
+    
+   <string name="search_all_hint">Search</string>
+   <string name="write_comment_hint">Write a comment…</string>
+   
+   <string name="department_circle_label">Department</string>
+    <string name="project_circle_label">Project team</string>
+    <string name="application_circle_label">Apps Dev team</string>
+</resources>

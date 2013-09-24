@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:orientation="horizontal">
+
+   <!--  <FrameLayout android:id="@+id/stream_photo_1_frame"
+                 android:layout_height="@dimen/stream_big_image_dimension_device"
+                 android:layout_width="@dimen/stream_big_image_dimension_device"
+                 android:background="@drawable/stream_photo_bg">
+        <ImageView android:id="@+id/stream_photo_1"
+                   android:layout_height="@dimen/stream_big_image_dimension_device"
+                   android:layout_width="@dimen/stream_big_image_dimension_device"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"/>
+        <FrameLayout android:id="@+id/stream_photo_1_cover"
+                     android:layout_height="fill_parent"
+                     android:layout_width="fill_parent"
+                     android:clickable="true"
+                     android:background="@drawable/stream_photo_cover"/>
+    </FrameLayout> -->
+    
+   <ImageView android:id="@+id/stream_photo_1"
+               android:layout_height="@dimen/stream_big_image_dimension_device"
+                 android:layout_width="@dimen/stream_big_image_dimension_device"
+                 android:background="@drawable/stream_photo_bg"
+               android:layout_marginTop="@dimen/stream_image_top_margin"
+               android:layout_gravity="center_vertical"
+               android:scaleType="centerCrop"
+               android:layout_alignParentTop="true"/>
+
+    <ImageView android:id="@+id/stream_photo_2"
+               android:layout_width="@dimen/stream_big_image_small_dimension_device"
+               android:layout_height="@dimen/stream_big_image_small_dimension_device"
+               android:background="@drawable/stream_photo_bg"
+               android:paddingTop="@dimen/stream_image_top_margin"
+               android:layout_below="@id/stream_photo_1"
+               android:visibility="gone"
+               android:scaleType="centerCrop"
+               android:layout_alignLeft="@id/stream_photo_1"/>
+    
+    <ImageView android:id="@+id/stream_photo_3"
+               android:layout_width="@dimen/stream_big_image_small_dimension_device"
+               android:layout_height="@dimen/stream_big_image_small_dimension_device"
+               android:background="@drawable/stream_photo_bg"
+               android:layout_toRightOf="@id/stream_photo_2"
+               android:layout_below="@id/stream_photo_1"
+               android:paddingTop="@dimen/stream_image_top_margin"
+               android:visibility="gone"               
+               android:scaleType="centerCrop"
+               android:layout_alignRight="@id/stream_photo_1"/>
+</RelativeLayout>

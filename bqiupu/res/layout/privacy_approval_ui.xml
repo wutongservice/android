@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_privacy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/privacy_set_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_set_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+        <RadioGroup
+            android:id="@+id/privacy_set"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/privacy_set_title"
+            android:layout_marginTop="@dimen/default_text_margin_top" >
+
+            <RadioButton
+                android:id="@+id/privacy_set_open"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/privacy_set_open" />
+
+            <RadioButton
+                android:id="@+id/privacy_set_close"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_set_closed" />
+
+            <RadioButton
+                android:id="@+id/privacy_set_secret"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_set_secret" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_approve"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/approve_set_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/approve_set_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+        <RadioGroup
+            android:id="@+id/approve_set"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/approve_set_title"
+            android:layout_marginTop="@dimen/default_text_margin_top" >
+
+            <RadioButton
+                android:id="@+id/approve_set_all"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/approve_set_all" />
+
+            <RadioButton
+                android:id="@+id/approve_set_manager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/approve_set_manager" />
+        </RadioGroup>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/layout_join_permission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/join_set_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/join_permission_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+       <RadioGroup
+            android:id="@+id/join_set"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/join_set_title"
+            android:layout_marginTop="@dimen/default_text_margin_top" >
+
+            <RadioButton
+                android:id="@+id/join_set_verified"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/join_permission_verified" />
+
+            <RadioButton
+                android:id="@+id/join_set_directly_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_permission_to_join" />
+
+            <RadioButton
+                android:id="@+id/join_set_forbid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_permission_forbid" />
+        </RadioGroup>
+    </RelativeLayout>
+
+</LinearLayout>

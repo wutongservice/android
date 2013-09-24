@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_exchange_vcard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qiupu_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+
+    <RelativeLayout 
+        android:id="@+id/tip_text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_container"
+        android:background="@drawable/about_ticket_nor"
+        android:padding="@dimen/default_padding" >
+        <TextView 
+            android:id="@+id/tip_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nfc_vcard_left_padding"
+            android:textColor="@color/exchange_vcard_tip_color"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/nfc_tip_title"/>
+        <TextView
+            android:id="@+id/tip_content1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nfc_vcard_left_padding"
+            android:layout_below="@id/tip_text"
+            android:textColor="@color/exchange_vcard_tip_color"
+            android:text="@string/nfc_tip_content1" />
+        <TextView
+            android:id="@+id/tip_content2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nfc_vcard_left_padding"
+            android:layout_below="@id/tip_content1"
+            android:textColor="@color/exchange_vcard_tip_color"
+            android:text="@string/nfc_tip_content2" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/my_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip_text_layout"
+        android:padding="10dp"
+        android:text="@string/my_card"
+        android:textSize="18sp" />
+
+    <include 
+        android:id="@+id/my_vcard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:layout_below="@id/my_card"
+        layout="@layout/stream_row_vcard"/>
+
+    <TextView
+        android:id="@+id/received_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/my_vcard_layout"
+        android:text="@string/received_card"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <include 
+        android:id="@+id/received_vcard_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:layout_below="@id/received_card"
+        layout="@layout/stream_row_vcard" />
+
+</RelativeLayout>

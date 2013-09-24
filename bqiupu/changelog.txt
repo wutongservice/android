@@ -1,0 +1,1483 @@
+BACK LOG:
+1. co-work with action bar for android 4.0+ and none action bar implement for older
+2. local contact in all people category
+3. circle managment
+
+TODO:
+1. reform code of syncing circles/friends list.
+2. not show system notification when wutong catch the notification(Need discussed).
+3. add new circle name can be repeated.
+4. monitor ME info change and update profile.
+5  reform compose code
+
+2013.08.14 v1.3.2(373,371)
+scale bitmap for stream to show the whole region
+
+2013.07.02 v1.3.2(372,371)
+fix for download url, fix for bitmap strong reference
+
+2013.06.09 v1.3.2(370)
+change download, let it download directly, not open browser
+
+2013.04.26 v1.3.2(367)
+AccountLoginServiceSrc@r8639
+bqiupu@r8615
+bqiupu/account_sync@r8460
+bqiupu/UniversalImageLoader@r7965
+1. adjust pick for create circle/event/poll.
+2. adjust compose with circle/people mode.
+3. add home page for top circle;
+4. optimized load child circle, employee...
+
+2013.03.22 v1.3.2(363)
+AccountLoginServiceSrc@r8397
+bqiupu@r8396
+bqiupu/account_sync@r8137
+bqiupu/UniversalImageLoader@r7965
+1. fix login bug.
+
+2013.03.22 v1.3.2(362)
+AccountLoginServiceSrc@r8350
+bqiupu@r8391
+bqiupu/account_sync@r8137
+bqiupu/UniversalImageLoader@r7965
+1. move notification/request to titlebar.
+2. adjust get location UE.
+3. add parent for create event/poll.
+4. adjust stream ui.
+
+2013.03.08 v1.3.2(361)
+AccountLoginServiceSrc@r8203
+bqiupu@r8272
+bqiupu/account_sync@r8074
+bqiupu/UniversalImageLoader@r7965
+1. apply auto play feature to shared photo & link.
+2. support search posts.
+3. add create category to circles, get posts with category in circles.
+4. reform compose ui.
+5. support inline search circle/event/group in pick.
+6. add frequently contacted people in pick.
+7. add custom location page.
+
+2013.02.25 v1.3.2(360)
+AccountLoginServiceSrc@r8036
+bqiupu@r8121
+bqiupu/account_sync@r8137
+bqiupu/UniversalImageLoader@r7965
+1. reform compose ui.
+
+2013.02.16
+1. apply auto play feature to shared photo & link.
+
+2013.02.06 v1.3.2(357)
+AccountLoginServiceSrc@r8036
+bqiupu@r8038
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7965
+1. fix for update cirlce event
+
+2013.02.06 v1.3.2(356)
+AccountLoginServiceSrc@r8036
+bqiupu@r8037
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7965
+1. load notification when phone bootup
+2. fix bug in load notification when no ticket
+
+
+2013.02.05 v1.3.2(355)
+AccountLoginServiceSrc@r7720
+bqiupu@r8024
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7965
+1. fix user provider db version column conflict while upgrading from low version.
+2. fix user provider db upgrade fail while downgrade and then upgrade that might re-create existing table.
+3. depress information by cached read stream and its comments.
+4. fix the font size of bottom floating bar in home stream page.
+
+2013.02.05 v1.3.2(354)
+AccountLoginServiceSrc@r7720
+bqiupu@r8020
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7965
+1. fix user provider db version column conflict while upgrading from low version.
+2. fix user provider db upgrade fail while downgrade and then upgrade that might re-create existing table.
+3. depress information by cached read stream and its comments.
+4. fix the font size of bottom floating bar in home stream page.
+
+2013.02.01 v1.3.2(353)
+AccountLoginServiceSrc@r7720
+bqiupu@r7992
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7965
+1. modify Photo Proceess Activity
+2. fix pick Circle/event crash.
+3. add height limit for title dropdown list; dimiss dropdown list when Configuration Changed.
+4. improve composing bar
+5. directly goto user/circle picker while try sending.
+
+
+2013.01.31 v1.3.2(352)
+AccountLoginServiceSrc@r7720
+bqiupu@r7960
+bqiupu/account_sync@r7799
+bqiupu/UniversalImageLoader@r7418
+1. fix form app share bug
+
+2013.01.31 v1.3.2(351)
+AccountLoginServiceSrc@r7720
+bqiupu@r7954
+bqiupu/account_sync@r7799
+1. merge new circle profile ui.
+2. separate task when compose
+
+2013.01.28 v1.3.2(350)
+AccountLoginServiceSrc@r7720
+bqiupu@r7866
+bqiupu/account_sync@r7799
+1. refresh circle ui of organization view.
+2. update stream icon for files mime type.
+
+1. floating bottom composing bar of stream list.
+2013.01.27 v1.3.1(349)
+AccountLoginServiceSrc@r7720
+bqiupu@r7834
+bqiupu/account_sync@r7799
+1. floating bottom composing bar of stream list.
+2. fix share to composer without existing process.
+
+2013.01.25 v1.3.0(348)
+AccountLoginServiceSrc@r7720
+bqiupu@r7828
+bqiupu/account_sync@r7799
+1.detect exception when play/download video.
+
+2013.01.22 v1.3.0(347)
+AccountLoginServiceSrc@r7720
+bqiupu@r7761
+bqiupu/account_sync@r7713
+1. integrate multiple home option feature.
+2. move action item down to the bottom of stream list.
+3. remember switched photo position.
+
+2013.01.18 v1.2.5(346)
+AccountLoginServiceSrc@r7720
+bqiupu@r7739
+bqiupu/account_sync@r7713
+1.fix default icon unconsistent bug.
+2.merge pick user/circles/contacts with search.
+3 fix pick event bug
+
+2013.01.18 v1.2.5(345)
+AccountLoginServiceSrc@r7720
+bqiupu@r7737
+bqiupu/account_sync@r7713
+1.fix default icon unconsistent bug.
+2. merge pick user/circles/contacts with search.
+
+2013.01.18 v1.2.5(344)
+AccountLoginServiceSrc@r7720
+bqiupu@r7726
+bqiupu/account_sync@r7713
+1.fix default icon unconsistent bug.
+
+2013.01.17 v1.2.5(343)
+AccountLoginServiceSrc@r7511
+bqiupu@r7704
+bqiupu/account_sync@r7614
+1. fix when clicking plugin item except appbox, wutong does no response bug.
+
+2013.01.14 v1.2.5(342)
+AccountLoginServiceSrc@r7511
+bqiupu@r7620
+bqiupu/account_sync@r7614
+1. force updagrade app share if it was outdated.
+
+2013.01.14 v1.2.4(341)
+AccountLoginServiceSrc@r7511
+bqiupu@r7611
+bqiupu/account_sync@r7566
+1. remove public from default recipient.
+2. location info query improvement.
+3. stream row ui reform with two inline comments.
+
+2013.01.11 v1.2.4(339)
+AccountLoginServiceSrc@r7511
+bqiupu@r7604
+bqiupu/account_sync@r7566
+1. remove public from default recipient.
+2. location info query improvement.
+3. stream row ui reform with two inline comments.
+
+
+2013.01.09 v1.2.3(338)
+AccountLoginServiceSrc@r7511
+bqiupu@r7538
+bqiupu/account_sync@r7497
+1. progress password updating.
+2. direct to recipient profile if only one.
+
+2013.01.06 v1.2.2(337)
+AccountLoginServiceSrc@r7074
+bqiupu@r7488
+bqiupu/account_sync@r7417
+1. progress password updating.
+2. direct to recipient profile if only one.
+
+335 change splash time out and let it always show the splash pic
+
+2012.12.31 v1.2.1(336)
+AccountLoginServiceSrc@r7074
+bqiupu@r7430
+bqiupu/account_sync@r7417
+1. progress password updating.
+2. direct to recipient profile if only one.
+
+2012.12.28 v1.2.0(334)
+AccountLoginServiceSrc@r7074
+bqiupu@r7419
+bqiupu/account_sync@r7417
+1. integrate page
+2. improve poll
+3. separate friend groups from circles.
+4. alter new year splash.
+
+
+2012.12.21 v1.1.5(332)
+AccountLoginServiceSrc@r7074
+bqiupu@r7273
+bqiupu/account_sync@r7239
+1. create poll
+2. optimize photo cache
+
+2012.12.14 v1.1.5(331)
+AccountLoginServiceSrc@r7074
+bqiupu@r7144
+bqiupu/account_sync@r7040
+1. add smiley icon.
+2. allow copy stream/comment message.
+3. add message composing while invitation.
+
+2012.12.12 v1.1.5(330)
+AccountLoginService@r6964
+bqiupu@r7050
+bqiupu/account_sync@r7040
+1. add smiley icon.
+2. allow copy stream/comment message.
+3. add message composing while invitation.
+
+2012.12.10 v1.1.4(329)
+AccountLoginService@r6963  replace (AccountLoginServiceSrc)
+bqiupu@r6989
+bqiupu/account_sync@r6946
+1. use baidu location service.
+2. add poll entrance in event and circle.
+3. roundAngle profile icon
+4. fix poll bug
+
+2012.12.07 v1.1.4(328)
+AccountLoginService@r6963  replace (AccountLoginServiceSrc)
+bqiupu@r6982
+bqiupu/account_sync@r6946
+1. use baidu location service.
+2. add poll entrance in event and circle.
+3. roundAngle profile icon
+
+2012.12.05 v1.1.4(327)
+AccountLoginService@r6807
+bqiupu@r6819
+bqiupu/account_sync@r6875
+2012.12.03
+1. add cache manager for stream and apply to its item activity.
+
+2012.12.03 v1.1.3(326)
+AccountLoginService@r6807
+bqiupu@r6819
+bqiupu/account_sync@r6500
+1. revert the min sdk version back to 7.
+
+2012.11.30 v1.1.3(325)
+AccountLoginService@r6807
+bqiupu@r6814
+bqiupu/account_sync@r6500
+1. use baidu location sdk.
+2. add cache for company.
+3. swithcing stream by circles fix.
+
+2012.11.30 v1.1.2(324)
+AccountLoginService@r6769
+bqiupu@r6786
+bqiupu/account_sync@r6500
+1. stream item improvement for reshare.
+2. add back to top.
+3. sort vote items.
+4. rename top stream title
+5. set or cancel stream to top
+6. clear all notifications in message center.
+
+2012.11.27   v1.1.1(323)
+AccountLoginService@r6666
+bqiupu@r6694
+bqiupu/account_sync@r6500
+1. account login service update to disable account removal.
+2. stream item ui improvement.
+3. add call_id for server
+
+2012.11.23   v1.1.0(322)
+AccountLoginService@r6488
+bqiupu@r6627
+bqiupu/account_sync@r6500
+1. auto sync event to calendar.
+
+
+2012.11.22   v1.1.0(321)
+AccountLoginService@r6488
+bqiupu@r6597
+bqiupu/account_sync@r6500
+1. add animation for like OK in stream row.
+2. add animation for stream row update.
+3. reform stream row for ui improvement.
+4. add comment feature for poll
+5. view liked people + mute post.
+6. implement mute operation to stream.
+6. add link Transform activity
+7. merge event info&stream
+8. invite people support public circles
+9.add animation when view photo
+10.fixed bug for photo grid
+11.fixed bug for save photo can not see in gallery
+
+2012.11.19   v1.1.0(320)
+AccountLoginService@r6299
+bqiupu@r6461
+bqiupu/account_sync@r6439
+1. update stream icon.
+
+2012.11.15   v1.1.0(319)
+AccountLoginService@r6299
+bqiupu@r6426
+bqiupu/account_sync@r6291
+1. fix crash in standard android 2.1 rom.
+2. remove inline comments.
+3. support export event to calendar.
+
+
+2012.11.08   v1.1.0(317)
+AccountLoginService@r6299
+bqiupu@r6314
+bqiupu/account_sync@r6291
+1. upgrade poll feature.
+2. add show top stream.
+
+2012.11.07   v1.1.0(316)
+AccountLoginService@r6282
+bqiupu@r6297
+bqiupu/account_sync@r6291
+1. add poll feature.
+2. fix edit event/publicCircle bug
+
+2012.11.06
+AccountLoginService@r6282
+bqiupu@r6292
+bqiupu/account_sync@r6291
+1. apply LRU cache for image and user's profile photo url for stream list performance.
+
+2012.10.30 v1.1.0(314)
+AccountLoginService@r6231
+bqiupu@r6241
+bqiupu/account_sync@r6231
+1, fix profile head back bug
+2, upgrade event profile ui
+
+
+2012.10.30 v1.1.0(313)
+AccountLoginService@r6205
+bqiupu@r6206
+bqiupu/account_sync@r5986
+1, fix don't sync notification
+2, fix sync exchange error
+3, hide privacy configuration on createEvent
+4, fix profile shareSource ui bug
+
+
+
+2012.10.30 v1.1.0(312)
+AccountLoginService@r6029
+bqiupu@r6164
+bqiupu/account_sync@r5986
+
+2012.10.25 v1.1.0(311)
+AccountLoginService@r6029
+bqiupu@r6105
+bqiupu/account_sync@r5986
+1. fix profile navigation bug.
+2. fix share multiple photo fresh bug(work-around fix, follow comment design)
+3. fix request crash issue.
+4. totaly move appbox to isolate project.
+
+2012.10.22 v1.0.51(6012)
+AccountLoginService@r5938
+bqiupu@r6012
+bqiupu/account_sync@r5986
+1. fix share link crash.
+2. fix quit message center too slow issue.
+3. fix read all notification issue.
+
+2012.10.18 v1.0.50(5972)
+1. login by email only.
+2. colorful the event presentation.
+3. improve photo/album experience.
+
+2012.10.16 v1.0.49(5917)
+AccountLoginService@r5875
+bqiupu@r5917
+bqiupu/account_sync@r5837
+1. fix repeat portrait issue
+2. fix can't share apk issue.
+3. cache request.
+4. fix save head portrait issue.
+
+2012.10.15 v1.0.48(5899)
+AccountLoginService@r5875
+bqiupu@r5899
+bqiupu/account_sync@r5837
+
+2012.10.13 v1.0.47(5890)
+AccountLoginService@r5875
+bqiupu@r5890
+bqiupu/account_sync@r5837
+
+2012.10.12 v1.0.46(5888)
+AccountLoginService@r5875
+bqiupu@r5888
+bqiupu/account_sync@r5837
+1. remove circle category from stream dropdown.
+2. shorten name of circle/event profile title.
+3. correct comment item profile photo displaying.
+4. dynamically text of more button on the bottom of comment list.
+
+2012.10.12 v1.0.45(5867)
+AccountLoginService@r5864
+bqiupu@r5867
+bqiupu/account_sync@r5837
+1. update stream comment while refresh.
+2. fix account register via email.
+3. improve escape speed from information activity.
+
+2012.10.11 v1.0.44(5818)
+AccountLoginService@r5696
+bqiupu@r5818
+bqiupu/account_sync@r5782
+1. apply two ways grid view to album activity.
+2. rmove post item from local cached list while abuse reported.
+3. add event list, event profile...
+
+2012.10.09  V1.0.43(5758)
+AccountLoginService@r5696
+bqiupu@r5758
+bqiupu/account_sync@r5672
+libs/notificationservice.jar (removed)
+
+2012.10.8
+1, improve stream serialization.
+2, fix addressPadMini ui for landscape.
+3, remove underline in information item, keep sync with stream.
+4. check location from network status.
+5. fix empty ui issue.
+6. fix photo alignment issue.
+
+2012.09.29  V1.0.42(5708)
+AccountLoginService@r5696
+bqiupu@r5708
+bqiupu/account_sync@r5672
+libs/notificationservice.jar (removed)
+1. fix reshare video crash bug.
+
+2012.09.25  V1.0.41(5683)
+AccountLoginService@r5660
+bqiupu@r5683
+bqiupu/account_sync@r5672
+libs/notificationservice.jar (removed)
+1. upgrade public circle profile ui;
+
+
+2012.09.25  V1.0.40(5651)
+AccountLoginService@r5574
+bqiupu@r5651
+bqiupu/account_sync@r5634
+libs/notificationservice.jar (removed)
+1. modify back behavior between app share and wutong.
+
+
+2012.09.25  V1.0.38(5638)
+AccountLoginService@r5574
+bqiupu@r5638
+bqiupu/account_sync@r5634
+libs/notificationservice.jar (removed)
+
+
+
+2012.09.24  V1.0.37(5618)
+
+AccountLoginService@r5574
+bqiupu@r5618
+bqiupu/account_sync@r5612
+libs/notificationservice.jar@r5615(v2008)
+
+1. fix crash when exchange vcard by shaking
+2. fix share multiple photo failed bug.
+3. add upload original photo
+4. move apps code to package appbox.
+
+2012.09.21 V1.0.36(5600)
+AccountLoginService@r5497
+bqiupu@r5600
+bqiupu/account_sync@r5599
+libs/notificationservice.jar@r5568(v2008)
+
+1. refresh notification list.
+2. set network transfer tag for performance tune.
+3. stop pushing service while escape wutong for battery saving.
+4. fix exchange vcard crash bug.
+5. add im compose from user profile.
+
+2012.09.20 V1.0.35(5564)
+AccountLoginService@r5497
+bqiupu@r5564
+bqiupu/account_sync@r5505
+bqiupu/notification@ replace with jar v2008
+libs/notificationservice.jar@r5503(v2008)
+1. update notification jar to v2008
+2. replace refresh_tutoral icon.
+3. add set phone or email to received circle message.
+
+2012.09.18 V1.0.34(5523)
+AccountLoginService@r5497
+bqiupu@r5523
+bqiupu/account_sync@r5505
+bqiupu/notification@ replace with jar v2006
+libs/notificationservice.jar@r5503(v2006)
+1. update notification jar to v2006
+2. update login component for login with borqs id.
+
+
+2012.09.13  1.0.33(5455)
+AccountLoginService@r5396
+bqiupu@r5455
+bqiupu/account_sync@r5455
+bqiupu/notification@r5053
+
+2012.09.13
+1. add db access monitor and simplifying user info querying.
+2. add user accessing frequency.
+
+2012.09.11  1.0.32(5419)
+AccountLoginService@r5396
+bqiupu@r5419
+bqiupu/account_sync@r5410
+bqiupu/notification@r5053
+
+
+2012.09.06  1.0.31(5343)
+AccountLoginService@r5341
+bqiupu@r5343
+bqiupu/account_sync@r5339
+bqiupu/notification@r5053
+
+1. optimize fetch location code.
+2. optimize search code.
+
+2012.09.04  1.0.30(5278)
+AccountLoginService@r5262
+bqiupu@r5278
+bqiupu/account_sync@r5273
+bqiupu/notification@r5053
+
+1. add bottom bar in stream page for composing.
+2. reset read status of notification while server request failed.
+3. find friends ui re-org.
+4. add exchange vcard by shaking feature.
+5. add new invite people.
+
+
+2012.08.30 v1.0.29(5235)
+AccountLoginService@r5151
+bqiupu@r5235
+bqiupu/account_sync@r5224
+bqiupu/notification@r5053
+1. filter public circle in set group for a user.
+2. add all circles in stream category.
+
+2012.08.30 v1.0.28(5230)
+AccountLoginService@r5151
+bqiupu@r5230
+bqiupu/account_sync@r5224
+bqiupu/notification@r5053
+1. bug fix for stream header refresh in comment activity
+2. add exiting to public circle.
+3. fix mismatch tables drop and create.
+4. excluding public circles from add connection.
+
+2012.08.29 v1.0.27(5206)
+AccountLoginService@r5151
+bqiupu@r5206
+bqiupu/account_sync@r5206
+bqiupu/notification@r5053
+1, fix account crash.
+
+
+2012.08.29 v1.0.26(5200)
+AccountLoginService@r5151
+bqiupu@r5200
+bqiupu/account_sync@r5197
+bqiupu/notification@r5053
+1, add pick ui for invite people .
+2, add scheme with public circle for notification.
+
+
+
+2012.08.24 v1.0.25(5129)
+AccountLoginService@r5121
+bqiupu@r5129
+bqiupu/account_sync@r5118
+bqiupu/notification@r5053
+1. init profile gateway actions to contacts.
+2. correct comment mode for app share.
+3. jump to apk detail in comment activity.
+
+2012.08.22 v1.0.24(5071)
+AccountLoginService@r5046
+bqiupu@r5071
+bqiupu/account_sync@r5069
+bqiupu/notification@r5053
+1. depress auto uploading contacts.
+2. enable instance message.
+3. fix icon click on stream header photo.
+4. depress refresh stream item after loaded data in comment activity.
+5. show album info in shared photo stream.
+6. add search to group.
+
+2012.08.20 v1.0.23(5020)
+AccountLoginService@r4985
+bqiupu@r5020
+bqiupu/account_sync@r5014
+bqiupu/notification@r4889
+1. pick existing account which might be created by other app
+2. show correct photo attachment while click it within multiple images stream.
+
+2012.08.16 v1.0.22(4989)
+AccountLoginService@r4985
+bqiupu@r4989
+bqiupu/account_sync@r4988
+bqiupu/notification@r4889
+1. show public circle info.
+2. show user album.
+
+2012.08.14 v1.0.21(4932)
+AccountLoginService@r4929
+bqiupu@r4932
+bqiupu/account_sync@r4927
+bqiupu/notification@r4889
+1. change to use switching server from common Account Service.
+2. update circles list while enter stream list.
+
+2012.08.13 v1.0.20(4891)
+SVN:
+AccountLoginService@r4881
+bqiupu@r4891
+bqiupu/account_sync@r4894
+bqiupu/notification@r4889
+1. Qick fix contact batch operation issue.
+
+2012.08.10 v1.0.19(4872)
+SVN:
+AccountLoginService@r4869
+bqiupu@r4872
+bqiupu/account_sync@r4871
+bqiupu/notification@r4858
+1. adapt change server to new login service.
+
+2012.08.10 v1.0.19(4860)
+SVN:
+AccountLoginService@r4859
+bqiupu@r4860
+bqiupu/account_sync@r4857
+bqiupu/notification@r4858
+1. fix can't set location bug when reshare.
+2. fix can't switch from cirlce to dynamic feed bug in navigation.
+3. change to new Account Service api.
+
+2012.08.07 v1.0.18(4803)
+SVN:
+AccountLoginService@r4794
+bqiupu@r4803
+bqiupu/account_sync@r4792
+bqiupu/notification@r4707
+1. reform friends fragment by abstract PeopleSearchableFragment with common inline search.
+2. appy dropdown category to friends activity.
+3. implement inline search of people in circles.
+4. change font size of left pannel text and category title.
+
+2012.08.02 v1.0.17(4726)
+SVN:
+AccountLoginService@r4713
+bqiupu@r4726
+bqiupu/account_sync@r4713
+bqiupu/notification@r4707
+1.add setting to control canComment, canLike, canReshare.
+2.fix geting stream and post comment mealwhile bug.
+3. enhance server switch, allow to pick/ignore/delete local configuration file.
+4. allow display current configuration while performing server switch.
+5. allow edit/bind phone number/email.
+6. refresh correct tab of profile.
+
+2012.07.31 v1.0.16(4696)
+SVN:
+AccountLoginService@r4667
+bqiupu@r4696
+bqiupu/account_sync@r4692
+bqiupu/notification@r4573
+1. fix apk download status after removed from downloading status.
+2. show prompt to removed stream in a reshare.
+
+2012.07.30
+1. Add category for notification list.
+2. fix display high quality photo as a small piece.
+3. add last sync apk.
+4. show removed stream info via customized toast.
+5. add category by time in absent applications.
+6. not show loading stream count.
+
+2012.07.27 
+SVN:
+AccountLoginService@r4619
+bqiupu@r4665
+bqiupu/account_sync@r4655
+bqiupu/notification@r4573
+1. setting comment/like property whilc composing a stream.
+2. alter comment/like property whilc comment a stream.
+3. enable notification receiver.
+
+2012.07.26 v1.0.14(4641)
+SVN:
+AccountLoginService@r4619
+bqiupu@r4641
+bqiupu/account_sync@r4626
+bqiupu/notification@r4573
+1. add plugin show to left navigation pannel.
+2. fix lost app while trying to share multiple ones at the same time.
+3. merge public stream and friends stream.
+4. add drop down list support to stream category.
+5. add ui prompt for stream loading result.
+
+2012.07.24 v1.0.13(4595)
+SVN:
+AccountLoginService@r4586
+bqiupu@r4595
+bqiupu/account_sync@r4575
+bqiupu/notification@r4573
+1. include public circle show.
+2. fix crash while update profile empty status.
+3. disable sensitive log
+4. Account Service update.
+
+2012.07.19 v1.0.12(4514)
+SVN:
+AccountCommon@r4455
+bqiupu@r4514
+bqiupu/account_sync@r4496
+bqiupu/notification@r4508
+1. friend sync invocation code reform
+2. swapping change password button.
+
+2012.07.18
+1. align the comment edit text.
+2. default to stream page of profile.
+
+2012.07.17 v1.0.11(4486)
+SVN:
+AccountCommon@r4455
+bqiupu@r4486
+bqiupu/account_sync@r4482
+bqiupu/notification@4475
+1. bulk write office info while sync friends
+2. remove landscape splash.
+3. change Add connection text
+4. shorten the splash interval while restart activity.
+5. revert profile.
+6. set notification read status to server
+
+2012.07.16 v1.0.10(4462)
+SVN:
+AccountCommon@r4455
+bqiupu@r4462
+bqiupu/account_sync@r4436
+1. add show version feautures when has new version.
+2. show more info in profile
+3. add upgrade change log.
+4. performance tune for db writing while sync friends.
+
+2012.07.13
+1. change enfoldmentView share link to share location.
+
+2012.07.12 v1.0.7 - 252(4400)
+1. fix userprofile bug.
+2. change drop_down ui for user profile.
+3. mark notification as READ after enter the stream item detail.
+4. unquery myself when add conversion.
+
+2012.07.9
+1. change privacy set with public circle.
+
+2012.07.11 v1.0.6 - 251(4287)
+Bqiupu bug fix version release for test.
+1. add friends text was hidden in comment activity.
+2. setup left padding of title text for both situations: with or without navigating picture.
+
+2012.07.10
+1. show candidates list of plus shortcut.
+2. remove hard code of SD card root path.
+3. remove useless left menu panel of post.
+4. depress removing text within '<' and '>' but not html.
+
+2012.07.6 v1.0.4(4287)-249
+1. change baidu appkey to the one registered for qiupu2011@gmail.com
+
+2012.07.6 v1.0.4(4284)-247
+1. to get comments everytime to go to QiupucommentActivity and update latest two comments to post item.
+2. show all contacts without IN_VISIBLE_GROUP.
+3. separate people lookup from address book sync class.
+4. tune my app startup scanning.
+
+2012.07.5 v1.0.3(4250)
+1. change share app dialog to system dialog.
+2. add Baidu statical sdk.
+
+2012.07.4 v1.0.2-243(4181)
+1. hide user name in adding friend message.
+2. depress address book log about contacts.
+3. add quick reply
+4. align stream text left padding.
+5. expanding all text count in stream detail view.
+6. show ime while insert plus one people in comments.
+6. hide icon refresh/favorite in userprofile.
+7. refresh profile title name when get userinfo suc.
+8. default select circle when create new circle to add friend .
+9. fix crash for qiupucommentActivity when click from notification.
+10.add show myself friends list for appbox.
+
+
+2012.07.03
+1. back from splash activity
+2. enhance plus feature for composing text
+
+2012.06.27 v1.0.2(4056)
+
+2012.06.27 v1.0.2(3970)
+1. change brook default host for Ali clound deploy
+2. enhnace server switching label.
+3. navigation translation.
+
+2012.06.26 v1.0.1(3970)
+SVN: r3970
+1. bug fix, add missed Latin resource.
+
+2012.06.21 v1.0.0(3970)
+SVN: r3970
+1. fix crash while view circle from contact.
+2. change padding.
+
+2012.06.21 v1.0.0(3946)
+SVN: r3946
+APK version code: 239
+1. stream >> load older : stream rows lost.
+2. remove refresh from friends profile/apk profile.
+3. recipient/privacy display in stream row view header.
+
+2012.06.08 v0.9.233(3632)
+1.change wutong skin to black style
+
+2012.06.08 v0.9.232(3622)
+1.release for new navigation
+
+2012.06.04 v0.9.231(3470)
+1. release for pure text composing.
+
+2012.06.01  v0.9.230(3455)
+1. add login request
+2. improve batch share item behavior.
+
+2012.06.01 v0.9.229(3437)
+1. separate reshared layout.
+2. batch composer.
+
+2012.05.30
+1. remove public stream
+2. cut down layout hierachy level in stream.
+3. separate reshare stream item between normal stream.
+
+2012.05.28 v0.9.228(3331)
+1. up navigation key added.
+
+2012.05.25 v0.9.226(3311)
+1. user profile fragment
+2. friends tab fix
+
+2012.05.23 v0.9.225(3240)
+1, perfect userprofile fragment
+2, delete request from Navigation, delete exchange vCard from friend.
+
+2012.05.22 v0.9.224(3202)
+1, add exchange vcard 
+2, combine contact group and bpc circleDetail
+
+2012.05.21 v0.9.223(3152)
+
+2012.05.12 v0.9.222(moon)
+GIT: 6130f1fdda956c01395ee78cd81af76dc5830fc8
+1. add startup page
+2. fix duplice entry stream list.
+
+2012.05.11 v0.9.221(2969)
+1. fix image run crash while met recycled bitmap.
+2. fix expanable crash on android 2.3.3
+
+2012.05.11 v0.9.220(2965)
+1. stream/comment row item feed back
+2. path like composer.
+3. add contacts into circles.
+
+2012.05.09 v0.9.219(snow2883)
+SVN: r2883
+1. temp release.
+
+2012.05.08 v0.9.219(2863)
+1. including conversation.
+
+2012.05.02 v0.9.218(2696)
+SVN: r2688
+1. fix crash and notification
+
+2012.04.25 v0.9.217(2688)
+SVN: r2688
+1. photo edit
+2. improve memory usage.
+
+2012.04.25 v0.9.216(2531)
+SVN: r2531
+1. NFC exchanged vcard.
+2. UI enhancement.
+
+2012.04.19
+1. Add long press BACK key to trigger left navigation menu.
+
+2012.04.19 v0.9.213-r2248
+1. Fix crash while reshare location only post.
+
+2012.04.18 v0.9.213-r2245
+2012.04.18 v0.9.212-r2243
+SVN: r2243
+1. search unify
+2. location
+3. photo edit.
+
+2012.04.16 v0.9.210-r2187
+SVN: r2187
+1. fragment the people in circle detail
+2. improve the stream fragment by implement Liker and StreamActionListner
+3. improve the people list fragment by implement send approval and update circle methods.
+
+2012.04.15
+1. fragment the stream of circle detail
+
+2012.04.14
+1. unify the comment class between stream and apk/book.
+
+2012.04.13 v0.9.207-r2172
+1. fix add friends performance.
+
+2012.04.12 v0.9.206-r2124
+1. fix handler crash without init while test server switch
+2. fix add 1st comment
+3. fix repeated add lookup contact entity while syncml is ongoing.
+4. upload photo
+
+2012.04.11 v0.9.205-r2068
+SVN: r2068
+1. open the local contact and add contact friends
+2. release version.
+
+2012.04.10 v0.9.204-r2032
+SVN: r2032
+1. listen contact change and update cached people lookup.
+
+2012.04.09
+1. postpone app scan and sync to 1st startup of appbox.
+2. wrap stream into a fragment
+3. shorten the top padding of people photo to look higher than name.
+
+2012.04.08
+1. wrap composer within scroll view for display well with mdpi device
+2. add low data consume mode for link/apk picture.
+3. correct the filter type of stream.
+
+2012.03.31
+1. add friend fragment activity(circlefragment, friendslistFragment, friendsContactFragment).
+2. add show system user and contact user on friends activiy.
+3. 
+
+2012.03.30
+1. not combine only two recipient.
+2. remove duplicate list xml
+3. confirm about any deletion axtion.
+
+2012.03.29
+1. depress title xml replace of composer
+2. add contact id for social contact upload.
+3. add toggle for navigation
+4. standardlizing the navigation ui.
+5. remove title bar container mechanism
+6. remove all single task flag from activity.
+
+2012.03.28
+1. add pick system user/contacts with fragment;
+2. remove rpeat fo apk other version when refreash.
+3. add TitlePageIndicator with ViewPager;
+
+
+
+2012.03.27
+1. reform apk/stream parse from server response about comment.
+2. show commented app item from notification.
+3. show link picture in origin order.
+4. open link if click on link photo.
+5. add control flags of sprint features: add friends/profile/local contacts
+
+2012.03.23
+1.add share contact feature.
+2. remove cached of system app images.
+ 
+2012.03.23 v0.9.203-r1741
+SVN : r1741
+
+2012.03.23
+1. init title bar of comment activity
+2. reshare from comment activity will pass what's has been typed.
+3. simplify the to list
+4. remove system cached image for outdated 3dhome.
+5. add liker list presentation.
+6. depress redundant request notification.
+
+2012.03.22
+1. disable request query loop service
+2. depress refresh stream while no new item from server.
+3. reorg for recipient siplifying.
+4. depress stream read/write while swipe between public and friends.
+
+2012.03.21
+1. add new  pull to refresh listview for stream.
+
+2012.03.20
+1. correct the english string about invitation via send email/message.
+
+2012.03.19
+1. add dialog to show simple user list.
+2. fix crash when click usericon on request item.
+3. add show simple user list with page on dialog.
+
+2012.03.19 v0.9.202-r1634
+SVN : r1634
+1. Enable all functions even if it is thahiti hardware.
+
+2012.03.19 v0.9.201-r1633
+SVN : r1633
+1. fix crash for MainActivity when the Network connection is failed .
+2. change notification content view to system notification view for requests.
+3. only show recipients details in Comment activity but not in stream list.
+4. fix location string sequence issue.
+5. add share link and apk feature.
+6. change dynamic display location feature 
+
+2012.03.16 v0.9.200-r1609
+SVN : r1609
+1. remove the download notification after installed app.
+2. reform composer to handle pure text shared from external app.
+3. change set apk permiss dialog ui to signChoiceDialog.
+4. add menu icon with forbid comment/like.
+5. move DashBorad View center on MainActivity.
+6. change item icon with appBox/apps on MainActivity DashBorad
+
+2012.03.15 v0.9.199-r1584
+SVN : r1584
+1. simplify mode of main activity
+2. re-org link stream ui
+3. encode possible subject to remote server while share a link
+4. new composer for that support app, link, can like/comment
+5. use new feedback api
+6. respond to can comment/like in stream comment.
+7. allow to like a comment
+
+2012.03.14 v0.9.198-r1529
+SVN : r1529
+1. unify the list view for stream presentation.
+2. fix server switch fail issue.
+
+2012.03.13 v0.9.197-r1503
+SVN : r1503
+1. add canComment/canLike option menu in composer
+2. re-org the layout of re-share.
+3. display attached images of shared link.
+
+2012.03.12 v0.9.196-r1481
+SVN : r1481
+1. enable link click in reshared item.
+2. composer reform with attachment/location/visibility edit
+3. show search in main activity
+4. show attachment photos in URL link.
+
+2012.03.09
+1. Listen for request notification.
+2. Go to correct comment for apk item or others.
+3. change request vcard ui.
+4. Reform app category view and apply to app search.
+
+2012.03.08 v0.9.195-r1441
+SVN : r1441
+1. Add enable/disable dynamically push service.
+
+2012.03.07
+1. not refresh if no stream row change.
+2. add composer to home screen.
+
+2012.03.06 v0.9.194-Jeep-midnight
+SVN : r1419
+Git: cf701510f3f900282f1e014cc04187eaf2be58d7
+1. fix bug that blind the press event on reshare stream item.
+2. fix bug that not title show for attachment.
+3. remove click listener on the whole attachment and its detail.
+4. fix commments display order within the commment activity.
+5. click to book/music item to download their app first.
+   (todo: need to detect if the apk has been download but not installed yet).
+6. stream filter.
+
+2012.03.04 v0.9.192-Jeep
+SVN : git after 1387 (r1388)
+Git: 1154bf5cb9e0866567001a813ea15ebabcbcb0b8
+1. battery cosume.
+2. stream item reform ready.
+3. partition resource clean
+4. use local app in ram to show app box
+
+2012.03.02 v0.9.191-r1383
+1. fix dynamically server url configuration.
+2. fix upload borqs app back door.
+
+2012.03.02 v0.9.190-r1374
+1. Change from notification, sync for query dynamaic configured server url.
+
+2012.03.01 v0.9.189-1367
+SVN : r1367
+1. fix loading profile image in stream item while cached icon path was clean.
+2. depress install wizard while ship as a system app.
+3. add customized server url in debug option setting.
+4. remove pesistent from application to avoid crash update in /opl/
+5. support configure server set via xml file push.
+
+2012.02.27 v0.9.188-1297
+SVN : r1297
+1. use system download manager as default in android 2.3 or higher.
+2. stream code reform by depress class property, wrap into local method stack.
+
+2012.02.27 v0.9.187-1293
+SVN : r1293
+1. reform splash of app box.
+
+2012.02.24 v0.9.186-1282
+SVN : r1282
+1. sync apk status and correct the signature.
+
+2012.02.24 v0.9.185-1276
+SVN : r1276
+1. performance tune for scrolling my app
+2. add theme for application.
+3. app share read local app from memory
+
+2012.02.23 v0.9.184-1272
+SVN : r1272
+1. simplify stream layout and code to reform
+2. remove customized color out from app box.
+3. prevent repeated comment acitivty launch.
+
+2012.02.21 v0.9.183-r1258
+SVN : r1258
+1. revert stream back to origin layout.
+
+2012.02.20 v0.9.182-r1238
+1. check icon path while launch applicaitons
+2. add back door
+3. disable auto upload borqs app.
+
+2012.02.20 v0.9.181-r1230
+1. stop sync apk info while no active network available.
+2. remove the possible crash scheme in setting activity.
+3. change dialog theme with system.
+
+2012.02.20 v0.9.180-sun
+SVN: r1227
+1. ICS edit text style fix for feed back screen
+2. Setting title enhance to replace by concrete app(app box, app share and b+)
+3. The input type of edit text in searching screen.
+4. remove useless private settings stuff.
+5. remove outdated stream/friend interval from app share settings.
+6. ill refresh button in exchange vcard screen.
+7. reform search of people and app.
+8. replace icon for app box lunch, default app.
+9. rename chinese app box name.
+
+2012.02.17 v0.9.179-r1225
+SVN: r1226
+1. use correct signature that was wrong in 178.
+
+2012.02.17 v0.9.178-r1225
+SVN: r1225
+1. remove cling of app box
+2. fix borqs app update status disappear bug.
+
+2012.02.16 v0.9.177-r1223
+SVN: r1223
+1. clean Qiupu DB content (app, user, cache) while logout.
+2. reset new version detect for app box and bpc.
+3. allow manually check new version in app box.
+4. disallow backup borqs applications from device.
+5. hide toast 'more back click' when back from message.
+6. fix refresh absent ui after login.
+7. add forbide borqs app .
+
+2012.02.16 v0.9.175-r1202
+SVN: r1202
+1. remove debug configuration from app box settings.
+2. compress the notificaitons message of request.
+3. fix ui bug and logic bug.
+
+2012.02.15 v0.9.174-r1190
+SVN: r1190
+1. fix status show error on applicationBoxActivity
+2. fix ui bug on ApplicationBoxActivity ,downloadManagerActivity and ApkdetailBoxActivity
+3. add show 'in or out' for installApk list and downloadingapk list on DownloadManagerActivity
+4. update MoreActivity Item Ui.
+5. fix show tutorial error when user cancel downloading apk
+6. Add server migration tips.
+
+2012.02.13 v0.9.173-r1159
+1. svn commit source code of v0.9.172-weekend-box to svn r1153
+2. release v0.9.173-r1159 
+
+2012.02.11 v0.9.172-weekend-box
+SVN: to commit to remote svn, local git tag: milestone-local-backup-v0.9.172-weekend-box
+1. Fix hard to click invitation button.
+2. [not fix] Force close when sdcard storage is low.
+3. [not fix] midnight hint about network issue.
+4. Show/hide bpc/appshare component configuration.
+
+2012.02.10 v0.9.171
+SVN: r1150
+1. Remove stream/friend from app share.
+2. Dismiss comments if cancel login dialog.
+
+2012.02.10 v0.9.170
+SVN: r1149
+1. Fix crash on low sdk older than android 4.0
+
+2012.02.10 v0.9.169
+SVN: r1148
+1. Change auto upload settings title.
+2. Excluding friends feeds from public stream.
+3. Depress double click BACK key if start AppShare from main activity.
+4. Remove confirm dialog while ignore recommendation candidates.
+5. fix get apk info is null in apkdetailActivity when click from downloadmanagerActivity.
+6. fix processbar status not consistency in downloadmanagerActivity and apkdetailActivity.
+7. Add login tutorial for guest while start up.
+
+2012.02.09 v0.9.168
+SVN: r1133
+1. Remove redundant picture in shared link.
+2. Fix 'query closed cursor' for Android 3.2 +
+3. Fix status error for apkdetail,re-design ui for apkdetail.
+4. Enhance the composer responding to outside share text but not url. 
+
+2012.02.06 v0.9.167
+SVN: r1177
+1. remove borqs account while switch between release and debug server url.
+
+2012.02.06 v0.9.166
+SVN: r1100
+1. Merge friends/stream tab into More tab
+2. More tab run user/guest mode.
+3. Align button size of compose/comment activity.
+4. Add setting to app box
+
+2012.02.03 v0.9.165
+SVN: r1074
+1. app box improve splash, ui, feedback.
+
+2012.02.03 v0.9.164 fix
+SVN: r1063
+1. correct url to set api.borqs.com as always formal host.
+2. check login for composing.
+3. simplify QApplicaiton construct.
+
+2012.02.02 v0.9.164
+SVN: r1057
+1. Add testing server
+2. Fix crash of change language.
+3. Jump to public stream if no login
+
+2012.02.01 v0.9.163
+SVN: r1039
+1. Fix app box crash if no update item
+2. Trim useless new line in stream
+3. Modify edit text style for ICS
+
+2012.01.31 v0.9.162
+SVN: r1015
+1. Set both app box and existing app share as active items.
+2. Fix search crash while search within app box.
+
+2012.01.30 v0.9.161
+SVN: r1008
+1. Add App Box activity and use it as startup one.
+
+2012.01.29 v0.9.160
+SVN: r997
+1. improve the stream item composing and displaying.
+
+2012.01.16 v0.9.159
+SVN: r986
+1. fix for account fetch issue, but still need cache to enhance the performance
+
+2012.01.16 v0.9.157
+SVN: r905
+1. UI change and add link functionality.
+
+2012.01.13 v0.9.156
+SVN: r942
+1. Adjust app share/bpc UI.
+
+2012.01.10 v0.9.155
+SVN: r905
+1. disable outdated BorqsAccountService.apk downloading.
+
+
+2012.01.09 v0.9.154
+SVN: r898
+1. fix notification service crash.
+2. Apk privacy settings.
+
+2012.01.09 v0.9.153
+SVN: r892
+1. first release after merging BorqsAccount and Push service.
+
+2011.12.29 v0.9.152
+SVN: r826
+1. fix force close when update qiupu app complete
+2. fix force close when update profile with the name's pinyin not ni the PINYIN library
+3. adjust UI for title category for every activity
+4. add popuwindow for app category with HOT apps and LATEST apps
+
+
+2011.12.27 v0.9.151
+SVN: r808
+1. remove logout form app share 'more' activity.
+2. unify the app search UI
+3. improve the prompt string text
+4. fix response issue for exit menu.
+5. clean Setting Activity of Bpc from qiupu.
+6. sync local apk list to db for no network access.
+
+2011.12.23 v0.9.150
+SVN: r772
+1. rename qiupu and alter icon, splash.
+2. 
+
+
+2011.12.20 v0.9.147
+SVN: r753
+1. fix downloading ui
+2. remove useless drawable
+3. add people search
+
+
+2011.12.16 v0.9.146
+SVN: r721
+1. add drop down to refresh stream.
+2. add update all head view for my app.
+3. improve composer with retweet/post and receive outside share.
+4. change to use sdcard path /borqs/apps/qiupu/.
+
+2011.12.15 v0.9.145
+SVN: r704
+1. show link subject while shared from outside.
+2. reform composer code.
+
+
+2011.12.14 v0.9.144
+SVN: r636
+1. add response to share picture from gallery
+2. add update all in my app list.
+3. sync UI after add people from may known into circle.
+4. back userinfo after setcircle to keep local user and server Consistent.
+
+
+2011.12.13 v0.9.143
+SVN: r636
+1. add show suggest user in mainActivity.
+2. remove qiupu login Ui.
+3. fix bug for stream refresh.
+
+2011.12.12 v0.9.142
+SVN: r620
+1. debug request/add tutorial when have no request.
+2. Optimization clear cache.
+3. You can delete comments which commented your stream.
+4. fix apk Screenshot maybe redundance,if clone or other action.
+
+
+
+2011.12.09 v0.9.141
+SVN: r607
+1. add load circle/user from server when pick circle/user
+2. not show 'add to circle' in request Activity.
+3. add go to streamCommentActivity from notification.
+
+
+2011.12.08 v0.9.139
+SVN: r589
+1. merger pick circle and user.
+2. add borqs music stream.
+
+2011.12.06 v0.9.138
+SVN: r565
+1. add stream filter.
+2. add A to Z widget.
+3. add notification set.
+
+2011.12.02 v0.9.137
+SVN: r536
+1. invitation reform.
+2. notification settings.
+
+2011.09.27 v1.1.107
+SVN: r21723
+
+1. improve launch performace from Home intent
+2. improve fling gestures to avoid navigation to other page while scrolling content
+3. fix api address Book sync to server
+4. fix edit profile of user and update user icon api
+5. fix api update status of user
+
+
+
+
+
+
+

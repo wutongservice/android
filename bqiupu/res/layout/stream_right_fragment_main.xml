@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/paper_bg"
+    android:orientation="vertical" >
+
+    <com.borqs.common.view.AllAppsScreen
+        android:id="@+id/workspace"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/bottom_layout" >
+    </com.borqs.common.view.AllAppsScreen>
+
+    <RelativeLayout
+        android:id="@id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/second_title_bar_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/tab_bar"
+        android:tag="bottom_style_oms25" >
+
+        <LinearLayout
+            android:id="@+id/tab_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:addStatesFromChildren="true"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+
+        <com.borqs.common.view.PageIndicatorLineStyleView
+            android:id="@id/page_line_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/pageindicatorline_height"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottom_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/small_text_margin_bottom"
+        android:layout_marginRight="@dimen/default_margin"
+        android:src="@drawable/to_search"  />
+    
+</RelativeLayout>

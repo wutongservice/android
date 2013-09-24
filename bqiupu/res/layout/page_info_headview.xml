@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/item_white_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/default_text_padding_bottom" >
+
+    <ImageView
+        android:id="@+id/page_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_cover_item_height"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="12dip"
+        android:paddingBottom="@dimen/small_text_padding_bottom"
+        android:paddingLeft="@dimen/stream_item_content_padding"
+        android:paddingRight="@dimen/stream_item_content_padding" >
+
+        <ImageView
+            android:id="@+id/page_logo"
+            android:layout_width="@dimen/stream_row_size_profile_icon"
+            android:layout_height="@dimen/stream_row_size_profile_icon"
+            android:src="@drawable/default_public_circle" />
+
+        <ImageView
+            android:id="@+id/icon_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/page_logo"
+            android:layout_alignRight="@id/page_logo"
+            android:src="@drawable/btn_camera"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/id_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/page_logo"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_toRightOf="@id/page_logo"
+            android:gravity="top|left"
+            android:textSize="@dimen/event_name_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_page_fan_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_page_title"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_marginTop="@dimen/page_card_gap_between_name_and_circles"
+            android:layout_toRightOf="@id/page_logo"
+            android:drawableLeft="@drawable/fans_icon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/page_card_fans_text_size" />
+
+        <FrameLayout
+            android:id="@+id/id_action_fl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/page_logo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/default_text_margin_right"
+            android:layout_marginTop="@dimen/default_text_margin_top"
+            android:paddingBottom="@dimen/default_text_padding_bottom"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/follow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="@string/following" />
+
+            <TextView
+                android:id="@+id/unfollow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="@string/un_follow" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/page_circle_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/page_logo"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/profile_in_circle_bg"
+            android:drawableLeft="@drawable/profile_circles_icon"
+            android:gravity="center"
+            android:paddingLeft="@dimen/stream_item_content_padding"
+            android:paddingRight="@dimen/stream_item_content_padding"
+            android:text="@string/user_circles"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layout_top_post"
+            style="@style/circle_profile_item"
+            android:layout_below="@id/page_logo"
+            android:layout_toLeftOf="@+id/dropdown_icon"
+            android:layout_toRightOf="@id/page_circle_label"
+            android:paddingLeft="@dimen/stream_item_content_padding"
+            android:paddingRight="@dimen/stream_item_content_padding"
+            android:visibility="gone" >
+
+            <!--
+                 <ImageView
+                android:id="@+id/icon_invite_member_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/commit_button_margin_right"
+                android:src="@drawable/chevron_grey" />
+            -->
+
+            <TextView
+                android:id="@+id/tv_top_post"
+                style="@style/shadow_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/circle_hot_icon"
+                android:drawablePadding="@dimen/default_text_padding_left" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@id/dropdown_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/page_logo"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="?attr/buttonSelectableBackground"
+            android:paddingBottom="10dip"
+            android:paddingLeft="14dip"
+            android:paddingRight="14dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/down_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/share_source_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share_bg"
+        android:visibility="gone" >
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_repeat"
+            android:scrollbars="none" >
+
+            <com.borqs.common.view.HorizontalLinearLayoutView
+                android:id="@+id/source_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </com.borqs.common.view.HorizontalLinearLayoutView>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

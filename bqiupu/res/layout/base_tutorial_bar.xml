@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/header"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal">
+
+    <TextView
+            android:id="@+id/id_goto_login"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="20dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:text="@string/tutorial_goto_login"
+            android:textSize="20sp"/>
+
+    <Button android:id="@+id/login_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="134dip"
+            android:text="@string/login_ok"
+            android:gravity="center"
+            android:textSize="18sp" />
+</LinearLayout>

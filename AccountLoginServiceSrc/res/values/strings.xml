@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acl_app_name">borqs login</string>
+ 	<string name="acl_borqs_account_label">Borqs</string>
+    <string name="acl_borqs_service_introduce">Login or register Borqs account, you can easily use the network services provided by Borqs.</string>
+    <string name="acl_settings_title_fmt">setting</string>
+    <string name="acl_account_already_login">You have already logged in a Borqs account.</string>
+    <string name="acl_ok">OK</string>
+    <string name="acl_done">Done</string>
+
+    <!--Login Activity-->
+    <string name="acl_user_id">ID:&#160;</string>
+    <string name="acl_user_id_input_hint">Phone/Email</string>
+    <string name="acl_user_password">Password:&#160;</string>
+    <string name="acl_user_password_input_hint_short">Password</string>
+    <string name="acl_user_password_input_hint">Password(6-16)</string>
+    <string name="acl_signin_text">Login</string>
+    <string name="acl_onekey_register_text">Quick register</string>
+    <string name="acl_register_text">Register</string>
+    <string name="acl_user_forgot_password">Forgot password?</string>
+    <string name="acl_sms_charge_declare"><b>Note:&#160;</b>Quick register will send one sms, will be charged by your operator.</string>    
+    <string name="acl_login_title">User login</string>
+    <string name="acl_register_title">User register</string>
+    <string name="acl_logining">Loging\.\.\.</string>
+    <string name="acl_registering">Registering\.\.\.</string>
+    <string name="acl_invalid_input_content">input content error!</string>
+    <string name="acl_user_verify_code_input_hint">Input the code</string>
+    <string name="acl_backto_login_text">Login</string>    
+    
+    <string name="acl_input_verify_code">verification code:&#160;</string>
+    <string name="acl_get_verify_code">Get code</string>
+    <string name="acl_verifycode_format">your verification code:&lt;CODE&gt;</string>
+    <string name="acl_get_verifycode_failed">failed to get verification code</string>
+    <string name="acl_register_user_input_hint">Phone/Email</string>
+    <string name="acl_register_user_hint_mail">Email</string>
+    <string name="acl_register_user_hint_phone">Phone number</string>
+    <string name="acl_send_verify_code_to_phone">Verify code has been sent to your phone, pls check it</string>
+    <string name="acl_send_verify_code_to_mail">Verify code has been sent to your mail, pls check it</string>
+    <string name="acl_user_name">Name:&#160;</string>
+    <string name="acl_user_phone">Phone:&#160;</string>
+    <string name="acl_user_birthday">Birthday:&#160;</string>
+    <string name="acl_user_address">Address:&#160;</string>
+    <string name="acl_user_real_name_hint">real name</string>
+    <string name="acl_user_detail_title">Personal info</string>
+    <string name="acl_edit_image">edit image</string>
+    <string name="acl_image_from_file">from gallery</string>
+    <string name="acl_image_from_camera">from camera</string>
+    <string name="acl_set_birthday">Birthday</string>
+    <string name="acl_show_password">show password</string>
+    <string name="acl_changing_profile_info">Changing profile information...</string>
+    <string name="acl_email_register_prompt">Sms server not working, pls register by mail</string>
+    <string name="acl_email_change_pwd_prompt">Sms server not working, pls change password by mail</string>
+
+    <string name="acl_reset_pwd_hint">Send new password to:&#160;</string>
+    <string name="acl_reset_pwd_title">Reset Password</string>
+    <string name="acl_get_new_pwd">Retrieve</string>
+    <string name="acl_rpd_user_id_input_hint">Phone/Email</string>
+    <string name="acl_getting_new_password">Getting new password...</string>
+    <string name="acl_send_new_pwd_to_phone">new password has sent to your phone, pls check it</string>
+    <string name="acl_send_new_pwd_to_mail">new password changed method has been sent to your email, pls check it</string>  
+    
+    <string name="acl_register_failed">Register failed</string>
+    <string name="acl_login_failed">sign in failed</string>    
+    <string name="acl_input_error_required">Please input</string>
+    <string name="acl_input_error_user_name">user name error</string>
+    <string name="acl_error_unknown">Unknown error, try again later</string>
+    <string name="acl_error_connect_server">can\'t connect to server, try later</string>
+    <string name="acl_error_server_rsp_data">server response error, try later</string>
+    <string name="acl_error_reg_time_out">register time out, try later</string>
+    <string name="acl_error_sed_reg_send_sms">send register sms error,</string>
+    <string name="acl_error_no_sim_card">no SIM card</string>
+    <string name="acl_error_server_unknown_error">server error:&#160;</string>
+    <string name="acl_error_ticket_invalid">session timeout, please login again</string>
+    <string name="acl_error_usr_pwd_invalid">user name or password error</string>
+    <string name="acl_error_no_phone">no phone number</string>
+    <string name="acl_error_no_user">the user not exists</string>
+    <string name="acl_error_no_record">no record</string>
+    <string name="acl_error_code_is_empty">pls get verify code first</string>
+    <string name="acl_error_cmp_code_gt_3">try verify code 3 times, pls get new verify code again</string>
+    <string name="acl_error_cmp_verifycode_failed">verify code error</string>
+    <string name="acl_change_profile_failed">change profile failed</string>
+    <string name="acl_error_input_phone">phone number error</string>
+    <string name="acl_error_input_pwd">Password(6-16)</string>
+    <string name="acl_error_get_new_pwd">Get new password failed</string>
+    <string name="acl_error_invalid_user">invalid user name</string>
+    <string name="acl_have_account_prompt">Already have an account in the system, signed in with the old account</string>
+    <string name="acl_sms_server_error">Sms server not working, Pls retry later</string>
+    <string name="acl_error_server_exception">Server not available now, Pls retry later</string>
+        
+    <!-- Account removal activity -->
+    <string name="account_removal_title">Account removal</string>
+    <string name="acl_removal_notice">"With the confirmation, the account and it's contacts would be removed from device!"</string>
+    <string name="acl_removal_contact_cleaning">Erasing Borqs contacts ...</string>
+
+    <!-- Account settings entry -->
+    <string name="account_settings_entry">Account settings</string>
+    <string name="account_settings_summary">Borqs application customize options</string>
+    <string name="account_settings_options">Setting options</string>
+    <string name="account_settings_no_options">No more options!</string>
+    
+    <!-- contact.xml -->
+   <string name="acl_invite_contact_label">Invite to circle</string>
+</resources>

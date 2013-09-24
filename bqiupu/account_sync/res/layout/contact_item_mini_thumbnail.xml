@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="0.5dip">
+    <ImageView
+            android:id="@+id/card_photo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="0dp"
+            android:background="@drawable/sync_vcard_head_icon"
+            android:src="@drawable/sync_default_user_icon" />
+
+    <TextView
+            android:id="@+id/card_name"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#80000000"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffffff" />
+    <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_gravity="bottom|right"
+            android:contentDescription="@null"
+            android:layout_marginRight="1dip"
+            android:layout_marginBottom="1dip"
+            android:src="@drawable/sync_dropdown_ic_arrow_normal_holo_light"
+        />
+     <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/sync_type_icon"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:contentDescription="@null"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="1dip"
+            android:visibility="gone"
+        />
+</FrameLayout>

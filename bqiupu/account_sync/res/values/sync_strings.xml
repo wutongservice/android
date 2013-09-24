@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+	<string name="cmcc_app_name">Borqs Sync</string>
+    <string name="sync_not_title">Please note that all entries with this icon will not be able to be synchronized</string>
+    <string name="sync_contacts_title">Contacts</string>
+    <string name="sync_calendar_title">Calendar</string>
+    <string name="sync_event_title">Calendar</string>
+    <string name="sync_tasks_title">ToDo List</string>
+    <string name="stop_sync_title">Stop Sync</string>
+    <string name="do_sync_title">Sync changed items</string>
+    <string name="backup_to_server">Backup to server</string>
+    <string name="restore_to_phone">Restore to phone</string>
+
+    <!-- Sync item status string -->
+    <string name="sync_item_status_waiting_sync">Waiting for sync</string>
+    <string name="sync_item_status_syncing">Synchronizing</string>
+    <string name="sync_item_status_sync_error">Synchronized failed</string>
+    <string name="sync_item_status_sync_ok">Synchronized successfully</string>
+    <string name="sync_item_status_interrupted">Synchronization interrupted</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_sync_log">Sync log</string>
+
+<!--     <string name="cancel_button">Cancel</string>
+    <string name="ok_button">OK</string>
+
+    <string name="close_button">Close</string> -->
+
+    <!-- Custom operation activity strings -->
+    <string name="custom_operation">Custom</string>
+    <string name="exitConfirmation">Exit PIM?</string>
+    <string name="confirmTitle">Confirm</string>
+    <string name="stopAndExitConfirmation">Are Syncing,if hide, in the background to complete the synchronization, if stop, data not synchronized will be lost.</string>
+    <string name="registConfirmation">Authentication fails, you may not be registered, whether registration?</string>
+    <string name="fastSyncConfirmation">Do you confirm to sync the content you changed?</string>
+    <string name="slowSyncConfirmation">Do you confirm to sync all local content?</string>
+    <string name="refreshFromClientConfirmation">Do you confirm to replace server content with local content?</string>
+    <string name="refreshFromServerConfirmation">Do you confirm to replace local content with server content?</string>
+    <string name="sync_mode_title_slow">Merge items</string>
+    <string name="sync_mode_title_one_way_from_client">Update Server</string>
+    <string name="sync_mode_title_refresh_from_client">Reload Server</string>
+    <string name="sync_mode_title_one_way_from_server">Update Device</string>
+    <string name="sync_mode_title_refresh_from_server">Reload Device</string>
+
+    <!-- Do not change the content or order only -->
+    <string-array name="sync_all_mode">
+        <item>Normal sync</item>
+        <item>Slow sync</item>
+        <item>Update Server</item>
+        <item>Reload Server</item>
+        <item>Update Device</item>
+        <item>Reload Device</item>
+    </string-array>
+
+	<!-- Main Screen string -->
+	<string name="main_screen_select_sync_profile">Select sync profile</string>
+
+	<!-- Service Strings -->
+	<string name="syncml_service_started">SyncML started</string>
+	<string name="syncml_service_sync_end">Sync end</string>
+
+	<!-- Sync status error strings -->
+	<string name="sync_status_bad_request">Synchronization failed(400).</string>
+	<string name="sync_status_invalid_credentials">Invalid credentials. Please verify the user name and password in setting.</string>
+	<string name="sync_status_payment_required">Payment required</string>
+	<string name="sync_status_forbidden">The operation is forbidden</string>
+	<string name="sync_status_not_found">The operation item not found</string>
+	<string name="sync_status_uri_wrong">Synchronization failed.Please check the remote database in settings</string>
+	<string name="sync_status_command_not_allowed">The command not allowed</string>
+	<string name="sync_status_optional_feature_not_supported">Optional feature not supported</string>
+	<string name="sync_status_missing_credentials">Missing credentials. Please input the user name and password in setting.</string>
+	<string name="sync_status_request_timeout">Request timeout</string>
+	<string name="sync_status_conflict">Conflict</string>
+	<string name="sync_status_gone">The requested target is no longer on the recipient and no forwarding Database is known.</string>
+	<string name="sync_status_size_required">Size required</string>
+	<string name="sync_status_incomplete_command">Incomplete command</string>
+	<string name="sync_status_request_entity_too_large">Request entity too large</string>
+	<string name="sync_status_uri_too_long">Database name too long</string>
+	<string name="sync_status_unsupported_media_type_or_format">Unsupported media type or format</string>
+	<string name="sync_status_requested_size_too_big">Requested size too big</string>
+	<string name="sync_status_retry_later">Retry later</string>
+	<string name="sync_status_already_exists">Already exists</string>
+	<string name="sync_status_conflict_resolved_with_server_data">Conflict resolved with server data</string>
+	<string name="sync_status_device_full">Device full</string>
+	<string name="sync_status_unknown_search_grammar">Unknown search grammar</string>
+	<string name="sync_status_bad_cgi_script">Bad CGI script</string>
+	<string name="sync_status_soft_delete_conflict">Soft-delete conflict</string>
+	<string name="sync_status_size_mismatch">Synchronization failed(424).</string>
+	<string name="sync_status_command_failed">Synchronization failed(500).</string>
+	<string name="sync_status_command_not_implemented">Synchronization failed(501).</string>
+	<string name="sync_status_bad_gateway">Bad gateway</string>
+	<string name="sync_status_service_unavailable">Service unavailable</string>
+	<string name="sync_status_gateway_timeout">Gateway timeout</string>
+	<string name="sync_status_dtd_version_not_supported">Synchronization failed(505).</string>
+	<string name="sync_status_processing_error">Processing error</string>
+	<string name="sync_status_atomic_failed">Atomic failed</string>
+	<string name="sync_status_refresh_required">Refresh required</string>
+	<string name="sync_status_reserved">Reserved</string>
+	<string name="sync_status_data_store_failure">Data store failure</string>
+	<string name="sync_status_server_failure">Server failure</string>
+	<string name="sync_status_synchronization_failed">Synchronization failed(512).</string>
+	<string name="sync_status_protocol_version_not_supported">Protocol version not supported</string>
+	<string name="sync_status_operation_cancelled">Operation canceled</string>
+	<string name="sync_status_atomic_roll_back_failed">Atomic roll back failed</string>
+
+	<string name="sync_msg_unsport_device_mode">Sync failed. Unsupported device.</string>
+	<string name="sync_msg_server_wbxml_error">Server WBXML error.</string>
+	<string name="sync_msg_select_sync_item">Please select sync item</string>
+
+	<!-- Syncing prompt string -->
+	<string name="sync_is_running">Sync running.</string>
+	<string name="sync_error">Sync error</string>
+	<string name="sync_database_full">Device database full.</string>
+	<string name="conn_err_airplanemode">Failed to access network for airplane mode.</string>
+	<string name="conn_err_prefix">Failed to access network. </string>
+	<string name="conn_err_other">Failed to access network.</string>
+	<string name="sync_in_running">Sync running,please wait...</string>
+
+	<!-- Profile setting strings -->
+	<string name="preference_profile_title">Profile name</string>
+	<string name="preference_profile_default">Default profile</string>
+	<string name="preference_title">Account setting</string>
+	<string name="preference_name_title">User name</string>
+	<string name="preference_passwd_title">User password</string>
+	<string name="preference_server_url_title">Sync server URL</string>
+	<string name="preference_sync_setting_title">Sync setting</string>
+	<string name="preference_sync_contact">Contacts</string>
+	<string name="preference_contact_remote_uri">Remote Database</string>
+	<string name="preference_sync_calendar">Calendar</string>
+	<string name="preference_calendar_remote_uri">Remote Database</string>
+	<string name="preference_apn_setting_title">APN setting</string>
+	<string name="preference_apn">APN</string>
+	<string name="preference_cannot_save_profile">Can not save the profile.</string>
+	<string name="preference_wrong_server_url">Please enter right server URL.</string>
+	<string name="preference_profile_no_name">&lt;No name&gt;</string>
+	<string name="preference_profile_default_string">Default</string>
+	<string name="deleteProfileConfirmation">Delete the profile will clear all the sync logs with the sync server. Do you confirm delete it?</string>
+	<string name="noButton">No</string>
+	<string name="yesButton">Yes</string>
+	<string name="hideButton">Hide</string>
+	<string name="quitButton">Exit</string>
+	<string name="stopButton">Stop</string>
+	<string name="edit_sync_profile">Edit sync profile</string>
+	<string name="sync_profiles_list">Sync profiles</string>
+	<string name="sync_prof_menu_new_profile">New profile</string>
+	<string name="sync_prof_menu_save">Save</string>
+	<string name="sync_prof_menu_discard">Discard</string>
+	<string name="sync_prof_menu_delete">Delete</string>
+
+	<!-- Sync log strings -->
+	<string name="sync_log_no_sync_log">No sync log</string>
+	<string name="sync_log">Sync log</string>
+	<string name="sync_log_sync_mode">Sync mode:</string>
+	<string name="sync_log_result">Result:</string>
+	<string name="sync_log_start">Start:</string>
+	<string name="sync_log_end">End:</string>
+	<string name="sync_log_phone_added">Device added:</string>
+	<string name="sync_log_phone_added_failed">Device added unsuccessfully:</string>
+	<string name="sync_log_phone_modified">Device modified:</string>
+	<string name="sync_log_phone_modified_failed">Device modified unsuccessfully:</string>
+	<string name="sync_log_phone_deleted">Device deleted:</string>
+	<string name="sync_log_phone_deleted_failed">Device deleted unsuccessfully:</string>
+
+<!-- <string name="sync_log_server_added">Server added:</string>
+	<string name="sync_log_server_added_failed">Server added unsuccessfully:</string>
+	<string name="sync_log_server_modified">Server modified:</string>
+	<string name="sync_log_server_modified_failed">Server modified unsuccessfully:</string>
+	<string name="sync_log_server_deleted">Server deleted:</string>
+	<string name="sync_log_server_deleted_failed">Server deleted unsuccessfully:</string> -->
+	<string name="sync_log_unknown_sync_mode">Unknown sync mode</string>
+	<string name="sync_log_successfully">Success</string>
+	<string name="sync_log_user_interrupted">User interrupted</string>
+	<string name="sync_log_failed">Fail</string>
+	<string name="sync_log_unknown_sync_result">Unknown sync result</string>
+
+	<!-- Sync message -->
+    <string name="sync_msg_not_sync">Not synchronized</string>
+    <string name="sync_msg_last_sync">Last sync:</string>
+    <string name="sync_msg_server_url_error">The server URL error! Please change it in setting.</string>
+    <string name="sync_msg_sync_successfully_completed">Sync successfully completed</string>
+    <string name="sync_msg_error_in_sync">Error in sync</string>
+    <string name="sync_msg_syncing">Synchronizing</string>
+    <string name="sync_msg_please_waiting">Please wait...</string>
+	<string name="sync_msg_checking_device_data">Analyzing device data:</string>
+	<string name="sync_msg_packaging_device_sync_items">Sending device data:</string>
+	<string name="sync_msg_handling_server_sync_items">Receiving server data:</string>
+	<string name="sync_msg_delete_device_all_content">Deleting device data:</string>
+
+	<string name="sync_phase_data_connection">Data connection</string>
+	<string name="sync_phase_initialization">Sync initialization</string>
+	<string name="sync_phase_device_prepare">Device preparing</string>
+	<string name="sync_phase_sync_device_to_server">Sync device data to server</string>
+	<string name="sync_phase_sync_server_to_device">Sync server data to device</string>
+	<string name="sync_phase_map_to_server">Mapping with server</string>
+
+	<string name="access_server_error">Access sync server error. Please check sync setting and network connection.</string>
+
+	<!-- CMCC string -->
+	<string name="cmcc_welcome_syncml">Phonebook Manager is a service provided by China Mobile:\n\n(1)Phonebook Update: Backup or restore your phonebook entries online.\n(2)Online Enquiry: Store your phonebook entries online to save memory space of your phone.</string>
+	<string name="cmcc_charge">Tariff</string>
+	<string name="cmcc_enter">Enter</string>
+	<string name="cmcc_open_cancel_service">Subscribe/Cancel services</string>
+	<string name="cmcc_network_inquiry">Online Inquiry</string>
+	<string name="cmcc_help">Help</string>
+
+	<!-- phone number filter prompt -->
+	<string name="phone_number_filter_prompt_message">Sync completed successfully,it has filtered out invalid characters in the phone number sent to server\n%s</string>
+	<string name="phone_number_filter_prompt_title">Filter prompt</string>
+	<!-- Borqs theme tag -->
+    <string  name="borqs_theme">[Compatible-OMS]</string>
+
+    <!-- change items title -->
+	<string name="change_log_contacts_added">Added contacts</string>
+	<string name="change_log_contacts_updated">Updated contacts</string>
+	<string name="change_log_contacts_deleted">Deleted contacts</string>
+
+	<string name="button_sync_to_server">Sync to server</string>
+	<string name="change_log_contacts_detail_added_title">Added contacts</string>
+	<string name="change_log_contacts_detail_updated_title">Updated contacts</string>
+	<string name="title_changelog_explain">Since the last time synchronous, user has done the following operation:</string>
+	<string name="change_log_no_contacts_items">No contacts</string>
+
+	<string name="change_log_count">%d</string>
+
+    <!-- Tab -->
+	<string name="bottom_tab_site_text">local</string>
+   <string name="bottom_tab_user_text">server</string>
+   <string name="tab_title">show the different between the local and server</string>
+	<color name="change">#FF6A6A</color>
+	<color name="nor">#919191</color>
+	<color name="sync_no_change_bg">#EBEBEB</color>
+	<color name="sync_no_change_text">#9BCD9B</color>
+
+	<!-- last sync time -->
+   <string name="last_sync_today">Today</string>
+   <string name="last_sync_yesterday">Yesterday</string>
+   <string name="last_sync_none">Never Sync Before</string>
+   <string name="last_sync">Last Sync:</string>
+
+   <string name="sync_button_lable">Sync now</string>
+   <string name="app_list_title_sync">Borqs Sync</string>
+   <string name="sync_list_loading">Loading,please hold on...</string>
+   <string name="sync_list_loading_false">Failed to load data</string>
+   <string name="toast_sync_change_info">Your phone\'s data is consistent with server\'s at present!</string>
+
+   <!-- change request detail's change type info text  -->
+   <string name="change_request_default_change">Updated:</string>
+    <string name="change_request_mail_change">Updated Email:</string>
+    <string name="change_request_mobile_phone_change">Updated mobile phone number:</string>
+    <string name="change_request_work_phone_change">Updated work phone number:</string>
+    <string name="change_request_home_phone_change">Updated home phone number:</string>
+    <string name="change_request_other_phone_change">Updated other phone number:</string>
+    <string name="change_request_name_change">Updated name:</string>
+    <string name="change_request_home_email_change">Updated home email:</string>
+    <string name="change_request_work_email_change">Updated work email:</string>
+    <string name="change_request_other_email_change">Updated other email:</string>
+
+    <string name="change_request_default_add">Added:</string>
+    <string name="change_request_mail_add">Added Email:</string>
+    <string name="change_request_mobile_phone_add">Added mobile phone:</string>
+    <string name="change_request_work_phone_add">Added work phone:</string>
+    <string name="change_request_home_phone_add">Added home phone:</string>
+    <string name="change_request_other_phone_add">Added other phone:</string>
+    <string name="change_request_name_add">Added name:</string>
+    <string name="change_request_home_email_add">Added home email:</string>
+    <string name="change_request_work_email_add">Added work email:</string>
+    <string name="change_request_other_email_add">Added other email:</string>
+
+    <!-- change request button title -->
+    <string name="change_request_yes_btn">Update</string>
+    <string name="change_request_no_btn">Ignore</string>
+
+    <string name="change_request_updating">Updating...</string>
+    <string name="change_request_update_false">Update fail.</string>
+
+    <string name="change_log_sync">Synchronizing...</string>
+    <string name="change_log_sync_false">Synchronization failed</string>
+
+    <string name="change_request_update_succ">Update successful.</string>
+    <!-- <string name="change_request_is_change_text">Do you want to update the change to your profile?</string> -->
+
+    <string name="send_week_string">A week ago</string>
+    <string name="send_day_string">day(s) ago</string>
+    <string name="send_hour_string">hour(s) ago</string>
+    <string name="send_minite_string">minute(s) ago</string>
+    <string name="send_second_string">seconds ago</string>
+    <string name="send_default_string">just now</string>
+    
+    <!-- change title -->
+   <!--  <string name="change_request_title_part1">Updated your information at </string>
+    <string name="change_request_title_part2"> contacts:</string>
+    <string name="change_request_sender_gender_f">\u0020her\'s\u0020</string>
+    <string name="change_request_sender_gender_m">\u0020his\'s\u0020</string>
+    <string name="change_request_sender_gender_default">\u0020his(her)\'s\u0020</string> -->
+    <string name="change_request_detail_summary">Changed your information in the contacts , You can update this information to your personal information :</string>
+    <string name="change_request_detail_summary_nochange">Changed your information in the contacts,it is consistent with your personal information.\n\nUpdating your personal information in time in order to provide your friends your latest information.</string>
+    <string name="change_request_title_update_notification">Update Notification</string>
+
+    <string name="change_request_already_sync_info">Did not find the data to be synchronized.</string>
+    <string name="change_request_sync_complete">Contacts synchronization is complete.</string>
+    <string name="change_request_no_account">No Account.</string>
+
+    <!-- contacts management source string -->
+    <string name="contact_manager_welcome">Use Borqs services to manage contacts, you can make your contact information complete and concise. &lt;br&gt;&lt;br&gt;What you only need to do is &lt;font color=&quot;black&quot;&gt;decide which name of the contact to be displayed. &lt;/font&gt;&lt;br&gt;&lt;br&gt;Click &lt;font color=&quot;black&quot;&gt;“Next” &lt;/font&gt;to manage your Borqs contacts.</string>
+	
+    <string name="contact_manager_finish">Management of the Borqs contacts has been completed. Increase %1$d contacts，update %2$d contacts。</string>
+    <string name="contact_manager_im_analysing">Analyzing Contacts Information.</string>
+    <string name="contact_manager_im_wait">Please wait...</string>
+    <string name="contact_manager_im_importing">Computing Contacts Information.</string>
+    
+    <string name="contact_manager_im_manager">Contacts Manager</string>   
+    <string name="contact_manager_im_summary">Touch to manage your Borqs contacts</string> 
+    <string name="contact_manager_im_next">Next</string>    
+    <string name="contact_manager_im_confirm">OK</string>
+    <string name="contact_manager_im_finish">Done</string>
+    
+    <string name="contact_manager_notification_title_merging">Service of Contacts Manager is running.</string>
+    <string name="contact_manager_notification_ticker_merging">Service of Contacts Manager is running in background.</string>
+    <string name="contact_manager_notification_message_merging">Click to check</string>
+    
+    <string name="contact_manager_merge_select_name">Choose Display Name</string>
+    
+    <string name="contact_manager_notification_not_login">Please login your Borqs account first</string>
+    <!-- error -->
+    <string name="error_dialog_context">Abnormal network connections, please try again later.</string>
+    <color name="green">#A2CD5A</color>
+    
+    <string name="error_sync_profile_is_run">Synchronizing profile, please do this later!</string>
+    <string name="error_sync_is_run">Synchronizing contacts, please do this later!</string>
+    <string name="error_merge_is_run">Merging contacts, please do this later!</string>
+    <string name="error_merge_analyze_is_run">Analyzing contacts, please do this later!</string>
+    <string name="error_contact_operate_is_run">The contact data is being operated,please do this later!</string>
+    <string name="error_import_is_run">Importing contacts, please do this later!</string> 
+    
+    <string name="register_use_email">register with email</string>
+    <string name="register_use_mobile">register with phone number</string>
+    
+    <!-- BPC feature entrance -->
+    <string name="request_conversion">Initiate a session</string>
+    <string name="add_to_circles">Add to circle</string>
+    <string name="view_bpc_profile">View Wutong Profile</string>
+    
+    <!-- sync result notification-->
+    <string name="sync_fail_notification">Sync fail,please re-try later.</string>
+    
+    <string name="sync_operation_info">Click will sync the local of Borqs contacts with the could</string>
+    <string name="sync_result_local">Local:</string>
+    <string name="sync_result_server">Could:</string>
+    <string name="sync_result_add">add %d </string>
+    <string name="sync_result_add_fail">add fail %d </string>
+    <string name="sync_result_del">delete %d </string>
+    <string name="sync_result_del_fail">delete fail %d </string>
+    <string name="sync_result_modify">update %d </string>
+    <string name="sync_result_modify_fail">update fail %d </string>
+    <string name="sync_run_at_background">Running in the background</string>
+    <string name="sync_finished_confirm">OK</string>
+    
+    <!-- Borqs Plus Transit -->
+    <string name="openface_video_call">Video call</string>
+    <string name="openface_voice_call">Voice call</string>
+    <string name="text_download_dialog_title">Download</string>
+    <string name="text_download_wutong_dialog_message">Must download Wutong(Size:%s) for this feature,continue?</string>
+    <string name="text_download_openface_dialog_message">Must download Openface(Size:%s) for this feature,continue?</string>
+    <string name="text_app_downloading">The application is in downloading process!</string>
+    <string name="text_download_dialog_message_loading">Loading...</string>
+    <string name="text_download_error_no_network">No network,download failed!</string>
+    <string name="text_download_error_no_sdcard">No sdcard,download failed!</string>
+    <string name="text_download_error_unknown">Unknown error,download failed!</string>
+    <string name="text_download_app_start">Downloading %s!</string>
+    <string name="text_download_invalid_url">Invalid url,download failed!</string>
+    <string name="text_app_download_fetch_error">Fetch application information failed!Download failed!</string>
+    <string name="text_app_downloading_failed">Loading failed!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="text_plus_label_wutong">Wutong</string>
+    <string name="text_plus_label_openface">Openface</string>
+    <!-- Borqs Plus Transit -->
+    
+    <!-- sync fail -->
+    <string name="contact_sync_fail_many_times_title">Sorry,auto sync failed</string>
+    <string name="contact_sync_fail_many_times_content">Has switched to manual sync,enter to sync</string>
+    <string name="contact_sync_result">Result:%s</string>
+</resources>

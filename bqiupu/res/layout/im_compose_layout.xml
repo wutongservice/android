@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/im_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/im_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/qiupu_list_color_cache_hint"
+        android:divider="@android:color/transparent"
+        android:listSelector="?attr/listSelector"
+        android:layout_above="@+id/id_span_view" />
+
+    <View
+        android:id="@+id/id_span_view"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/im_send"
+        android:layout_height="1px"
+        android:background="#9c9a9c"/>
+
+    <include
+        android:id="@+id/im_send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/comments_footer" />
+
+</RelativeLayout>

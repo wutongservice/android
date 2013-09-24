@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bottom_compose_view_style" >
+
+    <RelativeLayout
+        android:id="@+id/toggle_search"
+        style="@style/bottom_compose_bar_view" >
+
+        <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/actionbar_icon_search_normal"
+            android:gravity="center_horizontal"
+            android:text="@string/menu_title_search"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toggle_photo"
+        style="@style/bottom_compose_bar_view" >
+
+        <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/action_bar_camera"
+            android:gravity="center_horizontal"
+            android:text="@string/attach_photo"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/compose_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toggle_composer"
+        style="@style/bottom_compose_bar_view" >
+
+        <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/graffiti_icon"
+            android:gravity="center_horizontal"
+            android:text="@string/share_compose_title"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/compose_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toggle_more"
+        style="@style/bottom_compose_bar_view" >
+
+        <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/compose_more_icon"
+            android:gravity="center_horizontal"
+            android:text="@string/tab_more"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/compose_line" />
+    </RelativeLayout>
+
+</LinearLayout>

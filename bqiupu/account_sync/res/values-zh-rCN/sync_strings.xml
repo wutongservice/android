@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="cmcc_app_name">播思同步</string>
+    <string name="sync_not_title">请注意，凡是带有此图标的条目将不能被同步</string>
+    <string name="sync_contacts_title">通讯录</string>
+    <string name="sync_calendar_title">日历</string>
+    <string name="sync_event_title">日历</string>
+    <string name="sync_tasks_title">待办事项</string>
+    <string name="stop_sync_title">停止同步</string>
+    <string name="do_sync_title">同步修改条目</string>
+    <string name="backup_to_server">备份到服务器</string>
+    <string name="restore_to_phone">恢复到手机</string>
+
+    <!-- Sync item status string -->
+    <string name="sync_item_status_waiting_sync">等待同步</string>
+    <string name="sync_item_status_syncing">同步中</string>
+    <string name="sync_item_status_sync_error">失败</string>
+    <string name="sync_item_status_sync_ok">成功</string>
+    <string name="sync_item_status_interrupted">取消中断</string>
+
+    <string name="menu_settings">设置</string>
+    <string name="menu_sync_log">同步日志</string>
+
+ <!--    <string name="cancel_button">取消</string>
+    <string name="ok_button">确定</string>
+
+    <string name="close">关闭</string> -->
+
+    <!-- Custom operation activity strings -->
+    <string name="custom_operation">自定义操作</string>
+    <string name="exitConfirmation">退出号簿管家？</string>
+    <string name="confirmTitle">确认</string>
+    <string name="stopAndExitConfirmation">正在同步，隐藏将在后台完成同步，停止将丢失未同步数据。</string>
+    <string name="registConfirmation">鉴权失败，您可能未注册，是否注册？</string>
+    <string name="fastSyncConfirmation">是否同步手机与服务器双方的修改条目？</string>
+    <string name="slowSyncConfirmation">是否同步全部条目？</string>
+    <string name="refreshFromClientConfirmation">是否上传本地条目替换服务器条目？</string>
+    <string name="refreshFromServerConfirmation">是否下载服务器条目替换本地条目？</string>
+    <string name="sync_mode_title_slow">合并条目</string>
+    <string name="sync_mode_title_one_way_from_client">单向同步到服务器</string>
+    <string name="sync_mode_title_refresh_from_client">刷新服务器内容</string>
+    <string name="sync_mode_title_one_way_from_server">单向同步到手机</string>
+    <string name="sync_mode_title_refresh_from_server">刷新手机内容</string>
+
+    <!-- Do not change the content or order only -->
+    <string-array name="sync_all_mode">
+        <item>快速同步</item>
+        <item>慢同步</item>
+        <item>单向同步到服务器</item>
+        <item>刷新服务器内容</item>
+        <item>单向同步到手机</item>
+        <item>刷新手机内容</item>
+    </string-array>
+
+	<!-- Main Screen string -->
+	<string name="main_screen_select_sync_profile">选择同步帐号</string>
+
+	<!-- Service Strings -->
+	<string name="syncml_service_started">开始同步</string>
+	<string name="syncml_service_sync_end">同步结束</string>
+
+	<!-- Sync status error strings -->
+	<string name="sync_status_bad_request">同步失败（400）</string>
+	<string name="sync_status_invalid_credentials">同步失败，请检查用户名或密码是否正确</string>
+	<string name="sync_status_payment_required">手机已欠费，同步失败。</string>
+	<string name="sync_status_forbidden">本号码已有同步正在进行，请稍候再试</string>
+	<string name="sync_status_not_found">没有同步内容，同步失败。</string>
+	<string name="sync_status_uri_wrong">同步失败，请检查同步功能的数据库设置。</string>
+	<string name="sync_status_command_not_allowed">命令不允许，同步失败。</string>
+	<string name="sync_status_optional_feature_not_supported">该同步方式不支持，同步失败。</string>
+	<string name="sync_status_missing_credentials">请输入用户名和密码</string>
+	<string name="sync_status_request_timeout">会话超时，请稍候再试</string>
+	<string name="sync_status_conflict">同步失败，冲突。</string>
+	<string name="sync_status_gone">请求不存在，同步失败。</string>
+	<string name="sync_status_size_required">同步失败，需要大小。</string>
+	<string name="sync_status_incomplete_command">同步命令不完整，同步失败。</string>
+	<string name="sync_status_request_entity_too_large">请求单元过大，同步失败。</string>
+	<string name="sync_status_uri_too_long">数据库地址过长，同步失败。。</string>
+	<string name="sync_status_unsupported_media_type_or_format">媒体类型或格式不支持，同步失败。</string>
+	<string name="sync_status_requested_size_too_big">请求长度过大，同步失败。</string>
+	<string name="sync_status_retry_later">同步失败，请稍候再试。</string>
+	<string name="sync_status_already_exists">该同步已存在，同步失败。</string>
+	<string name="sync_status_conflict_resolved_with_server_data">服务器解决了冲突。</string>
+	<string name="sync_status_device_full">同步结束，通讯录容量已满</string>
+	<string name="sync_status_unknown_search_grammar">未知的查询语法。</string>
+	<string name="sync_status_bad_cgi_script">错误的CGI脚本。</string>
+	<string name="sync_status_soft_delete_conflict">软删除冲突。</string>
+	<string name="sync_status_size_mismatch">同步失败（424）</string>
+	<string name="sync_status_command_failed">同步失败(500)</string>
+	<string name="sync_status_command_not_implemented">同步失败（501）</string>
+	<string name="sync_status_bad_gateway">错误网关。</string>
+	<string name="sync_status_service_unavailable">服务器忙，请稍后再试</string>
+	<string name="sync_status_gateway_timeout">网关超时，同步失败。</string>
+	<string name="sync_status_dtd_version_not_supported">同步失败（505）</string>
+	<string name="sync_status_processing_error">处理错误。</string>
+	<string name="sync_status_atomic_failed">原子操作失败。</string>
+	<string name="sync_status_refresh_required">需要刷新。</string>
+	<string name="sync_status_reserved">保留。</string>
+	<string name="sync_status_data_store_failure">同步失败，请检查同步功能的数据库设置</string>
+	<string name="sync_status_server_failure">同步失败，服务器故障</string>
+	<string name="sync_status_synchronization_failed">同步失败(512)</string>
+	<string name="sync_status_protocol_version_not_supported">同步失败，同步协议不支持</string>
+	<string name="sync_status_operation_cancelled">操作已经成功取消</string>
+	<string name="sync_status_atomic_roll_back_failed">原子操作回滚失败。</string>
+
+	<string name="sync_msg_unsport_device_mode">同步失败，服务器不支持该型号的终端同步。</string>
+	<string name="sync_msg_server_wbxml_error">服务器WBXML错误。</string>
+	<string name="sync_msg_select_sync_item">请选择同步项目</string>
+
+	<!-- Syncing prompt string -->
+	<string name="sync_is_running">同步中</string>
+	<string name="sync_error">同步错误</string>
+	<string name="sync_database_full">手机数据库没有空间</string>
+	<string name="conn_err_airplanemode">飞行模式禁止访问数据网络</string>
+	<string name="conn_err_prefix">连接网络失败 </string>
+	<string name="conn_err_other">连接网络失败</string>
+	<!--<string name="sync_in_running">同步中,请稍后...</string>-->
+
+	<!-- Profile setting strings -->
+	<string name="preference_profile_title">帐户名称</string>
+	<string name="preference_profile_default">默认帐户</string>
+	<string name="preference_title">帐户设置</string>
+	<string name="preference_name_title">用户名</string>
+	<string name="preference_passwd_title">用户密码</string>
+	<string name="preference_server_url_title">同步服务器地址</string>
+	<string name="preference_sync_setting_title">同步设置</string>
+	<string name="preference_sync_contact">联系人</string>
+	<string name="preference_contact_remote_uri">远程数据库</string>
+	<string name="preference_sync_calendar">日程表和待办事项</string>
+	<string name="preference_calendar_remote_uri">远程数据库</string>
+	<string name="preference_apn_setting_title">数据连接设置</string>
+	<string name="preference_apn">数据连接</string>
+	<string name="preference_cannot_save_profile">帐号保存失败</string>
+	<string name="preference_wrong_server_url">请输入正确的同步服务器地址。</string>
+	<string name="preference_profile_no_name">&lt;无名&gt;</string>
+	<string name="preference_profile_default_string">默认帐号</string>
+	<string name="deleteProfileConfirmation">删除帐号将会清除该帐号的同步记录，确定删除？</string>
+	<string name="noButton">取消</string>
+	<string name="yesButton">确定</string>
+	<string name="hideButton">隐藏</string>
+	<string name="quitButton">退出</string>
+	<string name="stopButton">停止</string>
+	<string name="edit_sync_profile">编辑同步帐户</string>
+	<string name="sync_profiles_list">同步帐户列表</string>
+	<string name="sync_prof_menu_new_profile">新建帐号</string>
+	<string name="sync_prof_menu_save">保存</string>
+	<string name="sync_prof_menu_discard">放弃</string>
+	<string name="sync_prof_menu_delete">删除</string>
+
+	<!-- Sync log strings -->
+	<string name="sync_log_no_sync_log">没有同步日志</string>
+	<string name="sync_log">同步日志</string>
+	<string name="sync_log_sync_mode">同步类型：</string>
+	<string name="sync_log_result">同步结果：</string>
+	<string name="sync_log_start">开始：</string>
+	<string name="sync_log_end">结束：</string>
+	<string name="sync_log_phone_added">手机增加：</string>
+	<string name="sync_log_phone_added_failed">手机增加失败：</string>
+	<string name="sync_log_phone_modified">手机修改：</string>
+	<string name="sync_log_phone_modified_failed">手机修改失败：</string>
+	<string name="sync_log_phone_deleted">手机删除：</string>
+	<string name="sync_log_phone_deleted_failed">手机删除失败：</string>
+
+<!--<string name="sync_log_server_added">服务器增加:</string>
+	<string name="sync_log_server_added_failed">服务器增加失败:</string>
+	<string name="sync_log_server_modified">服务器修改:</string>
+	<string name="sync_log_server_modified_failed">服务器修改失败:</string>
+	<string name="sync_log_server_deleted">服务器删除:</string>
+	<string name="sync_log_server_deleted_failed">服务器删除失败:</string> -->
+	<string name="sync_log_unknown_sync_mode">未知同步模式</string>
+	<string name="sync_log_successfully">成功</string>
+	<string name="sync_log_user_interrupted">用户中断</string>
+	<string name="sync_log_failed">失败</string>
+	<string name="sync_log_unknown_sync_result">未知同步结果</string>
+
+	<!-- Sync message -->
+    <string name="sync_msg_not_sync">没有同步</string>
+    <string name="sync_msg_last_sync">上次同步：</string>
+    <string name="sync_msg_server_url_error">服务器地址错误，请修改帐户设置。</string>
+    <string name="sync_msg_sync_successfully_completed">同步成功完成</string>
+    <string name="sync_msg_error_in_sync">同步错误</string>
+    <string name="sync_msg_syncing">同步中</string>
+    <string name="sync_msg_please_waiting">请稍候…</string>
+	<string name="sync_msg_checking_device_data">分析手机数据：</string>
+	<string name="sync_msg_packaging_device_sync_items">发送手机数据：</string>
+	<string name="sync_msg_handling_server_sync_items">接收服务器数据：</string>
+	<string name="sync_msg_delete_device_all_content">删除手机数据：</string>
+
+	<string name="sync_phase_data_connection">建立数据连接</string>
+	<string name="sync_phase_initialization">同步初始化</string>
+	<string name="sync_phase_device_prepare">手机准备</string>
+	<string name="sync_phase_sync_device_to_server">同步到服务器</string>
+	<string name="sync_phase_sync_server_to_device">同步到手机</string>
+	<string name="sync_phase_map_to_server">对应</string>
+
+	<string name="access_server_error">访问同步服务器出错，请检查同步设置和确定网络连接。</string>
+
+	<!-- CMCC string -->
+	<string name="cmcc_welcome_syncml">号簿管家是中国移动为客户提供的以通讯录为基础的业务，主要功能为：\n\n(1)号簿更新：可随时备份或恢复手机号簿，保持手机号簿和网络号簿的同步，解决换机或丢机时的号簿恢复问题。\n(2)网络查询：提供庞大的网络号簿，解决手机号簿容量问题。</string>
+	<string name="cmcc_charge">资费</string>
+	<string name="cmcc_enter">进入</string>
+	<string name="cmcc_open_cancel_service">开通/取消业务</string>
+	<string name="cmcc_network_inquiry">网络查询</string>
+	<string name="cmcc_help">帮助</string>
+
+	<!-- phone number filter prompt -->
+	<string name="phone_number_filter_prompt_message">同步成功，上传到服务器的数据已经过滤掉号码中不支持的下列字符\n%s</string>
+	<string name="phone_number_filter_prompt_title">过滤提示</string>
+
+	<!-- change items title -->
+	<string name="change_log_contacts_added">新增联系人</string>
+	<string name="change_log_contacts_updated">修改联系人</string>
+	<string name="change_log_contacts_deleted">删除联系人</string>
+	
+	<string name="button_sync_to_server">同步到服务器</string>
+	<string name="change_log_contacts_detail_added_title">新增联系人</string>
+	<string name="change_log_contacts_detail_updated_title">修改联系人</string>
+	
+	<string name="change_log_no_contacts_items">没有联系人</string>
+	<string name="title_changelog_explain">自上次同步后，用户在本机做了如下操作：</string>
+	
+	<string name="change_log_count">%d个</string>
+
+    <!-- last sync time -->
+    <string name="last_sync_today">今天</string>
+    <string name="last_sync_yesterday">昨天</string>
+    <string name="last_sync_none">未同步过</string>
+    <string name="last_sync">上次同步：</string>
+    
+    <string name="sync_button_lable">同步</string>
+    <string name="app_list_title_sync">播思同步</string>
+    <string name="sync_list_loading">加载数据中，请稍候...</string>
+    <string name="sync_list_loading_false">加载数据失败</string>
+    <string name="toast_sync_change_info">您的手机数据和服务器目前是一致的。</string>
+    
+    <!-- change request detail's change type info text -->
+    <string name="change_request_default_change">修改：</string>
+    <string name="change_request_mail_change">修改手机电子邮件：</string>
+    <string name="change_request_mobile_phone_change">修改手机号码：</string>
+    <string name="change_request_work_phone_change">修改工作号码：</string>
+    <string name="change_request_home_phone_change">修改家庭号码：</string>
+    <string name="change_request_other_phone_change">修改其它号码：</string>
+    <string name="change_request_name_change">修改名字：</string>
+    <string name="change_request_home_email_change">修改家庭电子邮件：</string>
+    <string name="change_request_work_email_change">修改工作电子邮件：</string>
+    <string name="change_request_other_email_change">修改其它电子邮件：</string>   
+        
+    <string name="change_request_default_add">添加：</string>
+    <string name="change_request_mail_add">添加手机电子邮件：</string>
+    <string name="change_request_mobile_phone_add">添加手机号码：</string>
+    <string name="change_request_work_phone_add">添加工作号码：</string>
+    <string name="change_request_home_phone_add">添加家庭号码：</string>
+    <string name="change_request_other_phone_add">添加其它号码：</string>
+    <string name="change_request_name_add">添加名字：</string>
+    <string name="change_request_home_email_add">添加家庭电子邮件：</string>
+    <string name="change_request_work_email_add">添加工作电子邮件：</string>
+    <string name="change_request_other_email_add">添加其它电子邮件：</string>
+	  
+    <!-- change request button title -->
+    <string name="change_request_yes_btn">更新</string>
+    <string name="change_request_no_btn">忽略</string>
+    
+    <string name="change_request_updating">正在更新...</string>
+    <string name="change_request_update_false">更新失败</string> 
+    
+    <string name="change_log_sync">正在同步...</string> 
+    <string name="change_log_sync_false">同步失败</string> 
+        
+    <string name="change_request_update_succ">更新成功</string>
+   <!--  <string name="change_request_is_change_text">是否将这些信息更新到您的个人资料中？</string> -->
+    
+    <string name="send_week_string">一周前</string>
+    <string name="send_day_string">天前</string>
+    <string name="send_hour_string">小时前</string>
+    <string name="send_minite_string">分钟前</string>  
+    <string name="send_second_string">秒钟前</string>  
+    <string name="send_default_string">1秒钟前</string> 
+    
+    <!-- contacts management source string -->
+    <string name="contact_manager_welcome">使用播思服务管理联系人，可以使您的联系人信息完整、简洁。&lt;br&gt;&lt;br&gt;您只需要&lt;font color=&quot;black&quot;&gt;决定某些联系人要显示的名字&lt;/font&gt;，即可完成操作。&lt;br&gt;&lt;br&gt;点击&lt;font color=&quot;black&quot;&gt;“下一步”&lt;/font&gt;开始管理您的联系人</string>
+	
+    <string name="contact_manager_finish">播思账号联系人管理已经完成。本次新增联系人 %1$d 个，修改联系人信息 %2$d 个。</string>
+    <string name="contact_manager_im_analysing">正在分析联系人信息</string>
+    <string name="contact_manager_im_wait">请稍侯...</string>
+    <string name="contact_manager_im_importing">正在管理联系人信息</string>
+    
+    <string name="contact_manager_im_manager">管理联系人</string>    
+    <string name="contact_manager_im_summary">点击管理您的Borqs联系人</string>
+    <string name="contact_manager_im_next">下一步</string>    
+    <string name="contact_manager_im_confirm">确定</string>
+    <string name="contact_manager_im_finish">完成</string>
+    
+    <string name="contact_manager_notification_title_merging">管理联系人服务正在运行</string>
+    <string name="contact_manager_notification_ticker_merging">管理联系人转入后台运行</string>
+    <string name="contact_manager_notification_message_merging">点击查看</string>
+    
+    <string name="contact_manager_merge_select_name">选择共用的姓名</string>
+    
+    <string name="contact_manager_notification_not_login">请先登录您的播思帐号</string>
+    
+    <!-- change title -->
+   <!--  <string name="change_request_title_part1">在</string>
+    <string name="change_request_title_part2">的通讯录里修改了您的资料：</string>
+    <string name="change_request_sender_gender_f">她</string>
+    <string name="change_request_sender_gender_m">他</string>
+    <string name="change_request_sender_gender_default">TA</string> -->
+    
+    <string name="change_request_detail_summary">在其通讯录里更新了您的资料,您可以将这些资料更新到您的个人信息中：</string>
+    <string name="change_request_detail_summary_nochange">在其通讯录里更新了您的资料,与您当前的个人信息一致。\n\n及时更新个人信息，方便好友拥有您最新的资料。</string>
+    <string name="change_request_title_update_notification">更新提醒</string>
+    
+    <string name="change_request_already_sync_info">没有检查到需要同步的数据。</string>
+    <string name="change_request_sync_complete">通讯录同步完成。</string>
+    <string name="change_request_no_account">没有帐号.</string>    
+    
+    <!-- error -->
+    <string name="error_dialog_context">网络连接异常，请稍后再试。</string>
+
+    <!-- sync result notification-->
+    <string name="sync_fail_notification">同步失败，请稍候重试</string>
+    <string name="sync_in_running">正在同步中</string>
+    <string name="sync_run_at_background">后台运行</string>
+    <string name="sync_operation_info">同步帐号下联系人到云服务</string>
+    <string name="sync_finished_confirm">确定</string>
+    
+    <!-- Borqs Plus Transit -->
+    <string name="request_conversion">发起会话</string>
+    <string name="add_to_circles">添加到圈子</string>
+    <string name="view_bpc_profile">查看梧桐个人资料</string>
+    <string name="openface_video_call">视频电话</string>
+    <string name="openface_voice_call">语音电话</string>
+    <string name="text_download_dialog_title">下载</string>
+    <string name="text_download_wutong_dialog_message">此功能需要下载应用梧桐(大小：%s),是否下载？</string>
+    <string name="text_download_openface_dialog_message">此功能需要下载应用Openface(大小：%s),是否下载？</string>
+    <string name="text_download_dialog_message_loading">正在加载...</string>
+    <string name="text_app_downloading">此应用正在下载中!</string>
+    <string name="text_download_error_no_network">无网络，下载失败！</string>
+    <string name="text_download_error_no_sdcard">未检测到存储卡，下载失败！</string>
+    <string name="text_download_error_unknown">未知错误，下载失败！</string>
+    <string name="text_download_app_start">开始后台下载%s！</string>
+    <string name="text_download_invalid_url">非法地址，下载失败！</string>
+    <string name="text_app_download_fetch_error">获取应用信息失败，无法下载！</string>
+    <string name="text_app_downloading_failed">加载失败！</string>
+    
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <!-- Borqs Plus Transit -->
+    
+    <!-- sync fail -->
+    <string name="contact_sync_fail_many_times_title">非常抱歉，联系人自动同步失败</string>
+    <string name="contact_sync_fail_many_times_content">已为您切换为手动同步模式，点击手动同步</string>
+    <string name="contact_sync_result">同步结果:%s</string>
+    
+</resources>

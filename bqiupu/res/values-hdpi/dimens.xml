@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="category_width">80dip</dimen>
+    <dimen name="exchange_vard_title_left_padding">170dip</dimen>
+    <dimen name="exchange_card_paddingtop">10dip</dimen>
+    <dimen name="exchange_card_paddingbottom">10dip</dimen>
+    <dimen name="exchagne_card_button_paddingtop">10dip</dimen>
+    <dimen name="exchagne_card_button_paddingbottom">10dip</dimen>
+    <dimen name="compose_comment_text_default_height">220dip</dimen>
+</resources>

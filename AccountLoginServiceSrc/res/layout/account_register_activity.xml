@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@drawable/acl_login_bg">
+<TextView           
+           android:id="@+id/acl_backto_login"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="5dp"
+           android:padding="5dp"
+           android:layout_alignParentLeft="true"
+           android:drawableLeft="@drawable/acl_back_btn"
+           android:background="@drawable/acl_back_btn_bg"
+           android:textSize="20sp"
+           android:textColor="@color/acl_white"
+           android:text="@string/acl_backto_login_text" />
+
+<LinearLayout style="@style/acl_outer_layout"
+              android:layout_centerVertical="true">
+                  
+    <LinearLayout style="@style/acl_input_layout_new">
+	     <com.borqs.account.login.ui.EmailTextView
+	             android:id="@+id/acl_register_user_id_tv"
+	             style="@style/acl_input_tv_style2"     
+	             android:imeOptions="actionNext">
+	             <requestFocus/>
+	        </com.borqs.account.login.ui.EmailTextView>
+    </LinearLayout>
+
+    <!--<LinearLayout style="@style/acl_input_layout_new"-->
+            <!--android:layout_marginTop="@dimen/acl_item_space_height">-->
+     <!--<EditText-->
+             <!--android:id="@+id/acl_register_passwd_tv"-->
+             <!--style="@style/acl_input_tv_style2" -->
+             <!--android:hint="@string/acl_user_password_input_hint"-->
+             <!--android:imeOptions="actionNext"-->
+             <!--android:inputType="textPassword"-->
+             <!--android:maxLength="16" />-->
+    <!--</LinearLayout>-->
+
+    <Button
+        android:id="@+id/acl_get_verifycode_btn"
+        style="@style/acl_button_style_new"
+        android:layout_marginTop="@dimen/acl_item_space_height"
+        android:text="@string/acl_get_verify_code" />
+
+    <LinearLayout
+            style="@style/acl_input_layout_new"
+            android:layout_marginTop="@dimen/acl_item_space_height">
+        <EditText
+                android:id="@+id/acl_register_verifycode_tv"
+                style="@style/acl_input_tv_style2" 
+                android:hint="@string/acl_user_verify_code_input_hint"
+                android:imeOptions="actionDone"
+                android:inputType="phone">
+        </EditText>
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

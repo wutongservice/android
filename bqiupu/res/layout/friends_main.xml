@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+	 <LinearLayout
+	    android:id="@+id/titlebar_container"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="@dimen/title_bar_height"
+	    android:orientation="horizontal">
+     </LinearLayout>
+     
+	  <ListView
+          android:id="@+id/content"    
+ 		  android:layout_below="@id/titlebar_container"
+ 		  android:layout_above="@+id/bottom_region"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:divider="@null"
+		  android:listSelector="?attr/listSelector"/>
+		  
+	<LinearLayout
+	    android:id="@+id/tutorial"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+        android:gravity="center"
+	    android:layout_below="@+id/titlebar_container"
+	    android:layout_above="@+id/bottom_region"
+	    android:orientation="horizontal">
+     </LinearLayout>
+	
+	 <include layout="@layout/other_friends_bottom" android:id="@id/bottom_region" android:layout_below="@id/content"/>
+</RelativeLayout>	        

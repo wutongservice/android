@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:icon="@drawable/ic_app_box"
+                  android:title="@string/home_appbox">
+
+    <Preference
+            android:key="key_clear_cache"
+            android:title="@string/pref_string_clear_cache"
+            android:summary="@string/pref_string_clear_cache_summary"/>
+
+
+    <Preference
+            android:key="key_auto_backup_upload"
+            android:title="@string/signup_application_upload_title"
+            android:summary="@string/signup_application_upload_header"/>
+
+    <CheckBoxPreference android:key="key_auto_installation"
+                        android:title="@string/pref_auto_install"
+                        android:summary="@string/pref_auto_install_summary"/>
+
+    <Preference
+            android:key="key_version_upgrade"
+            android:title="@string/pref_string_version_check_title"
+            android:summary="@string/pref_string_version_check_summary"/>
+
+    <Preference
+            android:key="key_privacy_info"
+            android:title="@string/pref_string_privacy_info_title"
+            android:summary="@string/pref_string_privacy_info_summary"/>
+</PreferenceScreen>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dip" >
+
+    <TextView
+        android:id="@+id/address_info_title"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/default_text_margin_top"
+        android:text="@string/public_circle_address"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@+id/span_view2"
+        style="@style/circle_profile_span_view" />
+
+    <RelativeLayout
+        android:id="@+id/address_info_ll"
+        style="@style/circle_profile_item" >
+
+        <TextView
+            android:id="@+id/address_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/icon_in_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_address_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/contact_info_title"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_text_padding_right"
+        android:paddingTop="@dimen/default_text_margin_top"
+        android:text="@string/public_circle_contact_info_label"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@+id/span_view3"
+        style="@style/circle_profile_span_view" />
+
+    <RelativeLayout
+        android:id="@+id/phone_info_ll"
+        style="@style/circle_profile_item" >
+
+        <TextView
+            android:id="@+id/phone_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_phone_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/email_info_ll"
+        style="@style/circle_profile_item" >
+
+        <TextView
+            android:id="@+id/email_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_email_icon" />
+    </RelativeLayout>
+
+</LinearLayout>

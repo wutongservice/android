@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        
+      <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent" 
+        android:layout_height="46dp"
+        android:orientation="horizontal"/>
+        
+      <ProgressBar
+		android:id="@+id/app_head_progress"
+		android:layout_width="fill_parent"
+		android:layout_height="4dip"
+		android:layout_alignBottom="@id/titlebar_container"
+        android:indeterminate="false"
+	    android:indeterminateDrawable="@drawable/qiupu_title_progressbar"
+	    android:visibility="gone"/>
+      
+      <TextView android:id="@+id/no_apk_tips"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:gravity="center"
+         android:textColor="#000"         
+         android:visibility="gone"
+		 android:text="@string/no_update_apk_tips"/>
+
+    <LinearLayout
+            android:id="@+id/search_span"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlebar_container"
+            android:layout_gravity="top"
+            android:visibility="gone">
+        <Button
+                android:id="@+id/search_do"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:gravity="center_vertical"
+                android:nextFocusRight="@+id/search_span"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/search"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        <include
+                android:id="@+id/search_span"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dip"
+                android:hint="@string/hint_appname"
+                layout="@layout/inline_search_span_view"/>
+    </LinearLayout>
+   
+      <ListView
+          android:id="@+id/content"    
+ 		  android:layout_below="@id/search_span"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:divider="@drawable/divider"  
+          android:background="@color/qiupu_list_color"
+          android:cacheColorHint="@color/qiupu_list_color"
+          android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+          android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+          android:listSelector="@drawable/list_selector_background"/>
+
+        <!-- All applications on the top side of the screen -->
+      <GridView android:id="@+id/all_apps"
+                android:layout_below="@id/search_span"
+        android:background="#000000"
+        android:persistentDrawingCache="animation|scrolling"
+        android:alwaysDrawnWithCache="true"
+        android:scrollbars="none"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@drawable/grid_selector"
+        android:numColumns="auto_fit"
+        android:columnWidth="78dp"
+        android:stretchMode="spacingWidth"
+        android:layout_weight="1.0"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:stackFromBottom="false"
+        android:visibility="invisible" />
+
+       <LinearLayout
+	    android:id="@+id/tutorial"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/titlebar_container"
+	    android:layout_above="@+id/bottom_region"
+	    android:orientation="horizontal">
+     </LinearLayout>
+</RelativeLayout>	        

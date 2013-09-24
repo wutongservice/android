@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/stream_comment_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_horizontal_comments"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_vcard_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:padding="1dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+</LinearLayout>

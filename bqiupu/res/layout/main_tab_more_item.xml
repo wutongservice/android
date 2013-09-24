@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	
+		          <RelativeLayout
+			   		  android:id="@+id/id_profile_ll"
+			          android:layout_width="fill_parent"
+			          android:layout_height="@dimen/app_icon_size">
+			
+					 <ImageView
+				    	android:id="@+id/icon_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:layout_centerVertical="true"
+				        android:layout_marginLeft="@dimen/commit_button_margin_left"/>
+					 <TextView
+				 		android:id="@+id/id_title_tv"
+				        android:layout_width="wrap_content"
+				        android:layout_height="fill_parent"
+				        android:layout_marginLeft="@dimen/commit_button_margin_left"
+				        android:layout_toRightOf="@id/icon_left"
+				        android:textColor="#000000"
+				        android:textSize="18sp"
+				        android:gravity="center_vertical"/>
+				      <ImageView
+				    	android:id="@+id/icon_right"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerVertical="true"
+				        android:layout_marginRight="@dimen/commit_button_margin_right"
+				        android:src="@drawable/qiupu_goto"/>
+			   </RelativeLayout>
+</RelativeLayout>	        

@@ -1,0 +1,57 @@
+contact
+    {attrs}
+attrs
+    attr
+    attr, attrs
+attr    
+	name_signal_value : object    
+    name_multi_value : typed-pair-array
+name_signal_value
+    "N" / "PHOTO" / "NOTE" / "BDAY"  
+name_multi_value
+    "TEL" / "EMAIL" / "ADDR" / "ORG" / "IM" / "URL" /  "X"
+typed-pair-array    
+    [typed-pair,*typed-pair]
+typed-pair
+    {type : object}
+    {type : object, EXTRA:[*extras]}
+type
+    "HOME" / "WORK" / 
+    
+    "MOBILE" / "PAGE" / "HFAX" /  "ISDN" / "OFAX" /
+    "MMS" / "WFAX" / "TELEGRAPH" / "TTY" / "RADIO" / "WPAGE" /
+    "HMOBILE" / "WMOBILE" / "CAR" / "CBACK" / "ASSISTANT" /
+     
+    "QQ" / "MSN" / "FETION" / "ICQ" / "AIM" / "WLIVE" /
+    "NMEETING" / "GTALK" / "JABBER" / "YAHOO" /
+    
+    "HOMEPAGE" / "PROFILE" / "FTP" / "BLOG" /
+    "OTHER" / "X-" ...
+object
+	value
+    {key-value , *key-value}
+key-value
+    key : value
+key
+	"FN" / "LN" / "MN" / "NICK"/ "PRE"/ "POST" / "FN_PY" /
+    "MN_PY" / "LN_PY"
+      
+    "ST" / "CITY" / "POR" / "ZC" / 
+    "COMPANY" / "TITLE" / "X-"
+value
+    string
+
+===========================================================================    
+{
+    N:{ FN:三, LN:李, NN:小三 },
+    TEL:[{HOME:12345, EXTRA:[PRIMARY]},{HOME:2345},{WORK:09988},{"X-MY:0001"}],
+    EMAIL:[{WORK:sss@borqs.com, EXTRA:[PRIMARY]}],
+    ADDR:[{WORK:{STREET:Wanghualu, CITY:BEIJING, ZIPCODE:10000}}],
+    ORG:[{WORK:{COMPANY:borqs,TITLE:engineer}}, {OTHER:{COMPANY:ONG,TITLE:none}}],
+    IM:[{QQ:12121},{MSN:gg@gmail.com}]
+    BIRTHDAY:yyyy-mm-dd,
+    PHOTO:<base64>,
+    NOTE:bbbb,
+    URL:[{HOMEPAGE:http://}, {FTP:ftp://.} ],
+    X:[{X-ACCOUNT:com.borqs}, {X-11:000}]    
+}

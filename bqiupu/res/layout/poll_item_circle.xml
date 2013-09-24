@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/default_text_padding_left"
+    android:paddingRight="@dimen/default_text_padding_right" >
+
+    <ImageView
+        android:id="@+id/profile_img_ui"
+        android:layout_width="@dimen/circle_poll_item_icon"
+        android:layout_height="@dimen/circle_poll_item_icon"
+        android:layout_centerVertical="true"
+        android:src="@drawable/voting_icon" />
+
+    <TextView
+        android:id="@+id/poll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:layout_toRightOf="@id/profile_img_ui"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/circle_poll_item_font" />
+
+
+</RelativeLayout>

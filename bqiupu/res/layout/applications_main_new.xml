@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+     
+    <LinearLayout    
+     android:id="@+id/titlebar_container"
+     android:layout_width="fill_parent" 
+     android:layout_height="@dimen/title_bar_height" 
+     android:orientation="horizontal">
+    </LinearLayout>
+    
+     <RelativeLayout
+		        android:id="@+id/search_span"
+		        android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/bottom_shortcut_bg"
+		        android:visibility="gone">
+		        
+		         <ImageView android:id="@+id/btn_voice_search"
+		                   android:layout_width="wrap_content"
+		                   android:layout_height="wrap_content"
+		                   android:layout_alignParentLeft="true"
+		                   android:layout_marginLeft="2dip"
+		                   android:layout_marginTop="6dip"
+		                   android:src="@drawable/ic_btn_speak_now"/>
+			        
+		      </RelativeLayout>
+    
+   <com.borqs.appbox.view.AllAppsScreen
+        android:id="@+id/workspace"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/bottom_layout" >
+   </com.borqs.appbox.view.AllAppsScreen>
+   
+   <RelativeLayout 
+        android:id="@id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/second_title_bar_height"
+        android:layout_gravity="bottom"        
+        android:tag="bottom_style_oms25"
+        android:layout_below="@id/titlebar_container"
+        android:background="@drawable/tab_bg">
+        
+        <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"                       
+               android:layout_gravity="center_horizontal"
+               android:orientation="horizontal"
+               android:addStatesFromChildren="true">
+
+                     <TextView
+                     android:id="@+id/btn_apps_backup"
+                     style="@style/second_title_textview"
+                     android:text="@string/qiupu_my_apk_local"/>
+
+                     <TextView
+                     android:id="@+id/btn_apps_update"
+                     style="@style/second_title_textview"
+                     android:text="@string/bottom_btn_update"/>
+                     
+                      <TextView
+                     android:id="@+id/btn_apps_restore"
+                     style="@style/second_title_textview"
+                     android:text="@string/qiupu_my_apk_server"/>
+
+           </LinearLayout>
+           
+          <com.borqs.common.view.PageIndicatorLineStyleView 
+           android:id="@id/page_line_indicator"
+           android:layout_width="fill_parent"
+           android:layout_alignParentBottom="true"
+           android:layout_height="@dimen/pageindicatorline_height"/>
+
+    </RelativeLayout>
+    
+     <!-- ImageView
+	     android:id="@+id/id_span_view"
+	     android:orientation="vertical"
+	     android:layout_width="fill_parent"     
+	     android:layout_height="1px"
+		 android:layout_below="@id/titlebar_container"
+	     android:background="@drawable/actionbar_shadow"/ -->
+
+</RelativeLayout>

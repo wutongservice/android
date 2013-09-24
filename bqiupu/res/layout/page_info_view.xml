@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/page_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_cover_item_height"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/head_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/page_cover"
+                android:layout_marginTop="12dip"
+                android:paddingBottom="@dimen/small_text_padding_bottom"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right" >
+
+                <ImageView
+                    android:id="@+id/page_logo"
+                    android:layout_width="@dimen/stream_row_size_profile_icon"
+                    android:layout_height="@dimen/stream_row_size_profile_icon"
+                    android:src="@drawable/default_public_circle" />
+
+                <ImageView
+                    android:id="@+id/arrow_up_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/id_page_title"
+                    android:layout_marginRight="@dimen/default_text_margin_right"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@id/id_page_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/page_logo"
+                    android:layout_marginLeft="@dimen/default_text_margin_left"
+                    android:layout_toLeftOf="@id/arrow_up_down"
+                    android:layout_toRightOf="@id/page_logo"
+                    android:gravity="top|left"
+                    android:textSize="@dimen/event_name_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_page_fan_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_page_title"
+                    android:layout_marginTop="@dimen/page_card_gap_between_name_and_circles"
+                    android:layout_marginLeft="@dimen/default_text_margin_left"
+                    android:layout_toRightOf="@id/page_logo"
+                    android:drawableLeft="@drawable/fans_icon"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/page_card_fans_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/body_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/id_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right" />
+
+            <include
+                android:id="@+id/other_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_text_margin_bottom"
+                android:layout_marginTop="@dimen/large_text_margin_top"
+                layout="@layout/page_otherinfo_layout" />
+            
+            <RelativeLayout
+                android:id="@+id/fans_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/listSelector" >
+
+                <TextView
+                    android:id="@+id/tv_fans"
+                    style="@style/shadow_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_text_padding_right"
+                    android:paddingTop="@dimen/default_text_margin_top"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14.0sp" />
+
+                <com.borqs.common.view.ExpandGridView
+                    android:id="@+id/grid_fans"
+                    style="@style/simple_people_grid"
+                    android:layout_below="@id/tv_fans"
+                    android:minHeight="20dip" />
+
+                <ImageView
+                    android:id="@+id/icon_in_member_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/commit_button_margin_right"
+                    android:src="@drawable/chevron_grey" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

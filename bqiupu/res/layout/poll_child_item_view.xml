@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/list_item_height" >
+
+    <TextView
+        android:id="@+id/poll_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:layout_toLeftOf="@+id/right_container" />
+
+    <LinearLayout
+        android:id="@id/right_container"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/poll_item_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/poll_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>
+<!--
+    android:padding="12dip"
+    android:background="@drawable/list_selector_background"
+-->

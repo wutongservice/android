@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivCamera"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="140dip"
+        android:layout_marginLeft="8dip"
+        android:background="@drawable/composer_camera" />
+
+    <!-- <ImageView
+        android:id="@+id/ivPeople"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="159dip"
+        android:layout_marginLeft="47dip"
+        android:background="@drawable/composer_people" />
+
+    <ImageView
+        android:id="@+id/ivLocation"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="143dip"
+        android:layout_marginLeft="87dip"
+        android:background="@drawable/composer_location" /> -->
+
+    <ImageView
+        android:id="@+id/ivApp"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="121dip"
+        android:layout_marginLeft="70dip"
+        android:background="@drawable/composer_app" />
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        style="@style/enfoldment_style"
+        android:layout_width="@dimen/image_center_container_width"
+        android:layout_height="@dimen/image_center_container_height"
+        android:layout_marginBottom="70dip"
+        android:layout_marginLeft="121dip"
+        android:background="@drawable/composer_edit" />
+
+    <ImageView
+        android:id="@+id/ivLocation"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="140dip"
+        android:background="@drawable/composer_location" />
+
+    <!-- <ImageView
+        android:id="@+id/ivCard"
+        style="@style/enfoldment_style"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="165dip"
+        android:background="@drawable/composer_card" /> -->
+
+    <LinearLayout
+        android:layout_width="@dimen/image_center_width"
+        android:layout_height="@dimen/image_center_width"
+        android:layout_alignParentBottom="true"
+        android:padding="6dip"
+        android:background="@drawable/composer_button"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/ivComposer"
+            android:layout_width="@dimen/image_center_width"
+            android:layout_height="@dimen/image_center_height"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/composer_icn_plus" />
+    </LinearLayout>
+
+</RelativeLayout>

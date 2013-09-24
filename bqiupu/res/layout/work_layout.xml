@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/edit_profile_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View android:layout_width="fill_parent"
+	     android:layout_height="1dip" android:background="@color/holo_orange_dark"/>
+		<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            >
+		    <Button android:id="@+id/btn_del"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content" 
+        	android:layout_centerInParent="true"
+        	android:text="@string/delete"
+        	android:background="@drawable/delete_profile_info_btn"
+        	android:textColor="@color/title_text_color"
+        	android:textSize="14sp"
+        	android:gravity="center"
+        	android:layout_marginLeft="@dimen/default_text_margin_left"
+        	android:layout_marginRight="@dimen/default_text_margin_right"
+        	android:layout_marginTop="@dimen/default_text_margin_top"
+        	android:paddingTop="@dimen/default_text_padding_top"
+        	android:paddingBottom="@dimen/default_text_padding_bottom"/>
+		</RelativeLayout>
+
+		 <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/begin_date_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/begin_date"
+                 />
+
+            <EditText
+                android:id="@+id/et_begin_date"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/begin_date_title"
+                android:gravity="center_vertical"
+                android:hint="@string/begin_date"
+                android:editable="false"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" 
+                android:focusable="false"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/end_date_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/end_date" />
+
+            <EditText
+                android:id="@+id/et_end_date"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/end_date_title"
+                android:gravity="center_vertical"
+                android:hint="@string/end_date"
+                android:editable="false"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" 
+                android:focusable="false"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_company_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/update_profile_company_hint" />
+
+            <EditText
+                android:id="@+id/edit_company"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/edit_company_title"
+                android:gravity="center_vertical"
+                android:hint="@string/update_profile_company_hint"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_department_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/update_profile_department_hint" />
+
+            <EditText
+                android:id="@+id/edit_department"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/edit_department_title"
+                android:gravity="center_vertical"
+                android:hint="@string/update_profile_department_hint"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_job_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/update_profile_job_hint" />
+
+            <EditText
+                android:id="@+id/edit_job"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/edit_job_title"
+                android:gravity="center_vertical"
+                android:hint="@string/update_profile_job_hint"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_office_address"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/update_profile_address_hint" />
+
+            <EditText
+                android:id="@+id/et_office_address"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/tv_office_address"
+                android:gravity="center_vertical"
+                android:hint="@string/update_profile_address_hint"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_job_description"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/job_description" />
+
+            <EditText
+                android:id="@+id/et_job_description"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_below="@id/tv_job_description"
+                android:hint="@string/job_description"
+                android:maxLines="3"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+

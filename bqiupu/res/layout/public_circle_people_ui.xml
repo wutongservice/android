@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/title_select_toast"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal"
+        android:background="@drawable/tab_bg"
+        android:visibility="gone" >
+        <ImageView android:id="@+id/cab_done"
+            style="@style/title_bar_icon"
+            android:src="@drawable/ic_cab_done_holo_dark" />
+        
+        <TextView android:id="@+id/select_count"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:textSize="16dip"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    
+   <LinearLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_container"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+
+</RelativeLayout>

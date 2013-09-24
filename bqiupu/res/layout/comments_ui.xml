@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.borqs.common.view.KeyboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bpc_backgroud"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stream_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_container"
+        android:background="@color/bpc_backgroud"
+        android:maxHeight="120dp" />
+
+    <View
+        android:id="@+id/id_span_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/stream_container"
+        android:background="#9c9a9c"
+        android:orientation="vertical" />
+
+    <ListView
+        android:id="@+id/stream_comments_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_stream_property"
+        android:layout_below="@id/id_span_view"
+        android:layout_weight="1.0"
+        android:cacheColorHint="@color/qiupu_list_color_cache_hint"
+        android:fastScrollEnabled="false"
+        android:scrollbars="none"
+        android:listSelector="?attr/listSelector"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:divider="?attr/listDivider" />
+
+    <include
+        android:id="@id/photo_comments_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/comments_footer" />
+
+    <include
+        android:id="@+id/id_stream_property"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/photo_comments_layout"
+        android:layout_margin="@dimen/commit_button_margin_top"
+        layout="@layout/stream_property_layout" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_above="@id/photo_comments_layout"
+        android:background="#ffcccccc" />
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@id/photo_comments_layout" -->
+    <!-- android:background="@color/bpc_backgroud" -->
+    <!-- android:visibility="visible" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true"> -->
+    <!-- <ImageView -->
+    <!-- android:id="@+id/comments_mention_button" -->
+    <!-- android:layout_width="@dimen/commit_button_width" -->
+    <!-- android:layout_height="@dimen/commit_button_height" -->
+    <!-- android:src="@drawable/ic_add_contact_holo_dark" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:background="?attr/buttonSelectableBackground" -->
+    <!-- android:layout_marginTop="@dimen/commit_button_margin_top"> -->
+    <!-- </ImageView> -->
+    <!-- <com.borqs.common.view.ConversationMultiAutoCompleteTextView -->
+    <!-- android:gravity="top" -->
+    <!-- android:id="@+id/compose_text" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginLeft="4.0dip" -->
+    <!-- android:layout_marginTop="4.0dip" -->
+    <!-- android:layout_marginRight="6.0dip" -->
+    <!-- android:inputType="textCapSentences|textMultiLine" -->
+    <!-- android:hint="@string/type_to_compose_text_enter_to_send" -->
+    <!-- android:maxLines="4" -->
+    <!-- android:layout_toRightOf="@id/comments_mention_button" -->
+    <!-- android:layout_toLeftOf="@+id/comments_share_button"/> -->
+    <!-- <ImageView -->
+    <!-- android:id="@id/comments_share_button" -->
+    <!-- android:layout_width="@dimen/commit_button_width" -->
+    <!-- android:layout_height="@dimen/commit_button_height" -->
+    <!-- android:src="@drawable/actionbar_post" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:background="?attr/buttonSelectableBackground" -->
+    <!-- android:layout_marginTop="@dimen/commit_button_margin_top"> -->
+    <!-- </ImageView> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- </RelativeLayout> -->
+
+</com.borqs.common.view.KeyboardLayout>

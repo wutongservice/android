@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/edit_public_circle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/cover_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/select_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_cover_item_height"
+                android:scaleType="centerCrop"
+                android:src="@drawable/event_default_cover" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_cover_change_title_height"
+                android:layout_alignBottom="@id/select_cover"
+                android:background="@drawable/list_selected_holo"
+                android:gravity="right"
+                android:paddingRight="@dimen/default_text_padding_right"
+                android:text="@string/event_change_theme_title"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <EditText
+                android:id="@+id/public_circle_name"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:background="@drawable/list_all"
+                android:hint="@string/create_circle_hint" />
+
+            <EditText
+                android:id="@+id/public_circle_bulletin"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="100dip"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:gravity="top"
+                android:hint="@string/label_bulletin" />
+
+            <EditText
+                android:id="@+id/public_circle_description"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="100dip"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:gravity="top"
+                android:hint="@string/label_description" />
+
+            <EditText
+                android:id="@+id/public_circle_location"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:drawableLeft="@drawable/circle_address_icon"
+                android:hint="@string/update_profile_address_hint" />
+
+            <EditText
+                android:id="@+id/public_circle_company"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:hint="@string/update_profile_company_hint" />
+
+            <EditText
+                android:id="@+id/public_circle_department"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:hint="@string/update_profile_department_hint" />
+
+            <EditText
+                android:id="@+id/public_circle_job"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:hint="@string/update_profile_job_hint" />
+
+            <!-- <EditText
+                android:id="@+id/public_circle_office_address"
+                style="@style/edit_public_circle_edittext"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_all"
+                android:hint="@string/update_profile_address_hint" /> -->
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:text="@string/add_other_info" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

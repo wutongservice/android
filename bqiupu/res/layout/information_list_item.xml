@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector_background"
+    android:minHeight="64dp" >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/default_user_icon"
+        android:scaleType="fitXY" />
+
+    <com.borqs.common.view.EsTextView
+        android:id="@+id/message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/img"
+        android:layout_toLeftOf="@+id/contact_img"
+        android:ellipsize="end"
+        android:textAppearance="@style/sns_text_second_copy"
+        android:textSize="14dip"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/message_content"
+        android:layout_toRightOf="@id/img"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:singleLine="true"
+        android:textColor="@color/time"                        
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_weight="1"
+        android:textSize="12sp"/>
+    
+    
+     <ImageView
+        android:id="@id/contact_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_from_people"
+        android:visibility="gone" />
+
+</RelativeLayout>

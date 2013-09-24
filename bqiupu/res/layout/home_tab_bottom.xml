@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.borqs.common.view.TabBottomView xmlns:android="http://schemas.android.com/apk/res/android"
+      style="@style/bottom_view_style">
+	  
+ <LinearLayout   
+		    android:id="@+id/titlebar_container"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="@dimen/bottom_height"
+		    android:orientation="horizontal">
+		    
+     <RelativeLayout android:id="@+id/bottom_shortcut_app_pool"     
+	            android:layout_width="63dip"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical"	            
+	            android:layout_weight="1"
+	            android:gravity="center">
+	            
+	     <TextView android:layout_width="fill_parent" 
+	            android:id="@+id/bottom_shortcut"
+	            android:layout_height="fill_parent"
+	            android:focusable="true"
+	            android:clickable="true"
+	            android:background="@drawable/tab_view_bg"
+	            android:gravity="center"
+	            android:textAppearance="@style/first_title_textview"
+	            android:textColor="@color/facebook_backgroud"
+	            android:drawableTop="@drawable/bottom_icon_lib"/>
+	   
+	  </RelativeLayout>
+	  
+	  <RelativeLayout android:id="@+id/bottom_shortcut_app_manager" 
+              android:layout_width="63dip"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:layout_weight="1"
+              android:gravity="center">
+
+       <TextView android:layout_width="fill_parent"
+              android:id="@+id/bottom_shortcut"
+              android:layout_height="fill_parent"
+              android:focusable="true"
+              android:clickable="true"
+              android:background="@drawable/tab_view_bg"
+              android:gravity="center"
+              android:textAppearance="@style/first_title_textview"
+              android:textColor="@color/facebook_backgroud"
+              android:drawableTop="@drawable/bottom_icon_my"/>
+
+    </RelativeLayout>
+     
+	  
+     <RelativeLayout android:id="@+id/bottom_shortcut_feed"
+                android:layout_width="63dip"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"               
+                android:layout_weight="1"
+                android:gravity="center">                
+         <TextView android:layout_width="fill_parent"
+                android:id="@+id/bottom_shortcut"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:clickable="true"
+                android:background="@drawable/tab_view_bg"
+                android:gravity="center"
+                android:textAppearance="@style/first_title_textview"
+                android:textColor="@color/facebook_backgroud"
+                android:drawableTop="@drawable/bottom_icon_feeds"/>       
+     </RelativeLayout>
+       <!---->
+     <RelativeLayout android:id="@+id/bottom_shortcut_friend"    
+                android:layout_width="63dip"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"               
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+            <TextView
+             android:id="@+id/bottom_shortcut"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:background="@drawable/tab_view_bg"
+             android:clickable="true"
+             android:drawableTop="@drawable/bottom_icon_friends"
+             android:focusable="true"
+             android:gravity="center"
+             android:textAppearance="@style/first_title_textview"
+             android:textColor="@color/facebook_backgroud" />
+
+     </RelativeLayout>     
+
+     
+      <RelativeLayout android:id="@+id/bottom_shortcut_more"     
+                android:layout_width="63dip"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"                
+                android:layout_weight="1"
+                android:gravity="center">
+                
+         <TextView android:layout_width="fill_parent" 
+                android:id="@+id/bottom_shortcut"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:clickable="true"
+                android:background="@drawable/tab_view_bg"
+                android:gravity="center"
+                android:textAppearance="@style/first_title_textview"
+                android:textColor="@color/facebook_backgroud"
+                android:drawableTop="@drawable/bottom_icon_more"/>
+       
+      </RelativeLayout>
+      
+      </LinearLayout>
+      
+</com.borqs.common.view.TabBottomView>
+    

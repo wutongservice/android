@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/comment_item_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/stream_item_content_padding"
+                android:paddingRight="@dimen/stream_item_content_padding"
+                android:paddingTop="3dip"
+                android:paddingBottom="3dip" >
+
+
+    <ImageView android:id="@+id/tweet_img_ui"
+               android:layout_width="44dip"
+               android:layout_height="44dip"
+               android:layout_alignParentTop="true"
+               android:layout_alignParentLeft="true"
+               android:background="#00000000"/>
+
+    <com.borqs.common.view.EsTextView android:id="@+id/tweet_user_name"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:paddingLeft="10dip"
+              android:layout_toRightOf="@+id/tweet_img_ui"
+              android:textAppearance="@style/sns_link"
+              android:layout_weight="1"
+              android:singleLine="true"/>
+
+    <TextView android:id="@+id/tweet_publish_time"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:paddingLeft="10dip"
+              android:layout_gravity="right"
+              android:linksClickable="false"
+              android:textAppearance="@style/sns_time"
+              android:layout_weight="1"
+              android:layout_below="@+id/tweet_user_name"
+              android:layout_toRightOf="@+id/tweet_img_ui"/>
+
+    <com.borqs.common.view.EsTextView android:id="@+id/tweet_publish_text"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:paddingLeft="10dip"
+              android:layout_below="@+id/tweet_publish_time"
+              android:layout_toRightOf="@+id/tweet_img_ui"
+              android:gravity="center_vertical"
+              android:textAppearance="@style/sns_text"
+              android:layout_weight="1"/>
+
+    <com.borqs.common.view.EsTextView android:id="@+id/tweet_referred_text"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="fill_parent"
+                                      android:paddingLeft="10dip"
+                                      android:layout_below="@+id/tweet_publish_text"
+                                      android:layout_toRightOf="@+id/tweet_img_ui"
+                                      android:gravity="center_vertical"
+                                      android:textAppearance="@style/sns_text_small"
+                                      android:textStyle="italic"
+                                      android:textColor="@android:color/darker_gray"
+                                      android:visibility="gone"/>
+
+    <ImageView android:id="@+id/remove_action"
+               android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:layout_alignParentRight="true"
+               android:background="?attr/buttonSelectableBackground"
+               android:src="@drawable/subtract"
+               android:visibility="gone"/>
+
+    <TextView android:id="@+id/post_like_count"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingTop="5dp"
+              android:layout_alignParentRight="true"
+              android:layout_gravity="center_vertical"
+              android:gravity="center_vertical"
+              android:drawableRight="@drawable/ic_like"
+              android:drawablePadding="5dp"
+              android:visibility="gone"/>
+</RelativeLayout>   

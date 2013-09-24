@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/profile_span"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_detail_per_bg"
+            android:paddingBottom="@dimen/default_text_padding_bottom" >
+
+            <!--
+                  ImageView
+                android:id="@+id/image_bg"
+                android:layout_width="100.0dip"
+                android:layout_height="110.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="16.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/you_photo_frame" /
+            -->
+
+            <ImageView
+                android:id="@+id/profile_img_ui"
+                android:layout_width="90.0dip"
+                android:layout_height="90.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="16.0dip"
+                android:padding="4dip"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/name_and_degree_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_img_ui"
+                android:layout_marginLeft="14.0dip"
+                android:layout_marginRight="5.0dip"
+                android:layout_toRightOf="@+id/profile_img_ui"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/black"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_detail_borqsid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/user_name"
+                    android:layout_marginTop="@dimen/default_text_margin_top"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/id_user_in_privacy_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_detail_borqsid"
+                    android:layout_marginTop="@dimen/default_text_margin_top"
+                    android:drawableLeft="@drawable/icon_ticks"
+                    android:text="@string/people_circle_summary"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/profile_control_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/default_text_margin_right"
+                android:layout_gravity="center"
+                android:background="@drawable/profile_add_circle_bg"
+                android:drawableLeft="@drawable/profile_exchange_icon"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/profile_control_label"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/span_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_bar_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:text="@string/profile_detail_info_title"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tc_bg_gray_standalone_sep_bottom" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="qiupu_list_color">#ffffff</color>
+    <color name="qiupu_list_color_cache_hint">#00000000</color>
+    <color name="font_color">#737573</color>
+    <color name="application_screen_color_sel">#8ca639</color>
+    <color name="application_screen_color_nor">#ffffff</color>
+    <color name="application_type_color_nor">#393839</color>
+    <color name="qiupu_bg_color">#00ffffff</color>
+    <color name="bpc_backgroud">#ffffff</color>
+    <color name="list_item_selected_color">#8cc9de</color>
+    <color name="title_text_color">#ffffffff</color>
+    <color name="head_title_span_view_bg">#344b6b</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="atoz_font">#3e7cbb</color>
+    <color name="dialog_bg">#ffffffff</color>
+    <color name="quick_list_bg">#ffe2e2e2</color>
+    <color name="link_text_color">#3B5998</color>
+    <color name="link_text_pressed_color">#8cc9de</color>
+
+    <!-- For AddressPad -->
+    <drawable name="widget_background">#00000000</drawable>
+
+    <color name="time">#CCCCCC</color>
+    <color name="stream_comments">#3B5998</color>
+    <color name="facebook_backgroud">#FFFFFF</color>
+    <color name="search_bg">#aaffffff</color>
+    <color name="apk_detail_font">#68696e</color>
+
+    <!-- For AddressPad -->
+    <drawable name="default_address_pad_title_color">#FF82858B</drawable>
+    <drawable name="light_blue_background">#ffecfbff</drawable>
+    <drawable name="white_background">#ffffffff</drawable>
+    <!-- text color -->
+    <drawable name="text_color_black">#ff000000</drawable>
+    <drawable name="text_color_offwhite">#55ffffff</drawable>
+    <drawable name="default_address_pad_text_color">#FFFFFFFF</drawable>
+    <drawable name="default_address_pad_selected_text_color">#FFFFFFFF</drawable>
+
+    <color name="photos_album_background">#ffe8ebf0</color>
+    <color name="bpc_comments_bg">#f3f5f8</color>
+    <color name="button_bar_background">#ff282828</color>
+    <color name="profile_activity_background">#d5d3d5</color>
+    <color name="grid_view_bottom_text_color">#6b6d6b</color>
+    <color name="more_text_color">#3B5998</color>
+
+    <!-- compose activity -->
+    <color name="compose_visibility_text_color">#98999a</color>
+    <color name="compose_bottom_layout_background">#282828</color>
+    <color name="compose_location_link_color">#74c8e7</color>
+    <color name="recommend_friends_bg_color">#dbd6d6</color>
+    <color name="invite_line_color">#ffd2cbcb</color>
+    <color name="invite_tip_text_color">#ff8f8d89</color>
+    <color name="exchange_vcard_tip_color">#ff512700</color>
+    <color name="exchange_card_header_color">#ff7191dd</color>
+
+    <drawable name="visibility_background">#00ff00</drawable>
+    <drawable name="green_background">#00ff00</drawable>
+
+    <!-- indicator -->
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="default_title_indicator_footer_color">#FFff9925</color>
+    <color name="default_title_indicator_selected_color">#FFFFFFFF</color>
+    <color name="default_title_indicator_text_color">#BBFFFFFF</color>
+    <color name="title_bar_bg">#dfebfb</color>
+    <color name="quickcontact_tab_indicator">#ff33b5e6</color>
+    
+    <!-- MyHtml -->
+    <color name="textview_link_color">#333333</color>
+    <color name="textview_span_bg">#33b5e5</color>
+    <color name="stream_row_view_check_longpress_bg">#700099cc</color>
+	<color name="gray">#e5e5e5</color>
+	<color name="filter_text_bg">#0c3974</color>
+	<color name="detailApk_title_background">#ff2964a4</color>
+
+    <!-- new design color -->
+    <color name="left_menu_background">#ff2964a4</color>
+    <color name="left_menu_text_color">#ffffffff</color>
+    <color name="left_menu_press_background">#ff0170c6</color>
+
+    <color name="stream_row_header_background">#fff1f1f1</color>
+
+    <!-- left menu category color -->
+    <color name="left_nav_category_color">#ffb9b9b9</color>
+    <color name="left_nav_category_bg">#ff053a66</color>
+
+    <color name="translucenter_dark">#bf000000</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="im_more_color">#ffd4c7c7</color>
+    <color name="grey_profile">#ffa6a3a0</color>
+    <color name="text_grey">#ff999999</color>
+    <color name="red">#ffff0000</color>
+
+    <!-- absent application category color -->
+    <color name="absent_app_category_bg">#ffd0d2d0</color>
+    <drawable name="category_color">#ff9e9e9e</drawable>
+    <drawable name="fist_category_color">#ffd3ea92</drawable>
+    <drawable name="sencond_category_color">#ff92c400</drawable>
+    <drawable name="third_caregory_color">#ff7eae00</drawable>
+    
+    <!-- photo process activity -->
+    <color name="transparent_white">#20ffffff</color>
+    <color name="photo_preview_select_album_layout_bg">#ff111111</color>
+    <color name="light_blue">#ff005092</color>
+
+    <color name="find_near_by_people_color">#ff5a5555</color>
+    <color name="default_video_bg_color">#ff242424</color>
+    <color name="circle_profile_span">#ffa4a4a4</color>
+
+    <color name="scroll_selector_color">#ff378cff</color>
+    <color name="video_background_color">#ff524c4c</color>
+    <color name="poll_list_header_bgcolor">#ffdaeef6</color>
+    <color name="poll_going">#ffff804c</color>
+    <color name="poll_incoming">#ff828282</color>
+    <color name="poll_ending">#ff4eb2ff</color>
+    <color name="own_poll_count_bg">#ffa84d10</color>
+    <color name="dead_line_bg">#ff07a3b6</color>
+    <color name="voted_status_bg">#ff979797</color>
+    <color name="vote_description_bg">#ffebf6fe</color>
+        
+    <color name="light_blue">#ff2aaad5</color>
+    <color name="vote_count_color">#ff378cff</color>
+    <color name="poll_item_bg">#fff1f1f1</color>
+    
+     <color name="calendar_color">#ff0163b3</color>
+
+    <color name="default_bottom_bar_background">#aa000000</color>
+    <color name="default_activity_background">#ffeaeaea</color>
+    <color name="default_link_background">#aaf1f1f1</color>
+    <color name="request_high_light">#529bff</color>
+    
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="audio_bg_color">#ffedeaea</color>
+    <color name="comment_line_text_bg_color">#ffb5b6b5</color>
+    <color name="tab_bar_bg_color">#ff1b405f</color>
+    <color name="indicator_line_color">#ff398aff</color>
+    <color name="location_bg_color">#fffffffe</color>
+    
+    <color name="bookmarkWidgetFaviconBackground">#23ffffff</color>
+    <color name="bookmarkListFaviconBackground">#23ffffff</color>
+    
+    <color name="tab_perssed_color">#3cacec</color>
+</resources>

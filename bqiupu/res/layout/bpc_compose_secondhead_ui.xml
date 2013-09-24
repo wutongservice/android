@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stream_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:background="@drawable/input_text_bg"
+    android:orientation="vertical" >
+
+
+    <com.borqs.common.view.ConversationMultiAutoCompleteTextView
+        android:id="@+id/share_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:autoText="true"
+        android:gravity="top"
+        android:background="@null"
+        android:hint="@string/type_to_compose_text_enter_to_send"
+        android:inputType="textCapSentences|textMultiLine"
+        android:minHeight="@dimen/compose_comment_text_default_height"
+        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+        android:textColor="@android:color/black" />
+    
+    <include
+        android:id="@+id/location_layout"
+        android:layout_width="wrap_content"
+        layout="@layout/compose_location_layout" />
+
+</LinearLayout>

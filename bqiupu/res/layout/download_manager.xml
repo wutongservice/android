@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/qiupu_bg_color">
+        
+       <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent" 
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal">           
+       </LinearLayout>
+       
+           <RelativeLayout
+	        android:id="@+id/save_apk_title"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content"
+			android:background="#efefef"> 
+	                 
+	         <TextView 
+	            android:id="@+id/title_wait_install"    
+				android:layout_width="fill_parent"
+				android:layout_height="30dp"
+				android:text="@string/apk_wait_install"
+				android:textSize="20sp"
+				android:textColor="#6b6d6b"
+				android:paddingLeft="5dp"
+				android:gravity="center_vertical"
+				android:layout_alignParentLeft="true"/>
+	         
+	         <ImageView android:id="@+id/save_apk_in_out"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_centerVertical="true"
+	              android:layout_marginRight="10dip"
+	              android:src="@drawable/btn_show_in"
+	              android:layout_alignParentRight="true"/>
+	               
+	       </RelativeLayout>
+	        
+				 
+	  <ListView
+          android:id="@+id/content_wait_install"    
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:divider="?attr/listDivider"
+          android:listSelector="?attr/listSelector"/>  
+          
+	   <RelativeLayout
+	        android:id="@+id/download_apk_title"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+			android:background="#efefef"> 
+	                 
+	        <TextView 
+	            android:id="@+id/title_downloading"    
+				android:layout_width="fill_parent"
+				android:layout_height="30dp"
+	            android:layout_marginTop="5dp"
+				android:text="@string/apk_downloading"
+				android:textSize="20sp"
+				android:textColor="#6b6d6b"
+				android:gravity="center_vertical"
+				android:paddingLeft="5dp"
+				android:background="#efefef"/>
+	         
+	         <ImageView android:id="@+id/download_apk_in_out"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:layout_marginRight="10dip"
+	              android:layout_centerVertical="true"
+	              android:src="@drawable/btn_show_in"
+	              android:layout_alignParentRight="true"/>
+	       </RelativeLayout>
+          
+	  <ListView
+          android:id="@+id/content_downloading"    
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:divider="?attr/listDivider"
+          android:listSelector="?attr/listSelector"
+          android:cacheColorHint="#00000000"/>      
+</LinearLayout>	        

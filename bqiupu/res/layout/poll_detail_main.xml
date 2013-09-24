@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flipper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="0px"
+    android:background="#00ffffff"
+    android:padding="0px" >
+
+    <RelativeLayout
+        android:id="@+id/poll_detail_ui"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:layout_above="@+id/bottom_layout"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/default_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/default_listview" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/poll_comment_list_ui"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/default_poll_header_height"
+        android:background="@color/white"
+        android:layout_above="@+id/bottom_layout"
+        android:visibility="invisible" >
+
+        <include
+            android:id="@+id/comment_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/default_listview" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffcccccc" />
+
+        <include
+            android:id="@+id/poll_comments_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/comments_footer" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<CheckBoxPreference-->
+            <!--android:key="key_notification_enable"-->
+            <!--android:title="@string/pref_notification_enable"-->
+            <!--android:visibility="gone"-->
+            <!--android:singleLine="false"/>-->
+
+      <PreferenceCategory  android:title="@string/notification_title_mention_me">
+
+             <CheckBoxPreference android:key="key_accept_suggest"             
+                android:title="@string/notification_accept_suggest"
+                android:layout="@layout/notification_preference_view"/>
+                
+             <CheckBoxPreference android:key="key_my_app_comment"             
+                android:title="@string/notification_my_app_comment"
+                android:layout="@layout/notification_preference_view" />
+                
+           <CheckBoxPreference android:key="key_my_app_like"  
+                android:title="@string/notification_my_app_like" 
+                android:layout="@layout/notification_preference_view"/>
+                
+           <CheckBoxPreference android:key="key_new_follower"             
+                android:title="@string/notification_new_follower"
+                android:layout="@layout/notification_preference_view"/>
+           
+           <CheckBoxPreference android:key="key_profile_update" 
+                android:title="@string/notification_profile_update"
+                android:layout="@layout/notification_preference_view"  />     
+                
+           <CheckBoxPreference android:key="key_app_share"             
+                android:title="@string/notification_app_share"
+                android:layout="@layout/notification_preference_view" />
+                
+                <CheckBoxPreference android:key="key_other_share"  
+                android:title="@string/notification_other_share"
+                android:layout="@layout/notification_preference_view" />
+                
+                <CheckBoxPreference android:key="key_suggest_user_to_you"             
+                android:title="@string/notification_suggest_user"
+                android:layout="@layout/notification_preference_view" />
+                
+    </PreferenceCategory>
+    
+     <PreferenceCategory  android:title="@string/notification_title_stream">
+
+             <CheckBoxPreference android:key="key_my_stream_comment"             
+                android:title="@string/notification_my_stream_comment"
+                android:layout="@layout/notification_preference_view"/>
+                
+           <CheckBoxPreference android:key="key_my_stream_like"             
+                android:title="@string/notification_my_stream_like"
+                android:layout="@layout/notification_preference_view"  />     
+                
+           <CheckBoxPreference android:key="key_my_stream_retweet"             
+                android:title="@string/notification_my_stream_retweet"
+                android:layout="@layout/notification_preference_view"  />
+
+    </PreferenceCategory>
+    
+</PreferenceScreen>

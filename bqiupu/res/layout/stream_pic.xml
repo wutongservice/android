@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/stream_item_padding" >
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/default_text_padding_bottom"
+                android:background="@drawable/item_white_bg">
+	    <ImageView android:id="@+id/stream_pic"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/stream_big_image_dimension_device"
+                   android:layout_gravity="center_vertical"
+                   android:scaleType="centerCrop"/>
+
+	<ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="@dimen/stream_row_size_profile_icon"
+            android:layout_height="@dimen/stream_row_size_profile_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/stream_pic"
+            android:layout_marginLeft="@dimen/stream_item_content_padding"
+            android:layout_marginTop="-17dp"
+            android:background="@drawable/stream_icon_cover"
+            android:src="@drawable/default_user_icon" >
+        </ImageView>
+    <include layout="@layout/stream_row_view_header"
+             android:id="@+id/row_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stream_pic"
+            android:layout_toRightOf="@id/user_icon"
+            android:layout_marginTop="@dimen/stream_item_content_padding"
+            />
+    
+    
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_like"
+        android:drawablePadding="2dip"
+        android:gravity="center_vertical"
+        android:linksClickable="false"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right"
+        android:minHeight="@dimen/default_clicking_area_min_height"
+        android:minWidth="@dimen/default_clicking_area_min_width"
+        android:background="@drawable/btn_plusone_normal_bg"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignBottom="@id/stream_pic"
+                  android:layout_alignRight="@id/stream_pic"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="15.0dip"
+                  android:layout_marginBottom="10.0dip"
+        android:textSize="12sp" 
+        android:visibility="gone"/>
+</RelativeLayout>
+</FrameLayout>
+	

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/select_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_cover_item_height"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/head_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/select_cover"
+                android:layout_marginTop="12dip"
+                android:paddingBottom="@dimen/small_text_padding_bottom"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right" >
+
+                <ImageView
+                    android:id="@+id/creator_icon"
+                    android:layout_width="@dimen/stream_row_size_profile_icon"
+                    android:layout_height="@dimen/stream_row_size_profile_icon"
+                    android:src="@drawable/default_public_circle" />
+
+                <ImageView
+                    android:id="@+id/arrow_up_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/id_event_title"
+                    android:layout_marginRight="@dimen/default_text_margin_right"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@id/id_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/creator_icon"
+                    android:layout_marginLeft="@dimen/default_text_margin_left"
+                    android:layout_toLeftOf="@id/arrow_up_down"
+                    android:layout_toRightOf="@id/creator_icon"
+                    android:gravity="top|left"
+                    android:textSize="@dimen/event_name_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_event_title"
+                    android:layout_marginLeft="@dimen/default_text_margin_left"
+                    android:layout_marginTop="4dip"
+                    android:layout_toRightOf="@id/creator_icon"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/lightgrey"
+                    android:textSize="12dip" />
+
+                <TextView
+                    android:id="@+id/id_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_time"
+                    android:layout_marginLeft="@dimen/default_text_margin_left"
+                    android:layout_marginTop="@dimen/small_text_margin_top"
+                    android:layout_toRightOf="@id/creator_icon"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/light_blue"
+                    android:textSize="12dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/body_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/id_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right" />
+
+            <include
+                android:id="@+id/other_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_text_margin_bottom"
+                android:layout_marginTop="@dimen/large_text_margin_top"
+                layout="@layout/event_otherinfo_layout" />
+
+            <View
+                android:id="@+id/span_view_member"
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                style="@style/circle_profile_span_view" />
+
+            <RelativeLayout
+                android:id="@+id/in_member_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/listSelector" >
+
+                <TextView
+                    android:id="@+id/tv_in_member"
+                    style="@style/shadow_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_text_padding_right"
+                    android:paddingTop="@dimen/default_text_margin_top"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14.0sp" />
+
+                <com.borqs.common.view.ExpandGridView
+                    android:id="@+id/grid_in_member"
+                    style="@style/simple_people_grid"
+                    android:layout_below="@id/tv_in_member"
+                    android:minHeight="20dip" />
+
+                <ImageView
+                    android:id="@+id/icon_in_member_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/commit_button_margin_right"
+                    android:src="@drawable/chevron_grey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/invite_member_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="?attr/listSelector" >
+
+                <TextView
+                    android:id="@+id/tv_invite_member"
+                    style="@style/shadow_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_text_padding_right"
+                    android:paddingTop="@dimen/default_text_margin_top"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14.0sp" />
+
+                <com.borqs.common.view.ExpandGridView
+                    android:id="@+id/grid_invite_member"
+                    style="@style/simple_people_grid"
+                    android:layout_below="@id/tv_invite_member"
+                    android:minHeight="20dip" />
+
+                <ImageView
+                    android:id="@+id/icon_invite_member_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/commit_button_margin_right"
+                    android:src="@drawable/chevron_grey" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                style="@style/circle_profile_span_view" />
+            
+            <RelativeLayout
+            android:id="@+id/share_source_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top" >
+
+            <TextView
+                android:id="@+id/share_source_title"
+                style="@style/shadow_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:text="@string/share_source_label"
+                android:textColor="@color/text_grey"
+                android:textSize="14.0sp" />
+
+            <com.borqs.common.view.MyGridView
+                android:id="@+id/source_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/share_source_title"
+                android:listSelector="?attr/listSelector"
+                android:gravity="center"
+                android:horizontalSpacing="1dp"
+                android:numColumns="5"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp" />
+        </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

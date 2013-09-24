@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/edit_profile_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bpc_comments_bg"
+        android:orientation="vertical" >
+
+        <View android:layout_width="fill_parent"
+	     android:layout_height="1dip" android:background="@color/holo_orange_dark"/>
+		<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            >
+		    <Button android:id="@+id/btn_del"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content" 
+        	android:layout_centerInParent="true"
+        	android:text="@string/delete"
+        	android:background="@drawable/delete_profile_info_btn"
+        	android:textColor="@color/title_text_color"
+        	android:textSize="14sp"
+        	android:gravity="center"
+        	android:layout_marginLeft="@dimen/default_text_margin_left"
+        	android:layout_marginRight="@dimen/default_text_margin_right"
+        	android:layout_marginTop="@dimen/default_text_margin_top"
+        	android:paddingTop="@dimen/default_text_padding_top"
+        	android:paddingBottom="@dimen/default_text_padding_bottom"/>
+		</RelativeLayout>
+
+		 <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/begin_date_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/begin_date"
+                 />
+
+            <EditText
+                android:id="@+id/et_begin_date"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/begin_date_title"
+                android:gravity="center_vertical"
+                android:hint="@string/begin_date"
+                android:editable="false"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" 
+                android:focusable="false"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/end_date_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/end_date" />
+
+            <EditText
+                android:id="@+id/et_end_date"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/end_date_title"
+                android:gravity="center_vertical"
+                android:hint="@string/end_date"
+                android:editable="false"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" 
+                android:focusable="false"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_school_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/school" />
+
+            <EditText
+                android:id="@+id/edit_school"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@+id/edit_school_title"
+                android:gravity="center_vertical"
+                android:hint="@string/school"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_type_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/school_type" />
+
+            <EditText
+                android:id="@+id/edit_type"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@+id/edit_type_title"
+                android:gravity="center_vertical"
+                android:hint="@string/school_type"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/edit_location_title"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/school_location" />
+
+            <EditText
+                android:id="@+id/edit_location"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@+id/edit_location_title"
+                android:gravity="center_vertical"
+                android:hint="@string/school_location"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/school_class" />
+
+            <EditText
+                android:id="@+id/et_class"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@+id/tv_class"
+                android:gravity="center_vertical"
+                android:hint="@string/school_class"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_degree"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/degree" />
+
+            <EditText
+                android:id="@+id/et_degree"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@+id/tv_degree"
+                android:gravity="center_vertical"
+                android:hint="@string/degree"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_major"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="@string/major" />
+
+            <EditText
+                android:id="@+id/et_major"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_below="@+id/tv_major"
+                android:hint="@string/major"
+                android:maxLines="3"
+                android:textAppearance="?android:attr/textAppearanceSmallInverse" />
+        </RelativeLayout>
+    </LinearLayout>
+
+

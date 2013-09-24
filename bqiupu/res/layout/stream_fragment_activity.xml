@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" >
+
+    <LinearLayout
+            android:id="@+id/titlebar_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal"/>
+
+    <!--<FrameLayout-->
+            <!--android:id="@+id/embedded_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--/>-->
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+            >
+
+        <fragment android:name="com.borqs.qiupu.fragment.StreamListFragment"
+                  android:id="@+id/stream_fragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" />
+        <include
+                android:id="@+id/bottom_actions_layout"
+                android:layout_alignParentBottom="true"
+                layout="@layout/wutong_floating_compose_action_bar" />
+
+        <!--<LinearLayout    android:id="@+id/bottom_layout"-->
+                         <!--android:layout_gravity="bottom"-->
+                         <!--style="@style/bottom_view_style" >-->
+
+            <!--<ImageView-->
+                    <!--android:id="@+id/toggle_location"-->
+                    <!--style="@style/bottom_imageView"-->
+                    <!--android:src="@drawable/bottom_location"-->
+                    <!--android:visibility="gone"/>-->
+
+            <!--<ImageView-->
+                    <!--android:id="@+id/toggle_photo"-->
+                    <!--style="@style/bottom_imageView"-->
+                    <!--android:src="@drawable/bottom_camera"/>-->
+
+            <!--<ImageView-->
+                    <!--android:id="@+id/toggle_composer"-->
+                    <!--style="@style/bottom_imageView"-->
+                    <!--android:src="@drawable/actionbar_icon_release_normal" />-->
+        <!--</LinearLayout>-->
+    </RelativeLayout>
+</merge>

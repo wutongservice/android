@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/default_padding"
+              android:layout_marginRight="@dimen/default_padding"
+              android:orientation="horizontal">
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_gravity="center_vertical"
+                  android:orientation="horizontal">
+
+        <TextView android:id="@+id/comment_label"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/menu_comment_attribute_enable"
+                />
+        <ToggleButton android:id="@+id/comment_toggle"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:layout_gravity="center_vertical"
+                  android:orientation="horizontal">
+
+        <TextView android:id="@+id/like_label"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/menu_like_attribute_enable"
+                />
+
+        <ToggleButton android:id="@+id/like_toggle"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:layout_gravity="center_vertical"
+                      android:orientation="horizontal">
+
+            <TextView android:id="@+id/share_label"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/menu_share_attribute_enable"
+                    />
+
+            <ToggleButton android:id="@+id/share_toggle"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceSmall"
+                    />
+        </LinearLayout>
+
+</LinearLayout>

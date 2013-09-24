@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/stream_item_padding"
+    android:paddingTop="@dimen/stream_item_padding" >
+
+    <RelativeLayout
+        android:id="@+id/stream_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="@dimen/stream_row_size_profile_icon"
+            android:layout_height="@dimen/stream_row_size_profile_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/stream_item_content_padding"
+            android:layout_marginTop="@dimen/stream_item_content_padding"
+            android:background="@drawable/stream_icon_cover"
+            android:src="@drawable/default_user_icon" >
+        </ImageView>
+
+        <include
+            android:id="@+id/row_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_icon"
+            layout="@layout/stream_row_view_header"
+            android:layout_marginTop="@dimen/stream_item_content_padding"/>
+
+        <ViewStub
+            android:id="@+id/expandable_span"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_header"
+            android:layout_marginLeft="@dimen/stream_row_offset_content_left"
+            android:layout_marginRight="@dimen/stream_item_content_padding"
+            android:layout_marginTop="@dimen/stream_row_margin_vertical"
+            android:inflatedId="@+id/expandable_span"
+            android:layout="@layout/default_expandable_text_panel_item" />
+
+        <include
+                android:id="@+id/stream_row_view_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expandable_span"
+                layout="@layout/stream_row_view_footer"/>
+    </RelativeLayout>
+
+</FrameLayout>

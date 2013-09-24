@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <feature name="account_server_host" value="http://api.borqs.com/" />
+    <feature name="sync_server_host" value="http://api.borqs.com/sync/webagent/" />
+    <feature name="sms_gateway_number" value="106903007098" />
+    <feature name="share_key_prefix" value="test_" />
+</config>

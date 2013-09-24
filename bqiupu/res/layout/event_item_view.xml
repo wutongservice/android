@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/small_text_padding_left" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/item_white_bg" >
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="390dip"
+            android:layout_height="@dimen/event_cover_height"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/time_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/cover"
+            android:layout_marginTop="12dip"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <ImageView
+                android:id="@+id/creator_icon"
+                android:layout_width="@dimen/stream_row_size_profile_icon"
+                android:layout_height="@dimen/stream_row_size_profile_icon"
+                android:src="@drawable/default_public_circle" />
+
+            <TextView
+                android:id="@+id/id_event_title"
+                android:layout_width="300dip"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/creator_icon"
+                android:layout_marginLeft="@dimen/default_text_margin_left"
+                android:layout_toRightOf="@id/creator_icon"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="3"
+                android:focusableInTouchMode="true"
+                android:gravity="top|left"
+                android:singleLine="true"
+                android:textSize="@dimen/event_name_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_event_title"
+                android:layout_marginLeft="@dimen/default_text_margin_left"
+                android:layout_marginTop="4dip"
+                android:layout_toRightOf="@id/creator_icon"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="@dimen/event_date_time_text_size" />
+
+            <TextView
+                android:id="@+id/id_addess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_time"
+                android:layout_marginLeft="@dimen/default_text_margin_left"
+                android:layout_marginTop="4dip"
+                android:layout_toRightOf="@id/creator_icon"
+                android:drawableLeft="@drawable/circle_address_icon"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:textSize="@dimen/event_location_text_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

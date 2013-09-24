@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout
+            android:id="@+id/titlebar_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal">
+    </LinearLayout>
+
+
+    <include layout="@layout/default_listview"
+             android:layout_below="@id/titlebar_container"
+             android:id="@+id/content"
+             android:scrollbars="none"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+            />
+</RelativeLayout>	        

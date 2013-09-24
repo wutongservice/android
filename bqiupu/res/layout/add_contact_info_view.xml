@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--
+    LinearLayout
+        android:id="@+id/contact_info_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_all" >
+    </LinearLayout>
+    
+    <Button android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_other_info"
+        android:layout_gravity="center_horizontal"/
+    -->
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        style="@style/edit_public_circle_profile_style"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all" >
+
+        <EditText
+            android:id="@+id/group_phone"
+            style="@style/edit_public_circle_edittext"
+            android:drawableLeft="@drawable/circle_phone_icon"
+            android:hint="@string/phone_number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_email"
+        style="@style/edit_public_circle_profile_style"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all" >
+
+        <EditText
+            android:id="@+id/group_email"
+            style="@style/edit_public_circle_edittext"
+            android:drawableLeft="@drawable/circle_email_icon"
+            android:hint="@string/email_address" />
+    </RelativeLayout>
+
+</LinearLayout>

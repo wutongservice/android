@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:qiupu="http://schemas.android.com/apk/res/com.borqs.qiupu"  
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/qiupu_bg_color"
+              android:orientation="vertical">
+
+        <com.borqs.common.view.EsTextView
+            android:id="@+id/summary_introduction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_intro"
+            android:textAppearance="@style/sns_text_second_copy"
+            qiupu:need_handler_click="1"/>
+
+    <!--<View-->
+            <!--android:id="@+id/span_line"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/about_line"/>-->
+
+    <TextView
+            android:id="@+id/expandable_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right|top"
+            android:text="@string/about_expansion"/>
+
+</LinearLayout>

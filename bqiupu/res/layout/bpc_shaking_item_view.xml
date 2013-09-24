@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/friendsListView" >
+
+    <ImageView
+        android:id="@+id/id_friend_icon"
+        android:layout_width="@dimen/people_icon_width"
+        android:layout_height="@dimen/people_icon_width"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="5dip"
+        android:background="?attr/buttonSelectableBackground" />
+
+    <LinearLayout
+        android:id="@+id/id_user_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/id_friend_icon"
+        android:layout_toLeftOf="@+id/exchange_card_request"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_text_margin_left" >
+
+        <TextView
+            android:id="@+id/id_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/id_friend_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/small_text_padding_left"
+            android:ellipsize="end"
+            android:linksClickable="false"
+            android:paddingTop="@dimen/people_item_gap_between_name_and_circles"
+            android:singleLine="true"
+            android:text="distance"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/add_friends"
+        style="@style/list_item_icon"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_btn_add_member"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/exchange_card_request"
+        android:layout_width="64dip"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/exchange_icon_bg"
+        android:gravity="center"
+        android:text="@string/friends_item_request_exchange"
+        android:textAppearance="@style/sns_exchange_profile" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/edit_public_circle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right" >
+
+        <RelativeLayout
+            style="@style/edit_public_circle_profile_style"
+            android:layout_marginTop="@dimen/default_text_margin_top"
+            android:background="@drawable/list_background_all" >
+
+            <TextView
+                android:id="@+id/member_limit_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/public_circle_member_limit"
+                android:textAppearance="@style/edit_user_profiles_style" />
+
+            <EditText
+                android:id="@+id/member_limit"
+                style="@style/edit_public_circle_edittext"
+                android:layout_below="@id/member_limit_lable" />
+        </RelativeLayout>
+        
+         <com.borqs.common.view.GroupPrivacySetview
+                    android:id="@+id/privacy_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_text_margin_top" />
+    </LinearLayout>
+
+</ScrollView>

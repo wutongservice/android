@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:paddingLeft="@dimen/default_text_padding_left"
+              android:paddingRight="@dimen/default_text_padding_right">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dip"
+                android:text="\@"
+                android:textAppearance="@style/edit_user_profiles_min_style"/>
+
+        <TextView
+                android:id="@+id/invitation_recipient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/invitation_also_send_none"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:singleLine="true"
+                android:ellipsize="marquee"/>
+    </LinearLayout>
+
+    <RelativeLayout
+            style="@style/edit_public_circle_profile_style"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:background="@drawable/list_background_all">
+        <EditText
+                android:id="@+id/invitation_message"
+                style="@style/edit_public_circle_edittext"
+                android:hint="@string/invitation_message_hint"/>
+    </RelativeLayout>
+
+<!--     <EditText
+        android:id="@+id/invitation_message"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:linksClickable="false"
+        android:textSize='16dip'
+        android:background="@drawable/editline"
+        android:hint="@string/invitation_message_hint"/> -->
+
+    <LinearLayout
+            android:id="@+id/layout_privacy_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+        <TextView
+                android:id="@+id/privacy_set_title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/invitation_also_send"
+                android:textAppearance="@style/edit_user_profiles_min_style"/>
+
+        <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_text_margin_left"
+                android:layout_weight="1">
+
+            <TextView
+                    android:id="@+id/privacy_selected_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invitation_also_send_none"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:drawableRight="@drawable/account_spinner_icon"
+                    android:paddingBottom="@dimen/default_text_padding_bottom"
+                    android:paddingLeft="@dimen/small_text_padding_left"
+                    android:paddingTop="@dimen/default_text_padding_top"/>
+
+            <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignBottom="@id/privacy_selected_tv"-->
+                    <!--android:layout_alignRight="@id/privacy_selected_tv"-->
+                    <!--android:src="@drawable/account_spinner_icon"/>-->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <CheckBox 
+        android:id="@+id/send_email_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_email_tips"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:visibility="gone"/>
+
+    <CheckBox 
+        android:id="@+id/send_sms_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_sms_tips"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:visibility="gone"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/default_text_padding_bottom"
+            android:paddingTop="@dimen/default_text_padding_top"
+            android:gravity="center_vertical">
+
+        <Button
+                android:id="@+id/invitation_btn_skip"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/small_text_padding_right"
+                android:background="@drawable/list_background_all"
+                android:text="@string/label_cancel"/>
+
+        <Button
+                android:id="@+id/invitation_btn_send"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/small_text_padding_left"
+                android:background="@drawable/list_background_all"
+                android:text="@string/send_action_title"/>
+    </LinearLayout>
+</LinearLayout>

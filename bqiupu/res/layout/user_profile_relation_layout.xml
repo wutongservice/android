@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:id="@+id/im_button_container"
+        style="@style/user_profile_relationship_template" >
+        <ImageView
+            android:id="@+id/im_icon"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/icon_tencent_weixin_focused" />
+
+        <TextView 
+            android:id="@+id/im_button"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/im_icon"
+            android:layout_toRightOf="@id/im_icon"
+            android:singleLine="true"
+            android:text="@string/im_tmp_title" />
+
+        <ImageView 
+            android:id="@+id/on_line_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/on_line_text"
+            android:background="@drawable/offline_icon" />
+
+        <TextView 
+            android:id="@+id/on_line_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/im_right"
+            android:layout_centerVertical="true"
+            android:text="@string/offline_title"
+            android:layout_marginRight="10dip"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/im_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/circle_info_ll"
+        style="@style/user_profile_relationship_template" >
+
+        <ImageView
+            android:id="@+id/circle_iv"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/bottom_icon_circle" />
+
+        <TextView
+            android:id="@+id/id_user_circle"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/circle_iv"
+            android:layout_toRightOf="@id/circle_iv"
+            android:layout_toLeftOf="@+id/id_user_in_privacy_circle"
+            android:singleLine="true"
+            android:ellipsize="end"  />
+
+        <TextView
+            android:id="@id/id_user_in_privacy_circle"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="26.0dip"
+            android:drawableLeft="@drawable/exchange_icon"
+            android:text="@string/people_circle_summary"
+            android:layout_alignParentRight="true"
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/circle_info_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recommend_ll"
+        style="@style/user_profile_relationship_template"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/recommend_iv"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/icon_recommendation" />
+
+        <TextView
+            android:id="@+id/recommendate_friends"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/recommend_iv"
+            android:layout_toRightOf="@id/recommend_iv"
+            android:text="@string/friend_recomm" />
+
+        <ImageView
+            android:id="@+id/recommend_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/concern_ll"
+        style="@style/user_profile_relationship_template" >
+
+        <ImageView
+            android:id="@+id/concern_iv"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/bottom_icon_friends" />
+
+        <TextView
+            android:id="@+id/id_concern"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/concern_iv"
+            android:layout_marginLeft="12.0dip"
+            android:layout_toRightOf="@id/concern_iv"
+            android:text="@string/user_profile_concern" />
+        
+         <TextView
+            android:id="@+id/id_concern_count"
+            style="@style/user_profile_count_style" />
+
+        <ImageView
+            android:id="@+id/concern_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/follower_ll"
+        style="@style/user_profile_relationship_template" >
+
+        <ImageView
+            android:id="@+id/follower_iv"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/relationship_follower_bottom" />
+
+        <TextView
+            android:id="@+id/id_followers"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/follower_iv"
+            android:layout_toRightOf="@id/follower_iv"
+            android:text="@string/user_profile_follower" />
+        
+        <TextView
+            android:id="@+id/id_followers_count"
+            style="@style/user_profile_count_style"  />
+
+        <ImageView
+            android:id="@+id/follower_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/favorite_ll"
+        style="@style/user_profile_relationship_template" >
+
+        <ImageView
+            android:id="@+id/favorite_iv"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/actionbar_icon_collection_normal" />
+
+        <TextView
+            android:id="@+id/id_favourites"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/favorite_iv"
+            android:layout_toRightOf="@id/favorite_iv"
+            android:text="@string/user_profile_favourite" />
+        
+        <TextView
+            android:id="@+id/id_favourites_count"
+            style="@style/user_profile_count_style" />
+
+        <ImageView
+            android:id="@+id/favorite_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+</LinearLayout>

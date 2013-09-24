@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#e2e2e2"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/small_text_padding_bottom"
+    android:paddingTop="@dimen/small_text_padding_top"
+    android:paddingLeft="@dimen/default_text_padding_left" 
+    android:paddingRight="@dimen/default_text_padding_right" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_company"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18dip" 
+        style="@style/shadow_white"/>
+
+</LinearLayout>

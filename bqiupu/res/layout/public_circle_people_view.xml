@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/default_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_action"
+        layout="@layout/default_listview" />
+    
+    <LinearLayout
+        android:id="@id/bottom_action"
+        style="@style/bottom_view_style"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/action_find_people"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?attr/buttonSelectableBackground"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:src="@drawable/actionbar_icon_search_normal" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/action_delete"
+            style="@style/bottom_imageView"
+            android:paddingLeft="@dimen/large_text_padding_left"
+            android:src="@drawable/menu_delete" />
+
+        <FrameLayout
+            android:id="@+id/action_refresh"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?attr/buttonSelectableBackground"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:paddingRight="@dimen/default_text_padding_left"
+                android:src="@drawable/actionbar_icon_refresh_normal" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

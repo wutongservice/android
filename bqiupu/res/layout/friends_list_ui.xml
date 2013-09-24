@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qiupu_bg_color">    
+    
+       <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent" 
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal">           
+       </LinearLayout>
+       
+        <include layout="@layout/inline_search_span_view"
+                 android:id="@+id/search_span"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/titlebar_container" />
+
+        <include android:id="@+id/all_people_list" 
+            layout="@layout/friends_list_a2z"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:layout_below="@id/search_span"
+            android:layout_above="@+id/bottom_btn" />
+
+    <!-- ListView android:id="@+id/stream_type_list"
+      android:paddingBottom="10dip"
+      android:divider="?attr/listDivider" 
+      android:layout_weight="1"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent" 
+      android:listSelector="?attr/listSelector"/ -->
+
+    <include layout="@layout/bottom_layout" android:id="@id/bottom_btn"
+             android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+
+1. precondition:
+The activity MUST could be launch from Launcher, which means it has an intent filter that listen for action "android.intent.action.MAIN" and category "android.intent.category.LAUNCHER".
+
+2. append bellowing intent filter to let Bpc know it should be a plugin for it.
+<intent-filter>
+                <action android:name="com.borqs.bpc.action.APP_PLUGIN"/>
+                <category android:name="android.intent.category.TEST"/>
+</intent-filter>
+
+3. [Optional] To specify the icon and label display in Bpc main page by define android:icon and android:label for the activity.
+
+4. sample code
+Here is the sample code for the Qiupu Plugin item:
+
+<activity android:name=".ui.SplashActivity"
+                  android:launchMode="singleTask"
+                  android:label="@string/home_application"
+                  android:icon="@drawable/app_share"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.borqs.bpc.action.APP_PLUGIN"/>
+                <category android:name="android.intent.category.TEST"/>
+            </intent-filter>
+
+</activity>

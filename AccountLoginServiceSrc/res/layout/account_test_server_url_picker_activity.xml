@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:gravity="center">
+
+    <ScrollView
+            android:id="@+id/scroll_layout"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+
+            <TextView android:id="@+id/config_source_label"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/account_pref_borqs_url_select"
+                      android:gravity="center_vertical"
+                    />
+
+            <RadioGroup
+                    android:id="@+id/upload_radio_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:textSize="16dp"                    
+                    >
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Release(release) Server"
+                        android:textSize="16dp"
+                        android:id="@+id/both"
+                        />
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Development(development) Server"
+                        android:textSize="16dp"
+                        android:id="@+id/wifi_only"/>
+                
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pre-Release(prerelease) Server"
+                        android:textSize="16dp"
+                        android:id="@+id/both_1"
+                        />
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TEST(test) Server"
+                        android:textSize="16dp"
+                        android:id="@+id/wifi_only_1"/>
+            </RadioGroup>
+
+            <TextView android:id="@+id/pref_borqs_url_select_summary"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/account_pref_borqs_url_select_summary"
+                      android:paddingTop="5dp"/>
+
+            <TextView
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_horizontal"
+                      android:text="@string/account_pref_borqs_url_current_setting"
+                      android:background="@android:color/black"
+                      android:textColor="@android:color/white"
+                      android:paddingTop="10dp"/>
+            <TextView
+                    android:id="@+id/status_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="2.0dip"
+                    android:layout_marginRight="2.0dip"
+                    android:layout_marginBottom="3.0dip"
+                    android:layout_above="@+id/close_button" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+            android:id="@+id/embedded"
+            android:layout_width="wrap_content"
+            android:layout_height="200dip"
+            android:layout_gravity="center"
+            android:padding="6dp"
+            android:gravity="top|center_horizontal"
+            android:layout_below="@id/scroll_layout"
+            android:layout_above="@+id/close_button" />
+    <Button 
+            android:id="@+id/close_button"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:layout_marginBottom="3.0dip"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

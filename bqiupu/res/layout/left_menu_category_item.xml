@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/a_to_z"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/left_nav_category_bg"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/people_item_padding_left"
+    android:textColor="@color/left_nav_category_color"
+    android:textStyle="bold" />
+<!-- android:background="@drawable/left_menu_category_bg" -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bottom_height"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/bottom_btn_normal" >
+    
+    <Button
+        android:id="@+id/select_cancel"
+        style="@style/bottom_button_style"
+        android:text="@string/label_cancel" />
+    
+    <View android:layout_width="1dip"
+          android:layout_height="fill_parent"
+          android:layout_marginTop="@dimen/default_text_margin_top"
+          android:layout_marginBottom="@dimen/default_text_margin_bottom"
+          android:background="#FFf6f4f4"/>
+    
+    <Button
+        android:id="@+id/select_ok"
+        style="@style/bottom_button_style"
+        android:text="@string/string_select" />
+
+</LinearLayout>

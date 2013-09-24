@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout 
+        android:id="@+id/search_bar_rl"
+       android:layout_width="fill_parent"
+       android:layout_height="@dimen/title_bar_height"
+       android:background="@drawable/actionbar_bg" >
+    <TextView
+        android:id="@+id/search_bar"
+        android:src="@drawable/inline_search_bg"        
+        android:background="@drawable/inline_search_bg"        
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:hint="@string/left_navigationView_search_hint"
+        android:layout_height="@dimen/title_bar_height"/>
+    
+    </RelativeLayout>
+    
+    <RelativeLayout 
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_below="@id/search_bar_rl" >
+           <GridView
+	        android:id="@+id/grid"
+	        android:numColumns="2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:horizontalSpacing="5dp"
+	        android:stretchMode="columnWidth"
+	        android:verticalSpacing="32.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

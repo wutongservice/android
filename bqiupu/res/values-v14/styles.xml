@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme" parent="@android:style/Theme" />
+    <style name="Theme.Base.Light" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="listSelector">@drawable/list_selector_background</item>
+        <item name="listDivider">@drawable/divider</item>
+        <item name="editAudienceBackground">?android:editTextBackground</item>
+        <item name="editLocationBackground">?android:editTextBackground</item>
+        <!-- item name="buttonSelectableBackground">?android:selectableItemBackground</item-->
+        <item name="buttonSelectableBackground">@drawable/list_selector_background</item>
+        
+        <item name="phoenix_streamRowHeaderBackground">@drawable/actionbar_bg</item>
+        <item name="phoenix_streamRowHeaderTopBarBackground">@drawable/stream_row_header_top_bar_bg</item>
+                 <!-- <item name="android:windowAnimationStyle">@style/Animation.Activity.Base</item> --> 
+        
+    </style>    
+    
+     <style name="Theme.Base.Light.NoTitle" >
+        <item name="android:windowNoTitle">true</item>       
+    </style>    
+</resources>

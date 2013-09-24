@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="gone"
+    android:background="#6C7B8B">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_search"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Search" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_stream"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_stream"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_bpc_launcher" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_stream"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_stream"-->
+                    <!--android:text="@string/home_steam"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_friends"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_friends"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_friendslist" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_friends"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_friends"-->
+                    <!--android:text="@string/home_friends"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_profiles"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_profiles"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_friendslist" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_profiles"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_profiles"-->
+                    <!--android:text="@string/home_my_profile"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_req"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_req"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:src="@drawable/request_summary" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_req"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_req"-->
+                    <!--android:text="@string/home_requests"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+			<!--<RelativeLayout-->
+                <!--android:id="@+id/layout_app_box"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_app_box"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_app_box" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_app_box"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_app_box"-->
+                    <!--android:text="@string/bpc_tab_label"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_app_manager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_app_manager"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_qiupu_launcher" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_app_box"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_app_manager"-->
+                    <!--android:text="@string/home_appbox"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+            <RelativeLayout
+                android:id="@+id/layout_notification"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_icon_size"
+                android:background="@drawable/list_selector_background">
+
+                <ImageView
+                    android:id="@+id/img_notification"
+                    android:layout_width="@dimen/app_icon_size"
+                    android:layout_height="@dimen/app_icon_size"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="center"
+                    android:src="@drawable/icon_information" />
+
+                <TextView
+                    android:id="@+id/tv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/commit_button_margin_left"
+                    android:layout_toRightOf="@+id/img_notification"
+                    android:text="@string/string_notifications"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <com.borqs.common.view.MissingNumberView
+            		android:id="@+id/mv_notification_count"
+		            android:layout_width="30dp"
+		            android:layout_height="30dp"
+		            android:layout_marginRight="@dimen/commit_button_margin_right"
+                    android:layout_alignParentRight="true"
+                 />
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dip"
+                  android:background="@android:color/white"/>
+
+			 <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_may_know"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="5dip"-->
+                <!--android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_may_know"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:src="@drawable/ic_friendslist" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_may_know"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@+id/img_may_know"-->
+                    <!--android:text="@string/you_may_know"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+                <!--<com.borqs.common.view.MissingNumberView-->
+            		<!--android:id="@+id/mv_may_know_count"-->
+		            <!--android:layout_width="30dp"-->
+		            <!--android:layout_height="30dp"-->
+		            <!--android:layout_marginRight="10dip"-->
+                    <!--android:layout_alignParentRight="true"-->
+                 <!--/>-->
+            <!--</RelativeLayout>-->
+            <!--<View android:layout_width="match_parent"-->
+                <!--android:layout_height="1dip" android:background="@android:color/white"/>-->
+			  <!--<RelativeLayout-->
+                <!--android:id="@+id/layout_login"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingRight="5dip" android:background="@drawable/list_selector_background">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_login"-->
+                    <!--android:layout_width="25dip"-->
+                    <!--android:layout_height="25dip"-->
+                    <!--android:src="@drawable/ic_friendslist" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_login"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dip"-->
+                    <!--android:layout_toRightOf="@id/img_login"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceLarge" />-->
+
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/default_listview"
+             android:id="@+id/navigation_list"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/scrollView"
+            />
+</RelativeLayout>

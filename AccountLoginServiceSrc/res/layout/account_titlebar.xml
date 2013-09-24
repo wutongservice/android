@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/acl_titlebar"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/acl_title_bar_height"
+	android:background="@drawable/acl_title_bar_bg">
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/acl_titlebar_repeat"/>
+<!--
+	<ImageView
+		android:id="@+id/acl_titlebar_back_img"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/account_ic_ab_back_holo_dark" />
+
+	<TextView
+		android:id="@+id/acl_titlebar_tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="5dip"
+		android:layout_toRightOf="@id/acl_titlebar_back_img"
+		android:maxLines="1"
+		android:textColor="@android:color/white"
+		android:textSize="18sp"
+		android:textStyle="bold" />
+-->
+    <TextView
+        android:id="@+id/acl_titlebar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dip"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+<!--
+	<TextView
+		android:id="@+id/acl_titlebar_submit_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentRight="true"
+		android:layout_gravity="center_vertical|right"
+		android:layout_marginRight="8dip"
+		android:background="@drawable/account_list_selector_background"
+		android:drawableLeft="@drawable/account_ic_divider_dashed_holo_dark"
+		android:drawablePadding="8dip"
+		android:drawableRight="@drawable/account_ic_menu_done_holo_dark"
+		android:gravity="center_vertical|right"
+		android:textColor="@android:color/white"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:visibility="gone"
+		 />
+-->
+</RelativeLayout>

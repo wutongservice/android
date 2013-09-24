@@ -1,0 +1,102 @@
+How to integrate new compoment to BPC stream
+
+0. Overview:
+   BPC stream presents stream for compoment such as App, Book, Music, PhotoAlbum, etc. To integrate the stream of a component, there are serveral steps:
+   a. Generate a share stream from local compoment application and send to remote Server via a JSON.
+   b. Present the necessary info by the 'attachments' section within the JSON.
+   c. Provide the document about the 'attachments' for BPC.
+   d. Provide a call back activity fro BPC when trying open the attachment.
+   e. To show the stream shared from the component, invoke BPC actvity.
+
+1. Generate a share stream
+   The first step is generate a valid stream presenting as JSON, and succeed to send to the server, which mean you need to follow the server specific. Refer to server guide.
+   Take Book stream for example, it will gernate a stream JSON looks like this:
+{
+  "post_id" : 2767425550397000477,
+  "source" : 235,
+  "created_time" : 1319611334990,
+  "updated_time" : 1319611334990,
+  "quote" : 0,
+  "root" : 0,
+  "mentions" : "",
+  "app" : 2,
+  "type" : 16,
+  "app_data" : {
+    "appData" : ""
+  },
+  "message" : "我推荐书:《2012玛雅末日预言》",
+  "device" : "mfld_pr2 (intel; x86; generic) REL/Android-2.3.4/10",
+  "can_comment" : true,
+  "can_like" : true,
+  "attachments" : [ {
+    "id" : "0__-121231671643791757775322138788910443927__235__",
+    "summary" : "2012玛雅末日预言",
+    "coverurl" : "http://122.200.68.253:8980/brookserver/cover.borqs?name=2012%E7%8E%9B%E9%9B%85%E6%9C%AB%E6%97%A5%E9%A2%84%E8%A8%80&ownerid=235&md5=-121231671643791757775322138788910443927",
+    "name" : "2012玛雅末日预言"
+  } ],
+  "destroyed_time" : 0,
+  "target" : "",
+  "from" : {
+    "user_id" : 235,
+    "display_name" : "赵非",
+    "image_url" : "http://api.borqs.com/profile_image/profile_235_1316762154058_M.jpg",
+    "address" : [ ]
+  },
+  "to" : [ ],
+  "likes" : {
+  },
+  "comments" : {
+  },
+  "root_id" : "",
+  "custom" : [ ],
+  "iliked" : false
+}
+
+2. The 'attachments' JSON in the stream
+   Except for those plain text stream, most comonent includes extra specific info within its stream. All such info MUST present within the 'attachments' section within the generated JSON.
+   As to Book, see to above sample, all item about a sharing book are wrapped within 'attachments': the ebook file format (epub), file size (100605), etc. Again, the 'attachements' of the shared book in above example:
+   "attachments" : [ {
+    "id" : "0__-121231671643791757775322138788910443927__235__",
+    "summary" : "2012玛雅末日预言",
+    "coverurl" : "http://122.200.68.253:8980/brookserver/cover.borqs?name=2012%E7%8E%9B%E9%9B%85%E6%9C%AB%E6%97%A5%E9%A2%84%E8%A8%80&ownerid=235&md5=-121231671643791757775322138788910443927",
+    "name" : "2012玛雅末日预言"
+  } ]
+
+3. Document about 'attachments'
+   The document about 'attachments' section in shared JSON should define every possible item in a sheet, for each item, provide the definition in detail by answering these questions:
+   a. what's the name of this item?
+   b. what's the type of its value?
+   c. Is it a MUST item in the JSON, and always be set with a value?
+   d. what's the default value if it is absent from stream?
+   e. MUST it show in BPC stream? or an optional item.
+   f. Is it an item that allow user to Click?
+   g. [optional, if Yes to f], what's the intent/Activity will be trigger when it is clicked.
+   h. [optional] what's the extra comments to the item?
+
+   Here is an example about the 'attachments' of BOOK, which only define #a and #b, which should be append #c,#d,#e,#f and possible #g, #h:
+   "name": string
+   "summary": string
+   "coverurl": string
+   "id": string
+
+  4. Callback actvity to respond 'Open' action of the attachement
+   To respond the click action that intent to open the 'attachemnts', the component privode an Activity and declare a scheme of Intent-filter in AndroidManifest.xml
+   e.g. Qiupu provide activity ApkDetailInfoActivity with belowing intent-filter
+    <intent-filter android:priority="100">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:scheme="borqs"
+            android:host="application"
+            android:path="/details">
+        </data>
+    </intent-filter>
+   
+5. BPC activity to browse the shared stream
+   BPC provide PostActivity to present stream, the available value of appId and type MUST be compatible to definition of server side. The description in detail refer to helper class BpcApiUtils.
+   1. copy the code src/com/borqs/common/BpcApiUtils.java into the component project.
+   2. invoke BpcApiUtils.startStreamActivityWithStreamType(Context context, int type) or startStreamActivityWithAppId(Context context, APPID appId).
+   For Book, the helper type is BpcApiUtils.ONLY_BOOK_POST and BpcApiUtils.ALL_BOOK_POST.
+   For Apk, the helper type is BpcApiUtils.ONLY_APK_POST and BpcApiUtils.ALL_APK_POST.
+
+6. Customized comment activity
+7. Customized like activity

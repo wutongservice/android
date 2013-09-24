@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout"    
+    android:layout_gravity="bottom"
+    style="@style/bottom_view_style" >
+
+    <ImageView
+        android:id="@+id/toggle_location"
+        style="@style/bottom_imageView"
+        android:src="@drawable/bottom_location" />
+
+    <ImageView
+        android:id="@+id/toggle_photo"
+        style="@style/bottom_imageView"
+        android:src="@drawable/bottom_camera"/>
+
+    <ImageView
+        android:id="@+id/toggle_app"
+        style="@style/bottom_imageView"
+        android:src="@drawable/bottom_app" />
+
+</LinearLayout>

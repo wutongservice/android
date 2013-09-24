@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bpc_backgroud">
+            
+     <LinearLayout android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent" 
+        android:layout_height="@dimen/bottom_height" 
+        android:orientation="horizontal">
+     </LinearLayout>
+            
+          <LinearLayout android:id="@+id/id_add_people_ll"             
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity = "center"
+            android:layout_below="@id/titlebar_container"
+            android:background="?attr/listSelector">
+        
+                <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                        android:id="@+id/id_title_icon" 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_menu_add_people"/>
+                        
+                         <LinearLayout
+                          android:id="@+id/id_title_span_ll" 
+                          android:layout_width="fill_parent"
+                          android:layout_height="50dp"
+                          android:layout_toLeftOf="@+id/id_arrow_icon"
+                          android:layout_toRightOf="@id/id_title_icon"
+                          android:orientation="vertical"
+                          android:gravity="center_vertical">
+                          
+                          <TextView android:id="@+id/Privacy_circle_tv"
+                           android:layout_width="fill_parent"
+                           android:layout_height="wrap_content"
+                           android:textAppearance="@style/sns_link_big"
+                           android:text="@string/add_people_to_circle"
+                           android:paddingLeft="10dp"
+                           android:gravity="center_vertical"/>
+                           
+                          </LinearLayout>
+                          
+                        <ImageView
+                        android:id="@id/id_arrow_icon" 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/privacy_circle_itural"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"/>
+                           
+                </RelativeLayout>
+                 <TextView 
+                android:id="@+id/id_span_view"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="@color/head_title_span_view_bg"/>
+        </LinearLayout>
+              
+        <include layout="@layout/friends_list_a2z" android:id="@+id/content"
+                 android:layout_below="@id/id_add_people_ll"
+                 android:layout_above="@+id/bottom_span"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"/>
+                      
+        <LinearLayout
+           android:id="@id/bottom_span"
+           style="@style/bottom_view_style">
+           
+                <TextView
+                     android:id="@+id/btn_circle_peoples"
+                     style="@style/bottom_text_view"
+                     android:text="@string/circle_detail_people"
+                     android:drawableTop="@drawable/bottom_icon_friends"/>
+                     
+                  <TextView
+                     android:id="@+id/btn_circle_posts"
+                     style="@style/bottom_text_view"
+                     android:text="@string/circle_detail_post"
+                     android:drawableTop="@drawable/bottom_icon_feeds"/>
+
+      </LinearLayout>
+</RelativeLayout>           
+
+

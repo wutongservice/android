@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.borqs.qiupu"
+          android:versionName="1.3.2(373)" android:versionCode="373" android:installLocation="internalOnly">
+          <!-- About version code: odd for internal, e.g., 239, even for external market, e.g., 238. -->
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="14" android:maxSdkVersion="1000"/>
+
+    <!-- 可选权限  -->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>    
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"/>
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+
+    <uses-permission android:name="com.borqs.accountservice.permission.ACCESS_PROVIDER"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CALENDAR"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"></uses-permission>
+
+    <!-- 可选的权限 -->
+    <!-- 启用错误分析功能，须添加该权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+    <!-- 使用GPS获取用户精确定位信息 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>-->
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE"></permission>
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+
+    <application
+            android:icon="@drawable/ic_bpc_launcher"
+            android:label="@string/app_name"
+            android:name="com.borqs.qiupu.QiupuApplication"
+            android:hardwareAccelerated="false">
+
+        <meta-data android:name="appid" android:value="0zdWimY8ou8Dkllj1jdBPA"/>
+        <meta-data android:name="appkey" android:value="FcHjqwEGUz9FZuwUXFNjp5"/>
+        <meta-data android:name="appsecret" android:value="V9ONEI17Dj5I05e2P9OqX7"/>
+        
+        <!-- 渠道商编号 -->
+        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="Baidu Market"/>
+        <!-- Chi Zhenwei从百度网站获取的APP KEY -->
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="75721f4953"/>
+        <!--以下 -->
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true"/>
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START"/>
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false"/>
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+        
+        <!--<receiver android:name="com.borqs.qiupu.GexinSdkMsgReceiver">-->
+			<!--<intent-filter>-->
+				<!--<action android:name="com.igexin.sdk.action.0zdWimY8ou8Dkllj1jdBPA" />-->
+				<!--&lt;!&ndash;-->
+					<!--com.igexin.sdk.action.第三方的appId-->
+				<!--&ndash;&gt;-->
+			<!--</intent-filter>-->
+		<!--</receiver>-->
+
+        <activity android:name=".ui.bpc.MainSplashActivity"
+                  android:label="@string/app_title"
+                  android:icon="@drawable/ic_bpc_launcher"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="portrait"
+                  android:launchMode="singleTop"
+                  android:taskAffinity="com.borqs.qiupu.bpc"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.igexin.action.popupact.com.borqs.qiupu"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 
+        <service android:label="NotificationCenterAIDL" 
+            android:name="com.igexin.sdk.aidl.GexinMsgService" 
+            android:process="com.borqs.qiupu.pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.aidl.action.com.borqs.qiupu"/>
+			</intent-filter>
+		</service>
+		
+		<service android:label="NotificationCenter" 
+		    android:name="com.igexin.sdk.GexinMainService" 
+		    android:process="com.borqs.qiupu.pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.com.borqs.qiupu"/>
+			</intent-filter>		
+		</service>
+		<receiver android:name="com.igexin.sdk.GexinSdkReceiver">
+		    <intent-filter>
+		        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+		        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>		        
+		        <action android:name="android.intent.action.USER_PRESENT"/>
+		    </intent-filter>		   
+		</receiver>
+	    -->
+        <!-- ================================下载器模块================================= -->
+        <!-- 
+        <service android:name="sdk.download.DownloadService" android:process="com.borqs.qiupu.pushservice"/>
+        <receiver android:exported="false" android:name="sdk.download.DownloadReceiver">
+              <intent-filter>
+                  <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+              </intent-filter>
+        </receiver>        
+        <provider android:authorities="sdk.download.com.borqs.qiupu" 
+            android:process="com.borqs.qiupu.pushservice"  
+            android:name="sdk.download.DownloadProvider"/>
+        -->
+        <!-- =========================================================================== --> 
+        
+        
+        <activity android:name=".ui.bpc.BpcFriendsActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+            <!--  intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="friends"
+                      android:path="/details">
+                </data>
+            </intent-filter-->
+        </activity>
+        <activity android:name=".ui.bpc.TopPostListActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+        
+        <activity android:name=".ui.bpc.EventListActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+        </activity>
+        
+        <activity android:name=".ui.circle.EventThemeActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+        </activity>
+
+        <activity android:name=".ui.QiupuCommentsActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="stream"
+                      android:path="/comment">
+                </data>
+            </intent-filter>
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="application"
+                      android:path="/comment">
+                </data>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.QiupuCommentsPicActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:theme="@style/Theme.Base.Light"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="photo"
+                      android:path="/comment">
+                </data>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.bpc.AlbumActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        <activity android:name=".ui.bpc.GridPicActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        <activity android:name=".ui.bpc.PhotoSelectActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        <activity android:name=".ui.bpc.PhotosViewActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        
+        <activity android:name=".ui.bpc.PhotoProcessActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        
+        <activity android:name=".ui.circle.PublicCircleMemberPickActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+
+        <activity android:name=".ui.bpc.PickUserFragmentActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        
+        <activity android:name=".ui.bpc.PickAudienceActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        
+        <activity android:name=".ui.bpc.LinkSelectActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+
+        <activity android:name=".ui.bpc.NotificationSettingActivity"
+                  android:screenOrientation="user"
+                  android:label="@string/notification_set"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcFriendsFragmentActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustPan"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        <activity android:name=".ui.bpc.FriendsFragmentActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        <activity android:name=".ui.bpc.CircleFragmentActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+        
+        <activity android:name=".ui.company.CompanyDepListActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light">
+        </activity>
+
+        <activity android:name=".ui.bpc.EditProfileActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+        
+        <activity android:name=".ui.circle.EditPublicCircleActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:windowSoftInputMode="adjustResize"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+        </activity>
+        
+        <activity android:name=".ui.circle.EditEventActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:windowSoftInputMode="adjustResize"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+        </activity>
+        
+        <activity android:name=".ui.circle.PublicCirclePeopleActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="circle"
+                      android:path="/join_request">
+                </data>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.bpc.EditProfilesActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+
+        <activity android:name=".ui.bpc.PickCircleUserActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity
+                android:name=".ui.bpc.PickPeopleActivity"
+                android:theme="@style/Theme.Base.Light"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                />
+
+        <activity
+                android:name=".ui.bpc.PickVCardActivity"
+                android:theme="@style/Theme.Base.Light"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+
+        <activity
+                android:name=".ui.bpc.BeamDataByNFCActivity"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                android:theme="@style/Theme.Base.Light">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".ui.bpc.PickLocationActivity"
+                android:theme="@style/Theme.Base.Light"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                />
+
+        <activity
+                android:name=".ui.bpc.PickPlaceActivity"
+                android:theme="@style/Theme.Base.Light"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                />
+
+        <activity android:name=".ui.bpc.AddProfileInfoActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+
+        <activity android:name=".ui.QiupuPhotoActivity"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  >
+        </activity>
+
+        <activity android:name=".ui.InviteContactActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK_CONTACT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.bpc.InvitePeopleMainActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity android:name=".ui.bpc.ProfileActionGatewayActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.borqsplus.profile_action"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.UserProfileFragmentActivity"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:icon="@drawable/ic_bpc_launcher"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                        android:scheme="borqs"
+                        android:host="profile"
+                        android:path="/details">
+                </data>
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".ui.bpc.UsersArrayListActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                        android:scheme="borqs"
+                        android:host="userlist"
+                        android:path="/fans">
+                </data>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.UsersCursorListActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcSettingsActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcPostsNewActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="stream"
+                      android:path="/details">
+                </data>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.UserCircleSelectedActivity"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:theme="@style/Theme.QuickPeople"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.InviteContactActivity"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:theme="@style/Theme.QuickPeople"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.RequestActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="request"
+                      android:path="/details">
+                </data>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.QiupuFeedbackActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:label="@string/feedback_qiupu"/>
+
+        <activity android:name=".ui.LoginActivity"
+                  android:launchMode="singleInstance"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity android:name="com.borqs.account.service.ui.RegisterActivity"
+                  android:launchMode="singleInstance"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:enabled="false"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity android:name=".ui.DownloadManagerActivity"
+                  android:label="@string/home_downloadmanager"
+                  android:theme="@style/Theme.Base.Light"
+                  android:icon="@drawable/ic_launcher_download"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                >
+            <!--
+           <intent-filter>
+                 <action android:name="com.borqs.bpc.action.APP_PLUGIN"/>
+                 <category android:name="android.intent.category.TEST"/>
+           </intent-filter>
+            -->
+        </activity>
+
+        <activity android:name=".ui.AboutActivity"
+                  android:theme="@style/Theme.Base.Light.NoTitle"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:label="@string/about_title"
+                  android:icon="@drawable/main_about">
+        </activity>
+
+        <activity android:name=".ui.bpc.UserCircleDetailActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden"
+                  android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.circle.UserPublicCircleDetailActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="circle"
+                      android:path="/invitation">
+                </data>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.circle.EventDetailActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.company.CompanyDetailActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.FriendsListActivity"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.QuickPeople"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="users"
+                      android:path="/show">
+                </data>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcPostsFilterActivity"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!-- change to bpc compose -->
+        <activity android:name=".ui.bpc.QiupuComposeActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:label="@string/share_to_wutong"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+               <action android:name="android.intent.action.SEND" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+               <action android:name="android.intent.action.SEND" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+               <action android:name="android.intent.action.SEND" />
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+               <action android:name="android.intent.action.SEND_MULTIPLE"/>
+               <category android:name="android.intent.category.DEFAULT" />
+               <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcAddFriendsActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="friends"
+                      android:path="/details">
+                </data>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.bpc.BpcFindFriendsFragmentActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                />
+
+        <activity android:name=".ui.bpc.BpcInformationActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light">
+            <intent-filter>
+                <action android:name="com.borqs.bpc.action.NOTIFICATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <service android:name="com.borqs.qiupu.service.QiupuService"
+                 android:label="@string/wutong_service"/>
+
+        <service android:name="com.borqs.information.InformationDownloadService"/>
+
+        <service android:name="com.borqs.account.service.BorqsAccountService"
+                 android:label="@string/wutong_account_service"
+                 android:icon="@drawable/ic_bpc_launcher">
+            <intent-filter>
+                <action android:name="com.borqs.account.service.BorqsAccountService_wutong"/>
+                <action android:name="com.android.borqsaccount.service.COLLECTPHONEINFO_wutong"/>
+                <action android:name="com.borqs.account.service.BorqsAccountService_Start_wutong"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.borqs.qiupu.ui.QiupuPhoneBootReceiver">
+            <intent-filter>
+                <action android:name="oms.action.MASTERRESET"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="com.borqs.intent.action.BORQSID_READY"/>-->
+            <!--</intent-filter>-->
+        </receiver>
+
+        <receiver android:name="com.borqs.information.InformationHttpPushReceiver"
+                  android:enabled="true">
+            <intent-filter>
+                <action android:name="com.borqs.notification.notify"/>
+            </intent-filter>
+        </receiver>
+
+        <provider android:name=".db.QiupuProvider" android:authorities="com.borqs.qiupu"/>
+        <provider android:name=".db.UserProvider" android:authorities="com.borqs.users"/>
+        <provider android:name=".db.RequestProvider" android:authorities="com.borqs.request"/>
+        <provider android:name=".db.LookUpProvider" android:authorities="com.borqs.lookup"/>
+        <provider android:name=".db.MySuggestionProvider"
+                  android:authorities="com.borqs.qiupu.db.MySuggestionProvider"/>
+
+        <provider android:name="com.borqs.account.service.db.BorqsAccountProvider"
+                  android:authorities="com.borqs.account"/>
+
+        <provider android:name="com.borqs.information.db.NotificationProvider"
+                  android:authorities="com.borqs.qiupu.provider.inforprovider"/>
+        
+        <receiver android:name=".service.SyncContactStatusReceiver">
+            <intent-filter>
+                <action android:name="com.borqs.intent.action.BORQS_CONTACT_SYNC_BEGIN"/>
+                <action android:name="com.borqs.intent.action.BORQS_CONTACT_SYNC_END"/>
+            </intent-filter>
+        </receiver>
+
+
+        <!--Begin AccountCommon -->
+        <activity android:name="com.borqs.account.login.ui.AccountSettingsActivity"
+                  android:theme="@style/Theme.Base.Light.NoTitle"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter android:priority="100">
+                <action android:name="com.borqs.account.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.borqs.account.login.ui.AccountRegisterActivity"
+                android:theme="@style/Theme.AccountCommon.Base.Light"
+                android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.borqs.account.login.ui.AccountRegisterActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.borqs.account.login.ui.AccountLoginActivity"
+                  android:theme="@style/Theme.AccountCommon.Base.Light"
+                  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="com.borqs.login.account.ui.AccountLoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.borqs.account.login.ui.AccountResetPwdActivity"
+                  android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.borqs.account.login.ui.AccountResetPwdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.borqs.account.login.ui.AccountDetailActivity"
+                  android:theme="@style/Theme.AccountCommon.Base.Light"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.borqs.account.login.ui.AccountDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name="com.borqs.account.login.ui.InfoDialogActivity"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.borqs.account.login.ui.InfoDialogActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity            
+                android:label="@string/account_removal_title"
+                android:name="com.borqs.account.login.ui.AccountRemoveActivity"
+                android:theme="@android:style/Theme.Dialog"
+                android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="com.borqs.account.login.ui.AccountRemoveActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+                android:label="@string/account_config_name"
+                android:name="com.borqs.app.config.TestServerSetActivity"
+                android:screenOrientation="user">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.TEST"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:label="@string/account_config_name"
+                android:name="com.borqs.app.config.TestServerUrlPickerActivity"
+                android:screenOrientation="user">
+        </activity>
+        <!-- Required stanza to register the BMSAuthenticatorService with AccountManager -->
+        <service
+            android:name="com.borqs.account.login.service.BMSAuthenticatorService"
+            android:enabled="true" android:exported="true" android:label="@string/app_name" 
+            >
+
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/default_account_authenticator" />
+            <meta-data
+                    android:name="android.provider.CONTACTS_STRUCTURE"
+                    android:resource="@xml/contact_contacts"/>
+
+        </service>        
+        
+         <receiver android:name="com.borqs.account.login.service.EnableComponentsReceiver"
+                  android:enabled="true">
+            <intent-filter>
+                <action android:name="com.borqs.account.login.service.enablecomponents"/>
+            </intent-filter>
+        </receiver>
+        
+        <provider android:name="com.borqs.account.login.provider.AccountProviderNative"
+                  android:authorities="com.borqs.account_service_wutong" />
+        <!--End AccountCommon -->
+
+        <!--Begin Account & Sync -->
+        <service android:name="com.borqs.sync.service.SyncMLService"
+                 android:label="com.borqs.service.accountsync"
+                 android:process="com.borqs.service.accountsync">
+        </service>
+
+        <service
+                android:name="com.borqs.sync.service.ContactsSyncAdapterService"
+                android:label="com.borqs.service.accountsync"
+                android:process="com.borqs.service.accountsync"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                       android:resource="@xml/account_syncadapter_contacts" />
+            <!--meta-data
+                    android:name="android.provider.CONTACTS_STRUCTURE"
+                    android:resource="@xml/contact_contacts" /-->
+            <meta-data
+                    android:name="borqs.service.SyncAdapter"
+                    android:value="contacts"/>
+        </service>
+
+        <receiver android:name="com.borqs.sync.client.receiver.AccountUpdateReceiver"
+                  android:label="com.borqs.service.accountsync"
+                  android:process="com.borqs.service.accountsync"
+                  android:enabled="false"
+                >
+            <intent-filter>
+                <action android:name="com.borqs.intent.action.ACCOUNT_LOGIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.borqs.action.OVERRIDE_CONTACTS_SERVICE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.borqs.profile.ProfileSyncService"
+                 android:label="@string/cmcc_app_name"
+                 android:process="com.borqs.service.accountsync"/>
+
+   >
+
+        <receiver android:name="com.borqs.sync.client.receiver.BorqsSyncHttpPushReceiver"
+                  android:label="com.borqs.service.accountsync"
+                  android:process="com.borqs.service.accountsync"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="com.borqs.notification.notify" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.borqs.sync.client.receiver.ConnectivityChangeReceiver"
+                  android:label="com.borqs.service.accountsync"
+                  android:process="com.borqs.service.accountsync"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.borqs.sync.client.receiver.ScheduleSyncService"
+                 android:label="com.borqs.service.accountsync"
+                 android:process="com.borqs.service.accountsync">
+        </service>
+
+        <!--Sync Log-->
+        <activity
+            android:name="com.borqs.sync.client.activity.SyncMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SyncAppTheme"
+            android:label="@string/contact_sync"
+            android:process="com.borqs.service.accountsync">
+            <intent-filter >
+                <action android:name="com.borqs.account.action.SETTINGS_PLUGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- start borqsPlus -->
+        <activity
+                android:name="com.borqs.sync.client.activity.BorqsPlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:label="com.borqs.service.accountsync" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+                android:name="com.borqs.sync.client.activity.WutongPlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:icon="@drawable/contact_ic_sync_bpc_launcher"
+                android:label="@string/text_plus_label_wutong" >
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.borqsplus.profile"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+                android:name="com.borqs.sync.client.activity.OpenfacePlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:icon="@drawable/contact_launch_vt_icon"
+                android:label="com.borqs.service.accountsync" >
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.borqsplus.openface"/>
+            </intent-filter>
+        </activity>
+        <!-- 
+        <receiver android:name="com.borqs.sync.client.download.AppDownloadReceiver"
+                  android:label="com.borqs.service.accountsync"
+                  android:process="com.borqs.service.accountsync">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- end borqsPlus -->
+        
+        <!-- End Account & Sync -->
+        <!--<service android:name="com.borqs.notification.NotificationService"-->
+                 <!--android:label="com.borqs.notification"-->
+                 <!--android:process="com.borqs.notification">-->
+            <!--<meta-data android:name="com.borqs.notification.version"-->
+                <!--android:value="2008"/>-->
+            <!--<meta-data android:name="com.borqs.notification.package"-->
+                <!--android:value="com.borqs.qiupu"/>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.borqs.notification.StartService"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!--<receiver android:name="com.borqs.notification.NotificationReceiver"-->
+                  <!--android:label="com.borqs.notification"-->
+                  <!--android:process="com.borqs.notification"-->
+                  <!-->-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.borqs.notification.notify"/>-->
+                <!--<action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>-->
+                <!--<action android:name="android.net.wifi.STATE_CHANGE"/>-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.PACKAGE_ADDED" />-->
+                <!--<action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+                <!--<data android:scheme="package" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--<provider android:name="com.borqs.notification.UserContentProvider"-->
+                  <!--android:authorities="com.borqs.notification_16"-->
+                  <!--android:label="com.borqs.notification"-->
+                  <!--android:process="com.borqs.notification"-->
+                  <!--android:enabled="true"/>-->
+
+        <!-- Broadcast Receiver that will process BOOT Complete and launch OTA -->
+        <!--for download -->
+        <!--<receiver  -->
+        <!--android:name="com.borqs.qiupu.service.DownloadAdapterService.DownloadReceiver"  -->
+        <!--android:permission="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"  -->
+        <!--android:exported="true" >-->
+        <!--<intent-filter>  -->
+        <!--<action  -->
+        <!--android:name="android.intent.action.DOWNLOAD_COMPLETED">  -->
+        <!--</action>  -->
+        <!--</intent-filter>  -->
+        <!--<intent-filter>  -->
+        <!--<action  -->
+        <!--android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED">  -->
+        <!--</action>  -->
+        <!---->
+        <!--<category  -->
+        <!--android:name="android.intent.category.DEFAULT">  -->
+        <!--</category>  -->
+        <!--<data  -->
+        <!--android:scheme="content">  -->
+        <!--</data>  -->
+        <!--</intent-filter>  -->
+        <!--</receiver>-->
+
+
+        <activity android:name=".ui.circle.PublicCircleSearchActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysVisible"
+                >
+        </activity>
+        
+        <activity android:name=".ui.bpc.BpcSearchActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysVisible"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!--<data android:scheme="http"-->
+                      <!--android:host="apitest.borqs.com"-->
+                      <!--android:path="/search"/>-->
+
+                <!-- <data android:scheme="http"
+                      android:host="api.borqs.com"
+                      android:path="/search"/>
+                <data
+                        android:scheme="market"
+                        android:host="search"
+                        android:path="/"/>
+
+                <data
+                        android:scheme="http"
+                        android:host="market.android.com"
+                        android:path="/search">
+                </data>
+                <data
+                        android:scheme="https"
+                        android:host="market.android.com"
+                        android:path="/search">
+                </data>
+                <data
+                        android:scheme="market"
+                        android:host="search"
+                        android:path=""
+                        >
+                </data>
+                <data
+                        android:scheme="http"
+                        android:host="market.android.com"
+                        android:path="/details">
+                </data>
+                <data
+                        android:scheme="https"
+                        android:host="market.android.com"
+                        android:path="/details"
+                        >
+                </data>
+                <data
+                        android:scheme="market"
+                        android:host="details"
+                        android:path="">
+                </data> -->
+            </intent-filter>
+
+            <!-- <meta-data
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable"/> -->
+        </activity>
+
+        <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".ui.bpc.BpcSearchActivity"/>
+
+
+        <activity android:name=".ui.bpc.ShareResourcesActivity"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:theme="@style/Theme.Base.Light"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity
+                android:name="com.borqs.common.quickaction.QuickPeopleActivity"
+                android:theme="@style/Theme.QuickPeople"
+                android:launchMode="singleTop"
+                android:excludeFromRecents="true"
+                android:noHistory="true"
+                android:taskAffinity="android.task.quickcontact"
+                android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        
+        <activity
+                android:name="com.borqs.common.quickaction.QuickEmployeeActivity"
+                android:theme="@style/Theme.QuickPeople"
+                android:launchMode="singleTop"
+                android:excludeFromRecents="true"
+                android:noHistory="true"
+                android:taskAffinity="android.task.quickcontact"
+                android:windowSoftInputMode="stateUnchanged">
+        </activity>
+
+        <activity
+                android:name=".ui.bpc.BpcExchangeCardActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                android:theme="@style/Theme.Base.Light">
+              <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+              </intent-filter>
+              
+              <intent-filter android:priority="100">
+                <action android:name="android.intent.action.SHOW_VCARD_EXCHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+              </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.bpc.IMComposeActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+
+        <activity
+            android:name=".ui.bpc.BpcShakeExchangeCardActivity"
+            android:screenOrientation="user"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+
+        <activity
+            android:name=".ui.bpc.ExchangedCardFriendsActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+        
+        <activity
+            android:name=".ui.bpc.InvitePeopleFragmentActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+
+        <activity
+            android:name=".ui.bpc.BpcShakingListActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light" />
+
+         <activity android:name=".ui.bpc.PollListActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+
+         <activity android:name=".ui.bpc.PollCreateActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+
+         <activity android:name=".ui.company.CompanyListActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" />
+
+         <activity android:name=".ui.bpc.PollDetailActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:screenOrientation="user"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize" >
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="borqs"
+                      android:host="poll"
+                      android:path="/details">
+                </data>
+                <data android:scheme="borqs"
+                      android:host="poll"
+                      android:path="/comment">
+                </data>
+            </intent-filter>
+         </activity>
+         
+         <service
+            android:name=".calendar.CalendarSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+            <!-- <meta-data
+                android:name="android.provider.CONTACTS_STRUCTURE"
+                android:resource="@xml/contacts" /> -->
+        </service>
+        
+         <activity
+            android:name=".ui.bpc.LinksTraActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light" />
+
+         <activity
+            android:name=".ui.page.PageListActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+         
+         <activity
+            android:name=".ui.page.CreatePageActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+         
+         <activity
+            android:name=".ui.page.PageDetailActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+         
+         <activity
+            android:name=".ui.page.EditPageActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.Base.Light"/>
+          <activity
+            android:name=".ui.page.CreateCircleMainActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+         <activity
+            android:name=".ui.page.PageSearchActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+         <activity
+            android:name=".ui.circle.CircleEventsActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+
+        <!-- wutong experience start -->
+        <activity
+                android:name="com.borqs.wutong.HomePickerActivity"
+                android:screenOrientation="user"
+                android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                android:theme="@style/Theme.Base.Light" />
+        <activity android:name="com.borqs.wutong.OrganizationHomeActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        
+        <activity android:name="com.borqs.qiupu.ui.bpc.CheckTopCircleTranActivity"
+                  android:theme="@style/Theme.Base.Light"
+                  android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <!-- wutong experience end -->
+        
+        <activity
+            android:name=".ui.bpc.InformationListActivity"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:theme="@style/Theme.Base.Light"/>
+        <intent-filter>
+                <action android:name="com.borqs.bpc.action.NOTIFICATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+    </application>
+</manifest> 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_in_member"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp"
+        android:textStyle="bold" />
+
+    <View
+        style="@style/circle_profile_span_view"  />
+
+    <RelativeLayout
+        android:id="@+id/in_member_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/listSelector" >
+
+        <com.borqs.common.view.ExpandGridView
+            android:id="@+id/grid_in_member"
+            style="@style/simple_people_grid"
+            android:layout_width="fill_parent"
+            android:layout_toLeftOf="@+id/icon_in_member_right"
+            android:minHeight="20dip"
+            android:scrollbars="none"
+            android:numColumns="5"
+            android:paddingBottom="12.0dip" />
+
+        <ImageView
+            android:id="@id/icon_in_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_text_margin_left"
+            android:layout_marginRight="@dimen/small_text_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+</LinearLayout>

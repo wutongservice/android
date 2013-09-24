@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/paper_bg" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/actionbar_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:id="@+id/head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:paddingRight="@dimen/default_text_padding_right"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:text="@string/create_public_circle_title"
+            android:textSize="@dimen/head_title_text_size" />
+        
+        </LinearLayout>
+
+    <!-- <include layout="@layout/default_listview"/> -->
+    
+    <GridView android:id="@+id/circle_tem_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="1"
+        android:drawSelectorOnTop="true"
+        android:layout_centerInParent="true"
+        android:verticalSpacing="6dip"
+        android:paddingTop="6dip"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip" 
+        android:layout_below="@id/titlebar_container"
+        android:listSelector="?attr/listSelector"  />
+
+</RelativeLayout>

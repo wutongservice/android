@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/search_span_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_box_height"
+        android:layout_below="@id/titlebar_container"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:background="@drawable/search_bar_bg" >
+
+        <RelativeLayout
+            android:id="@+id/search_input_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/small_text_padding_bottom"
+            android:paddingTop="@dimen/small_text_padding_top"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_toLeftOf="@+id/search_do"
+            android:background="@drawable/search_input_bg" >
+
+            <ImageView
+                android:id="@+id/left_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/small_text_margin_left"
+                android:layout_marginRight="@dimen/small_text_margin_right"
+                android:src="@drawable/search_input_icon" />
+
+            <EditText
+                android:id="@+id/search_span"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/btn_clear_text"
+                android:layout_toRightOf="@id/left_icon"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@id/btn_clear_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/search_ic_input_delete"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/search_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/shadow_white"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_btn_bg"
+            android:gravity="center"
+            android:paddingBottom="@dimen/small_text_padding_bottom"
+            android:paddingLeft="@dimen/large_text_padding_left"
+            android:paddingRight="@dimen/large_text_padding_right"
+            android:paddingTop="@dimen/small_text_padding_top"
+            android:text="@string/menu_title_search" />
+
+        <!--
+            <ImageView
+            android:id="@id/search_do"
+            style="@style/search_title_bar_style"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/search_icon" />
+        -->
+
+    </RelativeLayout>
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/search_tab" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/search_span_rl" -->
+    <!-- android:orientation="horizontal" > -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/search_people_rl" -->
+    <!-- android:layout_width="0dip" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:background="@drawable/search_people_bg" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/search_people" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:drawableLeft="@drawable/icon_green" -->
+    <!-- android:drawablePadding="@dimen/default_text_padding_left" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="@string/search_people" /> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/search_app_rl" -->
+    <!-- android:layout_width="0dip" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_weight="1" -->
+    <!-- android:background="@drawable/search_app_bg" > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/search_app" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:drawableLeft="@drawable/icon_grey" -->
+    <!-- android:drawablePadding="@dimen/default_text_padding_left" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="@string/search_apps" /> -->
+    <!-- </RelativeLayout> -->
+    <!-- </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_span_rl"
+        android:orientation="horizontal" />
+
+    <include
+        android:id="@+id/center_progress"
+        android:layout_centerInParent="true"
+        layout="@layout/center_process"
+        android:visibility="gone" />
+
+</RelativeLayout>

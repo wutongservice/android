@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_title_category"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/second_title_bar_height"
+        android:layout_below="@id/titlebar_container"
+        android:background="@drawable/tab_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_simnumber"
+            style="@style/second_title_textview"
+            android:text="@string/invite_sim"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/id_phonenumber"
+            style="@style/second_title_textview"
+            android:text="@string/invite_phone" />
+
+        <TextView
+            android:id="@+id/id_email"
+            style="@style/second_title_textview"
+            android:text="@string/invite_email" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/search_span"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_title_category"
+        layout="@layout/inline_search_span_view"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/listview_title"
+        android:layout_width="fill_parent"
+        android:layout_height="46dip"
+        android:layout_below="@id/search_span"
+        android:background="@drawable/userinfo_title_bg" >
+
+        <TextView
+            android:id="@+id/all_select_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4dip"
+            android:layout_marginTop="12dip"
+            android:gravity="center"
+            android:text="@string/invite_contact"
+            android:textColor="#98999a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:layout_toLeftOf="@+id/select_all_iv"
+            android:gravity="center"
+            android:text="@string/select_all"
+            android:textColor="#98999a"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/select_all_iv"
+            style="@style/content_icon"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/select_other_user"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="4dip"
+            android:layout_toLeftOf="@id/select_all"
+            android:background="@drawable/cmcc_icon_add_bg"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/contact_list_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/action_region"
+        android:layout_below="@id/listview_title"
+        android:divider="?attr/listDivider"
+        android:listSelector="?attr/listSelector"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@id/action_region"
+        layout="@layout/bottom_layout" />
+
+    <!-- View
+        android:id="@+id/id_span_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/titlebar_container"
+        android:background="@drawable/actionbar_shadow"
+        android:orientation="vertical" / -->
+
+</RelativeLayout>

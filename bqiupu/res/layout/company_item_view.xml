@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:padding="@dimen/small_text_padding_left"
+        >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/item_white_bg">
+
+    <ImageView
+        android:id="@+id/select_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/borqs_company_cover"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/select_cover"
+        android:layout_marginTop="12dip"
+        android:paddingBottom="@dimen/small_text_padding_bottom"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right" >
+
+        <ImageView
+            android:id="@+id/creator_icon"
+            android:layout_width="@dimen/company_profile_icon"
+            android:layout_height="@dimen/company_profile_icon"
+            android:src="@drawable/default_public_circle" />
+
+
+        <TextView
+            android:id="@+id/company_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/creator_icon"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_toRightOf="@id/creator_icon"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="3"
+            android:focusableInTouchMode="true"
+            android:gravity="top|left"
+            android:singleLine="true"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_title"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/creator_icon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/lightgrey"
+            android:textSize="14dip" />
+
+        <TextView
+            android:id="@+id/id_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_website"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:layout_toRightOf="@id/creator_icon"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/light_blue"
+            android:textSize="12dip" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</FrameLayout>

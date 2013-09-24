@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quick_people"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_text_margin_left"
+        android:layout_marginRight="@dimen/large_text_margin_right"
+        android:layout_marginTop="56dip"
+        android:orientation="vertical" >
+
+        <include layout="@layout/quickcontact_photo_container" android:id="@+id/photo_container"/>
+
+        <HorizontalScrollView
+            android:id="@+id/track_scroller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/quickcontact_track_background"
+            android:fadingEdgeLength="0dip"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/track"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <View
+                    android:id="@+id/selected_tab_rectangle"
+                    android:layout_width="60dip"
+                    android:layout_height="6dip"
+                    android:layout_alignBottom="@id/track"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/quickcontact_tab_indicator" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/line_after_track"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/quickcontact_tab_indicator" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_marginLeft="@dimen/large_text_margin_left"
+        android:layout_marginRight="@dimen/large_text_margin_right" />
+
+</LinearLayout>

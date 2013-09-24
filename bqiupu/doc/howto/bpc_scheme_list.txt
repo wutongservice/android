@@ -1,0 +1,23 @@
+> See my comments, and update schema list:
+>
+> Existing in current design:
+> 1. View user profile:  borqs://profile/details?uid=<180>
+> 2. View an APK detail: borqs://application/details?id=<apk_server_id>
+> 3. View stream list: borqs://stream/details?type=<valid_type>
+  4. View friends list: borqs://friends/details?uid=<180>[&tab=<tab_index>]
+        uid: user id, e.g., for me, the value is 180
+        tab: optional para, the index of friends activity:
+               0: circle tab
+               1: people tab
+               2: guy you may know tab
+        e.g., for people I may know, the schema is: borqs://friends/details?uid=180&tab=2
+>
+> 5. View user request:  borqs://request/details?uid=<180>
+
+> Need to append (proposal, might be change later):
+> 1. View a stream comments: borqs://stream/comment?id=<post_id> 
+> 2. View fans list of a user:       borqs://userlist/fans?uid=<180>
+
+todo:
+> 1. View people may know: borqs://friends/suggestion
+>  alter origin borqs://friends/details?uid=<180>[&tab=<tab_index>]

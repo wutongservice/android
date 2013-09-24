@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dialog_bg" >
+
+    <include
+        android:id="@+id/user_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/default_listview" />
+
+    <include
+        android:id="@+id/center_process"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/center_process"
+        android:visibility="gone" />
+
+</RelativeLayout>

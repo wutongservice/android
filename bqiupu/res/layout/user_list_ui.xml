@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/qiupu_bg_color">
+            
+     <LinearLayout android:id="@+id/titlebar_container"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="@dimen/title_bar_height" 
+	    android:orientation="horizontal">
+     </LinearLayout>
+	  <TextView android:id="@+id/id_head_intutorial"
+	            android:layout_width="fill_parent"
+	            android:layout_height="30dip"
+	            android:text="@string/Privacy_circle_summary"
+	            android:paddingLeft="@dimen/default_text_padding_left"
+	            android:textAppearance="@style/sns_link"
+                android:visibility="gone"
+	            android:gravity="bottom"
+	            android:layout_below="@id/titlebar_container"/>
+	  
+	  <TextView 
+                android:id="@+id/id_span_view"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/id_head_intutorial"
+                android:visibility="gone"
+                android:background="@color/head_title_span_view_bg"/>
+	            
+	   <include layout="@layout/inline_search_span_view"
+                 android:id="@+id/search_span"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:visibility="gone"
+                 android:layout_below="@id/id_span_view" />
+
+		      <View android:id="@+id/id_span_view_1"
+		      android:layout_width="fill_parent"
+		      android:layout_height="2px"
+		      android:layout_below="@id/search_span"
+		      android:background="@drawable/divider"
+		      android:visibility="gone"/>
+
+         <include layout="@layout/friends_list_a2z" android:id="@+id/content"
+            android:layout_below="@id/search_span"
+            android:layout_above="@+id/bottom_view"            
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+            
+          <RelativeLayout android:id="@id/bottom_view"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="@dimen/bottom_height"
+		    android:layout_alignParentBottom="true"
+            android:visibility="gone"
+		    android:background="@drawable/bottom_btn_normal" >
+		  
+              <RelativeLayout android:id="@+id/id_add_people"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent"
+		    android:layout_alignParentBottom="true"
+		    android:background="?attr/listSelector" >
+		                   
+			     <TextView 
+			            android:layout_width="wrap_content"
+			            android:layout_height="@dimen/bottom_height"
+			            android:drawableLeft="@drawable/ic_menu_add_people_white"
+			            android:layout_centerInParent="true"
+			            android:gravity="center"
+			            android:textColor="@android:color/white"
+			            android:text="@string/add_friends_to_privacy_circle"/>
+             </RelativeLayout>  
+          
+        </RelativeLayout>  
+          
+</RelativeLayout>	        
+
+

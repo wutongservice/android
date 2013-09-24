@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/user_detail_sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_save" >
+
+        <LinearLayout
+            android:id="@+id/edit_profile_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:id="@+id/layout_username"
+                style="@style/edit_profile_style"
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                android:background="@drawable/above">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/edit_profile_title_style"
+                    android:textAppearance="@style/edit_user_profiles_style"
+                    android:text="@string/update_profile_name_hint" />
+
+                <TextView
+                    android:id="@+id/profile_username"
+                    style="@style/edit_profile_value_style"
+                    android:linksClickable="false"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+
+            </LinearLayout>
+            
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:id="@+id/layout_gender"
+                style="@style/edit_profile_style"
+                android:background="@drawable/middle">
+
+                <TextView
+                    android:id="@+id/lable_gender"
+                    style="@style/edit_profile_title_style"
+                    android:textAppearance="@style/edit_user_profiles_style"
+                    android:text="@string/update_profile_sex_title" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/edit_profile_value_style"
+                    android:linksClickable="false"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+
+            </LinearLayout>
+
+           <!--  <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right" 
+                android:background="@drawable/middle"
+                >
+
+                 <TextView
+                    android:id="@+id/edit_sex_title"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center_vertical"
+                    android:text="@string/update_profile_sex_title" />
+
+                <RadioGroup
+                    android:id="@+id/sex_rg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@id/edit_sex_title"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/sex_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:checked="true"
+                        android:text="@string/user_sex_man"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/sex_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dip"
+                        android:text="@string/user_sex_woman"
+                        android:textColor="#000000" />
+                </RadioGroup>
+            </RelativeLayout> -->
+
+            <LinearLayout 
+			    android:orientation="horizontal"
+                android:id="@+id/layout_birthday"
+                style="@style/edit_profile_style"
+                android:background="@drawable/middle">
+
+                <TextView
+                    android:id="@+id/edit_birthday_title"
+                    style="@style/edit_profile_title_style"
+                    android:textAppearance="@style/edit_user_profiles_style"
+                    android:text="@string/update_profile_birthday_hint" />
+
+                <TextView
+                    android:id="@+id/edit_birthday"
+                    style="@style/edit_profile_value_style"
+                    android:hint="@string/set_birthday_title"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+            </LinearLayout>
+
+            <LinearLayout 
+			    android:orientation="horizontal"
+                android:id="@+id/layout_address"
+                style="@style/edit_profile_style"
+                android:background="@drawable/below">
+
+                <TextView
+                    android:id="@+id/edit_address_title"
+                    style="@style/edit_profile_title_style"
+                    android:textAppearance="@style/edit_user_profiles_style"
+                    android:text="@string/update_profile_address_hint" />
+
+                <TextView
+                    android:id="@+id/edit_address"
+                    style="@style/edit_profile_value_style"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+            </LinearLayout>
+            <LinearLayout 
+			    android:orientation="horizontal"
+			    android:id="@+id/layout_company"
+                style="@style/edit_profile_style"
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                android:background="@drawable/above">
+
+			    <TextView
+			        android:id="@+id/edit_company_title"
+			        style="@style/edit_profile_title_style"
+			        android:textAppearance="@style/edit_user_profiles_style"
+			        android:text="@string/update_profile_company_hint" />
+
+			    <TextView
+			        android:id="@+id/edit_company"
+			        style="@style/edit_profile_value_style"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+			</LinearLayout>
+
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:id="@+id/layout_department"
+                style="@style/edit_profile_style"
+                android:background="@drawable/middle">
+
+			    <TextView
+			        android:id="@+id/edit_department_title"
+			        style="@style/edit_profile_title_style"
+			        android:textAppearance="@style/edit_user_profiles_style"
+			        android:text="@string/update_profile_department_hint" />
+
+			    <TextView
+			        android:id="@+id/edit_department"
+			        style="@style/edit_profile_value_style"
+                    android:textAppearance="@style/edit_user_profiles_values_style" 
+                	 />
+			</LinearLayout>
+
+			<LinearLayout 
+			    android:orientation="horizontal"
+			    android:id="@+id/layout_job_title"
+                style="@style/edit_profile_style"
+                android:background="@drawable/middle">
+
+			    <TextView
+			        android:id="@+id/edit_job_title"
+			        style="@style/edit_profile_title_style"
+			        android:textAppearance="@style/edit_user_profiles_style"
+			        android:text="@string/update_profile_job_hint" />
+
+			    <TextView
+			        android:id="@+id/edit_job"
+			        style="@style/edit_profile_value_style"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+			</LinearLayout>
+			<LinearLayout 
+			    android:orientation="horizontal"
+                android:id="@+id/layout_office_address"
+                style="@style/edit_profile_style"
+                android:background="@drawable/below">
+
+                <TextView
+                    android:id="@+id/tv_office_address"
+                    style="@style/edit_profile_title_style"
+                    android:textAppearance="@style/edit_user_profiles_style"
+                    android:text="@string/update_profile_address_hint" />
+
+                <TextView
+                    android:id="@+id/et_office_address"
+                    style="@style/edit_profile_value_style"
+                    android:textAppearance="@style/edit_user_profiles_values_style"/>
+            </LinearLayout>
+    <Button
+					        android:id="@+id/btn_save"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="@dimen/default_text_margin_top"
+					        android:layout_marginLeft="@dimen/default_text_margin_left"
+					        android:layout_marginRight="@dimen/default_text_margin_right"
+					        android:layout_marginBottom="@dimen/default_text_margin_bottom"
+					        android:gravity="center"
+					        android:paddingBottom="@dimen/default_text_padding_bottom"
+					        android:paddingTop="@dimen/default_text_padding_top"
+					        android:paddingLeft="@dimen/large_text_padding_left"
+							android:paddingRight="@dimen/large_text_padding_right"
+					        android:text="@string/label_save"
+					        android:textSize="14sp" />
+</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

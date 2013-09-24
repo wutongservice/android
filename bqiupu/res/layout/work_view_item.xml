@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+		android:background="@drawable/list_background_all" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"/>
+
+            <ImageView android:id="@+id/img_remove"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:paddingLeft="@dimen/default_text_padding_left"
+               android:src="@drawable/actionbar_icon_release_normal"
+			   android:visibility="invisible"
+               android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_company"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView android:layout_alignParentLeft="true"
+                android:id="@+id/tv_company_title"
+                android:layout_width="@dimen/max_text_width"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:text="@string/update_profile_company_hint" />
+
+            <TextView
+                android:id="@+id/tv_company"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_company_title"
+                android:textAppearance="@style/edit_user_profiles_values_min_style" 
+                android:singleLine="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_department"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView android:layout_alignParentLeft="true"
+                android:id="@+id/tv_department_title"
+                android:layout_width="@dimen/max_text_width"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:text="@string/update_profile_department_hint" />
+
+            <TextView
+                android:id="@+id/tv_department"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_department_title"
+                android:textAppearance="@style/edit_user_profiles_values_min_style" 
+                android:singleLine="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_job"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView android:layout_alignParentLeft="true"
+                android:id="@+id/tv_job_title"
+                android:layout_width="@dimen/max_text_width"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:text="@string/update_profile_job_hint" />
+
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_job_title"
+                android:textAppearance="@style/edit_user_profiles_values_min_style" 
+                android:singleLine="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_addr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView android:layout_alignParentLeft="true"
+                android:id="@+id/tv_addr_title"
+                android:layout_width="@dimen/max_text_width"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:text="@string/update_profile_address_hint" />
+
+            <TextView
+                android:id="@+id/tv_addr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_addr_title"
+                android:textAppearance="@style/edit_user_profiles_values_min_style" 
+                android:singleLine="true"
+                />
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:id="@+id/layout_major"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <TextView 
+                android:id="@+id/tv_descrip_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/edit_user_profiles_min_style"
+                android:text="@string/job_description" />
+
+            <TextView
+                android:id="@+id/tv_job_des"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_descrip_title"
+				android:textAppearance="@style/edit_user_profiles_values_min_style" 
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+

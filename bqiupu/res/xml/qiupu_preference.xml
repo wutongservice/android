@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:icon="@drawable/ic_qiupu_launcher"
+        android:title="@string/home_application">
+
+    <PreferenceCategory android:title="@string/pref_user_privacy_setting">
+        <Preference
+                android:key="key_set_apk_permission"
+                android:singleLine="true"
+                android:inputType="phone"
+                android:title="@string/update_apk_permission"/>
+
+        <Preference
+                android:key="key_clear_cache"
+                android:title="@string/pref_string_clear_cache"
+                android:summary="@string/pref_string_clear_cache_summary"/>
+
+        <CheckBoxPreference android:key="key_auto_share_dynamic"
+                            android:title="@string/install_app_share_title"
+                            android:summary="@string/install_app_share_summary"/>
+
+        <Preference
+                android:key="key_auto_backup_upload"
+                android:title="@string/signup_application_upload_title"
+                android:summary="@string/signup_application_upload_header"/>
+
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory android:title="@string/pref_specific_category">-->
+        <!--<EditTextPreference-->
+                <!--android:dialogTitle="@string/stream_view_timeout_title"-->
+                <!--android:title="@string/stream_view_timeout_title"-->
+                <!--android:key="key_stream_view_timeout"-->
+                <!--android:singleLine="true"-->
+                <!--android:inputType="number"/>-->
+
+        <!--<EditTextPreference-->
+                <!--android:dialogTitle="@string/friends_view_timeout_title"-->
+                <!--android:title="@string/friends_view_timeout_title"-->
+                <!--android:key="key_friends_view_timeout"-->
+                <!--android:singleLine="true"-->
+                <!--android:inputType="number"/>-->
+    <!--</PreferenceCategory>-->
+
+    <PreferenceCategory android:title="@string/pref_adv_setting">
+        <!--<Preference-->
+                <!--android:key="key_configure_debug_option"-->
+                <!--android:title="@string/configure_debug_option_title"-->
+                <!--android:summary="@string/configure_debug_option_summary"/>-->
+
+        <!--<CheckBoxPreference android:key="key_borqs_debug_log"-->
+                            <!--android:title="@string/pref_borqs_debug_log"-->
+                            <!--android:summary="@string/pref_borqs_debug_log_summary"/>-->
+
+        <!--<CheckBoxPreference android:key="key_select_borqs_url"-->
+                            <!--android:title="@string/pref_borqs_url_select"-->
+                            <!--android:summary="@string/pref_borqs_url_select_summary"/>-->
+
+        <!--<CheckBoxPreference android:key="key_main_ui_option"             -->
+        <!--android:title="@string/pref_ui_select"       -->
+        <!--android:summary="@string/pref_ui_select_summary" />-->
+
+        <CheckBoxPreference android:key="key_load_photo_auto"
+                            android:title="@string/pref_pic_show"
+                            android:summary="@string/pref_pic_show_summary"/>
+
+        <CheckBoxPreference android:key="key_show_dialog_to_market"
+                            android:title="@string/pref_link_market"
+                            android:summary="@string/pref_link_market_summary"/>
+
+        <CheckBoxPreference android:key="key_auto_installation"
+                            android:title="@string/pref_auto_install"
+                            android:summary="@string/pref_auto_install_summary"/>
+
+        <CheckBoxPreference android:key="key_market_app_detail"
+                            android:title="@string/pref_market_page"
+                            android:summary="@string/pref_market_page_summary"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

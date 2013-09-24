@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/borqs_wutong"
+    android:orientation="vertical" >
+   
+
+    <!-- LinearLayout android:background="@drawable/borqs_wutong"
+        android:id="@+id/sns_about"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/borqs_wutong"  -->
+
+        <!-- ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/about_logo" / -->
+
+        <!-- TextView
+            android:id="@+id/version_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_about_activity_margin_top"
+            android:gravity="center"
+            android:text="@string/about_version_info"
+            android:textColor="@color/apk_detail_font" / -->
+        
+        <!-- TextView
+                android:id="@+id/copyright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="20dip"
+                android:gravity="center"
+                android:text="@string/about_copyright"
+                android:textColor="@color/white" / -->
+
+      
+    <!-- /LinearLayout -->    
+    <ViewStub
+      android:id="@+id/stub_import"
+      android:inflatedId="@+id/panel_import"
+
+      android:layout="@layout/login_post_progress_overlay"
+
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom" />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.borqs.common.view.CommentRowView
+        android:background="@android:color/background_light"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingTop="@dimen/default_text_padding_top"
+        android:paddingRight="@dimen/default_text_padding_right"
+        android:paddingBottom="@dimen/default_text_padding_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"/>

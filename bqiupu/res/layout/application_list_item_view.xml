@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_list_item_parent">
+
+    <ImageView android:id="@+id/apk_icon"
+        style="@style/app_list_image" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/apk_opbtn_share"
+        android:layout_toRightOf="@id/apk_icon"
+        android:layout_marginLeft="@dimen/default_text_padding_left"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical">
+
+        <TextView android:id="@+id/apk_title"
+            style="@style/app_list_title" />
+
+        <TextView android:id="@+id/apk_latest_version"
+            style="@style/app_list_version_name"
+            android:gravity="center_vertical"
+            android:layout_alignLeft="@id/apk_title"
+            android:layout_below="@id/apk_title"
+            android:visibility="gone"/>
+
+         <com.borqs.common.view.RatingView android:id="@+id/apk_rating"
+            android:layout_width="@dimen/rate_span_width"
+            android:layout_height="@dimen/rate_span_heigth"
+            android:layout_alignLeft="@id/apk_title"
+            android:layout_marginTop="@dimen/app_padding_in_rating_and_text"
+            android:layout_below="@id/apk_latest_version"/>
+
+     </LinearLayout>
+
+    <LinearLayout android:id="@+id/apk_opbtn_ll"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_alignParentRight="true"
+         android:orientation="vertical"
+         android:layout_centerVertical="true"
+         android:gravity="center"
+         android:background="?buttonSelectableBackground">
+
+        <ImageView android:id="@+id/apk_opbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView android:id="@+id/apk_opbtn_tv"
+            android:layout_width="@dimen/app_action_name_width"
+            android:layout_height="wrap_content"
+            android:text="@string/apk_installed"
+            android:gravity="center"
+            android:textSize="@dimen/app_text_size"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView android:id="@+id/span_icon"
+        android:layout_width="2px"
+        android:layout_height="50dip"
+        android:layout_toLeftOf="@id/apk_opbtn_ll"
+        android:layout_centerVertical="true"
+        android:src="@drawable/widget_line"/>
+
+    <ImageView android:id="@+id/apk_opbtn_share"
+        style="@style/list_item_icon"
+        android:layout_toLeftOf="@+id/span_icon"
+        android:src="@drawable/icon_share_normal"/>
+
+    <ImageView android:id="@+id/apk_new_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/apk_icon"
+        android:layout_marginLeft="-18dp"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/new_conner"
+        android:visibility="gone"/>
+
+</RelativeLayout>

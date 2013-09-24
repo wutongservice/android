@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="acl_app_name">播思帐号登录</string>
+ 	<string name="acl_borqs_account_label">播思</string>
+    <string name="acl_borqs_service_introduce">登录或注册Borqs帐号后，您可以方便的使用Borqs为您提供的网络服务。</string>
+    <string name="acl_settings_title_fmt">设置</string>
+    <string name="acl_account_already_login">您已经登录了一个播思账户</string>
+    <string name="acl_ok">确定</string>
+    <string name="acl_done">完成</string>
+
+    <!--Login Activity-->
+    <string name="acl_user_id">用户名:&#160;</string>
+    <string name="acl_user_id_input_hint">手机号/电子邮箱</string>
+    <string name="acl_user_password">密&#160;&#160;&#160;&#160;码:&#160;</string>
+    <string name="acl_user_password_input_hint_short">密码</string>
+    <string name="acl_user_password_input_hint">密码(6-16位)</string>
+    <string name="acl_signin_text">登&#160;&#160;录</string>
+    <string name="acl_onekey_register_text">一键注册</string>
+    <string name="acl_register_text">注册新用户</string>
+    <string name="acl_user_forgot_password">忘记密码?</string>
+    <string name="acl_sms_charge_declare"><b>注:&#160;</b>一键注册将发送一条验证短信，资费与普通短信相同，由运营商收取。</string>    
+    <string name="acl_login_title">用户登录</string>
+    <string name="acl_user_verify_code_input_hint">输入4位验证码</string>
+    <string name="acl_backto_login_text">登录</string>    
+    
+    <string name="acl_register_title">用户注册</string>
+    <string name="acl_logining">正在登录，请稍候\.\.\.</string>
+    <string name="acl_registering">正在注册，请稍候\.\.\.</string>
+    <string name="acl_invalid_input_content">输入不正确。</string>
+    <string name="acl_input_verify_code">输入验证码:&#160;</string>
+    <string name="acl_get_verify_code">获取验证码</string>
+    <string name="acl_verifycode_format">您的验证码是:&lt;CODE&gt;</string>
+    <string name="acl_get_verifycode_failed">获取验证码失败</string>    
+    <string name="acl_register_user_input_hint">手机号/电子邮箱</string>
+    <string name="acl_register_user_hint_mail">电子邮箱</string>
+    <string name="acl_register_user_hint_phone">手机号</string>
+    <string name="acl_send_verify_code_to_phone">验证码已经下发到您的手机上，请注意查收</string>
+    <string name="acl_send_verify_code_to_mail">验证码经发到您的邮箱中，请注意查收</string>
+    
+    <string name="acl_user_name">姓&#160;&#160;&#160;&#160;名:&#160;</string>
+    <string name="acl_user_phone">电&#160;&#160;&#160;&#160;话:&#160;</string>
+    <string name="acl_user_birthday">生&#160;&#160;&#160;&#160;日:&#160;</string>
+    <string name="acl_user_address">居住地:&#160;</string>
+    <string name="acl_user_real_name_hint">真实姓名</string>
+    <string name="acl_user_detail_title">个人资料</string>
+    <string name="acl_edit_image">编辑头像</string>
+    <string name="acl_image_from_file">本地文件</string>
+    <string name="acl_image_from_camera">手机拍摄</string>
+    <string name="acl_set_birthday">设置生日</string>
+    <string name="acl_show_password">显示密码</string>
+    <string name="acl_changing_profile_info">更改个人信息...</string>
+    <string name="acl_email_register_prompt">手机注册暂时不可用，请用电子邮箱注册</string>
+    <string name="acl_email_change_pwd_prompt">手机修改密码暂时不可用，请用电子邮箱修改密码</string>
+        
+    <string name="acl_reset_pwd_hint">发送新密码到:&#160;</string>
+    <string name="acl_reset_pwd_title">重置密码</string>
+    <string name="acl_get_new_pwd">获取新密码</string>
+    <string name="acl_rpd_user_id_input_hint">注册时的手机号/邮箱</string>
+    <string name="acl_getting_new_password">请求新密码...</string>
+    <string name="acl_send_new_pwd_to_phone">新密码已经下发到您的手机上，请注意查收</string>
+    <string name="acl_send_new_pwd_to_mail">密码修改方式已经发到您的邮箱中，请注意查收</string>  
+    
+    <string name="acl_register_failed">注册失败</string>
+    <string name="acl_login_failed">登录失败</string>
+    <string name="acl_input_error_required">请输入</string>
+    <string name="acl_input_error_user_name">用户名输入不正确</string>
+    <string name="acl_error_unknown">未知错误，请稍候再试</string>
+    <string name="acl_error_connect_server">无法连接服务器，请稍候重试</string>
+    <string name="acl_error_server_rsp_data">服务器返回数据错误，请稍候重试</string>
+    <string name="acl_error_reg_time_out">注册超时，请稍候重试</string>
+    <string name="acl_error_sed_reg_send_sms">发送注册短信错误，</string>
+    <string name="acl_error_no_sim_card">没有SIM卡</string>
+    <string name="acl_error_server_unknown_error">服务器错误:&#160;</string>
+    <string name="acl_error_ticket_invalid">会话过期，请重新登录</string>
+    <string name="acl_error_usr_pwd_invalid">错误的用户名或密码</string>
+    <string name="acl_error_no_phone">没有手机号</string>
+    <string name="acl_error_no_user">用户不存在</string>
+    <string name="acl_error_no_record">无记录</string>
+    <string name="acl_error_code_is_empty">验证码无效，请获取验证码</string>
+    <string name="acl_error_cmp_code_gt_3">验证码输入失败三次，请重新获取</string>
+    <string name="acl_error_cmp_verifycode_failed">验证码校验失败</string>
+    <string name="acl_change_profile_failed">个人资料修改失败</string>
+    <string name="acl_error_input_phone">手机号码输入不正确</string>
+    <string name="acl_error_input_pwd">请输入6-16位的密码</string>
+    <string name="acl_error_get_new_pwd">获取新密码失败</string>
+    <string name="acl_error_invalid_user">无效的用户名</string>
+    <string name="acl_have_account_prompt">您已经注册过了，使用原账户进行登录了</string>
+    <string name="acl_sms_server_error">服务暂时不可用，请稍候再试</string>
+    <string name="acl_error_server_exception">登录服务暂时不可用，请稍候再试</string>
+        
+    <!-- Account removal activity -->
+    <string name="account_removal_title">帐号删除</string>
+    <string name="acl_removal_notice">该帐号及其相关的联系人将从当前设备中删除。</string>
+    <string name="acl_removal_contact_cleaning">正在清除帐号数据...</string>
+
+    <!-- Account settings entry -->
+    <string name="account_settings_entry">帐号设置</string>
+    <string name="account_settings_summary">播思应用用户选项</string>
+    <string name="account_settings_options">设置选项</string>
+    <string name="account_settings_no_options">没有设置选项!</string>
+    
+    <!-- contact.xml -->
+    <string name="acl_invite_contact_label">添加到圈子</string>
+</resources>

@@ -1,0 +1,185 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:id="@+id/qiupu_group_menu"
+       android:enabled="true" 
+       android:visible="true">
+            
+        <!--<item android:title="@string/menu_title_home" -->
+            <!--android:id="@+id/menu_home" -->
+            <!--android:icon="@drawable/ic_menu_home"-->
+            <!--android:enabled="true"-->
+            <!--android:visible="false"/>-->
+        <item
+            android:id="@+id/menu_left"
+            android:enabled="true"
+            android:icon="@drawable/actionbar_icon_refresh_normal"                    
+            android:visible="false"/>
+        <item
+            android:id="@+id/menu_middle"
+            android:enabled="true"
+            android:icon="@drawable/actionbar_icon_refresh_normal"            
+            android:visible="false"/>
+        <item
+            android:id="@+id/menu_right"
+            android:enabled="true"
+            android:icon="@drawable/actionbar_icon_refresh_normal"            
+            android:visible="false"/>
+        
+        <item android:title="@string/label_refresh"
+            android:id="@+id/menu_refresh" 
+            android:icon="@drawable/menu_refresh"
+            android:enabled="true"
+            android:visible="true"/>
+        
+        <item android:title="@string/menu_title_search" 
+            android:id="@+id/menu_search" 
+            android:icon="@drawable/menu_search"            
+            android:enabled="true"
+            android:visible="true"/>
+            
+       <item android:title="@string/recommend_qiupu" 
+            android:id="@+id/menu_share_qiupu" 
+            android:icon="@drawable/menu_share"            
+            android:enabled="true"
+            android:visible="false"/>
+            
+      <item android:title="@string/feedback_qiupu" 
+            android:id="@+id/menu_feedback" 
+            android:icon="@drawable/menu_feedback"            
+            android:enabled="true"
+            android:visible="false"/>
+
+     <item android:title="@string/stream_filter"
+           android:id="@+id/menu_stream_filter"
+           android:icon="@drawable/menu_filter"
+           android:enabled="true"
+           android:visible="false"/>
+
+     <item android:title="@string/stream_choose_circle"
+            android:id="@+id/menu_stream_choose_circle"
+            android:icon="@drawable/ic_menu_slide_panel"
+            android:enabled="true"
+            android:visible="false"/>
+            
+     <item android:title="@string/string_post_towall" 
+            android:id="@+id/menu_post_towall" 
+            android:icon="@drawable/menu_graffiti"
+            android:enabled="true"
+            android:visible="false"/>
+            
+      <item android:title="@string/version_check_qiupu" 
+            android:id="@+id/menu_version_check" 
+            android:icon="@drawable/menu_sync"            
+            android:enabled="true"
+            android:visible="false"/>
+
+        <item android:title="@string/apk_pravicy_setting" 
+            android:id="@+id/menu_pravicy_setting" 
+            android:icon="@drawable/menu_privacy"            
+            android:enabled="true"
+            android:visible="false"/>
+        
+        <item android:title="@string/menu_title_logout" 
+            android:id="@+id/menu_logout" 
+            android:icon="@drawable/menu_exit_account"            
+            android:enabled="true"
+            android:visible="false"/>
+            
+        <item android:title="@string/qiupu_exit_title" 
+            android:id="@+id/menu_exit_qiupu" 
+            android:icon="@drawable/menu_exit_app"            
+            android:enabled="true"
+            android:visible="false"/>
+            
+        <item android:title="@string/qiupu_delete_apks" 
+            android:id="@+id/menu_delete_apks" 
+            android:icon="@drawable/menu_delete_apks"            
+            android:enabled="true"
+            android:visible="false"/>
+                        
+        <item android:title="@string/qiupu_update_all" 
+            android:id="@+id/menu_update_all" 
+            android:icon="@drawable/menu_update_all"            
+            android:enabled="true"
+            android:visible="false"/>
+                        
+        <item android:title="@string/qiupu_backup_all" 
+            android:id="@+id/menu_backup_all" 
+            android:icon="@drawable/menu_backup_all"            
+            android:enabled="true"
+            android:visible="false"/>        
+            
+        <item android:title="@string/qiupu_delete_people" 
+            android:id="@+id/menu_delete_people" 
+            android:icon="@drawable/menu_delete"            
+            android:enabled="true"
+            android:visible="false"/>
+
+        <item android:title="@string/string_settings"
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/menu_setting"
+            android:enabled="true"
+            android:visible="false"/>
+
+    <item android:icon="@drawable/ic_menu_mute"
+          android:id="@+id/menu_mute_post"
+          android:title="@string/menu_mute_post"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+    <item android:icon="@drawable/menu_report_spam"
+          android:id="@+id/menu_report_abuse"
+          android:title="@string/menu_report_abuse"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+    <item android:icon="@drawable/menu_delete"
+          android:id="@+id/menu_remove_post"
+          android:title="@string/menu_remove_post"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+
+    <item android:icon="@drawable/menu_like"
+          android:id="@+id/menu_view_liker"
+          android:title="@string/menu_like_people"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+
+    <item android:icon="@drawable/menu_forbid_comments"
+          android:id="@+id/menu_comment_attribute"
+          android:title="@string/menu_comment_attribute_disable"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+
+    <item android:icon="@drawable/memu_forbid_like"
+          android:id="@+id/menu_like_attribute"
+          android:title="@string/menu_like_attribute_disable"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+
+    <item android:icon="@drawable/memu_forbid_share"
+          android:id="@+id/menu_share_attribute"
+          android:title="@string/menu_share_attribute_disable"
+          android:showAsAction="never"
+          android:enabled="true"
+          android:visible="false"/>
+    <item
+            android:id="@+id/menu_create_vote"
+            android:enabled="true"
+            android:icon="@drawable/voting_icon"
+            android:showAsAction="never"
+            android:title="@string/send_action_title"
+            android:visible="false"/>
+
+    <item
+            android:id="@+id/menu_insert_smiley"
+            android:enabled="true"
+            android:icon="@drawable/emo_im_happy"
+            android:showAsAction="never"
+            android:title="@string/insert_smiley_title"
+            android:visible="false"/>
+</group>
+</menu>

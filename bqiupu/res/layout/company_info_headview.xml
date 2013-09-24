@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:paddingBottom="@dimen/stream_item_padding"
+             android:paddingTop="@dimen/stream_item_padding"
+        >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/item_white_bg">
+
+    <ImageView
+        android:id="@+id/select_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/borqs_company_cover"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/select_cover"
+        android:layout_marginTop="12dip"
+        android:paddingBottom="@dimen/small_text_padding_bottom"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right" >
+
+        <ImageView
+            android:id="@+id/creator_icon"
+            android:layout_width="@dimen/company_profile_icon"
+                    android:layout_height="@dimen/company_profile_icon"
+                    android:src="@drawable/default_public_circle" />
+        
+        <TextView
+                android:id="@+id/id_top_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creator_icon"
+                android:layout_alignLeft="@id/creator_icon"
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxWidth="150dip"
+                android:minWidth="@dimen/company_profile_icon"
+                android:paddingBottom="@dimen/small_text_padding_bottom"
+                android:paddingTop="@dimen/small_text_padding_top"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right"
+                android:singleLine="true" 
+                android:textSize="15dip"
+                android:background="@drawable/profile_in_circle_bg"
+                android:text="@string/label_bulletin"/>
+
+        <ImageView
+            android:id="@+id/goto_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/id_event_title"
+            android:src="@drawable/profile_more_icon"  />
+
+        <TextView
+            android:id="@id/id_event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/creator_icon"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_toLeftOf="@id/goto_detail"
+            android:layout_toRightOf="@id/creator_icon"
+            android:gravity="top|left"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_event_title"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@id/creator_icon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/lightgrey"
+            android:textSize="14dip" />
+
+        <TextView
+            android:id="@+id/id_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_time"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:layout_toRightOf="@id/creator_icon"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/light_blue"
+            android:textSize="12dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_top_post"
+        style="@style/circle_profile_item"
+        android:layout_below="@id/head_rl"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/icon_invite_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+
+        <TextView
+            android:id="@+id/tv_top_post"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/icon_invite_member_right"
+            android:drawableLeft="@drawable/circle_hot_icon" />
+    </RelativeLayout>
+    
+    <FrameLayout
+                android:id="@+id/id_action_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_below="@id/layout_top_post"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_right"
+                android:layout_marginRight="@dimen/default_text_margin_right"
+                android:layout_marginTop="@dimen/default_text_margin_top"
+                android:background="@drawable/list_background_all"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/invite_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/invite"
+                    android:drawablePadding="@dimen/default_text_padding_left"
+                    android:gravity="center"
+                    android:text="@string/invite_more"
+                    android:textSize="16dip" />
+
+                <TextView
+                    android:id="@+id/apply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/yes"
+                    android:drawablePadding="@dimen/default_text_padding_left"
+                    android:gravity="center"
+                    android:text="@string/i_am_going"
+                    android:textSize="16dip" />
+            </FrameLayout>
+
+</RelativeLayout>
+</FrameLayout>

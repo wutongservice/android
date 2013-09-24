@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:background="@color/bpc_backgroud">
+        
+        <RelativeLayout android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginBottom="10dip">
+                        
+	              <TextView android:id="@+id/profile_dialog_title"
+				   android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+	               android:textAppearance="@style/sns_time"
+	               android:gravity="center_vertical"/>
+		                
+				  <EditText
+				 		android:id="@+id/edit_content"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:minLines="5"
+				        android:gravity="top"
+				        android:layout_below="@id/profile_dialog_title"/>
+
+				      <CheckBox
+				          android:id="@+id/isSendPost"
+				          android:layout_below="@id/edit_content"
+				          android:layout_width="wrap_content"
+				          android:layout_height="wrap_content"
+				          android:checked="true"
+				          android:text="@string/send_to_post" />
+
+				        <ImageView android:id="@+id/profile_status_commit"
+				            style="@style/content_icon"
+	                        android:layout_below="@id/isSendPost"
+	                        android:layout_alignParentRight="true"
+	                       android:src="@drawable/actionbar_post"/>
+        
+        </RelativeLayout>
+			        
+	  </LinearLayout>
+         

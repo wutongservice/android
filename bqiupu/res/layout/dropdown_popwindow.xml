@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drop_down_item_width"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/default_text_margin_right">
+
+<!--     android:background="#5000FF00"
+        android:layout_below="@+id/corpus_selector_arrow"-->
+        
+        <ImageView
+        android:id="@+id/corpus_selector_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/cmcc_launcher_arrow_up"
+        android:visibility="gone" />
+        
+   <LinearLayout
+        android:id="@+id/corpus_selector_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/corpus_selector_arrow"
+        android:background="@drawable/tooltip_bottom_right_background" 
+        android:orientation="vertical"
+        >
+        <!-- android:background="@drawable/corpus_selector_bg" -->
+         <ListView
+          android:id="@+id/corpus_grid"     
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="none"
+	      android:cacheColorHint="#00000000"
+	      android:fastScrollEnabled="false"
+	      android:divider="@drawable/line"
+	      android:listSelector="?attr/listSelector"/>
+    </LinearLayout> 
+
+</RelativeLayout>
+

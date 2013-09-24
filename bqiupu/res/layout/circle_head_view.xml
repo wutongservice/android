@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/people_item_padding_left"
+        android:paddingRight="@dimen/people_item_padding_right" >
+
+        <ImageView
+            android:id="@+id/id_title_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_menu_add_people" />
+
+        <LinearLayout
+            android:id="@+id/id_title_span_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_toLeftOf="@+id/id_arrow_icon"
+            android:layout_toRightOf="@id/id_title_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/Privacy_circle_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/add_friend_title"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Privacy_circle_summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:text="@string/Privacy_circle_summary"
+                android:textAppearance="@style/sns_time" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/id_arrow_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/privacy_circle_itural" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_span_view"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="@color/head_title_span_view_bg" />
+
+</LinearLayout>

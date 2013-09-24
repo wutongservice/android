@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.borqs.qiupu">
+
+    <LinearLayout
+            android:id="@+id/titlebar_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal">
+    </LinearLayout>
+    <com.borqs.common.view.TwoWayGridView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/titlebar_container"
+            app:Selector="@null"
+            app:cacheColorHint="#E8E8E8"
+            app:columnWidth="100dp"
+            app:rowHeight="100dp"
+            app:numColumns="3"
+            app:numRows="auto_fit"
+            app:verticalSpacing="1dp"
+            app:horizontalSpacing="1dp"
+            app:stretchMode="columnWidth"
+            app:gravity="center"
+            app:scrollDirectionPortrait="vertical"
+            app:scrollDirectionLandscape="horizontal"
+            android:clickable="false"
+            />
+
+</RelativeLayout>

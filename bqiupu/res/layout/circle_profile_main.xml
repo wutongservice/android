@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/default_activity_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    
+    <com.borqs.common.view.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_container"
+        android:layout_above="@+id/bottom_actions_layout" />
+
+    <!-- <LinearLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_container"
+        android:orientation="horizontal" >
+    </LinearLayout> -->
+
+    <include
+        android:id="@+id/bottom_actions_layout"
+        android:layout_alignParentBottom="true"
+        layout="@layout/wutong_floating_compose_action_bar"
+        android:visibility="gone" />
+
+</RelativeLayout>

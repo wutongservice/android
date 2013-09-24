@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/compose_bar" >
+    
+    <RelativeLayout
+            android:id="@+id/toggle_circle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:background="?attr/buttonSelectableBackground"
+            android:visibility="gone" >
+            
+         <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/ic_add_circles"
+            android:gravity="center"
+            android:text="@string/friends_circle"
+            android:textColor="@color/white" />
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/span_line_hor"
+                />
+    </RelativeLayout>
+
+     <RelativeLayout
+            android:id="@+id/toggle_poll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_below="@id/toggle_circle"
+            android:background="?attr/buttonSelectableBackground" >
+            
+         <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/create_voting_icon"
+            android:gravity="center"
+            android:text="@string/poll"
+            android:textColor="@color/white" />
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/span_line_hor"
+                />
+    </RelativeLayout>
+    
+     
+     <RelativeLayout
+            android:id="@+id/toggle_event"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_below="@id/toggle_poll"
+            android:background="?attr/buttonSelectableBackground" >
+         
+         <TextView
+            style="@style/bottom_text_imageView"
+            android:layout_width="match_parent"
+            android:drawableTop="@drawable/home_screen_create_event_icon"
+            android:gravity="center"
+            android:text="@string/event"
+            android:textColor="@color/white" />
+         
+    </RelativeLayout>
+        
+
+</RelativeLayout>

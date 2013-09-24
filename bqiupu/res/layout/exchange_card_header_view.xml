@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- <include 
+        android:id="@+id/exchange_card_header"
+        layout="@layout/exchange_card_header_layout"/>
+
+    <View 
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@drawable/divider"/> -->
+
+    <include 
+        android:id="@+id/nfc_card_header"
+        layout="@layout/exchange_nfc_header_layout"/>
+
+    <View 
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@drawable/navigation_bg_line"/>
+
+    <include 
+        android:id="@+id/request_card_header"
+        layout="@layout/exchange_request_header_layout"/>
+
+    <View 
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@drawable/navigation_bg_line"/>
+
+    <include 
+        android:id="@+id/send_card_header"
+        layout="@layout/exchange_send_header_layout"/>
+
+    <!-- <View 
+        android:layout_height="1dip"
+        android:layout_width="fill_parent"
+        android:background="@drawable/navigation_bg_line"/>
+
+    <LinearLayout
+        android:id="@+id/shaking_hands"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:paddingTop="15.0dip"
+        android:gravity="bottom|center" >
+
+        <ImageView
+            android:id="@+id/lbs_shake_hand_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bump_shake_hand" />
+
+        <ImageView
+            android:id="@+id/lbs_shake_hand_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/bump_shake_hand" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/lbs_card_desc_1"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:gravity="center"
+            android:text="@string/lbs_card_desc_2"
+            android:textSize="18.0sp" />
+    </LinearLayout> -->
+
+    <TextView 
+        android:id="@+id/card_holder"
+        android:layout_height="@dimen/recommend_text_height"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/large_text_padding_left"
+        android:textAppearance="?android:attr/textAppearance"
+        android:text="@string/exchange_card_holder"
+        android:background="@color/recommend_friends_bg_color"
+        android:visibility="gone" />
+
+</LinearLayout>

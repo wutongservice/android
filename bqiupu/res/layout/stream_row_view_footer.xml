@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/stream_item_content_padding"
+    android:paddingLeft="@dimen/stream_row_offset_content_left">
+
+    <com.borqs.common.view.EsTextView
+            android:id="@+id/post_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/sns_location"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/stream_foot_item_margin"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="@dimen/default_drawable_padding"
+            android:clickable="true"
+            android:visibility="gone"/>
+
+    <TextView android:id="@+id/stream_like_summary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/post_location"
+              android:layout_marginTop="@dimen/stream_foot_item_margin"
+              android:drawableLeft="@drawable/ic_like_summary"
+              android:textColor="@color/time"
+              android:linksClickable="false"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textSize="12sp"
+              android:visibility="gone"
+              android:layout_gravity="center_vertical"/>
+
+    <!--<ImageView android:id="@+id/stream_summary_icon"-->
+               <!--android:layout_width="wrap_content"-->
+               <!--android:layout_height="wrap_content"-->
+               <!--android:layout_below="@id/stream_like_summary"-->
+               <!--android:layout_marginTop="@dimen/stream_foot_item_margin"-->
+               <!--android:src="@drawable/ic_comment_summary"-->
+               <!--android:visibility="gone" />-->
+
+    <!--<ImageView android:id="@+id/stream_comment_divider"-->
+               <!--android:layout_width="fill_parent"-->
+               <!--android:layout_height="wrap_content"-->
+               <!--android:background="@drawable/divider_horizontal_comments"-->
+               <!--android:layout_below="@id/qiupu_stream_comment_summary"/>-->
+    <!---->
+    <com.borqs.common.view.CommentsSimpleView
+            android:id="@+id/qiupu_stream_comment_1"
+            android:layout_below="@id/stream_like_summary"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/stream_foot_item_margin"
+            />
+
+
+    <com.borqs.common.view.CommentsSimpleView
+            android:id="@+id/qiupu_stream_comment_2"
+            android:layout_below="@id/qiupu_stream_comment_1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/stream_foot_item_margin"
+            />
+
+    <TextView android:id="@+id/qiupu_stream_comment_summary"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/qiupu_stream_comment_2"
+                  android:layout_marginTop="@dimen/stream_foot_item_margin"
+                  android:textColor="@color/time"
+                  android:linksClickable="false"
+                  android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:textSize="12sp"
+                  android:visibility="gone"
+                  android:layout_gravity="center_vertical"/>
+
+    <ImageView
+            android:id="@+id/stream_action_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/stream_foot_item_margin"
+            android:layout_below="@id/qiupu_stream_comment_summary"
+            android:src="@drawable/btn_stream_more_bg"/>
+
+    <ImageView
+            android:id="@+id/stream_like_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/stream_action_comment"
+            android:layout_alignTop="@id/stream_action_more"
+            android:src="@drawable/btn_stream_like_normal_bg"/>
+
+    <ImageView
+            android:id="@+id/stream_action_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/stream_action_more"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:src="@drawable/btn_stream_comment_bg"/>
+</RelativeLayout>

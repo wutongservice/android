@@ -1,0 +1,4 @@
+-keep class com.borqs.appbox.ui.ApplicationsBoxActivity {
+    public void dismissWorkspaceCling(android.view.View);
+}
+

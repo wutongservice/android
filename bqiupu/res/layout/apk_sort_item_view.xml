@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_list_item_parent">
+
+    <ImageView android:id="@+id/apk_icon"
+        style="@style/app_list_image" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/right_view"
+        android:layout_toRightOf="@id/apk_icon"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical">
+
+        <TextView android:id="@+id/id_apk_name"
+            style="@style/app_list_title" />
+
+        <TextView android:id="@+id/qiupu_apk_versioncode"
+            style="@style/app_list_version_name"
+            android:paddingTop="@dimen/small_text_padding_top"
+            android:layout_below="@id/id_apk_name"
+            android:layout_alignLeft="@id/id_apk_name"
+            android:layout_gravity="left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/right_view"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical">
+
+        <com.borqs.common.view.RatingView android:id="@+id/apk_rating"
+            android:layout_width="@dimen/rate_span_width"
+            android:layout_height="@dimen/rate_span_heigth" />
+
+        <TextView android:id="@+id/qiupu_apk_download_install_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small_text_padding_top"
+            android:layout_below="@id/apk_rating"
+            android:textColor="@color/font_color"
+            android:text="@string/news_feed_like"
+            android:textSize="@dimen/app_text_size"
+            android:gravity="right" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <com.borqs.common.view.ScaleImageView
+            android:id="@+id/stream_photo_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@null"
+            />
+
+    <TextView
+            android:id="@+id/image_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/stream_photo_1"
+            android:layout_alignBottom="@id/stream_photo_1"
+            android:gravity="top|center_horizontal"
+            android:background="@drawable/stream_photo_count_bg_bar"
+            android:textSize="12dip"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/small_text_padding_left"
+            android:paddingRight="@dimen/small_text_padding_right"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"/>
+
+    <com.borqs.common.view.EsTextView
+            android:id="@+id/post_content_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/stream_photo_1"
+            android:layout_alignTop="@id/stream_photo_1"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/stream_link_label_bg_bar"
+            android:drawableLeft="@drawable/list_public"
+            android:drawablePadding="@dimen/default_drawable_padding"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:textAppearance="@style/sns_link"/>
+
+    <ImageView
+            android:id="@+id/stream_photo_thumbnail"
+            android:layout_width="@dimen/stream_image_photo_thumbnail_width"
+            android:layout_height="@dimen/stream_image_photo_thumbnail_height"
+            android:layout_alignLeft="@id/stream_photo_1"
+            android:layout_below="@id/post_content_cover"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:visibility="gone"
+            android:scaleType="fitXY"/>
+</RelativeLayout>

@@ -1,0 +1,1022 @@
+package com.borqs.qiupu.ui.bpc;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.*;
+import android.widget.ArrayAdapter;
+import android.widget.SpinnerAdapter;
+import com.borqs.account.service.AccountServiceUtils;
+import com.borqs.account.service.LocationRequest;
+import com.borqs.common.adapter.PostAdapter;
+import com.borqs.common.api.BpcApiUtils;
+import com.borqs.common.listener.StreamActionListner;
+import com.borqs.common.listener.TargetLikeActionListener;
+import com.borqs.common.util.DataConnectionUtils;
+import com.borqs.common.util.FileUtils;
+import com.borqs.common.util.TwitterExceptionUtils;
+import com.borqs.common.view.AbstractStreamRowView;
+import com.borqs.common.view.CustomListView;
+import com.borqs.common.view.CustomListView.OnRefreshListener;
+import com.borqs.common.view.EnfoldmentView;
+import com.borqs.qiupu.QiupuConfig;
+import com.borqs.qiupu.R;
+import com.borqs.qiupu.cache.QiupuHelper;
+import com.borqs.qiupu.ui.BasicActivity;
+import com.borqs.qiupu.util.LeftMenuMapping;
+import com.borqs.qiupu.util.StringUtil;
+import twitter4j.*;
+import twitter4j.Stream.Comments;
+import twitter4j.Stream.Comments.Stream_Post;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class BpcPostsNewActivity extends ActionBarActivity implements PostAdapter.OlderPostsLoader,
+        /*LikeListener, */TargetLikeActionListener, /*AllAppsScreen.TitleActionListener,
+        AllAppsScreen.LoadDataActionListener,*/ StreamActionListner,
+        BaseListener.InvokerInterface {
+
+	private static final String TAG = "Qiupu.BpcPostsNewActivity";
+
+    private final int   PAGE_SIZE        = 20;
+
+    BpcPostsListViewUi mViewListUi;
+
+    private static final String POSTS_FILE_PREFIX = QiupuHelper.posts_public;
+
+	private int mInitAppId = -1;
+    private int mInitType = -1;
+    private int mFilterType = -1;
+    private boolean for_appbox = false;
+
+    private boolean mCommentForward = false;
+    private boolean mForceRefreshing =false;
+    private boolean mIsDeserializing = false;
+    
+    private CustomListView frinendsListView;
+
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+		enableLeftNav();
+        super.onCreate(savedInstanceState);
+
+        processIntent(getIntent());
+        if (mCommentForward) {
+            return;
+        }
+
+        setContentView(R.layout.posts_main_new);
+
+//        setHeadTitle(R.string.friends_streams);
+        setHeadTitle(R.string.dynamic_friends);
+        initUI();
+
+        overrideRightActionBtn(R.drawable.actionbar_icon_release_normal , composeStreamListener);
+
+ 		QiupuHelper.registerStreamListener(getClass().getName(), this);
+        QiupuHelper.registerTargetLikeListener(getClass().getName(), this);
+
+        showLeftActionBtn(true);
+        showMiddleActionBtn(false);
+
+        mIsDeserializing = true;
+		new DeSerializationTask().execute((Void[])null);
+
+        LocationRequest.instance().registerContext(this);
+    }
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);	        
+    }
+
+    private void initUI() {
+        frinendsListView = createStreamListView();
+        mViewListUi = new BpcPostsListViewUi(this, this, frinendsListView, for_appbox);
+    }
+
+    private CustomListView createStreamListView() {
+        CustomListView listView = (CustomListView)findViewById(R.id.all_circles_stream);
+        listView.setFastScrollEnabled(false);
+        AbstractStreamRowView.attachListViewItemClickerContext(this, listView);
+        listView.setonRefreshListener(new OnRefreshListener() {
+            public void onRefresh() {
+            	mHandler.obtainMessage(MESSAGE_GET_CURRENT_POSTS).sendToTarget();
+            }
+        });
+        return listView;
+    }
+
+	private void filterStream() {
+        if (isFilterNeeded()) {
+            BpcPostsFilterActivity.startActivityForResult(this, mInitType, mInitAppId,
+                    mFilterType, REQUEST_CODE_STREAM_FILTER);
+        } else {
+            Log.w(TAG, "filterStream, unexpected mInitAppId: " + mInitAppId + ", mFilterType:" + mFilterType);
+        }
+	}
+
+    private void toggleLocationRequestVisibility(View composeSpan) {
+        if (composeSpan.getVisibility() == View.GONE) {
+            composeSpan.setVisibility(View.VISIBLE);
+            LocationRequest.instance().deActivate(this);
+        } else {
+            composeSpan.setVisibility(View.GONE);
+            LocationRequest.instance().activate(this);
+        }
+    }
+
+    private class DeSerializationTask extends UserTask<Void, Void, Void>
+    {       
+        public DeSerializationTask()
+        {
+            super();            
+            Log.d(TAG, "create DeSerializationTask="+this);
+        }
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			deSerialization();
+            return null;
+        }
+    }
+	
+	@Override
+	protected void doSerialization()
+	{
+		serialization(/*mCurrentIndex*/);
+	}
+
+    /**
+     *  It is supposed to be enough to serialize current page only.
+     */
+	private void serialization(/*int index*/) {
+        List<Stream> posts = mViewListUi.mStreams;
+	    if(posts != null && posts.size() > 0) {
+			synchronized(this) {
+				FileOutputStream fos = null;
+				ObjectOutputStream out = null;
+				try {
+                    final String posts_sfile = getPostsSearilizeFileName(/*index*/);
+                    File postsFile = new File(posts_sfile);
+
+                    if (postsFile.exists()) {
+                        Log.i(TAG,  "serialization, file existing: " + posts_sfile);
+                        // TODO: detect if it is neccessary to overwrite the existing file.
+                    } else {
+                        postsFile.createNewFile();
+                    }
+
+                    if (postsFile.canWrite()) {
+                        fos = new FileOutputStream(posts_sfile);
+                        out = new ObjectOutputStream(fos);
+                        Date date = new Date();
+                        out.writeLong(date.getTime());
+
+                        int count = posts.size();
+                        if (count > QiupuConfig.POSTS_SERIALIZE_ITEM_COUNT) {
+                            count = QiupuConfig.POSTS_SERIALIZE_ITEM_COUNT;
+                        }
+
+                        out.writeInt(count);
+                        for (int i = 0; i < count; i++) {
+                            Stream item = posts.get(i);
+                            item.isFromSerialize = true;
+                            out.writeObject(item);
+                        }                       
+                        
+                        out.close();
+                    } else {
+                        Log.e(TAG, "serialization, fail to write read-only file: " + posts_sfile);
+                    }
+				} catch(IOException ex) {
+				    Log.d(TAG, "serialization fail="+ex.getMessage());
+				}
+			}
+		}
+	}
+	
+	private void deSerialization() {
+		mHandler.post( new Runnable()
+        {
+			public void run()
+			{
+				synchronized(this) {
+                    final String posts_sfile = getPostsSearilizeFileName(/*mCurrentIndex*/);
+					try {
+                        BpcPostsListViewUi currentUi = mViewListUi;
+                        List<Stream> posts = mViewListUi.mStreams;
+
+                        if (currentUi.misDeserialized || posts.size() > 0) {
+                            Log.d(TAG, "deSerialization, already done before:" /*+ mCurrentIndex*/ + ", size:" + posts.size());
+                        } else {
+                            if (FileUtils.testReadFile(posts_sfile)) {
+                                Log.d(TAG, "deSerialization, start file:" + posts_sfile);
+                                FileInputStream fis = new FileInputStream(posts_sfile);
+                                ObjectInputStream in = new ObjectInputStream(fis);
+                                long lastrecord = in.readLong();
+                                Date now = new Date();
+
+                                final long interval = now.getTime() - lastrecord;
+                                if (interval > 30 * QiupuConfig.A_DAY) {
+                                    Log.d(TAG, String.format("it is %1$s hours ago, ignore the data",
+                                            interval / QiupuConfig.AN_HOUR));
+                                    in.close();
+                                    new File(posts_sfile).delete();
+                                    return;
+                                }
+
+                                final int count = in.readInt();
+                                for (int i = 0; i < count; i++) {
+                                    Stream item = (Stream) in.readObject();
+                                    posts.add(item);
+                                }
+                                in.close();
+                            }
+
+                            if (posts.size() > 0) {
+                                mViewListUi.lasttime = posts.get(0).created_time + QiupuConfig.A_SECOND;
+                                notifyDataSetChanged();
+                            }
+
+                            Log.d(TAG, "deSerialization, end file:" + posts_sfile + ", posts size:" + posts.size());
+
+                            // trigger timer only, this must be call before clear mIsDeserializing, or it will
+                            // start a loading progress, which should be done in coming loadRefresh.
+                            alarmComming();
+                            currentUi.misDeserialized = true;
+
+                            mHandler.obtainMessage(MESSAGE_DE_SERIALIZED_END).sendToTarget();
+                        }
+					} catch(IOException ex) {
+						ex.printStackTrace();
+						try{
+						    new File(posts_sfile).delete();
+						}catch(Exception ne){}
+						
+						Log.d(TAG, "deserialization fail="+ex.getMessage());
+					} catch(ClassNotFoundException ex) {
+						ex.printStackTrace();
+						Log.d(TAG, "deserialization fail="+ex.getMessage());
+					}
+            	}
+			}
+        });
+	}
+	
+	@Override
+	protected void loadRefresh() {
+        forceRefreshLoad(/*mCurrentIndex*/);
+	}
+
+	final static String ACTION_CHECK_CONTECT="com.borqs.qiupu.ui.RELOAD_STREAM";
+
+	static int nTimes;
+	public void alarmComming()
+	{
+        if (mIsDeserializing) {
+            Log.d(TAG, "alarmComming, skip while doing serializing.");
+            return;
+        }
+
+		nTimes++;
+		Log.d(TAG, "tims="+nTimes+"  &&&&&&&&&&&  time it out="+ new Date().toLocaleString());
+
+        if (!mIsDeserializing) {
+            mHandler.obtainMessage(MESSAGE_GET_CURRENT_POSTS).sendToTarget();
+        }
+	}
+
+    private void getActiveStreamView() {
+        if (ensureAccountLogin()) {
+            getStream(0, /*mViewListUi.lasttime,*/ true);
+        }
+    }
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        Log.d(TAG, "onNewIntent=" + intent);
+        final Intent i = intent;
+        processIntent(i);
+
+		if(intent.getAction() != null && intent.getAction().equals(ACTION_CHECK_CONTECT))
+		{
+			setIntent(intent);
+		}
+	}
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (mCommentForward) {
+            return;
+        }
+
+    	QiupuHelper.unregisterStreamListener(getClass().getName());
+        QiupuHelper.unRegisterTargetLikeListener(getClass().getName());
+
+        if(AccountServiceUtils.isAccountReady())
+        {
+            serialization(/*INDEX_STREAM_FRIEND*/);
+        }
+
+        EnfoldmentView.foldEnfoldmentView();
+        EnfoldmentView.clearStaticResource();
+
+        LocationRequest.instance().deActivate(this);
+    }
+		
+    @Override
+    public void onLogin() 
+	{
+        // as super.onLogion will call loadRefresh, so we must set the active index before it.
+
+    	super.onLogin();
+	}
+    
+    @Override
+    public void filterInvalidException(TwitterException ne) {
+    	super.filterInvalidException(ne);
+    }
+    
+    @Override
+    public void onLogout() {
+        super.onLogout();
+
+        gotoLogin();
+	}
+
+	@Override
+	protected void createHandler() {
+		mHandler = new PostHandler();		
+	}
+	
+	private final static int MESSAGE_LOAD_POSTS       = 1;
+	private final static int MESSAGE_LOAD_POSTS_END   = 3;
+    private final static int MESSAGE_GET_CURRENT_POSTS = 4;
+    private final static int MESSAGE_DE_SERIALIZED_END = 5;
+
+	private class PostHandler extends Handler 
+    {
+        public PostHandler()
+        {
+            super();            
+            Log.d(TAG, "new PostHandler");
+        }
+        
+        @Override
+        public void handleMessage(Message msg) 
+        {
+            switch(msg.what)
+            {
+	            case MESSAGE_LOAD_POSTS:
+	            {
+                    getStream(mViewListUi.lasttime, true);
+	                break;
+	            }	           
+	            case MESSAGE_LOAD_POSTS_END:
+	            {
+                    end();
+
+                    //process for UI
+                    final int index = msg.getData().getInt("index");
+                    final boolean outdated = msg.getData().getBoolean("outdated");
+
+                    mForceRefreshing = false;
+
+                    if (outdated) {
+                        mViewListUi.loadRefresh(mFilterType);
+                    }
+                        frinendsListView.onRefreshComplete();
+
+                    break;
+	            }
+                case MESSAGE_GET_CURRENT_POSTS:
+                    getActiveStreamView();
+                    break;
+                case MESSAGE_DE_SERIALIZED_END:
+                    mIsDeserializing = false;
+                    
+                    //just get stream from latest time, this is to save the data
+                    mHandler.obtainMessage(MESSAGE_GET_CURRENT_POSTS).sendToTarget();
+                default:
+                    break;
+            }
+        }
+    }
+
+	private void getStream(long prelasttime, final boolean newpost)
+	{	
+		if(isInProcess())
+		{
+			Log.d(TAG, "getStream, in loading stream");
+			return ;			
+		} else if (!DataConnectionUtils.testValidConnection(getApplicationContext())) {
+            Log.d(TAG, "getStream, no connection");
+            invokeHandlerMsgResult(MESSAGE_LOAD_POSTS_END, 0/*INDEX_STREAM_FRIEND*/, false, false);
+            return;
+        }
+		
+		begin();
+        mViewListUi.refreshButtonText(getString(R.string.loading));
+        
+		synchronized(mLock)
+    	{
+    	    inProcess = true;
+    	}
+
+        final String appIdFilter = BpcApiUtils.isValidAppId(mInitAppId) ?
+                String.valueOf(mInitAppId) : "";
+        final int filterType = getQueryFilterType();
+		asyncQiupu.getPostTimeLine(getSavedTicket(), QiupuConfig.USER_ID_ALL, QiupuConfig.CIRCLE_ID_ALL,
+                PAGE_SIZE, String.valueOf(prelasttime), newpost, appIdFilter, filterType, new TwitterAdapter() {
+            public void getPostTimeLine(List<Stream> posts) {
+                if (QiupuConfig.LOGD) Log.d(TAG, "getPostFriendsTimeLine, got posts count:" + posts.size());
+                boolean outdated = true;
+                if (posts != null) {
+                    if (newpost) {
+                        outdated = getLastViewCount(posts/*, INDEX_STREAM_FRIEND*/);
+                    } else {
+                        outdated = getPreviousViewCount(posts);
+                    }
+                }
+
+                synchronized (mLock) {
+                    inProcess = false;
+                }
+
+                invokeHandlerMsgResult(MESSAGE_LOAD_POSTS_END, 0/*INDEX_STREAM_FRIEND*/, true, outdated);
+            }
+
+            public void onException(TwitterException ex, TwitterMethod method) {
+                synchronized (mLock) {
+                    inProcess = false;
+                }
+
+                TwitterExceptionUtils.printException(TAG, "getPostFriendsTimeLine, server exception:", ex, method);
+                invokeHandlerMsgResult(MESSAGE_LOAD_POSTS_END, 0/*INDEX_STREAM_FRIEND*/, false, false);
+            }
+        });
+	}
+
+    private boolean getPreviousViewCount(final List<Stream> streams) {
+        if (null == streams || streams.isEmpty()) {
+            Log.d(TAG, "getPreviousViewCount, empty stream list.");
+            return false;
+        }
+
+        mHandler.post(new Runnable() {
+            public void run() {
+                synchronized (this) {
+                    List<Stream> currentStreamList = mViewListUi.mStreams;
+                    currentStreamList.addAll(streams);
+                    notifyDataSetChanged();
+                }
+            }
+        });
+
+        return true;
+    }
+
+    private boolean getLastViewCount(final List<Stream> newStreams/*, final int index*/) {
+        if (null == newStreams || newStreams.size() == 0) {
+            return false;
+        }
+        
+        final List<Stream> oldPosts = mViewListUi.mStreams;
+        final Stream firstOldStream = null == oldPosts || oldPosts.isEmpty() ? null : oldPosts.get(0);
+        final long oldCreatedTime = null == firstOldStream ? -1L : firstOldStream.created_time;
+        final long oldUpdatedTime = null == firstOldStream ? -1L : firstOldStream.updated_time;
+        final Stream firstNewStream = newStreams.get(0);
+        if (oldCreatedTime == firstNewStream.created_time && oldUpdatedTime == firstNewStream.updated_time) {
+            return false;
+        }
+
+        mHandler.post(new Runnable() {
+            public void run() {
+                synchronized (this) {
+                    //remove pre-serialize stream to let the stream is update to date			
+                    
+                	//just keep last 20 items
+                	//if the return less than 20, it mean the serialized data is a little new
+                	//so keetp it
+                	//if the reuturn data is big than 20, remove all old serialized data
+                	if(oldPosts.size() > 0 && oldPosts.get(0).isFromSerialize)
+                	{
+                		if(newStreams.size() >= PAGE_SIZE)
+                		{
+                			//remove all older stream;
+                			oldPosts.clear();
+                		}
+                		else
+                		{
+                		    int removesize = (newStreams.size() + oldPosts.size() - PAGE_SIZE);
+                		    if(removesize > 0)
+                		    {
+                		    	final int keepsize = oldPosts.size() - removesize;
+                		    	while(oldPosts.size() > keepsize)
+                		    	{
+                		    		oldPosts.remove(oldPosts.size() -1);
+                		    	}
+                		    }
+                		}
+                	}                	
+                	
+                    if (newStreams.size() > 0 && oldPosts.size() > 0) {
+                        if (mForceRefreshing || oldPosts.get(0).isFromSerialize) {
+                        	for(Stream item: oldPosts)
+                        	{
+                        		item.isFromSerialize = false;
+                            }
+                        }
+                    }
+
+                    for (int i = newStreams.size() - 1; i >= 0; i--) {
+                        Stream item = newStreams.get(i);
+
+                        boolean isExist = false;
+
+                        for (int j = 0; j < oldPosts.size(); j++) {
+                            Stream exist = oldPosts.get(j);
+                            if (item.type == exist.type
+                                    && StringUtil.isValidString(item.rootid)
+                                    && StringUtil.isValidString(exist.rootid)
+                                    && item.rootid.equalsIgnoreCase(exist.rootid)) {
+                                oldPosts.remove(j);
+                                break;
+                            }
+                            if (item.post_id.equalsIgnoreCase(exist.post_id)) {
+                                isExist = true;
+                                //update the content						
+                                exist.despose();
+                                exist = null;
+
+                                oldPosts.set(j, item);
+                                break;
+                            }
+                        }
+
+                        if (isExist == false) {
+                            oldPosts.add(0, item);
+                        }
+                    }
+
+                    java.util.Collections.sort(oldPosts);
+                    if (oldPosts.size() > 0) {
+//                        mPostViewUiList.get(index).lasttime = oldPosts.get(0).created_time + QiupuConfig.A_SECOND;
+                        mViewListUi.lasttime = oldPosts.get(0).created_time + QiupuConfig.A_SECOND;
+                    }
+
+                    notifyDataSetChanged();
+                }
+            }
+        });
+
+        return true;
+    }
+
+    private void notifyDataSetChanged() {
+        mViewListUi.loadRefresh(mFilterType);
+//        getCurrentActiveViewUi().loadRefresh(mFilterType);
+    }
+	
+	public boolean deletePost(String postId) {
+		return false;
+	}
+
+	private void refreshPost(final String post_id, final Stream stream)
+	{
+		mHandler.post( new Runnable()
+		{
+			public void run()
+			{
+                mViewListUi.refreshPost(post_id, stream);
+			}
+		});
+	}
+	
+	public View.OnClickListener loadOlderClick = new View.OnClickListener()
+	{
+		public void onClick(View v) 
+		{
+			Log.d(TAG, "load older message");		  	  	
+			loadOlderPost();
+		}
+	};
+
+    // TODO: redesign for Bpc filter
+    protected void loadOlderPost() {
+        List<Stream> posts = mViewListUi.mStreams;
+        if (posts != null && posts.size() > 0) {
+            long prelasttime = posts.get(posts.size() - 1).created_time;
+            getStream(prelasttime, false);
+        } else {
+            getStream(0, true);
+        }
+    }	
+	
+    public void updateStreamRemovedUI(final String postid) {
+        Log.d(TAG, "updateUI, postid = " + postid);
+
+        List<Stream> posts = mViewListUi.mStreams;
+        for (int i = 0; i < posts.size(); i++) {
+            if (posts.get(i).post_id.equals(postid)) {
+                invokeRemovePostRunnable(i);
+                break;
+            }
+        }
+    }
+
+	public void updateStreamCommentUI(final String postid, final int commentType, final int commentCount, final ArrayList<Stream_Post> streamComment)
+	{
+		Log.d(TAG, "Post_Id"+postid);
+		mHandler.post(new Runnable()
+		{
+			public void run()
+			{
+                List<Stream> posts = mViewListUi.mStreams;
+				for(int i =0 ;i<posts.size();i++)
+				{
+					Stream post = posts.get(i);
+                    if (post.post_id.equals(postid)) {
+                        if (post.comments != null) {
+                        } else {
+                            post.comments = new Comments();
+                        }
+                        post.comments.alterCommentList(streamComment, commentCount);
+                        refreshPost(post.post_id, post);
+                        break;
+                    } else if (BpcApiUtils.isValidTypeOfAppAttachment(commentType) &&
+                            BpcApiUtils.isValidTypeOfAppAttachment(post.type)) {
+                        Stream.AttachmentBase attachment = post.attachment;
+                        if (null != attachment && attachment instanceof Stream.ApkAttachment) {
+                            if (null != attachment.attachments && attachment.attachments.size() > 0) {
+                                final ApkBasicInfo apkInfo = (ApkBasicInfo)attachment.attachments.get(0);
+                                if (apkInfo.apk_server_id.equals(postid)) {
+                                    if (apkInfo.comments != null) {
+                                    } else {
+                                        apkInfo.comments = new Comments();
+                                    }
+                                    apkInfo.comments.alterCommentList(streamComment, commentCount);
+                                    refreshPost(post.post_id, post);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+				}
+			}
+		});
+		
+	}
+
+    private void invokeLoadFriendPosts() {
+        mHandler.obtainMessage(MESSAGE_LOAD_POSTS).sendToTarget();
+    }
+
+    private void invokeHandlerMsgResult(int msgId, int index, boolean result, boolean outdated) {
+        Message msg = mHandler.obtainMessage(msgId);
+        msg.getData().putBoolean(RESULT, result);
+        msg.getData().putInt("index", index);
+        msg.getData().putBoolean("outdated", outdated);
+        msg.sendToTarget();
+    }
+
+    private void invokeAddPostRunnable(final int position, final Stream post) {
+        mHandler.post(new Runnable() {
+            public void run() {
+                List<Stream> posts = mViewListUi.mStreams;
+                posts.add(position, post);
+                notifyDataSetChanged();
+            }
+        });
+    }
+
+    private void invokeRemovePostRunnable(final int position) {
+        mHandler.post(new Runnable() {
+            public void run() {
+                List<Stream> posts = mViewListUi.mStreams;
+                posts.remove(position);
+                notifyDataSetChanged();
+            }
+        });
+    }
+
+    private void loadStreamData(/*int index*/) {
+        final boolean isConnection = DataConnectionUtils.testValidConnection(this);
+        final boolean isAccountReady = AccountServiceUtils.isAccountReady();
+        if (ensureAccountLogin()) {
+            mForceRefreshing = false;
+            invokeLoadFriendPosts();
+        }
+    }
+
+    private String getPostsSearilizeFileName(/*int index*/) {
+        StringBuffer fileName = new StringBuffer();
+        fileName.append(POSTS_FILE_PREFIX).append("-").
+                append(0/*mCurrentIndex*/).append("-").
+                append(mInitAppId).append("-").
+                append(mInitType).append("-app").
+                append(mFilterType);
+            fileName.append("-in");
+
+        return fileName.toString();
+    }
+
+    private void forceRefreshLoad(/*int index*/) {
+        mForceRefreshing = true;
+        mViewListUi.lasttime = 0;
+        loadStreamData(/*index*/);
+    }
+
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_STREAM_FILTER) {
+            if (resultCode == Activity.RESULT_OK && null != data) {
+                final int filterType = data.getIntExtra(BpcApiUtils.SEARCH_KEY_TYPE, mFilterType);
+                Log.d(TAG, "onActivityResult, get type: " + filterType);
+                
+                applyFilterType(filterType);
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+	private void processIntent(Intent intent) {
+        final String streamId = BpcApiUtils.parseSchemeValue(intent, BpcApiUtils.SEARCH_KEY_ID);
+        final int initType = BpcApiUtils.parseSearchedStreamType(intent);
+
+        if (!TextUtils.isEmpty(streamId)) {
+            gotoStreamComment(streamId, initType);
+            mCommentForward = true;
+            return;
+        }
+
+        final int appId =BpcApiUtils.parseSearchedSteamAppId(intent);
+
+        if (initType != mInitType) {
+            if (appId != mInitAppId) {
+                mInitType = initType;
+                mFilterType = initType;
+            } else {
+                mInitType = initType;
+            }
+        }
+
+        if (appId != mInitAppId) {
+            mInitAppId = appId;
+        }
+        
+        for_appbox=intent.getBooleanExtra("for_appbox", false);
+        if(for_appbox)
+        {
+        	mInitType   = BpcApiUtils.ONLY_PURE_APK_POST;
+            mFilterType = BpcApiUtils.ONLY_PURE_APK_POST;
+        }
+    }
+
+    private void gotoStreamComment(String id, int type) {
+        final String schemeParam = "?" + BpcApiUtils.SEARCH_KEY_ID + "=" + id;
+        if (BpcApiUtils.isValidStreamType(type)) {
+            final Intent appIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(BpcApiUtils.APP_COMMENT_SCHEME_PATH + schemeParam));
+            appIntent.addCategory(Intent.CATEGORY_DEFAULT);
+            if (BpcApiUtils.isActivityReadyForIntent(getApplicationContext(), appIntent)) {
+                startActivity(appIntent);
+            }
+        } else {
+            final Intent streamIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(BpcApiUtils.STREAM_COMMENT_SCHEME_PATH + schemeParam));
+            streamIntent.putExtra(BpcApiUtils.SEARCH_KEY_ID, id);
+
+            if (BpcApiUtils.isActivityReadyForIntent(getApplicationContext(), streamIntent)) {
+                startActivity(streamIntent);
+            } else {
+                final Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(BpcApiUtils.STREAM_COMMENT_SCHEME_PATH + schemeParam));
+                intent.putExtra(BpcApiUtils.SEARCH_KEY_ID, id);
+                startActivity(intent);
+            }
+        }
+
+        finish();
+    }
+
+    private int getQueryFilterType() {
+        return mFilterType > 0 ? mFilterType : mInitType;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+
+        menu.findItem(R.id.menu_search).setVisible(false);
+        menu.findItem(R.id.menu_stream_filter).setVisible(isFilterNeeded() && !isUsingActionBar());
+
+        return true;
+    }
+
+    private boolean isFilterNeeded() {
+        if (mInitAppId < 0 && mInitType < 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    protected void onAccountLoginCancelled() {
+        super.onAccountLoginCancelled();
+        if (!fromtab) {
+            finish();
+        }
+    }
+
+    @Override
+    public View.OnClickListener getLoadOlderClickListener() {
+        return loadOlderClick;
+    }
+
+    @Override
+    public int getCaptionResourceId() {
+        return isInProcess() ? R.string.loading : R.string.list_view_more;
+    }
+
+    @Override
+    public void onTargetLikeCreated(String targetId, String targetType) {
+        mViewListUi.updateTargetLikeResult(true, targetId, targetType);
+    }
+
+    @Override
+    public void onTargetLikeRemoved(String targetId, String targetType) {
+        mViewListUi.updateTargetLikeResult(false, targetId, targetType);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.menu_stream_filter) {
+            filterStream();
+        } else if (i == R.id.menu_stream_choose_circle) {
+
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+
+        return true;
+    }
+
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (!EnfoldmentView.mIsClose) {
+            EnfoldmentView.foldEnfoldmentView();
+            return true;
+        } else {
+            return super.onKeyUp(keyCode, event);
+        }
+    }
+
+    public boolean invoke(int itemPosition, long itemId) {
+        if (itemPosition >= 0 || itemPosition < BpcPostsFilterActivity.appFilterToType.length) {
+            int targetType = BpcPostsFilterActivity.appFilterToType[itemPosition];
+            return applyFilterType(targetType);
+        }
+        Log.d(TAG, "invoke with invalid filter index: " + itemPosition);
+        return false;
+    }
+
+    private boolean applyFilterType(int filterType) {
+        boolean isOutdated = false;
+
+        final int target = mInitType > 0 ? (mInitType & filterType) : filterType;
+        if (target != mFilterType) {
+            mViewListUi.misDeserialized = false;
+            mFilterType = target;
+            isOutdated = true;
+        } else {
+            Log.d(TAG, "applyFilterType, ignore identical filter value:" + filterType);
+        }
+
+        if (isOutdated) {
+            final List<Stream> oldPosts = mViewListUi.mStreams;
+            if (oldPosts != null && oldPosts.size() > 0) { //clear current content
+                mHandler.post(new Runnable() {
+                    public void run() {
+                        mViewListUi.lasttime = 0;
+                        oldPosts.clear();
+                        notifyDataSetChanged();
+                        forceRefreshLoad();
+                    }
+                });
+            } else {
+                forceRefreshLoad();
+            }
+        }
+
+        return isOutdated;
+    }
+
+    public void initActionBarContent()
+    {
+        super.initActionBarContent();
+
+        if (null == filters) {
+            CharSequence[] charSequences = getResources().getTextArray(R.array.stream_app_key_list);
+            filters = new String[charSequences.length];
+            int i = 0;
+            for (CharSequence cs : charSequences) {
+                filters[i++] = cs.toString();
+            }
+        }
+
+        ActionBar bar = getActionBar();
+
+        if (null != bar) {
+//        bar.setTitle(tag);
+            bar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+            bar.setListNavigationCallbacks(
+                    new SimpleSpinnerArrayAdapter(this),
+                    new ListListener(this, this));
+
+            bar.setDisplayShowTitleEnabled(false);
+        }
+    }
+
+    private static String[] filters;
+
+    public static class SimpleSpinnerArrayAdapter
+            extends ArrayAdapter<String>
+            implements SpinnerAdapter
+    {
+        public SimpleSpinnerArrayAdapter(Context ctx)
+        {
+            super(ctx, android.R.layout.simple_spinner_item, filters);
+            this.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        }
+        public View getDropDownView(
+                int position, View convertView, ViewGroup parent)
+        {
+            return super.getDropDownView(
+                    position, convertView, parent);
+        }
+    }
+
+    public static class ListListener
+            extends BaseListener
+            implements ActionBar.OnNavigationListener
+    {
+        public ListListener(
+                Context ctx, InvokerInterface target)
+        {
+            super(ctx, target);
+        }
+        public boolean onNavigationItemSelected(int itemPosition, long itemId)
+        {
+            this.mReportTo.invoke(itemPosition, itemId);
+            return true;
+        }
+    }
+
+	@Override
+	public void setLeftMenuPosition() {
+		mPosition = LeftMenuMapping.getPositionForActivity(this);
+	}
+
+    /**
+     * Override and set itself as persist activity.
+     * @return true to keep while navigating to other activities from navigation panel.
+     */
+    @Override
+    protected boolean isPersistActivity() {
+        mPosition = LeftMenuMapping.getPositionForActivity(this);
+        return true;
+    }
+}
+
+class BaseListener
+{
+    public interface InvokerInterface {
+        public boolean invoke(int itemPosition, long itemId);
+    }
+
+    protected InvokerInterface mReportTo;
+    protected Context mContext;
+    public BaseListener(Context ctx, InvokerInterface target)
+    {
+        mReportTo = target;
+        mContext = ctx;
+    }
+}

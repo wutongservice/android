@@ -1,0 +1,7 @@
+
+<resources>
+    <dimen name="allapps_text_paddingTop">0dp</dimen>
+    <dimen name="allapps_text_drawablePadding">-3dp</dimen>
+
+    <dimen name="home_navigation_panel_width">240dp</dimen>
+</resources>

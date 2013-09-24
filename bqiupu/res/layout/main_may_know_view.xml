@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bpc_backgroud">
+            
+     <ListView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:listSelector="?attr/listSelector"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="?attr/listDivider"/>
+            
+             <LinearLayout android:id="@+id/refresh_tutorial"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:layout_centerInParent="true"
+				    android:orientation="vertical"
+				    android:paddingLeft="40dip"
+			        android:paddingRight="40dip"
+			        android:paddingBottom="80dip"
+				    android:gravity="center"
+				    android:visibility="gone">
+	    
+			    <TextView android:id="@+id/tutorial_tv"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"
+			              android:gravity="center"
+			              android:textAppearance="@style/refresh_tv_style"/>
+	              <ImageView 
+	                      android:id="@+id/refresh_icon"
+	                      android:layout_width="wrap_content"
+	                      android:layout_height="wrap_content"
+	                      android:src="@drawable/refresh_tutorial"/>
+	              
+         </LinearLayout>
+         
+              <include layout="@layout/center_process" 
+             android:id="@+id/center_progress"
+             android:layout_centerInParent="true"
+             android:visibility="gone"/>
+         
+</RelativeLayout>	        
+
+

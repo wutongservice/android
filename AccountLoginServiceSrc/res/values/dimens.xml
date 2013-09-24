@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="acl_text_padding_left">8.0dip</dimen>
+    <dimen name="acl_text_padding_right">8.0dip</dimen>
+    <dimen name="acl_text_padding_top">10.0dip</dimen>
+    <dimen name="acl_text_padding_bottom">10.0dip</dimen>
+    <dimen name="acl_padding">10dip</dimen>
+    <dimen name="acl_small_text_padding_top">6.0dip</dimen>
+
+    <dimen name="acl_bottom_button_width">100dip</dimen>
+    <dimen name="acl_bottom_button_height">48dip</dimen>
+
+    <!--titlebar -->
+    <dimen name="acl_title_bar_height">46dip</dimen>
+    <dimen name="acl_second_title_bar_height">36dip</dimen>
+    <dimen name="acl_bottom_height">48dip</dimen>
+    <dimen name="acl_pageindicatorline_height">4dip</dimen>
+
+    <dimen name="acl_layout_padding_left">20dip</dimen>
+    <dimen name="acl_layout_padding_right">20dip</dimen>
+
+    <!-- login view -->
+    <dimen name="acl_login_input_height">44dip</dimen>
+    <dimen name="acl_forgot_password_text_height">15sp</dimen>
+    
+    <dimen name="acl_item_space_small_height">5dp</dimen>
+    <dimen name="acl_item_space_height">20dp</dimen>
+    <dimen name="acl_item_margin_space_left">30dp</dimen>
+    <dimen name="acl_item_margin_space_right">30dp</dimen>
+    
+</resources>

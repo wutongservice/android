@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tacos"
+    android:padding="@dimen/page_card_padding" >
+
+    <ImageView
+        android:id="@+id/img_dep"
+        android:layout_width="@dimen/page_card_avatar_size"
+        android:layout_height="@dimen/page_card_avatar_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_public_circle" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_dep"
+        android:layout_marginLeft="16dip"
+        android:layout_marginTop="@dimen/default_text_margin_top"
+        android:layout_toRightOf="@id/img_dep"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textAppearance="@style/users_circles_name"
+        android:textSize="@dimen/page_card_name_text_size" />
+
+    <TextView
+        android:id="@+id/id_dep_destription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginLeft="16dip"
+        android:layout_marginTop="@dimen/page_card_gap_between_name_and_circles"
+        android:layout_toRightOf="@id/img_dep"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/page_card_fans_text_size" />
+
+</RelativeLayout>

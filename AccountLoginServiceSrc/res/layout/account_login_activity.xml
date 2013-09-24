@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/acl_login_bg">
+    <LinearLayout 
+           android:layout_width="match_parent"
+           android:layout_height="0dip"
+           android:layout_weight="2"
+           android:gravity="center_vertical|center_horizontal" >
+    <ImageView
+           android:contentDescription="@null"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:src="@drawable/acl_borqs_logo"
+        >
+	</ImageView>
+	</LinearLayout>        
+<LinearLayout 
+              style="@style/acl_login_outer_layout"
+              android:layout_weight="5"
+               android:gravity="top|center_horizontal">
+    <LinearLayout
+            style="@style/acl_input_layout_new">
+            <com.borqs.account.login.ui.EmailTextView
+                android:id="@+id/acl_user_id_tv"
+                style="@style/acl_input_tv_style2"               
+                android:hint="@string/acl_user_id_input_hint"
+                android:imeOptions="actionNext">
+                <requestFocus/>
+            </com.borqs.account.login.ui.EmailTextView>
+    </LinearLayout>
+    
+    <LinearLayout
+            style="@style/acl_input_layout_new"
+            android:layout_marginTop="@dimen/acl_item_space_height">            
+            <EditText
+                android:id="@+id/acl_passwd_tv"
+                style="@style/acl_input_tv_style2" 
+                android:hint="@string/acl_user_password_input_hint_short"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="16" />
+    </LinearLayout>
+    
+    <Button
+           android:id="@+id/acl_signin_btn"
+           android:text="@string/acl_signin_text"                
+           style="@style/acl_button_style_new"
+           android:layout_marginTop="@dimen/acl_item_space_height"/>
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acl_login_input_height"
+            android:layout_marginTop="@dimen/acl_item_space_height">
+       <TextView           
+           android:id="@+id/acl_forgot_password_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:layout_alignParentLeft="true"           
+           android:textAppearance="?android:attr/textAppearanceMedium"
+           android:textSize="@dimen/acl_forgot_password_text_height"
+           android:textColorLink="@color/acl_white"
+           android:text="@string/acl_user_forgot_password" />
+       
+        <TextView
+                android:id="@+id/acl_register_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"                
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/acl_forgot_password_text_height"
+                android:textColorLink="@color/acl_white" />     
+    </RelativeLayout>   
+    
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+    <ImageView
+            android:id="@+id/comments_mention_button"
+            style="@style/title_bar_icon"
+            android:src="@drawable/ic_add_contact_holo_comment"
+            android:background="?attr/buttonSelectableBackground">
+    </ImageView>
+
+    <com.borqs.common.view.ConversationMultiAutoCompleteTextView
+            android:gravity="top"
+            android:id="@+id/compose_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint="@string/write_comment_hint"
+            android:maxLines="4" />
+    <ImageView
+            android:id="@+id/comments_share_button"
+            style="@style/title_bar_icon"
+            android:src="@drawable/sendout_comment"
+            android:background="?attr/buttonSelectableBackground">
+    </ImageView>
+</LinearLayout>

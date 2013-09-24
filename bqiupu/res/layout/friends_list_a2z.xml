@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_list_layout_rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qiupu_bg_color"
+    android:orientation="horizontal" >
+
+    <include
+        android:id="@+id/guide_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/find_friends_step_intro_layout"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/friends_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="?attr/listSelector"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/find_near_by_people_color"
+        android:visibility="gone" />
+
+    <com.borqs.common.view.AtoZ
+        android:id="@+id/atoz"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center" />
+
+    <include
+        android:id="@+id/center_progress"
+        layout="@layout/center_process"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" >
+<!-- <ImageView android:layout_width="fill_parent"
+		    android:layout_height="@dimen/user_detail_image_height"
+		    android:scaleType="centerCrop"
+		    android:src="@drawable/user_background_imge"/> -->    
+<!-- <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:divider="?attr/listDivider" 
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" 
+		    android:listSelector="?attr/listSelector"
+		    android:cacheColorHint="@color/qiupu_list_color_cache_hint"/> -->
+<ListView 
+            android:id="@+id/default_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:listSelector="?attr/listSelector"
+        android:divider="?attr/listDivider" 
+        android:cacheColorHint="@color/qiupu_list_color_cache_hint"
+        android:background="@color/bpc_backgroud"
+        />
+</FrameLayout>
+<!-- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_detail_sv"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bpc_backgroud"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/profile_span"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bpc_users_account_detail_header_fragment" />
+        <include
+            android:id="@+id/profile_span"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bpc_user_detail_header" />
+        <LinearLayout android:background="#acacac"
+    	android:id="@+id/layout_base"
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center_vertical" android:layout_below="@id/profile_span">
+            <TextView android:layout_width="wrap_content"
+                android:textColor="@android:color/black"
+          		android:textSize="12dip"
+                android:layout_height="wrap_content" android:text="@string/base_info_title"
+                android:layout_marginLeft="10dip"/>
+        </LinearLayout>
+             <WebView
+            android:id="@+id/webView1"
+            android:layout_below="@id/layout_base"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+        <include
+            android:id="@+id/user_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/webView1"
+            layout="@layout/user_grid_layout" />
+
+        <include
+            android:id="@+id/user_detail_sv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_grid"
+            layout="@layout/bpc_users_account_detail_about_content" />
+            
+    </RelativeLayout>
+
+</ScrollView> -->

@@ -1,0 +1,10 @@
+
+1. update BpcApiUtils.java to your project.
+
+2. invoke activity
+For friend activity: BpcApiUtils.startFriendsActivityWithAppId(Context context, APPID appId, long userId);
+For User profile acitivty: BpcApiUtils.startProfileActivityWithAppId(Context context, APPID appId, long userId)
+
+3. Example. my User Id in Borqs Account system is 180, bellow will enter the friend activity of me.
+BpcApiUtils.startFriendsActivityWithAppId(getContext(), BpcApiUtils.APPID.BOOK, 180);
+BpcApiUtils.startProfileActivityWithAppId(getContext(), BpcApiUtils.APPID.BOOK, 180);

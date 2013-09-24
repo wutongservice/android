@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">梧桐</string>
+    <string name="app_title">梧桐</string>
+    <string name="share_to_wutong">分享到梧桐</string>
+    <string name="login_ok">登录</string>
+    <string name="sign_up">注册</string>
+    <string name="username_hint">手机/邮箱/ID</string>
+    <string name="pwd_hint">密码</string>
+    <string name="login_error_msg">登录错误，请重试!</string>
+    <string name="loading">加载中</string>
+   
+    <string name="username_txt">登录名:</string>
+    <string name="register_username_hint">请输入电子邮箱</string>
+    <string name="password_txt">密码 : </string>
+    <string name="register_password_hint">6~20个字母或数字</string>
+    
+
+    <string name="nickname_txt">昵称:</string>
+    <string name="register_nickname_hint">昵称</string>
+
+    <string name="label_ok">确定</string>
+    <string name="label_cancel">取消</string>
+    <string name="label_done">完成</string>
+    <string name="label_save">保存</string>
+    <string name="label_skip">跳过</string>
+    
+    <string name="share">分享了</string>
+    <string name="share_title">分享应用程序</string>
+    <string name="share_desc">正在分享</string>
+
+    <string name="comment">评论:</string>
+    
+    <string name="nickname_error_msg">请输入昵称</string>
+    <string name="pwd_error_msg">密码无效</string>
+    <string name="username_error_msg">请输入有效电子邮箱</string>
+    <string name="user_exist_error_msg">邮箱已被注册</string>
+    <string name="verify_txt">验证码:(请输入验证码完成注册)</string>
+    <string name="phonenumber_txt">手机号码:(非必填)</string>
+    <string name="register_phonenumber_hint">请输入有效手机号码</string>
+    <string name="verify_code_error">验证码错误</string>
+           
+
+
+
+
+
+
+    <string name="label_refresh">刷新</string>
+    <string name="menu_title_search">搜索</string>
+    <string name="menu_title_home">主页</string>
+    
+
+    <string name="backup_suc">备份成功</string>
+    <string name="backup_fail">备份失败</string>
+
+    
+
+
+
+    
+    <string name="registe_failed_msg">注册失败,请重试</string>
+    <string name="verify_failed_msg">验证失败,请重试</string>
+
+    
+    <string name="home_steam">动态</string>
+    <string name="home_application">应用分享</string>
+    <string name="home_album">相册</string>
+    <string name="home_book">读书</string>
+    <string name="home_music">音乐</string>
+    <string name="home_account_service">同步</string>
+    <!--<string name="home_video_call">视频通话</string>-->
+    <!--<string name="home_backup">备份管理</string>-->
+    <string name="home_settings">设置</string>
+    <string name="home_friends">好友</string>
+    <string name="home_exchange">信息交换</string>
+    <string name="home_requests">请求</string>    
+    <string name="home_my_profile">我的资料</string>
+    <string name="home_msg">消息</string>
+    <string name="home_advise">推荐</string>
+    <string name="home_calling">呼叫</string>
+    <string name="home_others">广场</string>
+    <!--<string name="home_borqsapps">应用</string>-->
+	<!--<string name="home_empty">空闲</string>    -->
+    
+    <!--<string name="home_backup_quickbackup">一键备份</string>-->
+    <!--<string name="home_backup_quickrestore">一键还原</string>-->
+    <!--<string name="home_backup_diy">备份 DIY</string>-->
+    <!--<string name="home_backup_settings">备份方式选择</string>-->
+    
+    <!--<string name="apps_sync">同步</string>-->
+    
+    <string name="app">应用</string>
+    <string name="app_intro">应用简介</string>
+    <string name="app_pics">软件截图</string>
+
+    <string name="app_open">打开</string>
+    <string name="app_delete">删除</string>
+
+
+    <string name="app_comments">评论</string>  
+    <string name="string_posts">发布</string>
+    
+    <string name="confirm_delete_apkfile">确认删除已下载应用?</string>
+     
+
+    <string name="user_followers">粉丝</string>  
+    
+    <string name="app_info_version_code_title">当前版本: %1$s</string>
+    <string name="app_info_new_version_code_title">最新版本: %1$s</string>
+	<string name="app_info_version_size_title">文件大小: %1$s</string>
+	
+
+
+	
+	<string name="friend_add">关注</string>
+
+	
+    <string name="confirm_logout">确认退出帐户？</string>
+	<string name="label_logout">退出帐户</string>
+	<string name="label_login">登录帐户</string>
+
+
+	<string name="apk_installed">已安装</string>
+	<string name="search_recommend">请输入您要搜索的内容</string> 
+
+	<string name="apk_needupdate">更新</string>
+	<string name="apk_updating">更新中</string>
+
+	<string name="label_upload">备份</string>
+	<string name="apk_uploading">备份中</string>
+
+
+	<string name="apk_wait_install">待安装</string>
+	
+	<string name="bottom_btn_update">更新</string>
+
+
+	
+	<string name="home_downloadmanager">下载管理</string>
+	
+	<string name="apk_download">下载</string>
+    <string name="apk_download_short">下载</string>
+	<string name="apk_download_failed">下载失败</string>
+	<string name="apk_downloading">下载中</string>
+    <string name="apk_download_ok">安装</string>
+    <string name="apk_download_finish">下载完毕</string>
+    <string name="apk_download_msg">"将要下载应用: %1$s?"</string>
+    <string name="apk_install_download_msg">"%1$s 安装文件已存在, 直接安装或者下载最新版本?"</string>
+
+	<string name="apk_update_failed">升级失败</string>
+	
+
+
+
+
+
+
+
+    <string name="share_app">分享 %1$s</string>
+
+    <string name="recommend_qiupu">分享梧桐</string>
+    <string name="about_title">关于</string>
+    <string name="close_about">关闭</string>
+    <string name="install_app">安装</string>
+    <string name="uninstall_app">卸载</string>
+
+
+
+    
+
+    
+    <string name="share_apk_ok">分享成功</string>
+    
+    <string name="get_password_up">获取密码</string>
+
+    
+    <string name="string_notifications">通知</string>
+
+
+    <string name="apk_pravicy_setting">隐私设置</string>
+    <string name="share_app_all_user">所有人可见</string>
+    <string name="share_app_all_friends">好友可见</string>
+    <string name="share_app_all_own">不可见</string>
+    <string name="share_to_circle">选择圈子(默认选择所有圈子)</string>
+    <string name="share_to_default_setting">默认隐私设置</string>
+    
+    <string name="no_sdcard_no_download">没有存储卡</string>
+    <string name="no_enough_space_sdcard_download">存储空间不够</string>    
+    <string name="pref_adv_setting">高级设置</string>
+    <string name="pref_specific_category">时间周期设置</string>
+    <string name="pref_user_base_setting">用户基本设置</string>
+    <string name="string_downloading_finished">下载完成</string>
+    <string name="string_downloading_fail">下载失败</string>
+    <string name="string_downloading">正在下载</string>     
+    <string name="string_installing">正在安装</string>
+    <string name="delete_apk_file">已删除下载应用程序</string>
+    
+    <string name="toast_input_email">请在帐号中填写正确的邮箱地址</string> 
+    <string name="toast_get_password_success">请前往邮箱确认，系统会向该邮箱发送新密码!</string>
+    <string name="toast_get_password_failed">密码获取失败，请确认!</string>
+    <string name="dialog_get_password_toast">点击确定，密码将发到您的邮箱中 !</string>
+
+    <string name="add_friends">添加好友</string>
+    
+
+
+
+
+
+
+    
+    <string name="old_password">旧密码</string>
+    <string name="new_password">新密码</string>
+    <string name="update_password">修改密码</string>
+    <string name="update_password_ok">密码修改成功，请重新登录</string>
+    <string name="update_password_failed">密码修改失败，请稍后重试</string>
+    <string name="input_new_password_tutorial">新密码输入有误,请重新输入</string>
+    <string name="input_old_password_tutorial">旧密码输入有误,请重新输入</string>
+    <string name="same_password_tutorial">新密码和旧密码一样，请重置</string>
+    <string name="update_apk_permission">设置应用分享权限</string>
+    <string name="update_phonebook_permission">设置联系人信息权限</string>
+    
+    <string name="set_apk_permission_ok">隐私设置成功</string>
+    <string name="set_apk_permission_failed">隐私设置失败</string>
+
+
+
+    <string name="user_news">动态</string>
+    <string name="profile">资料</string>
+
+
+
+
+    <string name="load_posts_failed">获取动态失败</string>
+     
+     <string name="to">给:</string>
+     
+
+     <string name="friends_streams">朋友</string>
+     <string name="public_streams">公共</string>
+     <string name="user_info">信息</string>
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+    
+    <string name="news_feed_comment">评论</string>
+    <string name="news_feed_like">赞</string>
+    <string name="news_feed_unlike">去赞</string>
+    <string name="news_feed_reshare_hint">分享来自:</string>
+    <string name="news_feed_reshare">重新分享</string>
+    
+    <string name="you_may_know">可能认识</string>
+    <string name="processbar_loading">加载中...</string>
+    <string name="processbar_login_in">登录中...</string>
+    
+    <string name="min">分钟以前</string>
+    <string name="sec">秒以前</string>
+
+    <string name="hour">小时以前, 在 %1$s</string>    
+    
+    <string name="facebook_time_tracte_min">大约一分钟前</string>
+    <string name="facebook_time_tracte_hour">大约一小时前</string>
+    <string name="facebook_time_tracte_td">在今天</string>
+    <string name="facebook_time_tracte_yd">在昨天</string>
+    <string name="facebook_time_tracte_at">在</string> 
+
+
+
+
+    <string name="list_view_more">更多</string>
+    <string name="hint_more">更多:</string>
+    <string name="cannot_send_message_reason">没有有效的联系人。</string>
+    <string name="address_pad_edit">编辑</string>
+    <string name="address_pad_delete">删除</string>
+    <string name="address_pad_view_contact">查看联系人</string>
+    <string name="address_pad_add_contact">添加联系人</string>
+    
+    <string name="selectAll" msgid="6876518925844129331">"全选"</string>
+    <string name="cut" msgid="3092569408438626261">"剪切"</string>
+    <string name="cutAll" msgid="2436383270024931639">"全部剪切"</string>
+    <string name="copy" msgid="2681946229533511987">"复制"</string>
+    <string name="paste" msgid="5629880836805036433">"粘贴"</string>
+    <string name="address_hint">添加分享对象</string>
+    <string name="address_hint_share">收件人(缺省为所有人)</string>
+    <string name="type_to_compose_text_enter_to_send">分享新鲜事…</string>
+    <string name="show_password">显示密码</string>
+
+
+
+    <string name="no_update_apk_tips">没有需要更新的应用</string>
+    
+    <string name="stream_view_timeout_title">动态加载间隔(秒)</string>
+    <string name="friends_view_timeout_title">朋友关系更新间隔(天)</string>
+    <string name="address_view_timeout_title">地址本同步间隔(天)</string>
+    
+    <string name="menu_title_logout">注销</string>
+
+    <string name="status_update_compose">你在想什么?</string>     
+    <string name="status_share">分享</string>
+    <string name="status_update">更新状态</string>
+    <string name="status_update_summary">正在发送</string>   
+    <string name="post_to_wall">发送消息</string>
+    <string name="post_to_wall_summary">正在发送</string> 
+    <string name="input_content">请输入内容</string>  
+    <string name="friend_recomm">推荐朋友</string>
+    <string name="string_in_processing">正在处理请求, 请稍等.</string>   
+    <string name="string_in_calculating">计算中...</string>   
+    <string name="who_like">%1$s 赞.</string>
+    <string name="i_like">我</string>   
+
+    <string name="share_to_qiupu">分享给好友</string>   
+    <string name="share_by_phone">通过手机分享</string>    
+    <string name="share_to_my_wall">分享到我的墙</string>
+    <string name="string_select">选择</string>
+    <string name="hint_username">用户名称</string>
+    <string name="hint_contact_name">联系人名称</string>
+    <string name="hint_appname">应用</string>
+    <string name="string_select_user">用户选择</string>
+    <string name="string_select_app">应用选择</string>
+    <string name="pref_string_clear_cache">清除缓存</string>
+    <!--<string name="pref_ui_select">主界面</string>-->
+    <string name="pref_borqs_url_select">变更服务器</string>
+    <string name="pref_borqs_url_select_summary">改变服务器后需重新注册或用有效帐户登录。</string>
+    <string name="pref_string_clear_cache_summary">清除手机存储, 释放内存</string>
+    <!--<string name="pref_ui_select_summary">选中将以仪表盘形式展示主界面</string>-->
+    <string name="latest_app">最新</string>
+    <string name="download_url_format">推荐应用程序, 点击下载: %1$s, 发现更多朋友的应用程序: %2$s</string>
+    <string name="install_download_times"> 下载次数：%1$s(%2$s) </string>
+
+    <string name="in_loading_app">正在从服务器获取数据, 请等待.</string>
+    <string name="my_favorites">我的收藏</string>
+    <string name="edit_profile">编辑</string>
+
+    <string name="upload_from">备份来自 %1$s</string>
+    <string name="qiupu_login_public">梧桐广场</string>
+    <string name="qiupu_login_casual_look">随便看看</string>
+    <string name="qiupu_login_hot_app">热门应用</string>
+    <string name="qiupu_login_input_username">请输入用户名</string>
+    <string name="qiupu_login_input_password">请输入密码</string>
+    <string name="app_used_users">看看谁安装该应用程序</string>
+    <string name="app_liked_users">看看谁赞了该应用</string>
+    <string name="user_sex">性别:</string>
+    <string name="user_sex_man">男</string>
+     <string name="user_sex_woman">女</string>
+     <string name="user_sex_unknow">未知</string>
+    <string name="fail_to_get_intalled_users">获取用户失败.</string>
+    <string name="sync_apk_failed">同步应用失败</string>
+    <string name="tab_app">应用库</string>
+    <string name="tab_feed">动态</string>
+    <string name="tab_friends">朋友</string>
+    <string name="tab_backup">我的</string>
+    <string name="tab_more">更多</string>
+    <string name="tab_lobby">广场</string>
+    <string name="user_detail_address">地  址: %1$s</string>
+
+	<string name="user_detail_login_name">登录名: %1$s</string>
+	<string name="user_detail_nick_name">姓  名: %1$s</string>
+	<string name="user_detail_phone_number">手机号: %1$s</string>
+	<string name="user_detail_email">邮  箱: %1$s</string>
+	<string name="user_detail_company">公  司: %1$s</string>
+	<string name="user_detail_department">部  门: %1$s</string>
+	<string name="user_detail_job">职  位: %1$s</string>
+
+	<string name="user_detail_birthday">生  日: %1$s</string>
+	<string name="user_detail_concern">好  友: %1$s</string>
+	<string name="user_detail_follower">粉  丝: %1$s</string>
+	<string name="user_detail_favourite">应用收藏: %1$s</string>
+	<string name="user_detail_share">图片: %1$s</string>
+	<string name="user_detail_borqsid">BorqsID: %1$s</string>
+	<string name="user_detail_gender">性  别: %1$s</string>
+	<string name="user_detail_jobtitle">职  称: %1$s</string>
+
+	<string name="user_detail_edit_image">编辑头像</string>
+	<string name="feedback_qiupu">意见反馈</string>
+	<string name="version_check_qiupu">检查更新</string>
+
+	<string name="string_show">详情</string>
+	<string name="feedback_submit">提交</string>
+	<string name="feedback_hint">说点什么吧....</string>
+	<string name="version_checking">检查中....</string>
+	<string name="check_back">该版本已是最新版本!</string>
+	<string name="feedback_submission">反馈提交中...</string>
+	<string name="feedback_submission_successful">反馈成功</string>
+	<string name="feedback_submission_failed">反馈失败</string>
+	<string name="add_favorites">收藏</string>
+	<string name="remove_favorites">去收藏</string>
+	<string name="edit_profile_address">修改地址</string>
+	<string name="edit_profile_phone_number">修改电话</string>
+	<string name="edit_profile_company">修改公司</string>
+	<string name="edit_profile_nick_name">修改姓名</string>
+	 <string name="edit_profile_address_hint">请输入所在地</string>
+
+	<string name="edit_profile_phone_number_hint">请输入联系方式</string>
+	<string name="edit_profile_company_hint">请输入公司名称</string>
+	<string name="edit_profile_nick_name_hint">请输入姓名</string>
+	<string name="edit_profile_emmail_hint">请输入邮箱</string>
+	<string name="edit_profile_update_dialog">正在更新到服务器</string>
+	<string name="edit_profile_input_null">内容不能为空</string>
+	<string name="edit_profile_update_suc">信息更新成功</string>
+
+	<string name="operate_succeed">操作成功</string>
+	<string name="edit_profile_img_location">选择照片</string>
+	<string name="edit_profile_img_camera">拍照</string>	
+	<string name="take_photo">拍照</string>
+	<string name="phone_album">从相册选择</string>
+	<string name="others_favorites">%1$s的收藏</string>	
+	<string name="already_in_favorite">已经收藏</string>
+	<string name="qiupu_exit_title">退出应用</string>
+    <string name="qiupu_exit_message">确定退出应用程序?</string>	
+    <string name="recommend_success">推荐成功</string>	
+    <string name="recommend_failed">推荐失败</string>	
+    
+    <string name="recommend_from_user">推荐来自%1$s</string>
+    <string name="user_suggest_attention">请求关注</string>	
+    <string name="user_suggest_both_know">有共同的好友</string>
+    <string name="user_suggest_from_my_addressbook">有他的联系方式</string>
+    <string name="user_suggest_from_both_addressbook">有共同的联系人</string>
+    <string name="user_suggest_have_my_contact">有我的联系方式</string>
+    <string name="user_suggest_from_work_info">有共同的工作经历</string>
+    <string name="user_suggest_from_education_info">有共同的教育经历</string>
+    <string name="user_suggest_from_server">基于系统推荐</string>
+
+    <string name="recommend_from_title">推荐来自</string>
+
+    <string name="qiupu_invite">邀请</string>
+    <string name="qiupu_abandon">放弃</string>
+    <string name="invite_contact">邀请联系人</string>
+    <string name="select_all">全选</string>
+    <string name="pref_pic_show">显示截图</string>
+    <string name="pref_pic_show_summary">显示应用屏幕截图</string>
+    <string name="download_from_mm">从电子市场下载</string>
+    <string name="send_message_successful">发送成功</string>
+    <string name="send_sms_success">短信发送成功</string>
+    <string name="send_email_success">邮件发送成功</string>
+    <string name="send_message_failed">发送失败</string>
+    <string name="qiupu_invite_message_content">%1$s%5$s邀请你为%2$s伙伴,请确认:%4$saccount/invite?info=%3$s</string>
+    <string name="qiupu_invite_message_exchange_vcard_content">%1$s%5$s邀请你到%2$s交换信息,请确认:%4$saccount/invite?info=%3$s</string>
+    <string name="to_say">对你说：</string>
+    <string name="send_invitation_dialog_title">邀请伙伴</string>
+    <string name="message_invite_dialog_message">短信邀请: </string>
+    <string name="email_invite_dialog_message">邮件邀请: </string>
+    <string name="stream_filter">过滤</string>
+    <string name="send_action_title">发送</string>
+    <string name="string_post_towall">涂鸦</string>
+    <string name="select_one_user">请选择一个联系人</string>
+    <string name="select_one_app">您没有选择应用</string>
+    <string name="share_secretly">偷偷分享</string>
+    <string name="phone_action">电话</string>
+    <string name="phonebook_call">电话:</string>
+    <string name="phonebook_message">短信息:</string>
+
+    <string name="contact_select">发送(%1$s)</string>
+    <string name="email_comefrom_qiupu">来自应用分享</string>    
+    <string name="clear_cache">确认清除缓存</string>    
+    <string name="privacy_show">偷偷分享需要输入收件人</string>
+    <string name="common_know">共同关注</string>
+    <string name="users_inline_search_hint">人名/电话/邮箱</string>
+    <string name="comments_remove">删除评论</string>     
+    <string name="stream_remove">删除当前分享</string>
+    <string name="operate_failed">"请求失败,请检查网络或稍候重试! %1$s"</string>
+    <string name="application_serch_hint">输入要找的应用</string>
+    <string name="activity_not_found">您的手机上未安装应用程序。</string>
+    <string name="application_not_found_title">没有相关应用</string>
+    <string name="application_not_found_message">点击确定通过电子市场搜索</string>   
+    <string name="pref_link_market">链接到电子市场</string>
+    <string name="pref_link_market_summary">没有相关应用时,链接到电子市场搜索</string>     
+
+    <string name="pref_auto_install">自动安装</string>               
+    <string name="pref_auto_install_summary">下载完成后,自动安装应用程序。</string>     
+    <string name="pref_market_page">应用详情展示</string>
+    <string name="install_app_share_title">自动分享</string>
+    <string name="install_app_share_summary">应用安装完成后,自动分享该动态</string>
+    <string name="pref_market_page_summary">打开电子市场展示应用详情</string>
+
+
+
+    <string name="qiupu_delete_apks">删除备份</string>
+    <string name="qiupu_delete_apks_message">点击确定删除选中应用的备份</string>
+    <string name="qiupu_delete_apks_message_detail">点击确定删除该应用的备份</string>
+    <string name="qiupu_deleting_apks">删除中...请稍等</string>
+    <string name="string_click_onemore_exit">再次点击后退键退出</string>
+    <string name="apk_current_version">当前版本: %1$s</string>
+    <string name="install_apk_to_post_stream">安装了%1$s,大家一起来玩吧~</string>
+    <string name="post_message_last_index_of">安装了</string>
+    <string name="post_message_index_of">,大家一起来玩吧</string>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="category_app">分类</string>
+    
+    <string name="qiupu_update_all">全部更新</string>
+    <string name="qiupu_backup_all">全部备份</string>
+    <string name="qiupu_my_apk_local">已安装</string>
+    <string name="qiupu_my_apk_server">不在本机</string>
+    <string name="send_email_dialog_title">发送邮件</string>
+    <string name="send_email_dialog_message">发送邮件邀请联系人朋友</string>
+    <string name="email_invite_title">邮件邀请</string>
+    <string name="phone_invite_title">短信邀请</string>
+    <string name="email_invite_summary">正在发送</string>
+    
+    <string name="sub_category_title_application">应用程序</string>
+    <string name="sub_category_title_game">游戏</string>
+    <string name="sub_category_title_topic">应用专区</string>
+    <string name="sub_category_title_master">应用达人</string>
+
+     <string name="post_prompt">点击获取:</string>
+     <string name="app_type_hot">热点</string>
+     <string name="invite_dialog_name">姓名:</string>
+     <string name="invite_dialog_phone">手机:</string>
+     <string name="invite_dialog_email">邮箱:</string>
+     <string name="invite_dialog_toast">请输入名称和联系方式</string>
+    <string name="qiupu_my_apk_all">所有</string>
+     <string name="tutorial_goto_login">彼此相伴，让孤单不再！\n\n现在就登录。</string>
+     <string name="relative_apps">其他版本</string>
+
+    <string name="pref_user_privacy_setting">隐私设置</string>
+
+
+    <string name="download_current_version">下载 %1$s 版本</string>
+
+    <string name="account_service_deny">帐户不可用</string>
+    <string name="account_service_deny_msg">Borqs Account服务无法返回的帐户信息。可能是程序签名冲突引起，你可以取消本对话框，程序将运行在无帐户状态。</string>
+
+    <string name="version_outdate">版本过期</string>
+    <string name="version_outdate_msg">当前版本过旧，必须升级到新版本才能继续使用. </string>
+
+    <string name="version_update">有新版本</string>
+    <string name="version_update_msg">程序有可更新的版本，立即升级？ </string>
+    <string name="installing_package">正在安装 %1$s</string>
+    <string name="check_voice_app">您的手机没有语音搜索，请下载安装。</string>
+    <string name="voice_dialog_title">选择搜索内容</string>
+    <string name="app_intro_out">展开</string>
+    <string name="app_intro_in">收起</string>
+    <string name="from_device_single">"\n %1$s"</string>
+    <string name="from_device">"\n %1$s, %2$s</string>    
+
+    <string name="confirm_app_install">安装应用</string>
+    <string name="dlg_msg_app_install">开始下载所需的应用，并安装到手机。</string>
+
+    <string name="user_circles">圈子</string>
+
+
+    <string name="circle_detail_people">人员</string>
+    <string name="circle_detail_post">动态</string>
+
+    <string name="add_to_circle">加为好友</string>
+    <string name="create_new_circle">新建分组</string>
+    <string name="new_circle_dialog_title">新建分组</string>
+
+    <string name="create_circle_process">创建中,请稍等...</string>
+    <string name="circle_exists">该圈子已经存在</string>
+    <string name="set_friends_circle">设置中，请稍等...</string>
+    <string name="delete_user_from_circle_message">您尚未选择圈子,该用户会从您的圈中去除</string>
+    <string name="delete_user_from_circle_title">删除用户</string>
+    <string name="title_request_account_login">需要登录</string>
+    <string name="dlg_msg_request_account_login">需要登录才能提供此服务，转到登录/注册界面?</string>
+    <string name="privacy_settings">隐私设置</string>
+    <string name="privacy_settings_phonebook_title">联系人信息</string>
+    <string name="privacy_settings_phonebook_summary">对电话号码，邮箱进行隐私设置</string>
+    <string name="privacy_settings_other_info_title">其他信息</string>
+    <string name="privacy_settings_other_info_summary">对其他基本信息进行隐私设置</string>
+    <string name="share_compose_title">分享</string>
+
+
+    <string name="delete_post_title">删除动态</string>
+    <string name="detail_grid_book">图书</string>
+    <string name="detail_grid_app">应用</string>
+    <string name="detail_grid_music">音乐</string>
+    <string name="install_inconsistent_certificates">发现不一致证书, 请卸载后重新安装应用程序</string>
+    <string name="recommend_qiupu_desc">发现更多好友应用, 推荐您使用梧桐, 点击下载%1$s</string>
+    <string name="title_my_app">应用</string>
+    <string name="invite_sim">Sim邀请</string>
+    <string name="invite_phone">电话邀请(%1$s)</string>
+    <string name="invite_email">邮件邀请(%1$s)</string>
+    <string name="bolcked_circle">黑名单</string>
+    <string name="address_book_circle">信息交换</string>
+    <string name="default_circle">关注对象</string>
+    <string name="family_circle">家庭</string>
+    <string name="close_friends_circle">朋友</string>
+    <string name="acquaintance_circle">熟人</string>
+    <string name="delete_circle_process">删除中,请稍等...</string>
+    <string name="delete_circle_title">删除分组</string>
+    <string name="delete_circle_message">要删除此分组吗? </string>
+    <string name="location_at">我的位置</string>    
+    <string name="title_no_connectivity">无可用网络</string>
+    <string name="dlg_msg_no_active_connectivity">无可用网络. 请检查/设置后重试.</string>
+
+    <string name="signup_application_upload_title">即时备份</string>
+    <string name="signup_application_upload_header">在您本地应用程序版本比远程服务器上的版本更新时自动将其备份。</string>
+    <string name="signup_application_upload_desc">将服务器上还没有的本地新应用（版本）备份。您可以选择随时恢复这些应用程序（含各个版本）到你的手机或其它Android设备。</string>
+    <string name="signup_application_upload_warning">通过移动网络备份会使用您的数据连接。您可以随时在“设置”中停用此功能。</string>
+    <string name="signup_application_upload_radio_1">通过 Wi-Fi 或移动网络</string>
+    <string name="signup_application_upload_radio_2">只通过 Wi-Fi</string>
+    <string name="signup_application_upload_radio_3">停用“即时备份”功能</string>
+    <string name="title_people">人员</string>
+    <string name="title_my_fans">我的粉丝</string>
+    <string name="Privacy_circle_summary">可查看我信息的好友</string>
+    <string name="people_circle_summary">允许查看我的信息</string>
+
+    <string name="refuse_user_title">忽略推荐</string>
+    <string name="refuse_user_message">确定忽略此用户？ </string>
+    <string name="add_friends_to_privacy_circle">允许更多的人查看我的信息 </string>
+
+
+    <string name="empty_notification">暂时还没有新的通知，点击刷新。</string>
+    <string name="new_notification_content">你有%d条未读通知，快去看看吧。</string>
+    <string name="update_notification_note">你更新了%d条通知。</string>
+    <string name="notification_unread_count">(%d条未读)</string>
+    <string name="notification_download_failed">网络异常，通知更新失败。</string>
+    <string name="notification_none">没有新的通知</string>
+    <string name="delete_user_title">删除用户</string>
+    <string name="delete_user_from_privacy_circle">您确定不再允许该用户看见自己的信息？</string>
+    <string name="request_see_profile">邀请你交换信息</string>
+    <string name="other_more_people">及其他%1$s人</string>
+    <string name="request_to_concern">求关注：请求加入到你的圈子</string>
+    <string name="request_to_add_friends">添加你进入他的圈子</string>
+    <string name="request_to_change_phone">"建议修改手机电话%1$s 为 %2$s"</string>
+    <string name="request_to_change_email">"建议修改电子邮箱%1$s 为 %2$s"</string>
+    <string name="request_event_invite">邀请你加入事件%1$s</string>
+    <string name="request_event_join">申请加入您的事件%1$s</string>
+    <string name="request_circle_invite">邀请你加入圈子%1$s</string>
+    <string name="request_circle_join">申请加入您的圈子%1$s</string>
+    <string name="request_exchange_info">请求和你交换信息.</string>
+    <string name="string_settings">设置</string>
+    
+    <string name="pref_notification_setting">通知设置</string>
+    <string name="pref_notification_enable">接收通知</string>
+    
+    <string name="pref_request_setting">请求设置</string>
+    <string name="request_notification_enable">接收请求</string>
+    <string name="pref_request_vibrate">振动</string>
+    <string name="pref_request_vibrate_desc">收到请求时振动</string>
+    <string name="request_list_title">刷新频率</string>
+    <string name="request_summary">刷新频率</string>
+
+    
+    <string name="privacy_circle_select_summary">请先选择一个分组</string>
+    <string name="request_process_title">请求中...</string>
+    <string name="request_ok">发送成功</string>
+    <string name="set_user_process_title">设置中，请稍等...</string>
+    <string name="add_people_to_circle">添加人员</string>
+    <string name="request_concern">求关注</string>
+    <string name="say_hi">打招呼</string>
+    <string name="change_request_phone">请求修改电话</string>
+    <string name="change_request_email">请求修改邮箱</string>
+    <string name="menu_bpc_post_msg">发送消息</string>
+    <string name="menu_add_shortcut">加收藏</string>
+    <string name="menu_remove_shortcut">去收藏</string>
+    <string name="menu_remove_all_shortcut">移除所有收藏</string>
+    <string name="register_ok_tutorial">注册成功，请进入邮件确认。</string>
+    <string name="main_page">主页面</string>
+    <string name="main_page_may_know">推荐</string>
+    <string name="history_people">收藏</string>
+    <string name="request_see_user_profile">请求查看信息</string>
+    <string name="qiupu_delete_people">删除人员</string>
+
+    <string name="menu_exchange_profile">请求交换信息</string>
+    <string name="menu_exchange_profile_desc">请求交换信息.</string>
+    <string name="set_contact_info_title">设置联系人信息</string>
+    <string name="set_profile_phone">电话:</string>
+    <string name="set_profile_email">邮箱:</string>
+    <string name="set_profile_summary">完善联系人信息,可以找到更多的朋友</string>
+
+
+    <string name="update_contact_info">修改信息</string>
+    <string name="already_send_request">已发送请求</string>
+    <string name="already_exchange_info">已交换信息</string>
+
+    <string name="stream_make_friends"> 添加 %1$s 为好友.</string>
+    <string name="already_bind">已验证</string>
+    <string name="add_more_info">添加更多信息</string>
+    <string name="add_more_item_phone">电话</string>
+    <string name="add_more_item_email">邮箱</string>
+    <string name="network_exception">网络异常,请检查网络状况后重试</string>    
+
+    <string name="user_share_item">源</string>
+    <string name="apk_shared_item_label">应用</string> 
+
+    <string name="add_info_title">添加信息</string>
+    <string name="add_info_email">保存并发送验证邮件</string>
+    <string name="add_info_phone">保存并发送验证短信</string>
+    <string name="add_email_title">绑定邮箱</string>
+    <string name="add_phone_title">添加电话</string>
+    <string name="add_email_edit_hint">请输入邮箱地址</string>
+    <string name="add_phone_edit_hint">请输入手机号码</string>
+    <string name="add_phone_summary">添加可以找到更多的朋友</string>
+    <string name="add_email_summary">绑定可以找到更多的朋友,并可以用于登录及找回密码</string>
+    <string name="add_info_failed">添加失败</string>
+    <string name="add_info_process">正在更新到服务器</string>
+    <string name="geo_location_at">%1$s</string>
+    <string name="geo_location_on">, %1$s</string>
+    <string name="geo_location_in">, %1$s</string>
+    <string name="get_location_failed">获取位置信息失败</string>
+    <string name="add_info_bind_email_summary">已绑定邮箱</string>
+    <string name="add_info_bind_phone_summary">已绑定手机号</string>
+    <string name="delete_bind">删除并解除绑定</string>
+    <string name="resend_message_verify">重新发送验证短信</string>
+    <string name="resend_email_verify">重新发送验证邮件</string>
+    <string name="update_info_phone">修改电话号码</string>
+    <string name="update_info_email">修改邮箱地址</string>
+    <string name="delete_info_email">删除邮箱地址</string>
+    <string name="delete_info_phone">删除电话号码</string>
+    <string name="not_delete_last_bind">最后一个绑定的帐号不能删除</string>
+    <string name="have_no_change">你没有做出任何改动</string>
+    <string name="add_email_suc">添加邮件成功,请查收邮件</string>
+    <string name="add_phone_suc">添加电话成功</string>
+    <string name="update_contact_info_btn">修改</string>
+    <string name="delete_email_message">确定删除此邮箱</string>
+    <string name="delete_phone_message">确定删除此号码</string>
+    <string name="selected_one_user">请选择一个用户</string>
+    <string name="notification_set">通知设置</string>
+    
+    <string name="notification_title_mention_me">提及我</string>
+    <string name="notification_title_stream">动态</string>
+    <string name="notification_set_failed">更新通知时出现问题</string>
+    
+    <string name="notification_accept_suggest">和我推荐的人成为好友</string>
+    <string name="notification_my_app_comment">有人评论了我分享的应用</string>
+    <string name="notification_my_app_like">有人赞了我分享的应用</string>
+    <string name="notification_new_follower">有人将我添加到圈子中</string>
+    <string name="notification_profile_update">朋友更新了信息</string>
+    <string name="notification_app_share">有人与我分享了应用</string>
+    <string name="notification_other_share">有人与我分享了信息</string>
+    <string name="notification_my_stream_comment">有人评论了我发的动态</string>
+    <string name="notification_my_stream_like">有人赞了我发的动态</string>
+    <string name="notification_my_stream_retweet">有人重新分享了我的动态</string>
+    <string name="notification_suggest_user">有人给我推荐了好友</string>
+    <string name="input_valid_email">请输入有效的邮箱</string>
+    <string name="input_valid_phone">请输入有效的电话</string>
+    <string name="circle_select_title">添加好友到分组</string>
+    <string name="have_no_request_info">当前请求列表已处理完毕.</string>
+    <string name="request_exchange">同意</string>
+    <string name="friends_item_request_exchange">交换信息</string>
+    <string name="request_exchange_card_again">再次请求</string>
+    <string name="request_ignore">忽略</string>
+    <string name="have_no_suggest_user">当前推荐列表已处理完毕.</string>
+
+    <string name="stream_head_refresh">下拉可以刷新</string>
+    <string name="stream_head_refreshing">正在刷新，请稍候...</string>
+    <string name="stream_head_Last_updated">更新于:%1$s</string>
+    <string name="stream_head_release">松开可以刷新</string>
+    
+    <string name="post_toggle_location">切换所在地信息</string>
+    <string name="post_add_app">添加应用</string>
+    <string name="post_add_book">添加图书</string>
+    <string name="post_add_music">添加音乐</string>
+    <string name="search_from_net_title">来自网络</string>
+    <string name="search_input_tutorial">请输入至少2个字符</string>
+    <string name="app_search_have_no_change">输入内容没有发生变化</string>
+    
+    <string name="top_category_app">应用</string>
+    <string name="top_category_game">游戏</string>
+    
+    <string name="tutorial_uninstall">新版本更新, 请卸载播思同步</string>
+    <string name="tutorial_uninstall_notification">新版本更新, 请卸载播思通知服务</string>
+    <string name="other_profile_have_no_status">这家伙很懒，什么都没说...</string>
+    <string name="my_profile_have_no_status">说点什么吧...</string>
+    <string name="phone_email_title">电话和邮件</string>
+    <string name="edit_contact">编辑联系方式</string>
+    <string name="base_info_title">基本信息</string>
+    <string name="sim_state_absent">请插入SIM卡</string>
+    
+    <string name="home_appbox">应用管家</string>
+    <string name="edit_profile_title">编辑资料</string>
+    
+    <string name="title_about_me">关于我</string>
+    <string name="update_profile_sex_title">性别</string>
+    <string name="update_profile_name_hint">姓名</string>
+    <string name="update_profile_address_hint">地址</string>
+    <string name="update_profile_address_hint_en">英文地址</string>
+    <string name="update_profile_company_hint">公司</string>
+    <string name="update_profile_department_hint">部门</string>
+    <string name="update_profile_job_hint">职位</string>
+    <string name="update_profile_birthday_hint">生日</string>
+    <string name="set_birthday_title">设置生日</string>
+    
+    <string name="my_status_title">我的状态</string>
+    <string name="update_my_status_title">修改状态</string>
+    <string name="update_my_status_hint">吼一句...</string>
+
+    <string name="app_box_up_to_date">    所有本机应用已经是最新版本。\n\n    我们渴望听到你的声音。</string>
+    <!-- string name="app_box_empty_backup">    你好,%1$s。你的管家是空的。如果你刚开始使用，可通过“菜单” > “设置” > “教程”获得帮助。\n\n    我们渴望听到你的声音。</string -->
+    <string name="app_box_empty_backup">    自动备份的应用已经全部安装到本机。\n\n    我们渴望听到你的声音。</string>
+
+    <string name="test_server_url_set_exchange">变更</string>
+    <string name="test_server_url_set_warning">变更服务器的URL将删除现有的Borqs帐户，稍后请用新服务器有效帐号登录。</string>
+    <string name="test_server_url_current_release">当前使用服务器为正式服务器，准备变更为调试服务器？</string>
+    <string name="test_server_url_current_debug">当前使用服务器为调试服务器，准备变更为正式服务器？</string>
+
+    <string name="guest_nickname">匿名</string>
+
+    <!-- Clings -->
+    <!-- The title text for the workspace cling [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_title">让我们一起做得更好</string>
+    <!-- The description of how to use the workspace [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_hint_item">你登录后，可以获得更好的服务。</string>
+    <!-- The description of how to open all apps from the workspace [CHAR_LIMIT=none] -->
+    <string name="appbox_guest_login_cling_sign_up">点击圆圈登录，让我们认识你。</string>
+    <!-- The title text for the All Apps cling [CHAR_LIMIT=none] -->
+    <!--<string name="all_apps_cling_title">Choose some apps</string>-->
+    <!-- The description of how to pick up and add an item to the workspace [CHAR_LIMIT=none] -->
+    <!--<string name="all_apps_cling_add_item">To add an app to your home screen, touch &amp; hold it.</string>-->
+    <!-- The title text for the Folder cling [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_title">Organize your apps with folders</string>-->
+    <!-- The description of how to move an app [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_move_item">To move an app, touch &amp; hold it.</string>-->
+    <!-- The description of how to create a folder [CHAR_LIMIT=none] -->
+    <!--<string name="folder_cling_create_folder">To make a new folder on your home screen, stack one app on top of another.</string>-->
+    <!-- The text on the button to dismiss a cling [CHAR_LIMIT=none] -->
+    <string name="cling_dismiss">确定</string>
+
+    <string name="pref_dev_feature">开发中功能试用</string>
+    <string name="pref_dev_feature_summary">抢先试用尚在开发的SNS以及分享平台，在Launcher的应用中将显示Bpc启动图标.</string>
+
+    <string name="configure_debug_option_title">梧桐调试选项</string>
+    <string name="configure_debug_option_summary">配置HTTP日志，切换服务器，试用/取消正在开发中的功能.</string>
+
+    <string name="dialog_title_formal_server_migration">开始使用正式服务器</string>
+    <string name="dialog_message_formal_server_migration">正式服务器准备就绪，赶快前去注册帐号，开始新的体验吧。（当前测试服务器帐号短期内仍可使用，可以通过设置菜单可以切换服务器）</string>
+
+    <string name="pref_string_version_check_title">检查新版本</string>
+    <string name="pref_string_version_check_summary">当前版本是%1$s, 检测更新版本。</string>
+    
+        <string name="create_circle_hint">名称</string>
+
+    <string name="key_stream_reforming_feature_title">试用重构中的动态展示</string>
+    <string name="key_stream_reforming_feature_summary">动态展示正在重构，欢迎试用并提供宝贵意见与建议.</string>
+    
+    <string name="key_tabui_feature_title">Tab 风格主屏</string>
+    <string name="key_tabui_feature_summary">勾选, 显示Tab 风格主屏</string>
+
+    <string name="key_monthly_sprint_feature_title">启用本月正在开发的功能</string>
+    <string name="key_monthly_sprint_feature_summary">启用本月正在开发，尚未充分测试的功能。</string>
+    
+    <string name="key_monthly_new_platform_feature_title">启用新平台调试功能</string>
+    <string name="key_use_contact_edit_title">启用ICS联系人编辑</string>
+    <string name="key_show_album_title">显示用户相册</string>
+
+    <string name="friends_exchenge_info_allow">(允许查看我的信息)</string>
+    <string name="friends_exchenge_already_send_request">已发送信息交换请求</string>
+    <string name="friends_exchenge_already_exchange_info">已交换信息</string>
+    
+        <string name="exchange_request_title">信息交换</string>
+        <string name="suggest_request_title">修改资料的建议</string>
+
+    <string name="menu_mute_post">忽略</string>
+    <string name="menu_mute_all_his_post">忽略此人</string>
+    <string name="mute_object_suc">忽略成功</string>
+    <string name="mute_object_failed">忽略失败</string>
+    <string name="menu_report_abuse">举报滥用行为</string>
+    <string name="report_abuse_suc">举报成功</string>
+    <string name="report_abuse_failed">举报失败</string>
+    <string name="menu_delete_comment">删除</string>
+    <string name="menu_remove_post">删除</string>
+
+    <string name="menu_like_people">赞的人</string>
+
+    <string name="pref_string_privacy_info_title">隐私权信息</string>
+    <string name="pref_string_privacy_info_summary">你们怎样存储和分享我提供的信息?</string>
+    <string name="pref_string_privacy_info_description">您同意Borqs使用您设备的应用信息，以便改进Borqs的产品和服务。Borqs在使用您的信息时将遵守Borqs的隐私权政策(网址为http://www.borqs.com). Borqs可能会与其应用程序的第三方开发人员共享您提供的信息。上述第三方开发人员在使用您的信息时将遵守第三方自己的隐私政策.</string>
+
+    <string name="context_menu_comment_title">%1$s的评论</string>
+	<string name="context_menu_stream_title">%1$s的信息</string>
+    <string name="context_menu_stream_title_readonly">%1$s不再允许评论，赞或重新分享等操作</string>
+
+    <string name="pref_push_service_setting">即时消息</string>
+    <string name="pref_string_push_service_enable_title">接收和发送即时消息</string>
+    <string name="pref_string_push_service_enable_summary">允许接收来自网络端的通知和请求，同时也可以发送即时消息。该功能可能会占用少许流量和电量。</string>
+    
+    <!-- compose visibility -->
+    <string name="visibility_compose_anyone">可见性(所有人)</string>
+    <string name="visibility_compose_contact">可见性(仅限收件人)</string>
+    <string name="visibility_dialog_title">可见性</string>
+    <string name="location_text">未添加所在地</string>
+    <string name="location_progress_bar_text">正在获取位置信息...</string>
+    <string name="location_empty_text">没有获取到位置信息.</string>
+    <string name="location_message">无法确定您的位置。要立即调整您的设置吗？</string>
+    <!--<string name="location_position">我在这里：</string>-->
+    <string name="location_title">位置</string>
+    <string name="history_location">历史位置</string>
+    <string name="tmp_photo_toast">暂时还不支持。</string>
+    <string name="add_attachment">附件</string>
+    <string name="compose_replace">替换</string>
+    <string name="compose_delete">删除</string>
+    <string name="attach_link">链接</string>
+    <string name="replace_message">目前只支持分享一个%1$s，你需要选择新的%2$s替换当前选择吗？</string>
+    <string name="delete_message">删除此%1$s?</string>
+    <string name="share_message">你确定要公开分享此联系人信息吗？</string>
+    <string name="share_message2">分享联系人信息必须指定收件人偷偷分享！</string>
+    <string name="import_vcard_failed">导入联系人失败。</string>
+    <string name="import_vcard_success">导入联系人成功。</string>
+    <string name="has_vcard_tips">您已经选择联系人信息，必须偷偷分享。</string>
+    <string name="attach_app">应用</string>
+    <string name="attach_photo">图片</string>
+    <string name="attach_people">联系人</string>
+    <string name="attach_file">文件</string>
+    <string name="have_select_link">已经选择一个链接.</string>
+    <string name="have_select_app">已经选择一个应用.</string>
+    <string name="have_select_photo">已经选择一个图片.</string>
+    <string name="phone_way">电话：</string>
+    <string name="email_way">邮箱：</string>
+    <string name="import_vcard">导入</string>
+    <string name="import_vcard_message">您确定导入此联系人吗？</string>
+    <string name="nfc_text">使用NFC进行信息交换</string>
+    <string name="nfc_exchange_vcard_succeed">发送信息成功.</string>
+    <string name="my_card">我的信息</string>
+    <string name="no_available_nfc">NFC不可用！</string>
+    <string name="nfc_tip_title">提示:</string>
+    <string name="nfc_tip_content1">1.进入手机设置，打开NFC.</string>
+    <string name="nfc_tip_content2">2.手机背靠背，进行信息交换.</string>
+    <string name="no_vcard_in_box">没有收到交换信息.</string>
+    <string name="no_vcard_out_box">没有发出我的信息</string>
+    <string name="commments_tips_title">分享信息</string>
+    <string name="comments_tips_message">此信息最初是在限定范围内分享。因此，在选择分享对象时请务必小心。</string>
+
+    <!-- add friends activity -->
+    <string name="add_friend_title">添加好友</string>
+    <string name="recommend_friends">推荐好友</string>
+    <string name="email_address">邮箱地址</string>
+    <string name="phone_number">电话号码</string>
+    <string name="invite_friends">邀请</string>
+    <string name="or">或者</string>
+    <string name="friends">朋友</string>
+    <string name="invite_input_null_tip">请输入邮箱地址或者电话号码。</string>
+    <string name="invite_tip">邀请一个好友加入吧，你只需要输入他/她的邮箱地址或者电话号码，然后发送…</string>
+    <string name="people_in_qiupu">在梧桐中的联系人</string>
+    <string name="people_out_qiupu">邀请加入梧桐的联系人</string>
+    <string name="no_people_in_qiupu">没有联系人在梧桐中。</string>
+    <string name="no_people_in_contact">没有联系人。</string>
+    <string name="invite_message">是否邀请此联系人？</string>
+    <string name="send_sms_to">发短信到：</string>
+    <string name="send_email_to">发邮件到：</string>
+    <string name="invite_hint_text">向%1$s说句话吧</string>
+    <string name="reach_max_length">输入内容达到最大值(70个字)。</string>
+    <string name="feedback_hint_text">还可以输入70个字</string>
+
+    <string name="from_fans_title">粉丝</string>
+    <string name="from_contact_title">联系人</string>
+    <string name="from_invite_title">邀请</string>
+    <string name="from_suggestion_title">推荐</string>
+
+    <string name="from_fans_detail">从你的粉丝中添加好友。</string>
+    <string name="from_contact_detail">从你的联系人中添加好友。</string>
+    <string name="from_invite_detail">通过电话和邮箱邀请好友。</string>
+
+    <string name="bpc_tab_label">应用宝盒</string>
+    <string name="tab_app_feed">社区</string>
+    <string name="tab_message">消息</string>
+
+    <string name="menu_comment_attribute_enable">允许评论</string>
+    <string name="menu_comment_attribute_disable">不允许评论</string>
+    <string name="menu_like_attribute_enable">允许赞</string>
+    <string name="menu_like_attribute_disable">不允许赞</string>
+    <string name="menu_share_attribute_enable">允许重新分享</string>
+    <string name="menu_share_attribute_disable">不允许重新分享</string>
+    
+    <string name="progressdialog_loading">正在获取…</string>
+    <string name="dialog_like_user_title">+1 的人</string>
+    <string name="userdetail_title_from_share">设置为我的图片</string>
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新，请稍候…</string>
+    <string name="pull_to_refresh_tap_label">正在刷新，请稍候…</string>
+    
+    <string name="current_work">当前工作</string>
+    <string name="work_experience">工作经历</string>
+    <string name="add_work_history">添加工作经历</string>
+    <string name="add_edu">添加教育背景</string>
+    <string name="add">添加</string>
+    <string name="delete">删除</string>
+    <string name="confirm_delete_work">确认删除这条工作经历吗?</string>
+    <string name="confirm_delete_record">确认删除这条记录吗?</string>
+    <string name="set_begin_date">设置起始日期</string>
+    <string name="set_end_date">设置结束日期</string>
+    <string name="begin_end_date">起止日期</string>
+    <string name="begin_date">开始日期</string>
+    <string name="end_date">结束日期</string>
+    <string name="begin_date_not_null">开始日期不能为空</string>
+    <string name="end_date_not_null">结束日期不能为空</string>
+    <string name="job_description">工作描述</string>
+    <string name="education">教育背景</string>
+    <string name="school">学校</string>
+    <string name="school_type">学校类型</string>
+    <string name="school_location">学校地址</string>
+    <string name="school_class">班级</string>
+    <string name="degree">学位</string>
+    <string name="major">主修</string>
+    <string name="user_gender">性别</string>
+	<string name="user_address">地址</string>
+	<string name="nickname">昵称</string>
+	<string name="user_birthday">生日</string>
+
+    <string name="delete_comment_title">删除评论</string>
+    <string name="delete_comment_message">确定要永久删除评论吗?</string>
+
+    <string name="add_contact_title">联系人</string>
+    <string name="add_contact_message">发送我的联系人到服务器以查找家人和朋友.</string>
+
+    <string name="disable_data_flow_saved_mode_title">启用高保真模式</string>
+    <string name="disable_data_flow_saved_mode_message">WIFI网络，启用高保真模式，可在自动加载，显示动态中的图片.</string>
+
+    <string name="enable_data_flow_saved_mode_title">使用省流量模式</string>
+    <string name="enable_data_flow_saved_mode_message">使用省流量模式，将不加载一些大数据，如动态中的图片，以节省有限的数据流量.可以在需要的时候随时更改此设置。</string>
+
+    <string name="pref_enable_data_flow_saved_mode_title">使用省流量模式</string>
+    <string name="pref_enable_data_flow_saved_mode_summary">为了节省数据流量使用，停止从服务器加载某些大数据，如动态的图片。</string>
+    
+    <string name="borqs_contact_title">好友</string>
+    <string name="local_contact_title">本机联系人</string>
+    <string name="local_circle_title">管理圈子</string>
+        
+    <string name="search_hint">搜索人</string>
+    <string name="search_people">找人</string>
+    <string name="search_apps">搜索应用</string>
+    
+    <string name="string_enter_background_share">进入后台分享</string>
+    <string name="string_enter_background_share_link">进入后台分享链接.</string>    
+    <string name="string_enter_background_share_app">进入后台分享应用: %1$s.</string>
+    <string name="string_enter_background_share_photo">进入后台分享美图: %1$s.</string>
+    
+    <string name="say_hi_content">你好！</string>
+    <string name="left_navigationView_search_hint">点击搜索</string>
+    
+    <string name="about_version_info">梧桐Android版\n %1$s</string>
+    <string name="about_intro">梧桐雌雄双株, 梧为雄, 桐为雌; 凤凰雌雄相像, 雄曰凤, 雌曰凰, 有诗云非醴泉不饮, 非梧桐不栖.</string>
+    <string name="about_official_website">官方网站: %1$s</string>
+    <string name="about_official_weibo">新浪微博: %1$s</string>
+    <string name="about_copyright">梧桐工作室 版权所有 \n\n Copyright 2012 Borqs Technology Ltd, All rights reserved</string>
+    <string name="about_expansion">...</string>
+    
+    <string name="resource_share_apps">应用</string>
+    <string name="resource_share_photos">图片</string>
+    <string name="resource_share_links">链接</string>
+    <string name="resource_share_books">图书</string>
+    <string name="resource_share_text">文本</string>
+    <string name="resource_share_static_file">文档</string>
+    <string name="resource_share_audio">音频</string>
+    <string name="resource_share_video">视频</string>
+    
+    <string name="contact_friends_activated">您的联系人好友: <a href="borqs://profile/details?id=%2$s">\"%1$s\"</a>已经开通了梧桐账号，赶快关注他吧</string>
+    <string name="loading_failed">加载失败</string>
+
+    <string name="discard_dialog_title">发表%1$s</string>
+    <string name="discard_dialog_message">要放弃这条%1$s吗?</string>
+    
+    <string name="invite_contact_dialog_title">哪一个电话(邮件)?</string>
+    <string name="stream_choose_circle">选择圈子</string>
+
+    <string name="instructions">轻点屏幕跳过.\n左右划动查看更多.</string>
+    <string name="startup_header_instructions">连通生命中那些正在移动的人们</string>
+    <string name="startup_contributor_prefix">启动画面来自: </string>
+    <string name="startup_appreciation_prefix">鸣谢:\n  </string>
+    <string name="circle_id_all">好友</string>
+    <string name="circle_id_hot">热门</string>
+    <string name="circle_id_nearby">附近</string>
+    <string name="circle_id_public">公开</string>
+
+    <string name="exchange_nfc_header_title">NFC交换信息</string>
+    <string name="exchange_request_header_title">交换信息请求</string>
+    <string name="exchange_send_header_title">发过信息的好友</string>
+    <string name="exchange_shake_header_title">摇一摇交换信息</string>
+    <string name="exchange_card_holder">信息交换</string>
+    <string name="send_card_title">发过信息的好友</string>
+
+    <string name="received_card">已收到交换信息</string>
+    <string name="detail_title">详情</string>
+    <string name="recommend_friends_progress">正在发送...</string>
+    <string name="ic_lable_photo_share">图片分享</string>
+    <string name="repeat_select">重复选择</string>
+    <string name="re_try_dialog_title">注意</string>
+    <string name="re_try_button">重发</string>
+    <string name="re_try_dialog_msg">发送失败，是否重新发送？</string>
+    <string name="repeat_message">您已经选择了此%1$s.</string>
+    <string name="search_people_result_null">没有找到相关的人</string>
+
+    <string name="personal_infomation">资料</string>
+    <string name="dynamic_friends">动态</string>
+    <string name="message_center">消息中心</string>
+    <string name="friends_circle">圈子</string>
+    <string name="event">事件</string>
+    <string name="poll">投票</string>
+    <string name="whose_poll">%1$s的投票</string>
+    <string name="find_friends">找人</string>
+    <string name="exchange_card">信息交换</string>
+    <string name="dynamic_public">公共动态</string>
+    <string name="application_recomment">应用推荐</string>
+    <string name="options">选项</string>
+    <string name="public_dynamic">公共动态</string>
+    <string name="common_item">常用</string>
+    <string name="plugin_item">应用</string>
+    <string name="operation_item">操作</string>
+
+    <string name="request_conversion">发起会话</string>
+    <string name="add_to_circles">添加到分组</string>
+    <string name="view_bpc_profile">查看梧桐个人资料</string>
+    <string name="toast_invalid_input_content">输入内容无效</string>
+
+    <string name="dialog_recipient_title">收件人列表</string>
+    <string name="recipient_limit">受限.收件人</string>
+    <string name="recipient_public">公开.收件人</string>
+    <string name="anonymous_public">公开</string>
+    
+    <string name="add_connection">加强联系</string>
+
+    <string name="prompt_mention_typing_start">开始输入接收者名字.</string>
+
+    <string name="favour">赞</string>
+    <string name="cancel_favour">取消赞</string>
+    <string name="favour_people">查看赞过的人</string>
+    <string name="delete_comment">删除</string>
+    <string name="reply">回复</string>
+
+    <!-- absent apk category title name -->
+    <string name="in_one_week">1周内</string>
+    <string name="between_week_and_month">1个月内</string>
+    <string name="before_one_month">1个月前</string>
+
+    <string name="profile_remark">备注</string>
+    <string name="update_remark">修改备注</string>
+    <string name="update_remark_title">备注</string>
+    <string name="message_have_no_share_message">该用户没有分享的图片</string>
+    <string name="message_have_no_favorite">该用户没有收藏的应用</string>
+
+    <string name="new_versioninfo_title">新版本特性:</string>
+    <string name="update_version_ok">现在升级</string>
+    <string name="update_version_cancel">以后再说</string>
+    <string name="update_version_info_size">版本:%1$s, 大小:%2$s</string>
+    
+    <string name="send_to_post">分享到动态</string>
+    <string name="no_user_in_circle">您还没有添加联系人。</string>
+    <string name="invalid_recipient">无效的收件人</string>
+
+    <string name="prompt_stream_property_readonly">只读选项.</string>
+    <string name="prompt_stream_property_settings">通过MENU菜单修改这些选项.</string>
+
+    <string name="ntf_label_all_messages">所有消息</string>
+    <string name="ntf_label_friend_suggestion">交朋友</string>
+    <string name="ntf_label_comment_to_me">给我的评论</string>
+    <string name="ntf_label_like_to_me">给我的赞</string>
+    <string name="ntf_label_share_to_me">给我的分享</string>
+    <string name="ntf_label_reshare_mine">转发我的分享</string>
+    <string name="ntf_label_profile_update">资料更新</string>
+    <string name="ntf_label_others">其它</string>
+
+    <string name="exception_stream_removed">此信息已删除或隐藏.</string>
+    <string name="stream_setting">设置</string>
+    <string name="media_play_error">播放器不支持该文件。</string>
+    <string name="play_title">提示</string>
+    <string name="play_msg">当前没有连接wifi，是否继续操作？</string>
+    <string name="wifi_play_msg">已连接wifi, 请选择操作.</string>
+    <string name="no_wifi_mobile">当前没有有效的网络连接.</string>
+    <string name="play_pos_button">播放</string>
+    <string name="play_neu_button">下载</string>
+    <string name="wifi_static_file_msg">当前未连接wifi,是否继续下载</string>
+
+    <string name="dialog_local_config_title">本地配置文件</string>
+    <string name="dialog_local_config_message">已检测到本地配置文件, 打算使用此配置文件内容? \n%1$s</string>
+    <string name="view_current_configuration">查看当前配置</string>
+
+    <string name="public_circle_span">圈子</string>
+    <string name="local_circle_span">好友</string>
+    
+    <string name="recommend_people_title">梧桐推荐的人</string>
+    
+    <string name="create_public_circle">创建为公共圈子</string>
+    <string name="public_circle_member_limit">圈子人数上限</string>
+    <string name="public_circle_is_stream_public">圈子的动态是否公开</string>
+    <string name="public_circle_can_search"> 圈子能否被搜索到</string>
+    <string name="public_circle_can_view_members">能否看到圈子中的成员</string>
+    <string name="public_circle_can_join">能否允许申请加入圈子</string>
+    <string name="Invalid_recipient">无效的收件人</string>
+    <string name="edit_string">编辑</string>
+    <string name="create_public_circle_title">创建圈子</string>
+    <string name="public_circle_manager_people">管理人员</string>
+    
+    <string name="public_circle_name_hint">请输入圈子名称 (必填)</string>
+    <string name="public_circle_des_hint">请简要描述一下</string>
+    <string name="name_isnull_toast">名称不能为空</string>
+    
+    <string name="public_circle_create_suc">创建成功</string>
+    <string name="public_circle_invite_message">邀请好友加入吧~</string>
+    
+    <string name="public_circle_member_count">成员: %1$s</string>
+    
+    <string name="label_description">描述</string>
+    <string name="label_description_en">英文描述</string>
+    <string name="label_bulletin">公告</string>
+    <string name="public_circle_special_set">特殊设置</string>
+    
+    <string name="label_name">名称</string>
+    <string name="label_name_en">英文名称</string>
+    <string name="max_file_size_tip">你上传的文件已经超过%1$sM.</string>
+    
+    <string name="key_use_public_circle_ui">启用公有圈子UI</string>
+    <string name="public_circle_add_people_hint">输入你想加入的人</string>
+    
+    <string name="edit_base_info">圈子信息</string>
+    <string name="edit_base_set_label">圈子设置</string>
+    <string name="edit_contact_info">联系方式</string>
+    <string name="edit_circle_people_manager">人员管理</string>
+    <string name="edit_circle_dialog_member">成员</string>
+    
+    <string name="edit_base_info_title">编辑圈子信息</string>
+    <string name="edit_base_set_title">编辑圈子设置</string>
+    <string name="edit_contact_info_title">编辑联系方式</string>
+   <string name="set_image_icon">设置头像</string>
+
+    <string name="hint_search_people">查找朋友</string>
+    
+    <string name="privacy_set_title">隐私设置</string>
+    <string name="privacy_set_open">公开</string>
+    <string name="privacy_set_open_summary">任何人能查看圈子信息,动态.</string>
+    <string name="privacy_set_closed">熟人</string>
+    <string name="privacy_set_closed_summary">任何人能查看圈子信息,仅成员能查看动态.</string>
+    <string name="privacy_set_secret">私密</string>
+    <string name="privacy_set_secret_summary">仅成员能查看圈子信息,动态.</string>
+    
+    <string name="approve_set_title">成员管理</string>
+    <string name="approve_set_all">任何成员可以添加或批准</string>
+    <string name="approve_set_manager">仅管理员可以添加或批准</string>
+    
+    <string name="join_permission_title">加入方式</string>
+    <string name="join_permission_verified">验证加入</string>
+    <string name="join_permission_verified_summary">申请人发出申请需管理员通过</string>
+    <string name="join_permission_to_join">直接加入</string>
+    <string name="join_permission_to_join_summary">申请人可直接加入</string>
+    <string name="join_permission_forbid">不允许申请加入</string>
+    <string name="join_permission_forbid_summary">只能通过管理员邀请加入</string>
+    
+    <string name="members_in_circle">现有成员</string>
+    <string name="members_applyed_circle">申请加入的人</string>
+    <string name="members_invited_circle">邀请过的人</string>
+    
+    <string name="public_circle_address">具体地址</string>
+    <string name="public_des_info">圈子介绍</string>
+    <string name="hide_location">隐藏位置</string>
+
+    <string name="send_im_message">发消息</string>
+    <string name="im_title">正在与%1$s聊天</string>
+    <string name="im_tmp_title">私信</string>
+    <string name="notification_msg">您有新消息来了，快点点击看看吧。</string>
+    <string name="im_more">查看更多</string>
+    
+    <string name="public_circle_tip_content">以下用户存在多个联系方式，请选择您想邀请的方式.</string>
+    <string name="public_circle_role_manager">管理员</string>
+    <string name="public_circle_role_creator">创建者</string>
+    
+    <string name="public_circle_invite_by">邀请来自:%1$s</string>
+    
+    <string name="user_profile_concern">好  友</string>
+	<string name="user_profile_follower">粉  丝</string>
+	<string name="user_profile_favourite">收  藏</string>    
+    <string name="online_title">在线</string>
+    <string name="offline_title">不在线</string>
+    <string name="lbs_card_desc_1">晃动手机</string>
+    <string name="lbs_card_desc_2">与朋友交换信息</string>
+
+    <string name="lbs_card_desc_11">靠近 晃动手机</string>
+    <string name="lbs_card_desc_22">与附近的朋友交换信息</string>
+
+    <string name="stream_content_share_photo">分享%1$s张照片</string>
+    
+    <string name="public_circle_invite">邀请</string>
+    <string name="public_circle_apply">加入</string>
+    <string name="find_circle_title">找圈子</string>
+    <string name="search_null_toast">没有找到相关内容</string>
+    <string name="title_select_count">已选定 %1$s 个</string>
+    
+    <string name="public_circle_remove_member_msg">确定要将该用户从本群中移除?</string>
+    <string name="public_circle_grant_title">管理权限</string>
+    <string name="public_circle_grant_manager_message">将用户 %1$s 提升为管理员?</string>
+    <string name="public_circle_grant_member_message">将用户 %1$s 设置为普通用户?</string>
+    
+    <string name="apply_to_public_circle">加入中, 请稍等...</string>
+    <string name="invite_friends_exchange_vcard">邀请好友交换信息</string>
+    <string name="nfc_exchange_vcard">NFC交换信息</string>
+    <string name="shaking_exchange_vcard">摇一摇交换信息</string>
+    <string name="shaking_friends">摇到的朋友</string>
+    <string name="check_exchanged_vcard_friends">查看交换信息的好友</string>
+    <string name="check_needing_handled_vcard_request">查看信息交换请求</string>
+    <string name="has_my_card_people">有我信息的人</string>
+    <string name="exchange_my_card_people">和我交换信息的人</string>
+    <string name="exchanged_vcard_people_title">已交换信息的好友</string>
+    <string name="received_card_friends">收到信息的好友</string>
+    <string name="card_holder_title">已交换信息的好友</string>
+    <string name="shaking_distance_remote">相距%1$s公里</string>
+    <string name="shaking_distance_near">%1$s米以内</string>
+    <string name="shaking_but_find_no_body">抱歉，这次没有摇到好友。</string>
+    <string name="shaking_progress_msg">查找中，请稍候...</string>
+    <string name="shaking_exchange_apply">交换申请</string>
+    <string name="shaking_nothing_toast">无结果，请重新再试一次</string>
+    <string name="shaking_to_find_friends">摇一摇，发现身边的朋友</string>
+    <string name="find_friends_title">找朋友</string>
+    <string name="shaking_find_friends">摇一摇</string>
+    <string name="near_by_people_tips">正在查找附近的人</string>
+    <string name="find_no_nearby_people">暂时没有找到附近也使用该功能的人，请稍候再尝试查看。</string>
+    <string name="near_by_people_tab_title">附近的人</string>
+    <string name="finding_your_friends">在梧桐查找你的联系人，请稍候...</string>
+
+    <string name="find_friends_intro_header">在梧桐查找我的手机联系人</string>
+    <string name="find_friends_intro_continuous_footer">定期检查我的通讯录,以及时提供新朋友.</string>
+    <string name="find_friends_intro_skip">跳过</string>
+    
+    <string name="photo_write_comments">写点评论吧</string>
+    <string name="user_no_album">该用户没有相册</string>
+
+    <string name="last_stream_item_load">"已到达最后一条动态"</string>
+    <string name="add_other_info">添加其他信息</string>
+    <string name="get_info_failed">获取信息失败,请刷新...</string>
+    
+    <string name="public_circle_exit">退出</string>
+    <string name="circle_exit_label">退出圈子</string>
+    <string name="public_circle_exit_message">确认退出圈子?</string>
+    <string name="event_exit_message">确认退出事件?</string>
+    
+    <string name="public_circle_shortcut">创建快捷访问</string>
+    
+    <string name="public_circle_exit_toast">提示</string>
+    <string name="public_circle_exit_prompt">作为圈子最后的管理员,您可以退出并解散圈子或者授权给其他成员并退出.</string>
+     <string name="event_exit_prompt">作为事件最后的管理员,您可以退出并解散事件或者授权给其他成员并退出.</string>
+    <string name="public_circle_exit_dialog">解散退出</string>
+    <string name="public_circle_exit_dialog_grant_mamanger">授权退出</string>
+    
+    <string name="invite_people_title">邀请好友</string>
+    <string name="invite_contact_with_phone">电话联系人</string>
+    <string name="invite_contact_with_email">邮箱联系人</string>
+    <string name="invite_have_no_select_toast">请选择一个好友</string>
+    <string name="invite_progress_dialog_message">邀请中,请稍等...</string>
+    
+    <string name="search_from_internet">在网络中搜索\"%1$s\"</string>
+    <string name="search_circle_people">在该类成员中搜索\"%1$s\"</string>
+    
+    <string name="undefind_app_id">未知的对象</string>
+    
+    <string name="request_circle_apply_label">申请加入圈子的请求</string>
+    <string name="request_circle_invited_label">邀请加入圈子的请求</string>
+    
+    <string name="photo_original_quality">原图</string>
+    <string name="photo_high_quality">高清</string>
+    <string name="photo_normal_quality">普清</string>
+    
+    <string name="photo_user_action_save">保存到本地</string>
+    <string name="photo_loading_wait">图片正在加载，请稍等...</string>
+    <string name="photo_save_success">成功保存到</string>
+    <string name="delete_photo">删除照片</string>
+    <string name="sure_delete_photo">确定要删除这张照片吗？</string>
+    <string name="photo_del_all">同时将照片从接收者的相册中删除</string>
+    <string name="del_success">删除成功</string>
+    <string name="del_failed">删除失败</string>
+    
+    <string name="profile_detail_info_title">详细资料</string>
+    
+    <string name="toast_update_failed">修改失败</string>
+    <string name="share_album_mame">分享</string>
+    
+    <string name="circle_notification_set_label">圈子通知设置</string>
+    <string name="circle_receive_enable_label">短信或邮件订阅</string>
+    <string name="circle_add_receive_phone">手机号码</string>
+    <string name="circle_add_receive_phone_summary">添加接收号码</string>
+    
+    <string name="circle_add_receive_email">邮件地址</string>
+    <string name="circle_add_receive_email_summary">添加接收邮件</string>
+    
+    <string name="toast_setting">设置中，请稍等...</string>
+    
+    <string name="public_circle_receive_set">订阅设置</string>
+    
+    <string name="error_toast_get_failed">获取失败,请重试</string>
+    <string name="open_label">开</string>
+    <string name="close_label">关</string>
+    
+    <string name="create_group_label">创建分组</string>
+
+    <string name="wutong_service">梧桐服务</string>
+    <string name="wutong_account_service">梧桐帐号</string>
+    <string name="location_progress_title">正在查找你的位置...</string>
+    
+    <string name="share_source_label">分享</string>
+    <string name="public_circle_contact_info_label">联系方式</string>
+    <string name="circle_profile_member_limit">人数上限:%1$s</string>
+    <string name="empty_tip_title">您和好友的信息已经全部交换</string>
+    <string name="have_no_event">未找到任何事件。</string>
+    
+    <string name="event_start_date">开始日期</string>
+    <string name="event_start_time">开始时间</string>
+    
+    <string name="event_end_date">结束日期(可选)</string>
+    <string name="event_end_time">结束时间</string>
+    
+    <string name="clear">清除</string>
+    <string name="create">创建</string>
+    <string name="create_new_event_title">新事件</string>
+    <string name="event_change_theme_title">更改主题背景</string>
+    
+    <string name="event_title_hint">标题 (晚宴,聚会…)</string>
+    
+    <string name="event_title_upcoming">将要进行</string>
+    <string name="event_title_past">过往</string>
+    
+    <string name="delete_public_circle_message">要解散此圈子吗?</string>
+    <string name="delete_event_message">要删除此事件吗?</string>
+    <string name="no_such_user">无法取得该用户信息</string>
+    <string name="edit_event_title">修改事件</string>
+    <string name="select_theme">选择主题</string>
+
+    <string name="poll_title">投票</string>
+    <string name="restrict_msg">你只有%1$s票</string>
+    <string name="no_choice_msg">你还没有选择</string>
+    <string name="has_voted_msg">你已经投过票</string>
+    <string name="can_vote_msg">投票已截止</string>
+    <string name="poll_header_title">活动名称</string>
+    <string name="poll_header_status">状态</string>
+    <string name="poll_incoming_title">未开始</string>
+    <string name="poll_going_title">进行中</string>
+    <string name="poll_ending_title">已截止</string>
+    <string name="detail_poll_tip_title">请勾选你所支持的作品，确定投票！</string>
+    <string name="no_deadline">无截止日期</string>
+    <string name="sponsor_msg">发起人:%1$s</string>
+    <string name="left_time">%1$s天</string>
+    <string name="attend_count">参与人数:%1$s</string>
+    <string name="voted_poll">我已投</string>
+    <string name="event_in_member_title">参加</string>
+    <string name="event_waiting_title">未回复</string>
+    <string name="invite_more">邀请更多人</string>
+    <string name="i_am_going">我要参加</string>
+    <string name="public_poll">公共投票</string>
+    <string name="poll_by_me">我发起的投票</string>
+    <string name="invited_me_poll">邀请我的投票</string>
+    <string name="attend_friends_title">参与投票的好友</string>
+    <string name="no_friend_vote">您没有好友参与投票</string>
+    <string name="confirm_delete_poll">确认取消您发布的投票吗?</string>
+    <string name="delete_poll">取消投票</string>
+    
+    
+    <string name="import_to_calender">导入日历</string>
+    <string name="import_to_calender">导出到日历</string>
+    <string name="import_to_calender_successful">导出成功</string>
+    <string name="already_import">该事件已经导出到日历</string>
+    
+    <string name="view_top">置顶帖</string>
+    <string name="voting_progress_mes">投票中,请稍等…</string>
+    <string name="vote_successfully">投票成功</string>
+    <string name="create_vote_successfully">创建投票成功</string>
+    <string name="vote_left_time">距截止日期还有%1$s天</string>
+    <string name="vote_left_ticket_count">你可投:%1$s票</string>
+    <string name="vote_left_ticket_zero">你已投完</string>
+    <string name="vote_finished">投票已截止</string>
+    <string name="vote_left_ticket_voted">你已投:%1$s票</string>
+    <string name="vote_left_ticket_unvote">你未投票</string>
+    <string name="top_list_title">修改标题</string>
+    <string name="set_top">置顶</string>
+    <string name="cancel_top">取消置顶</string>
+    <string name="no_top_stream">没有动态.</string>
+    <string name="clear_all_notification">您要清除所有的通知么？</string>
+    <string name="clear_notification_failed">清除通知失败</string>
+    
+    <string name="invite_set_title">是否直接加入被邀请者</string>
+    <string name="comment_count_title">评论:%1$s条</string>
+    <string name="link_title">链接</string>
+    <string name="save_link_label">保存到书签</string>
+    <string name="share_link_label">分享网页</string>
+    <string name="open_with_browser">在浏览器中打开</string>
+    <string name="already_import_link">该链接已经导出到书签</string>
+
+    <string name="post_delete_question">要删除这条信息吗？</string>
+    <string name="post_mute_question">要忽略这条信息吗？</string>
+    <string name="post_report_question">要举报这条信息吗？</string>
+    
+    <string name="company">公司</string>
+     <string name="my_company">我所在公司</string>
+     <string name="company_person_count">人数:%1$s</string>
+     <string name="department_list">部门列表</string>
+     <string name="department_in_company">现有部门</string>
+    
+    <string name="does_not_repeat">一次性活动</string>
+    <string name="does_not_repeat">一次性事件</string>
+    <string name="daily">每天</string>
+    <string name="every_weekday">每个工作日（周一至周五）</string>
+    <string name="weekly">每周（每周的%1$s）</string>
+    <string name="monthly_on_day_count">每月（每月的%1$s%2$s）"</string>
+    <string name="monthly" >每月</string>
+    <string name="yearly_plain">每年</string>
+    <string name="monthly_on_day">每月（%1$s日）</string>
+    <string name="yearly">每年（%1$s）</string>
+    <string name="compose_top_title">发布置顶信息</string>
+    <string name="share_photo_title">分享图片</string>
+    <string name="other_text">其他</string>
+    <string name="add_item_title">添加投票选项</string>
+    <string name="add_one_item">再加一项</string>
+
+    <string name="me">我</string>
+    <string name="back_to_top">回顶</string>
+    <string name="comment_count_label">%1$s条评论</string>
+    
+    <string name="profile_control_label">信息控制</string>
+    <string name="insert_smiley_title">插入表情</string>
+    <string name="item_copy">复制消息</string>
+    <string name="content_copy">内容已复制到剪贴板.</string>
+    <string name="ntf_forme_label">跟我相关</string>
+    <string name="ntf_share_label">信息分享</string>
+    <string name="create_poll">创建投票</string>
+    <string name="poll_title_hint">标题(25字以内)</string>
+    <string name="poll_item_hint">投票选项(25字以内)</string>
+    <string name="can_poll_count_title">可投%1$s票</string>
+    <string name="allow_add_item_title">允许参与者追加投票选项</string>
+    <string name="invite_poll_attendee">邀请参与者</string>
+    <string name="send_email_title">向邀请者发送邮件提醒</string>
+    <string name="send_email_tips">发送邮件</string>
+    <string name="send_sms_tips">发送短信</string>
+    <string name="add_poll_item">添加选项</string>
+    <string name="private_poll_toast">偷偷投票，需要输入邀请者</string>
+    <string name="poll_title_toast">投票需要输入标题</string>
+    <string name="poll_item_toast">投票至少需要输入2个选项</string>
+    <string name="poll_creating_dialog_msg">创建中，请稍等…</string>
+    <string name="poll_quit_dialog_msg">要放弃这个投票么？</string>
+    <string name="poll_mode_single">一次性投票</string>
+    <string name="poll_mode_pending">增量式投票</string>
+    <string name="poll_mode_revert">反悔式投票</string>
+    <string name="add_poll_item_tip">您最多可以添加%1$s个选项</string>
+    <string name="revert_poll_add_item_msg">您可以去掉勾选的选项，然后继续添加.</string>
+
+    <string name="invitation_message_hint">跟朋友说几句话吧.</string>
+    <string name="invitation_also_send">邀请同时发送到</string>
+    <string name="invitation_also_send_none">不发送</string>
+    <string name="invitation_also_send_sms">短信</string>
+    <string name="invitation_also_send_email">邮件</string>
+    <string name="invitation_also_send_both">短信和邮件</string>
+    <string name="invitation_message_title">邀请留言</string>
+    <string name="invitation_discard_title">放弃留言</string>
+    <string name="invitation_discard_message">丢弃输入的文字，发送邀请.</string>
+    <string name="page_label">主页</string>
+    <string name="create_page_label">创建主页</string>
+    <string name="page_fans_count">%1$s粉丝</string>
+      <string name="edit_page">编辑主页</string>
+      <string name="label_fax">传真</string>
+      <string name="label_website">网站</string>
+      <string name="select_cover_photo">选择封面</string>
+      <string name="select_profile_photo">选择个人资料图片</string>
+      <string name="select_circle_photo">选择标志</string>
+
+    <string name="friends_all">全部好友</string>
+    <string name="group_management">分组管理</string>
+    <string name="str_people">"%1$s 人"</string>
+      
+      <string name="have_no_page">你还没有主页。</string>
+      <string name="organization_circle_label">组织机构</string>
+      <string name="organization_circle_summary">公司,学校 创建一个属于组织的圈子</string>
+      <string name="interested_circle_label">兴趣圈</string>
+      <string name="interested_circle_summary">摄影,旅游 创建一个属于自己的圈子</string>
+      <string name="create_organization">创建组织</string>
+      
+      <string name="delete_page_message">要删除此主页吗?</string>
+      <string name="following">加关注</string>
+      <string name="un_follow">取消关注</string>
+      
+      <string name="circle_as_page">生成主页</string>
+    <string name="item_tags">加标签</string>
+      
+      <string name="create_class_title">创建班级</string>
+      <string name="create_department_title">创建部门</string>
+      <string name="create_organization_title">创建组织机构</string>
+      <string name="child_circle_label_department">部门</string>
+      <string name="child_circle_label_class">班级</string>
+      <string name="child_circle_label_project">创建公司项目组</string>
+      <string name="child_circle_label_application">创建应用开发组</string>
+      
+      <string name="class_list">班级列表</string>
+      <string name="search_page_result_null">没有找到相关的主页</string>
+      
+      <string name="searchview_description_search">"搜索"</string>
+      <string name="searchview_description_voice">"语音搜索"</string>
+      <string name="searchview_description_submit">"提交查询"</string>
+      <string name="searchview_description_clear">"清除查询"</string>
+      <string name="searchview_description_query">"搜索查询"</string>
+
+    <string name="view_all_comment">查看所有%1$s评论</string>
+    <string name="create_event_label">创建事件</string>
+    <string name="create_poll_label">创建投票</string>
+
+    <string name="dlg_message_add_recipient">现在就添加的收件人</string>
+    <string name="circle_have_no_poll_label">此圈子还没有投票</string>
+    <string name="circle_have_no_event_label">此圈子还没有事件</string>
+    
+    <string name="create_poll_msg_label">此圈子还没有投票, 快来发起投票吧~</string>
+    <string name="create_event_msg_label">此圈子还没有事件, 快去创建事件吧~</string>
+    
+    <string name="create_as_page_msg_label">此圈子还没有主页, 确认为该圈子生成主页？</string>
+    <string name="have_no_permission_to_seePage">你无法查看该圈子主页</string>
+    
+    <string name="whose_event">%1$s的事件</string>
+    
+    <string name="create_circle_msg_label">该主页还没有圈子, 快去创建圈子吧~</string>
+    <string name="check_follow_msg_label">关注之后才能查看哦, 快来关注吧~</string>
+    <string name="page_have_no_circle_label">此主页没有圈子</string>
+
+    <string name="app_share_force_upgrade">"应用分享已经过期, 现在更新."</string>
+
+    <string name="wutong_home_picker_header">请选择主屏</string>
+    <string name="wutong_home_classical_view">经典主屏</string>
+    
+    <string name="resources_label">资源</string>
+
+    <string name="download_app_title">点击安装\"应用分享\"</string>
+    <string name="download_app_description">\"应用分享\"是一款专注也管理备份自己的应用，以及和人们分享的软件。下载安装后，点击一个应用可直接进入该软件查看详情。</string>
+
+    <string name="share_my_location">分享我的位置信息</string>
+    
+    <string name="invalid_url">无效网址</string>
+    <string name="comment_referred_text">回复%1$s %2$s</string>
+    
+    <string name="frequently_contacted_label">经常联系的人</string>
+    <string name="frequently_circle_label">常用圈子</string>
+    
+    <string name="search_title">搜索结果</string>
+    <string name="search_circles_title">搜圈子</string>
+    <string name="search_pages_title">搜主页</string>
+    <string name="search_people_title">搜人</string>
+    <string name="search_post_title">搜动态</string>
+    <string name="format_location_distance">%1$s米</string>
+    
+    <string name="no_category">无分类</string>
+    <string name="all_category_label">所有信息</string>
+    <string name="add_category_label">新增分类</string>
+    
+    <string name="category_exist_message">新增分类已存在</string>
+    
+    <string name="ntf_label_tome">给我的消息</string>
+    <string name="ntf_label_other">其他消息</string>
+    <string name="ntf_see_all">查看更多</string>
+    <string name="circle_member_label">成员</string>
+    
+    <string name="email_label">邮件</string>
+    <string name="phone_label">电话</string>
+    
+    <string name="sync_default_top_circle">正在获取默认圈子,请稍等</string>
+    <string name="more_action">操作</string>
+    
+    <string name="just_saying_label">公开</string>
+    <string name="privacy_saying_label">私密</string>
+    
+    <string name="home_label">首页</string>
+    
+    <string name="search_all_hint">搜动态,人…</string>
+    
+    <string name="write_comment_hint">添加评论…</string>
+    <string name="department_circle_label">部门</string>
+    <string name="project_circle_label">项目组</string>
+    <string name="application_circle_label">应用开发组</string>
+</resources>

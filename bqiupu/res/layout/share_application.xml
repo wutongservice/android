@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_content"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:layout_marginLeft="@dimen/small_text_margin_left"
+    android:layout_marginRight="@dimen/small_text_margin_right"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="@dimen/app_icon_width"
+        android:layout_height="@dimen/app_icon_height"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/small_text_margin_left"
+        android:layout_marginRight="@dimen/small_text_margin_right" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_icon"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/link_remove"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/link_title_size" />
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_icon"
+            android:layout_below="@id/app_title"
+            android:layout_toLeftOf="@+id/link_remove"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="left"
+            android:textAppearance="@style/sns_link"
+            android:textSize="@dimen/link_url_size" />
+        
+        <TextView
+            android:id="@+id/photo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_icon"
+            android:layout_toLeftOf="@+id/app_remove"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/link_title_size"
+            android:visibility="gone" />
+
+    <ImageView 
+        android:id="@+id/app_remove"
+        style="@style/list_item_delete"
+        android:src="@drawable/subtract" />
+
+</RelativeLayout>

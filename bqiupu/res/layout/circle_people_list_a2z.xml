@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/header_list_layout_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+    <com.borqs.common.view.AtoZ
+            android:id="@+id/atoz"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentRight="true"/>
+
+
+    <include
+            android:id="@+id/search_span"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/atoz"
+            layout="@layout/inline_search_span_view"
+            android:visibility="gone"/>
+
+    <LinearLayout android:id="@+id/id_add_people_ll"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:layout_toLeftOf="@id/atoz"
+                  android:layout_below="@id/search_span"
+                  android:background="?attr/listSelector">
+
+        <RelativeLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+            <ImageView
+                    android:id="@+id/id_title_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_menu_add_people"/>
+
+            <LinearLayout
+                    android:id="@+id/id_title_span_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/id_arrow_icon"
+                    android:layout_toRightOf="@id/id_title_icon"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                <TextView android:id="@+id/Privacy_circle_tv"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:textAppearance="@style/sns_link_big"
+                          android:text="@string/add_people_to_circle"
+                          android:paddingLeft="10dp"
+                          android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@id/id_arrow_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/privacy_circle_itural"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip"/>
+
+        </RelativeLayout>
+        <TextView
+                android:id="@+id/id_span_view"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="@color/head_title_span_view_bg"/>
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/friends_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/atoz"
+            android:layout_below="@id/id_add_people_ll"
+            android:cacheColorHint="#00000000"
+            android:divider="?attr/listDivider"
+            android:listSelector="?attr/listSelector"
+            android:scrollbars="none"/>
+
+    <!--
+         include layout="@layout/common_list_view"
+             android:id="@+id/friends_list"
+             android:scrollbars="none"/
+    -->
+
+</RelativeLayout>

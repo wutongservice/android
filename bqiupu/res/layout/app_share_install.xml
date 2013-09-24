@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:padding="@dimen/default_padding">
+    <LinearLayout
+            android:id="@+id/app_share_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/list_item_height"
+            android:padding="@dimen/default_padding"
+            android:background="@color/light_blue"
+            android:orientation="vertical"
+            android:gravity="right|center_vertical">
+
+        <TextView
+                style="@style/edit_user_profiles_style"
+                android:text="@string/download_app_title"/>
+
+        <TextView
+                style="@style/edit_user_profiles_min_style"
+                android:drawableRight="@drawable/home_screen_app_icon_default"
+                android:text="@string/download_app_description"
+                />
+    </LinearLayout>
+
+    <RelativeLayout
+            style="@style/edit_user_profiles_style"
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_padding"
+            android:gravity="left"
+            android:background="@drawable/list_background_all">
+        <TextView
+                android:id="@+id/app_package_summary"
+                style="@style/edit_user_profiles_style"
+                android:drawableLeft="@drawable/default_app_icon"/>
+
+        <TextView android:id="@+id/app_package_open"
+                style="@style/bottom_compose_bar_view"
+                android:layout_width="match_parent"
+                android:layout_below="@id/app_package_summary"
+                android:padding="@dimen/default_padding"
+                android:text="@string/open_label"
+                android:drawableTop="@drawable/yes"
+                android:background="?attr/buttonSelectableBackground"
+                android:gravity="center_horizontal"
+                />
+        <TextView android:id="@+id/app_package_install"
+                  style="@style/bottom_compose_bar_view"
+                  android:layout_width="match_parent"
+                  android:layout_below="@id/app_package_summary"
+                  android:padding="@dimen/default_padding"
+                  android:text="@string/install_app"
+                  android:drawableTop="@drawable/menu_icon_save"
+                  android:background="?attr/buttonSelectableBackground"
+                  android:gravity="center_horizontal"
+                />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.borqs.qiupu.AddressPadMini
+        android:id="@+id/receiver_editor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:inputType="textEmailAddress|textMultiLine"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:textSize="16dip"
+        android:paddingLeft="@dimen/large_text_padding_left"
+        android:paddingRight="@dimen/large_text_padding_left"
+        android:paddingTop="@dimen/default_text_padding_top"
+        android:paddingBottom="@dimen/default_text_padding_bottom"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/address_span"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider"
+        android:visibility="gone" />
+
+</LinearLayout>

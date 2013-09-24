@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/QuickContactListItemStyle" >
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="?attr/buttonSelectableBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

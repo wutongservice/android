@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_privacy_set"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/privacy_set_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/privacy_set_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_text_margin_left"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/privacy_selected_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_set_open"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingBottom="@dimen/default_text_padding_bottom"
+                android:paddingLeft="@dimen/small_text_padding_left"
+                android:paddingTop="@dimen/default_text_padding_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/privacy_selected_tv"
+                android:layout_alignRight="@id/privacy_selected_tv"
+                android:src="@drawable/account_spinner_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_approve"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/approve_set_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/approve_set_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_text_margin_left"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/approve_selected_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/approve_set_manager"
+                android:paddingBottom="@dimen/default_text_padding_bottom"
+                android:paddingLeft="@dimen/small_text_padding_left"
+                android:paddingTop="@dimen/default_text_padding_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/approve_selected_tv"
+                android:layout_alignRight="@id/approve_selected_tv"
+                android:src="@drawable/account_spinner_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_join_permission"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/list_background_all"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/join_set_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/join_permission_title"
+            android:textAppearance="@style/edit_user_profiles_style" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_text_margin_left"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/join_selected_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/join_permission_verified"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/default_text_padding_bottom"
+                android:paddingLeft="@dimen/small_text_padding_left"
+                android:paddingTop="@dimen/default_text_padding_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/join_selected_tv"
+                android:layout_alignRight="@id/join_selected_tv"
+                android:src="@drawable/account_spinner_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <CheckBox android:id="@+id/invite_set_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invite_set_title"
+         android:layout_marginTop="@dimen/small_text_margin_top"/>
+
+    <CheckBox 
+        android:id="@+id/send_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_email_tips"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:visibility="gone"/>
+
+    <CheckBox 
+        android:id="@+id/send_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_sms_tips"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:visibility="gone"/>
+
+</LinearLayout>

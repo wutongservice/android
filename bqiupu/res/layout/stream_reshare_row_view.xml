@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/stream_row_padding_right"
+                android:paddingBottom="@dimen/stream_row_padding_bottom">
+
+    <include layout="@layout/stream_row_view_header"
+             android:id="@+id/row_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stream_item_content_padding"/>
+
+    <ViewStub
+            android:id="@+id/expandable_span"
+            android:inflatedId="@+id/expandable_span"
+
+            android:layout="@layout/default_expandable_text_panel_item"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/row_header"
+            android:layout_marginLeft="@dimen/stream_row_offset_content_reshare_left"
+            android:layout_marginRight="10dip"/>
+
+    <include layout="@layout/stream_row_attachment_reshare"
+            android:id="@+id/stream_reshared_stream"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expandable_span"
+            android:layout_marginTop="@dimen/stream_row_margin_vertical"
+            android:layout_marginLeft="@dimen/stream_row_offset_content_reshare_left"
+            android:visibility="gone"/>
+
+    <include
+            android:id="@+id/stream_row_view_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stream_reshared_stream"
+            layout="@layout/stream_row_view_footer"/>
+</RelativeLayout>

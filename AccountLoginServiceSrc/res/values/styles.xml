@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="Theme.AccountCommon.Base.Light" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@color/acl_bg_color</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="Theme.Base.Light.NoTitle" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- style name="Theme.AccountCommon.Base.Light.Transparent" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@color/acl_transparent</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style-->
+    
+    <!-- layout -->
+    <style name="acl_outer_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">@dimen/acl_item_margin_space_left</item>
+        <item name="android:layout_marginRight">@dimen/acl_item_margin_space_right</item>        
+    </style>
+    <style name="acl_login_outer_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">@dimen/acl_item_margin_space_left</item>
+        <item name="android:layout_marginRight">@dimen/acl_item_margin_space_right</item>        
+    </style>
+    <style name="acl_input_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/acl_login_input_height</item>
+        <item name="android:orientation">horizontal</item>  
+        <item name="android:gravity">center_vertical</item>      
+        <item name="android:layout_marginLeft">@dimen/acl_layout_padding_left</item>
+        <item name="android:layout_marginRight">@dimen/acl_layout_padding_right</item>
+    </style>
+    <style name="acl_input_layout_new">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/acl_login_input_height</item>
+        <item name="android:orientation">horizontal</item>  
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>  
+        <item name="android:background">@drawable/acl_input_box_bg</item> 
+    </style>
+    <style name="acl_user_detail_outer_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>   
+        <item name="android:background">@drawable/acl_login_bg</item>
+    </style>
+        
+    <!-- icon style -->
+    <style name="acl_base_icon_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">?attr/acl_customSelectableBackground</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="acl_title_bar_icon" parent="@style/acl_base_icon_style">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">@dimen/acl_text_padding_left</item>
+        <item name="android:paddingRight">@dimen/acl_text_padding_right</item>
+    </style>
+
+    <style name="acl_button_style">
+        <item name="android:layout_height">@dimen/acl_bottom_button_height</item>
+        <item name="android:layout_width">@dimen/acl_bottom_button_width</item>
+        <item name="android:background">@drawable/acl_button_bg</item>
+        <item name="android:textColor">@color/acl_light_black</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+        
+    <style name="acl_bottom_single_button_style" parent="@style/acl_button_style">
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    
+    <style name="acl_tv_prompt_style">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/acl_light_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="acl_input_tv_style">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/acl_light_black</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@color/acl_transparent</item>
+    </style>
+    <style name="acl_input_tv_style2" parent="acl_input_tv_style">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    
+    <style name="acl_button_style_new">
+        <item name="android:layout_height">@dimen/acl_bottom_button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/acl_button_bg</item>
+        <item name="android:textColor">@color/acl_white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+    
+</resources>

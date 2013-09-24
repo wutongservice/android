@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="category_width">80dip</dimen>
+    <dimen name="exchange_vard_title_left_padding">130dip</dimen>
+    <dimen name="compose_comment_text_default_height">150dip</dimen>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_exchange_vcard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qiupu_bg_color"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/friends_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/qiupu_bg_color"
+        android:divider="@drawable/padded_list_divider"
+        android:listSelector="?attr/listSelector"
+        android:scrollbars="none" />
+
+    <include 
+        android:id="@+id/my_vcard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="15dip"
+        layout="@layout/stream_row_vcard"/>
+    
+    <LinearLayout 
+        android:id="@+id/lbs_container"
+        android:layout_below="@id/my_vcard_layout"
+        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+	    <LinearLayout
+	        android:id="@+id/shaking_hands"
+	        android:layout_width="fill_parent"
+	        android:layout_height="100.0dip"
+	        android:gravity="center" >
+
+	        <ImageView
+	            android:id="@+id/lbs_shake_hand_left"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/bump_shake_hand" />
+
+	        <ImageView
+	            android:id="@+id/lbs_shake_hand_right"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5.0dip"
+	            android:src="@drawable/bump_shake_hand" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/lbs_shake_content"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20.0dip"
+	        android:orientation="vertical"
+	        android:padding="15.0dip" >
+
+	        <TextView
+	            android:id="@+id/lbs_shake_title"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/lbs_card_desc_1"
+	            android:textSize="18.0sp" />
+
+	        <TextView
+	            android:id="@+id/lbs_shake_subtitle"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5.0dip"
+	            android:gravity="center"
+	            android:text="@string/lbs_card_desc_2"
+	            android:textSize="18.0sp" />
+	    </LinearLayout>
+
+	    <TextView
+	        android:id="@+id/find_nobody"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20.0dip"
+	        android:gravity="center"
+	        android:textColor="@color/exchange_vcard_tip_color"
+	        android:textSize="18.0sp"
+	        android:visibility="gone" />
+    
+    </LinearLayout>
+
+</RelativeLayout>

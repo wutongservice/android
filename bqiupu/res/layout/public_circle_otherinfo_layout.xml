@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circle_info_item_normal"
+    android:paddingBottom="30dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right" >
+
+        <TextView
+            android:id="@+id/other_info_title"
+            style="@style/shadow_white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_settings_other_info_title"
+            android:textSize="16.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/member_limit"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_grey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/circle_des_info_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="@dimen/default_text_padding_right"
+        android:paddingTop="@dimen/default_text_margin_top" >
+
+        <TextView
+            android:id="@+id/public_circle_des_title"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/public_des_info"
+            android:textColor="@color/text_grey"
+            android:textSize="14.0sp" />
+
+        <View
+            android:id="@+id/span_view1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/public_circle_des_title"
+            android:background="@color/circle_profile_span" />
+
+        <TextView
+            android:id="@+id/public_circle_des"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/span_view1"
+            android:paddingTop="@dimen/default_text_margin_top"
+            android:paddingRight="@dimen/default_text_padding_right"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/address_info_title"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingTop="@dimen/default_text_margin_top"
+        android:text="@string/public_circle_address"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@+id/span_view2"
+        style="@style/circle_profile_span_view" />
+
+    <RelativeLayout
+        android:id="@+id/address_info_ll"
+        style="@style/circle_profile_item"
+        android:layout_below="@id/span_view2" >
+
+        <TextView
+            android:id="@+id/address_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/icon_in_member_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_address_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/contact_info_title"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_text_padding_right"
+        android:paddingTop="@dimen/default_text_margin_top"
+        android:text="@string/public_circle_contact_info_label"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@+id/span_view3"
+        style="@style/circle_profile_span_view" />
+
+    <RelativeLayout
+        android:id="@+id/phone_info_ll"
+        style="@style/circle_profile_item"
+        android:layout_below="@id/span_view3" >
+
+        <TextView
+            android:id="@+id/phone_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_phone_icon" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/email_info_ll"
+        style="@style/circle_profile_item" >
+
+        <TextView
+            android:id="@+id/email_info"
+            style="@style/shadow_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_grey"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_email_icon" />
+    </RelativeLayout>
+
+</LinearLayout>

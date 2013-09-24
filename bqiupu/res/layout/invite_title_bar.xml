@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/invite_header"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@drawable/actionbar_bg" >
+
+    <TextView
+        android:id="@+id/head_cancel"
+        style="@style/invite_title_bar_style"
+        android:layout_alignParentLeft="true"
+        android:text="@string/label_cancel" />
+
+    <TextView
+        android:id="@+id/head_title"
+        style="@style/invite_title_bar_style"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/title_bar_title_left_padding"
+        android:textAppearance="?android:attr/textAppearanceInverse"
+        android:textSize="@dimen/title_text_size"
+        android:layout_centerHorizontal="true"
+        android:text="@string/invite_friends" />
+
+    <TextView
+        android:id="@+id/head_send"
+        style="@style/invite_title_bar_style"
+        android:text="@string/send_action_title"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

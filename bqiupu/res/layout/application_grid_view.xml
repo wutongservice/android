@@ -1,0 +1,10 @@
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/rate_span_width"
+    android:paddingTop="@dimen/grid_top_padding"
+    android:horizontalSpacing="@dimen/commit_button_width"
+    android:numColumns="auto_fit"
+    android:columnWidth="@dimen/grid_column_width"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    android:listSelector="?attr/listSelector" />

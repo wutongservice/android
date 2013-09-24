@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/circle_event_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/tv_event_title"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/text_grey"
+        android:textSize="14.0sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/view_more_event"
+        style="@style/shadow_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_event_title"
+        android:layout_alignParentRight="true"
+        android:background="?attr/buttonSelectableBackground"
+        android:text="@string/im_more"
+        android:textColor="@color/text_grey"
+        android:padding="2dip"
+        android:textSize="14.0sp" />
+
+    <View
+        android:id="@+id/event_divider"
+        style="@style/circle_profile_span_view"
+        android:layout_below="@id/tv_event_title"  />
+
+    <LinearLayout
+        android:id="@+id/event_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_divider"
+        android:orientation="vertical" />
+
+</RelativeLayout>

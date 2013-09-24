@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.borqs.common.view.KeyboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poll_create_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_container"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/poll_target_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/editline" >
+
+                <ImageView
+                    android:id="@+id/choose_share_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/buttonSelectableBackground"
+                    android:padding="5dip"
+                    android:src="@drawable/ic_add_contact_holo_comment" />
+
+                <com.borqs.qiupu.AddressPadMini
+                    android:id="@+id/receiver_editor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/choose_share_user"
+                    android:background="@null"
+                    android:hint="@string/invite_poll_attendee"
+                    android:inputType="textEmailAddress|textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="9dp"
+                    android:paddingTop="5dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/poll_title"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/editline"
+                android:hint="@string/poll_title_hint"
+                android:linksClickable="false"
+                android:maxLength="25"
+                android:paddingLeft="5dip"
+                android:paddingTop="@dimen/small_text_margin_top"
+                android:textSize="14dip" />
+
+            <com.borqs.common.view.PollTimeview
+                android:id="@+id/time_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip" />
+
+            <LinearLayout
+                android:id="@+id/poll_item_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="3dip"
+                android:paddingRight="3dip" >
+
+                <include
+                    android:id="@+id/poll_default_item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/poll_default_item_ui" />
+
+                <include
+                    android:id="@+id/poll_default_item2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/poll_default_item_ui" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_poll_item_container"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:paddingLeft="3dip" >
+
+                <ImageView
+                    android:id="@+id/add_poll_item_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/create_contact" />
+
+                <TextView
+                    android:id="@+id/add_poll_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/add_poll_item_icon"
+                    android:text="@string/add_poll_item" />
+            </RelativeLayout>
+
+            <Spinner
+                android:id="@+id/can_poll_count_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/poll_background_all"
+                android:paddingLeft="5dip" />
+
+            <Spinner
+                android:id="@+id/poll_mode_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/poll_background_all"
+                android:paddingLeft="5dip" />
+
+            <CheckBox
+                android:id="@+id/allow_add_item_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allow_add_item_title"
+                android:textSize="14dip"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/send_email_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_email_tips"
+                android:textSize="14dip"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/send_sms_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_sms_tips"
+                android:textSize="14dip"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/poll_description"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:background="@drawable/editline"
+                android:hint="@string/label_description"
+                android:linksClickable="false"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingTop="@dimen/small_text_margin_top"
+                android:textSize="14dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.borqs.common.view.KeyboardLayout>

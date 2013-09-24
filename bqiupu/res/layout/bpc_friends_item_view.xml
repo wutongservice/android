@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+android:layout_height="wrap_content" >
+<View 
+    android:id="@+id/id_divider"
+         android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider"
+        android:layout_alignParentBottom="true"/>
+<RelativeLayout 
+    android:layout_above="@id/id_divider"
+style="@style/friendsListView" >
+
+    <ImageView
+        android:id="@+id/id_friend_icon"
+        android:layout_width="@dimen/stream_row_size_profile_icon"
+	        android:layout_height="@dimen/stream_row_size_profile_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_friend_icon"
+        android:layout_alignRight="@id/id_friend_icon"
+        android:src="@drawable/account_spinner_icon"
+        android:visibility="gone" />
+    
+    <RelativeLayout
+        android:id="@+id/friends_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/default_text_padding_left"
+        android:layout_toLeftOf="@+id/friend_phonebook_region"
+        android:layout_toRightOf="@id/id_friend_icon" >
+
+        <RelativeLayout
+            android:id="@+id/id_friend_name_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/id_friend_name"
+                style="@style/peopleName"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/id_friend_see_my_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/small_text_padding_left"
+                android:layout_toRightOf="@id/id_friend_name"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:linksClickable="false"
+                android:singleLine="true"
+                android:textAppearance="@style/sns_time"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_friend_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/id_friend_name_ll"
+            android:layout_below="@id/id_friend_name_ll"
+            android:drawableLeft="@drawable/people_circle_icon_small"
+            android:drawablePadding="@dimen/small_text_padding_left"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:linksClickable="false"
+            android:paddingTop="@dimen/people_item_gap_between_name_and_circles"
+            android:singleLine="true"
+            android:textAppearance="@style/people_cirlce" />
+
+        <TextView
+            android:id="@+id/id_friend_from_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/id_friend_name_ll"
+            android:layout_below="@id/id_friend_name_ll"
+            android:linksClickable="false"
+            android:paddingTop="@dimen/people_item_gap_between_name_and_circles"
+            android:textAppearance="@style/sns_time"
+            android:visibility="gone" />
+    </RelativeLayout>
+	<!-- <ImageView
+                android:id="@+id/img_online"
+                style="@style/list_item_icon"
+                android:src="@drawable/icon_grey" 
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                /> -->
+    <RelativeLayout
+        android:id="@+id/friend_phonebook_region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right|center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/user_call_email_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- LinearLayout
+                    android:id="@+id/call_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/friend_call"
+                        style="@style/list_item_icon"
+                        android:src="@drawable/sym_action_call" />
+
+                    <ImageView
+                        android:id="@+id/friend_email"
+                        style="@style/list_item_icon"
+                        android:src="@drawable/sym_action_email" />
+                </LinearLayout -->
+
+                <!-- TextView
+                    android:id="@+id/friend_request"
+                    android:layout_width="64dip"
+                    android:layout_height="30dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/exchange_icon_bg"
+                    android:gravity="center"
+                    android:text="@string/friends_item_request_exchange"
+                    android:textAppearance="@style/sns_exchange_profile" / -->
+
+                <ImageView
+                    android:id="@+id/add_other_user"
+                    style="@style/list_item_icon"
+                    android:src="@drawable/ic_btn_add_member"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/delete_user"
+                    style="@style/list_item_icon"
+                    android:src="@drawable/subtract"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/may_add_delete_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/may_know_add"
+                style="@style/list_item_icon"
+                android:src="@drawable/ic_btn_add_member" />
+
+            <ImageView
+                android:id="@+id/may_know_delete"
+                style="@style/list_item_icon"
+                android:layout_toRightOf="@id/may_know_add"
+                android:src="@drawable/ic_btn_dismiss_person" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+
+</RelativeLayout>
+
+</RelativeLayout>

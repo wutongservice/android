@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:gravity="center">
+
+    <ScrollView
+            android:orientation="vertical"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+
+            <TextView android:id="@+id/upload_header"
+                      android:textSize="18dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/signup_application_upload_header"
+                      android:gravity="left"
+                    />
+
+            <LinearLayout
+                    android:id="@+id/upload_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                <ImageView android:id="@+id/upload_image"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/menu_backup_all"
+                           android:layout_gravity="center_vertical"
+                           android:layout_alignParentLeft="true"
+                           android:paddingRight="10dp"
+                        />
+
+                <TextView android:id="@+id/upload_desc"
+                          android:textSize="18dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/signup_application_upload_desc"
+                        />
+            </LinearLayout>
+
+            <RadioGroup
+                    android:id="@+id/upload_radio_group"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:textSize="16dp"
+                    >
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signup_application_upload_radio_1"
+                        android:textSize="16dp"
+                        android:id="@+id/both"
+                        />
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signup_application_upload_radio_2"
+                        android:textSize="16dp"
+                        android:id="@+id/wifi_only"/>
+                <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signup_application_upload_radio_3"
+                        android:textSize="16dp"
+                        android:id="@+id/none"/>
+            </RadioGroup>
+
+            <TextView android:id="@+id/upload_title"
+                      android:textSize="18dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/signup_application_upload_warning"
+                      android:paddingTop="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingTop="2.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <Button android:id="@+id/close_button"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_marginBottom="3.0dip"
+                android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+</LinearLayout>

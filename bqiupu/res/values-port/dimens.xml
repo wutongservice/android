@@ -1,0 +1,5 @@
+
+<resources>
+    <dimen name="allapps_text_paddingTop">4dp</dimen>
+    <dimen name="allapps_text_drawablePadding">0dp</dimen>
+</resources>

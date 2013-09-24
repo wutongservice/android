@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="77dp"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:layout_gravity="center">
+    <ImageView android:id="@+id/apk_icon"
+        android:layout_width="@dimen/app_icon_width"
+        android:layout_height="@dimen/app_icon_height"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="center" />
+    
+	<TextView android:id="@+id/apk_title" 
+        android:layout_width="match_parent"
+		android:layout_height="32dp"
+        android:gravity="center"
+        android:textSize="@dimen/app_text_size"
+        android:textColor="@color/grid_view_bottom_text_color"
+        android:layout_below="@id/apk_icon" />
+</RelativeLayout>

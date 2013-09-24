@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="@dimen/compose_face_top_margin"
+    android:layout_height="72dip"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:id="@+id/attchment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/share_add_bg"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/toggle_location"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/bottom_location" />
+
+        <ImageView
+            android:id="@+id/toggle_link"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/bottom_link" />
+
+        <ImageView
+            android:id="@+id/toggle_app"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/bottom_app" />
+
+        <ImageView
+            android:id="@+id/toggle_photo"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/attach_camera" />
+
+        <ImageView
+            android:id="@+id/toggle_file"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/create_file_icon" />
+
+        <ImageView
+            android:id="@+id/toggle_contact"
+            style="@style/compose_bottom_imageview"
+            android:src="@drawable/bottom_vcard" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cursor_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/attchment_layout"
+        android:layout_marginLeft="-36dp"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/share_cursor"/>
+
+</RelativeLayout>

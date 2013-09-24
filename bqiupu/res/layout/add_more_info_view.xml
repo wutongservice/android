@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/profile_activity_background">
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal"/>
+
+    <TextView
+        android:id="@+id/summary_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dip"
+        android:textAppearance="@style/sns_big_username"
+        android:gravity="center"
+        android:layout_below="@id/titlebar_container"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="20dip"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/summary_tv">
+
+        <EditText
+            android:id="@+id/edit_value"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:capitalize="none"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:scrollHorizontally="true"/>
+
+        <Button android:id="@+id/add_btn"
+            style="@style/app_profile_button_style"
+            android:layout_marginBottom="20dip"/>
+
+        <Button android:id="@+id/delete_bind"
+            style="@style/app_profile_button_style"
+            android:layout_marginBottom="20dip"
+            android:text="@string/delete_bind"
+            android:visibility="gone"/>
+
+        <Button android:id="@+id/resend_verify"
+            style="@style/app_profile_button_style"
+            android:visibility="gone"/>
+
+        <Button android:id="@+id/update_info"
+            style="@style/app_profile_button_style"
+            android:visibility="gone"/>
+
+        <Button android:id="@+id/delete_phone_email"
+            style="@style/app_profile_button_style"
+            android:layout_marginBottom="20dip"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</RelativeLayout>

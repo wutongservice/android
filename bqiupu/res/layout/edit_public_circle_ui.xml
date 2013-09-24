@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  >
+
+    <ScrollView
+        android:id="@+id/edit_public_circle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_view"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/profile_span_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/user_detail_pic_left_margin"
+                android:layout_marginTop="@dimen/user_detail_pic_top_margin"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/public_circle_icon"
+                    android:layout_width="@dimen/people_icon_width"
+                    android:layout_height="@dimen/people_icon_height"
+                    android:src="@drawable/default_public_circle" />
+
+                <ImageView
+                    android:id="@+id/public_circle_edit_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/public_circle_icon"
+                    android:layout_alignRight="@id/public_circle_icon"
+                    android:layout_marginBottom="-7dip"
+                    android:layout_marginRight="-7dip"
+                    android:src="@drawable/composer_camera" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/invite_people"
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/add_people_to_circle" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dip"
+                android:background="#d1d1d1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:text="@string/base_info_title"
+                android:textColor="@android:color/black"
+                android:textSize="12dip" />
+
+            <include
+                android:id="@+id/edit_profile_info"
+                layout="@layout/public_circle_baseinfo_ui" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dip"
+                android:background="#d1d1d1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:text="@string/phone_email_title"
+                android:textColor="@android:color/black"
+                android:textSize="12dip" />
+            
+            <LinearLayout
+                android:id="@+id/phone_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+
+            <include
+                android:id="@+id/public_circle_base_set"
+                layout="@layout/public_circle_base_set"  />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@id/bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_btn_normal" >
+
+        <RelativeLayout
+            android:id="@+id/id_add_people"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/listSelector" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/bottom_height"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/label_save"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

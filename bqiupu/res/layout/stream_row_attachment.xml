@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                
+     <!--<View    android:id="@+id/sep_attachment"-->
+              <!--android:layout_width="wrap_content"-->
+              <!--android:layout_height="1px"            -->
+              <!--android:layout_below="@id/stream_container">         -->
+     <!--</View>-->
+     
+     <com.borqs.common.view.EsTextView android:id="@+id/post_content"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textAppearance="@style/sns_link"
+               android:gravity="center_vertical"
+               android:drawableLeft="@drawable/default_app_icon"
+               android:drawablePadding="@dimen/default_text_margin_top"/>
+    
+    <com.borqs.common.view.EsTextView android:id="@id/stream_message_des"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:linksClickable="false"              
+              android:layout_below="@id/post_content"
+              android:textAppearance="@style/sns_text_second_copy"                 
+              android:paddingTop="5dp"            
+              android:visibility="gone"/>
+
+    <RelativeLayout android:id="@+id/stream_photo_span"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_below="@id/stream_message_des"
+                    android:orientation="horizontal">
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/stream_extra_span"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_below="@id/stream_photo_span"
+                    android:orientation="horizontal">
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/location_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/compose_location_bg"  >
+
+    <ImageView
+        android:id="@+id/location_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:src="@drawable/location_gray" />
+
+    <include
+        android:id="@+id/location_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/location_right_arrow"
+        layout="@layout/location_progress_bar" />
+
+    <RelativeLayout
+        android:id="@+id/location_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/location_left_icon"
+        android:paddingLeft="3dip"
+        android:layout_centerVertical="true"
+        android:focusable="true" >
+
+        <TextView
+            android:id="@+id/location_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_text_padding_left"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:text="@string/location_text"
+            android:textColorLink="@color/compose_location_link_color"
+            android:textAppearance="@style/sns_process_dialog" />
+
+        <!-- <ImageView
+            android:id="@+id/location_right_arrow"
+            style="@style/list_item_delete"
+            android:layout_marginRight="-8dip"
+            android:src="@drawable/delete_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone" /> -->
+
+       <ImageView
+            android:id="@+id/location_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/location_info"
+            android:layout_marginLeft="@dimen/small_text_margin_left"
+            android:src="@drawable/right_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

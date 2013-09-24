@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_exchange_vcard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout 
+        android:id="@+id/tip_text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/about_ticket_nor"
+        android:padding="@dimen/default_padding" >
+        <TextView 
+            android:id="@+id/tip_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nfc_vcard_left_padding"
+            android:textColor="@color/exchange_vcard_tip_color"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/nfc_tip_title"/>
+        <TextView
+            android:id="@+id/tip_content1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nfc_vcard_left_padding"
+            android:layout_below="@id/tip_text"
+            android:textColor="@color/exchange_vcard_tip_color"
+            android:text="@string/public_circle_tip_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

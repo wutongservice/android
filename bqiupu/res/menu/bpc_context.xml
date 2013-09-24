@@ -1,0 +1,81 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bpc_post_message"
+          android:enabled="true"
+          android:visible="false"
+          android:title="@string/menu_bpc_post_msg">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_add_shortcut"
+          android:title="@string/menu_add_shortcut">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_remove_shortcut"
+          android:title="@string/menu_remove_shortcut">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_remove_all_shortcut"
+          android:title="@string/menu_remove_all_shortcut">
+    </item>
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_exchange_profile"
+          android:title="@string/menu_exchange_profile">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_stream_comment"
+          android:title="@string/news_feed_comment">
+    </item>
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_stream_like"
+          android:title="@string/news_feed_like">
+    </item>
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_stream_unlike"
+          android:title="@string/news_feed_unlike">
+    </item>
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_stream_reshare"
+          android:title="@string/news_feed_reshare">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_item_delete"
+          android:title="@string/delete">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_item_set_top"
+          android:title="@string/set_top">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_item_unset_top"
+          android:title="@string/cancel_top">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_item_copy"
+          android:title="@string/item_copy">
+    </item>
+
+    <item android:enabled="true"
+          android:visible="false"
+          android:id="@+id/bpc_item_tags"
+          android:title="@string/item_tags">
+    </item>
+</menu>

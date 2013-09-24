@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:orientation="horizontal">
+
+    <ImageView android:id="@+id/stream_photo_1"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/stream_big_image_dimension_device"
+               android:background="@drawable/stream_photo_bg"
+               android:layout_marginRight="@dimen/stream_image_right_margin"
+               android:layout_marginTop="@dimen/stream_image_top_margin"
+               android:layout_gravity="center_vertical"
+               android:scaleType="centerCrop"
+               android:layout_alignParentTop="true"/>
+
+</RelativeLayout>

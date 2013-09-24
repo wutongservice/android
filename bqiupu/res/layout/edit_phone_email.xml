@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<!-- <RelativeLayout android:id="@+id/phone_email_span"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:orientation="vertical">
+
+            <TextView android:id="@+id/phone_email_tv"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/phone_email_title"
+                      android:gravity="bottom"
+                      android:textAppearance="@style/profile_info_title"/>
+
+            <ImageView android:id="@+id/add_phone_email"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="bottom"
+                       android:paddingLeft="8dip"
+                       android:paddingTop="8dip"
+                       android:paddingRight="8dip"
+                       android:layout_alignBottom="@id/phone_email_tv"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/add"
+                       android:background="?attr/listSelector"/>
+
+            <View android:id="@+id/span_view_1"
+                  android:layout_width="fill_parent"
+                  android:layout_height="2px"
+                  android:layout_below="@id/phone_email_tv"
+                  android:background="@drawable/profile_bg_line2"/>
+        </RelativeLayout> -->
+	
+    <ScrollView
+        android:id="@+id/user_detail_sv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/default_text_padding_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+	        <LinearLayout
+	            android:id="@+id/id_contact_info"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:orientation="vertical" >
+	
+	        </LinearLayout>
+	        <Button
+					        android:id="@+id/btn_add"
+					        android:layout_width="fill_parent"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="@dimen/default_text_margin_top"
+					        android:layout_marginLeft="@dimen/default_text_margin_left"
+					        android:layout_marginRight="@dimen/default_text_margin_right"
+					        android:layout_marginBottom="@dimen/default_text_margin_bottom"
+					        android:gravity="center"
+					        android:paddingBottom="@dimen/default_text_padding_bottom"
+					        android:paddingTop="@dimen/default_text_padding_top"
+					        android:paddingLeft="@dimen/large_text_padding_left"
+							android:paddingRight="@dimen/large_text_padding_right"
+					        android:text="@string/add"
+					        android:textSize="14sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/default_text_padding_bottom"
+    android:scrollbars="none" >
+    
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titlebar_container"
+        android:paddingBottom="@dimen/default_text_padding_bottom"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:paddingRight="@dimen/default_text_padding_right" >
+
+            <RelativeLayout
+                android:id="@+id/layout_pagename"
+                style="@style/edit_public_circle_profile_style"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_background_all" >
+
+                <EditText
+                    android:id="@+id/page_name"
+                    style="@style/edit_public_circle_edittext"
+                    android:hint="@string/label_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_address"
+                style="@style/edit_public_circle_profile_style"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_background_all" >
+
+                <EditText
+                    android:id="@+id/page_location"
+                    style="@style/edit_public_circle_edittext"
+                    android:drawableLeft="@drawable/circle_address_icon"
+                    android:hint="@string/update_profile_address_hint" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_text_margin_top"
+                android:background="@drawable/list_background_all"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/default_text_padding_left"
+                android:paddingRight="@dimen/default_text_padding_left" >
+
+                <EditText
+                    android:id="@+id/page_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dip"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/label_description"
+                    android:linksClickable="false"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16dip" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

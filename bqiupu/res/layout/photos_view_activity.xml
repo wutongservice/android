@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/layout_content">
+
+    <!--     <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" > -->
+
+            <com.borqs.common.view.SuperViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+<!-- 
+            <TextView
+                android:id="@+id/tv_photo_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/pager"
+                android:layout_alignRight="@id/pager"
+                android:layout_alignWithParentIfMissing="true"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textSize="25dp" />
+        </RelativeLayout> -->
+
+        <LinearLayout
+            android:id="@+id/progressbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/black"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </LinearLayout>
+    </FrameLayout>
+    <!-- <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" 
+        android:layout_alignTop="@id/layout_content">
+    </LinearLayout> -->
+
+	<include layout="@layout/photo_title_bar" android:id="@+id/layout_titleBar"
+	    android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignTop="@id/layout_content"/>
+	 <RelativeLayout
+             android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/layout_content"
+        android:background="#cc000000">
+
+
+            <TextView
+                android:id="@+id/tv_photo_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:paddingTop="8dip"
+                android:paddingRight="8dip"
+                android:textColor="@android:color/white"
+                android:textSize="16dip" />
+            <TextView
+                android:id="@+id/tv_caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_photo_num"
+                android:layout_alignParentLeft="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:paddingTop="5dip"
+                android:paddingRight="8dip"
+                android:paddingLeft="8dip"
+                android:textColor="@android:color/white"
+                android:textSize="14dip" 
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:visibility="gone"/>
+       
+    <LinearLayout
+        android:id="@+id/layout_photo_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_caption"
+        android:background="#cc000000"
+        android:gravity="center_vertical"
+        android:layout_alignWithParentIfMissing="true"
+        android:orientation="horizontal"
+        android:paddingTop="8dip" >
+
+        <Button
+            android:id="@+id/edittext_photo_input_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/edittext_bg"
+            android:clickable="false"
+            android:gravity="left|center"
+            android:paddingLeft="8.0dip"
+            android:text="@string/photo_write_comments"
+            android:textColor="#ffb0b0b0"
+            android:textSize="14.0sp" />
+
+        <RelativeLayout
+            android:id="@+id/button_photo_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:background="@drawable/photo_terminal_comment_count_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="8.0dip"
+            android:paddingTop="6.0dip" >
+
+            <ImageView
+                android:id="@+id/img_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/photo_terminal_comment_count" />
+
+            <TextView
+                android:id="@+id/text_photo_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6.0dip"
+                android:layout_toRightOf="@id/img_count"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+ </RelativeLayout>
+    
+
+</RelativeLayout>

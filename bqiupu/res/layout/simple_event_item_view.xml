@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/small_text_padding_top"
+    android:paddingBottom="@dimen/small_text_padding_bottom"
+    android:paddingLeft="@dimen/people_item_padding_left"
+    android:paddingRight="@dimen/people_item_padding_right"
+    android:background="?attr/buttonSelectableBackground" >
+
+    <ImageView
+        android:id="@+id/creator_icon"
+        android:layout_width="@dimen/stream_row_size_profile_icon"
+        android:layout_height="@dimen/stream_row_size_profile_icon"
+        android:src="@drawable/default_public_circle" />
+
+    <TextView
+        android:id="@+id/id_event_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/creator_icon"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_toRightOf="@id/creator_icon"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:gravity="top|left"
+        android:marqueeRepeatLimit="3"
+        android:singleLine="true"
+        android:textSize="@dimen/event_name_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/id_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_event_title"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginTop="4dip"
+        android:layout_toRightOf="@id/creator_icon"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textSize="@dimen/event_date_time_text_size" />
+
+    <TextView
+        android:id="@+id/id_addess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_time"
+        android:layout_marginLeft="@dimen/default_text_margin_left"
+        android:layout_marginTop="4dip"
+        android:layout_toRightOf="@id/creator_icon"
+        android:drawableLeft="@drawable/circle_address_icon"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:textSize="@dimen/event_location_text_size" />
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/media_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/stream_image_dimension_device_screen_shot" >
+
+    <ImageView 
+        android:id="@+id/screen_shot_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/default_video_bg_color"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout 
+        android:id="@+id/background_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_selector_background" />
+
+    <TextView
+        android:id="@+id/qiupu_download_from_market"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dip"
+        android:textAppearance="?android:attr/textAppearanceInverse" />
+
+    <TextView 
+        android:id="@+id/media_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qiupu_download_from_market"
+        android:paddingLeft="5dip"
+        android:text="@string/download_from_mm"
+        android:textAppearance="?android:attr/textAppearanceInverse" />
+
+    <ImageView 
+        android:id="@+id/play_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView 
+        android:id="@+id/down_load_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_download_normal"
+        android:visibility="gone" />
+
+</RelativeLayout>
+<!-- 
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/qiupu_download_from_market"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/sns_text_second_copy"
+          android:layout_gravity="center_vertical"
+          android:text="@string/download_from_mm"
+          android:paddingTop="5dp"
+          android:drawablePadding="5dp"
+          android:gravity="center_vertical"
+          android:drawableLeft="@drawable/ic_mobile_market"/>
+ -->

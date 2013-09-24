@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/bpc_backgroud">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title_bar_base"
+                 android:id="@+id/title_bar"
+                 android:layout_width="fill_parent"
+                 android:layout_height="@dimen/title_bar_height"
+                />
+
+        <!-- View
+	     android:id="@+id/id_span_view"
+	     android:orientation="vertical"
+	     android:layout_width="fill_parent"     
+	     android:layout_height="1px"
+		 android:layout_below="@id/title_bar"
+	     android:background="@drawable/actionbar_shadow"/ -->
+        
+         <RelativeLayout 
+        android:id="@+id/id_title_category"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/second_title_bar_height"
+        android:layout_gravity="bottom"        
+        android:background="@drawable/tab_bg">
+     
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+        
+	        <TextView
+	                  android:id="@+id/id_main_page_may_know"
+	                  style="@style/second_title_textview"
+	                  android:text="@string/main_page_may_know"/>
+             <TextView
+                  android:id="@+id/id_main_page"
+                  style="@style/second_title_textview"
+                  android:text="@string/main_page"/>
+                            
+             <TextView
+                  android:id="@+id/id_history_people"
+                  style="@style/second_title_textview"
+                  android:text="@string/history_people"/>
+                  
+        </LinearLayout>
+        
+        <com.borqs.common.view.MissingNumberView
+            android:id="@+id/id_may_know_user_count"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="80dip"/>   
+        
+        <com.borqs.common.view.PageIndicatorLineStyleView 
+           android:id="@id/page_line_indicator"
+           android:layout_width="fill_parent"
+           android:layout_alignParentBottom="true"
+           android:layout_height="@dimen/pageindicatorline_height"/>
+           
+         </RelativeLayout>
+            
+       <com.borqs.appbox.view.AllAppsScreen
+	        android:id="@+id/workspace"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        >
+      </com.borqs.appbox.view.AllAppsScreen>
+            
+            
+    </LinearLayout>
+
+    <!-- <SlidingDrawer
+        android:id="@+id/info_slider"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:allowSingleTap="true"
+        android:content="@+id/info_content"
+        android:gravity="center"
+        android:handle="@+id/info_title"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/info_title"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/qiupu_title_bg" >
+
+            <TextView
+                android:id="@+id/info_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/string_notifications"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/info_title_progressbar"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:maxHeight="28dp"
+                android:maxWidth="28dp"
+                android:minHeight="28dp"
+                android:minWidth="28dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/info_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <com.borqs.common.view.CustomListView
+                android:id="@+id/information_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollingCache="true"
+                android:smoothScrollbar="true"
+                android:animationCache="true" />
+
+            <LinearLayout
+                android:id="@android:id/empty"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+             
+             <LinearLayout
+                android:id="@+id/info_empty_refresh"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="80dip"
+                android:paddingLeft="40dip"
+                android:paddingRight="40dip"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/empty_notification"
+                    android:textAppearance="@style/refresh_tv_style" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/refresh_tutorial" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/info_empty_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Small.Inverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dip"
+                    android:max="100"
+                    android:progress="50" >
+                </ProgressBar>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/processbar_loading"
+                    android:textAppearance="@style/sns_process_dialog" >
+                </TextView>
+            </LinearLayout>
+
+        	</LinearLayout>
+        </LinearLayout>
+    </SlidingDrawer> -->
+
+</FrameLayout>

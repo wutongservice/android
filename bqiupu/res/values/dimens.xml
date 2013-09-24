@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <dimen name="rate_span_width">80dp</dimen>
+    <dimen name="rate_span_heigth">15dp</dimen>
+    <dimen name="drag_scale">25dp</dimen>
+    <dimen name="quick_qiupu_show_top">70dip</dimen>
+    <dimen name="quick_qiupu_show_down">50dip</dimen>
+    <dimen name="allapps_cell_width">80dp</dimen>
+    <dimen name="allapps_cell_height">88dp</dimen>
+    <dimen name="allapps_text_drawablePadding">0dp</dimen>
+    <dimen name="like_span">5dip</dimen>
+    <dimen name="requests_textSize">13dip</dimen>
+    <dimen name="fastscroll_overlay_size">104dp</dimen>
+    <dimen name="commit_button_width">50dip</dimen>
+    <dimen name="commit_button_height">40dip</dimen>
+    <dimen name="commit_button_margin_left">10dip</dimen>
+    <dimen name="commit_button_margin_right">10dip</dimen>
+    <dimen name="commit_button_margin_top">10dip</dimen>
+    <dimen name="commit_button_margin_bottom">10dip</dimen>
+    <dimen name="clingPunchThroughGraphicCenterRadius">94dp</dimen>
+    <dimen name="folderClingMarginTop">20dp</dimen>
+    <dimen name="apps_customize_tab_bar_height">52dp</dimen>
+    <dimen name="app_icon_size">48dp</dimen>
+    <dimen name="toolbar_button_horizontal_padding">12dip</dimen>
+    <dimen name="button_bar_height">24dip</dimen>
+
+    <!-- padding value -->
+    <dimen name="default_text_padding_left">4.0dip</dimen>
+    <dimen name="large_text_padding_left">14.0dip</dimen>
+    <dimen name="small_text_padding_left">4.0dip</dimen>
+    <dimen name="default_text_padding_right">4.0dip</dimen>
+    <dimen name="large_text_padding_right">14.0dip</dimen>
+    <dimen name="small_text_padding_right">4.0dip</dimen>
+    <dimen name="default_text_padding_top">10.0dip</dimen>
+    <dimen name="large_text_padding_top">14.0dip</dimen>
+    <dimen name="small_text_padding_top">6.0dip</dimen>
+    <dimen name="default_text_padding_bottom">10.0dip</dimen>
+    <dimen name="large_text_padding_bottom">14.0dip</dimen>
+    <dimen name="small_text_padding_bottom">6.0dip</dimen>
+    <dimen name="default_padding">10dip</dimen>
+    <dimen name="apk_detail_min_padding">2.0dip</dimen>
+    <dimen name="apk_detail_min_margin">4.0dip</dimen>
+
+    <!-- margin value -->
+    <dimen name="default_text_margin_left">4.0dip</dimen>
+    <dimen name="large_text_margin_left">14.0dip</dimen>
+    <dimen name="small_text_margin_left">4.0dip</dimen>
+    <dimen name="default_text_margin_right">4.0dip</dimen>
+    <dimen name="large_text_margin_right">14.0dip</dimen>
+    <dimen name="small_text_margin_right">4.0dip</dimen>
+    <dimen name="default_text_margin_top">10.0dip</dimen>
+    <dimen name="large_text_margin_top">14.0dip</dimen>
+    <dimen name="small_text_margin_top">6.0dip</dimen>
+    <dimen name="default_text_margin_bottom">10.0dip</dimen>
+    <dimen name="large_text_margin_bottom">14.0dip</dimen>
+    <dimen name="small_text_margin_bottom">6.0dip</dimen>
+    <dimen name="default_margin">10dip</dimen>
+
+    <!-- list item default value -->
+    <dimen name="list_item_height">64.0dip</dimen>
+    <dimen name="people_item_padding_left">10.0dip</dimen>
+    <dimen name="people_item_padding_right">16.0dip</dimen>
+    <dimen name="people_item_padding_top">6.0dip</dimen>
+    <dimen name="people_item_padding_bottom">6.0dip</dimen>
+    <dimen name="people_item_gap_between_name_and_circles">4.0dip</dimen>
+    
+    <!-- icon  -->
+    <dimen name="people_icon_width">64dip</dimen>
+    <dimen name="people_icon_height">64dip</dimen>
+    <dimen name="profile_icon_width">60dip</dimen>
+    <dimen name="profile_icon_height">60dip</dimen>
+    <dimen name="vcard_icon_width">70dip</dimen>
+    <dimen name="vcard_icon_height">70dip</dimen>
+    <dimen name="app_icon_width">48dip</dimen>
+    <dimen name="app_icon_height">48dip</dimen>
+    
+    <dimen name="icon_width_small">32dip</dimen>
+    <dimen name="icon_height_small">32dip</dimen>
+
+    <dimen name="compose_icon_width">42dip</dimen>
+    <dimen name="compose_icon_height">42dip</dimen>
+
+    <!-- title and bottom -->
+    <dimen name="title_bar_title_left_padding">8dip</dimen>
+    <dimen name="title_bar_height">46dip</dimen>
+    <dimen name="second_title_bar_height">36dip</dimen>
+    <dimen name="fix_tab_height">42dip</dimen>
+    <dimen name="bottom_height">48dip</dimen>
+    <dimen name="more_button_height">46dip</dimen>
+    <dimen name="pageindicatorline_height">4dip</dimen>
+
+    <!-- app value -->
+    <dimen name="app_text_size">12sp</dimen>
+    <dimen name="app_action_name_width">50dip</dimen>
+    <dimen name="app_padding_in_rating_and_text">2dip</dimen>
+
+    <!-- circle list -->
+    <dimen name="circle_list_item_height">60dip</dimen>
+
+    <!-- edit profile -->
+    <dimen name="max_text_width">100dip</dimen>
+    <dimen name="text_width">60dip</dimen>
+    <dimen name="text_height">46dip</dimen>
+
+    <!-- stream image -->
+    <dimen name="stream_image_dimension">140.0px</dimen>
+    <dimen name="stream_image_small_dimension">69.0px</dimen>
+    
+    <dimen name="stream_image_dimension_device">140.0dp</dimen>
+    <dimen name="stream_image_dimension_device_screen_shot">160dip</dimen>
+    <dimen name="stream_image_small_dimension_device">69.0dp</dimen>
+
+    <dimen name="stream_big_image_frame_dimension_device">244.0dp</dimen>
+    <dimen name="stream_big_image_small_frame_dimension_device">124.0dp</dimen>
+
+    <dimen name="stream_big_image_dimension_device">240.0dp</dimen>
+    <dimen name="stream_big_image_small_dimension_device">120.0dp</dimen>
+
+    <dimen name="stream_image_photo_thumbnail_width">142.0dp</dimen>
+    <dimen name="stream_image_photo_thumbnail_height">80.0dp</dimen>
+    
+     <dimen name="stream_big_image_dimension">240.0px</dimen>
+    <dimen name="stream_big_image_small_dimension">120.0px</dimen>
+    
+    <dimen name="stream_image_right_margin">2.0dip</dimen>
+    <dimen name="stream_image_top_margin">1.0dip</dimen>
+    <dimen name="stream_image_more_indicator_width">48.0dip</dimen>
+    <dimen name="category_width">90dip</dimen>
+
+    <!-- grid view -->
+    <dimen name="grid_column_width">65dp</dimen>
+    <dimen name="grid_top_padding">2dip</dimen>
+    <!-- compose visibility -->
+    <dimen name="visibility_padding_right">4.0dip</dimen>
+    <dimen name="visibility_parent_padding">10.0dip</dimen>
+    <dimen name="visibility_text_size">14dip</dimen>
+    <dimen name="visibility_text_margin_top">4dip</dimen>
+    <dimen name="compose_location_text_size">16sp</dimen>
+    <dimen name="compose_bottom_layout_height">48dip</dimen>
+    <dimen name="compose_location_margin_top">8dip</dimen>
+    <dimen name="compose_visibility_margin_right">8dip</dimen>
+    <dimen name="compose_phone_number_size">12dip</dimen>
+    <dimen name="compose_phone_number_left_margin">20dip</dimen>
+    <dimen name="compose_phone_user_name_size">20dip</dimen>
+    <dimen name="location_padding">15dip</dimen>
+    <dimen name="link_title_size">18dip</dimen>
+    <dimen name="link_url_size">16dip</dimen>
+
+    <!-- add friends activity -->
+    <dimen name="recommend_text_height">30dip</dimen>
+    <dimen name="title_text_size">18dip</dimen>
+    <dimen name="paper_line_height">2.0dip</dimen>
+    <dimen name="invite_tips_left_margin">10dip</dimen>
+    <dimen name="invite_tips_right_margin">10dip</dimen>
+    <dimen name="invite_divider_left_padding">10dip</dimen>
+    <dimen name="invite_divider_right_padding">10dip</dimen>
+    <dimen name="invide_divider_bottom_padding">3.0dip</dimen>
+    <dimen name="invite_divider_height">22.0dip</dimen>
+    <dimen name="invite_divider_text_size">16dip</dimen>
+    <dimen name="invite_by_email_top_padding">20dip</dimen>
+    <dimen name="invite_edit_left_padding">5dip</dimen>
+    <dimen name="invite_edit_right_padding">5dip</dimen>
+    <dimen name="invite_edit_min_height">50dip</dimen>
+    <dimen name="nfc_vcard_left_padding">18dip</dimen>
+
+    <!-- request item -->
+    <dimen name="request_bottom_btn_width">160dip</dimen>
+    <dimen name="vcard_info_margin_left">20dip</dimen>
+    <dimen name="vcard_info_padding_bottom">26dip</dimen>
+
+    <dimen name="search_box_height">54dip</dimen>
+    
+    <dimen name="set_apk_permission_dialog_height">210dip</dimen>
+
+    <!-- enfoldment layout -->
+    <dimen name="image_around_height">50dip</dimen>
+    <dimen name="image_around_width">50dip</dimen>
+    <dimen name="image_center_container_height">60dip</dimen>
+    <dimen name="image_center_container_width">60dip</dimen>
+    <dimen name="image_center_height">42dip</dimen>
+    <dimen name="image_center_width">42dip</dimen>
+    <dimen name="exchange_header_text_size">16dip</dimen>
+
+          <!-- indicator -->
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_title_indicator_footer_line_height">2dp</dimen>
+    <dimen name="default_title_indicator_clip_padding">4dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_height">4dp</dimen>
+    <dimen name="default_title_indicator_footer_padding">7dp</dimen>
+    <dimen name="default_title_indicator_footer_indicator_underline_padding">20dp</dimen>
+    <dimen name="default_title_indicator_text_size">15dp</dimen>
+    <dimen name="default_title_indicator_title_padding">5dp</dimen>
+    <dimen name="default_title_indicator_top_padding">7dp</dimen>
+
+    <dimen name="default_about_view_horizontal_margin">16dip</dimen>
+    <dimen name="default_about_activity_margin_top">20dip</dimen>
+    
+    <dimen name="summary_title_size">20.0sp</dimen>
+    <dimen name="apk_min_text_width">80dip</dimen>
+        
+    <dimen name="tab_text_size">12dip</dimen>
+
+    <dimen name="home_navigation_panel_width">180dp</dimen>
+
+    <dimen name="stream_row_offset_content_left">60dp</dimen>
+    <dimen name="stream_row_offset_content_reshare_left">60dp</dimen>
+    <!--<dimen name="stream_row_offset_content_left">10dp</dimen>-->
+
+    <dimen name="stream_row_padding_left">5dip</dimen>
+    <dimen name="stream_row_padding_bottom">10dp</dimen>
+    <dimen name="stream_row_padding_right">5dip</dimen>
+    <dimen name="stream_row_padding_vertical">5dip</dimen>
+
+    <dimen name="stream_row_margin_horizontal">4dip</dimen>
+    <dimen name="stream_row_margin_vertical">3dip</dimen>
+
+    <dimen name="stream_row_size_profile_icon">50dip</dimen>
+    <dimen name="stream_row_size_reshared_profile_icon">40dip</dimen>
+
+    <dimen name="stream_row_header_profile_frame_size">60dip</dimen>
+    <dimen name="stream_row_header_profile_photo_size">60dip</dimen>
+    <dimen name="stream_row_header_profile_padding_top">10dip</dimen>
+    <dimen name="stream_row_header_top_bar_height">20dip</dimen>
+    <dimen name="stream_row_header_height">70dip</dimen>
+
+    <dimen name="stream_row_header_padding_horizontal">6dip</dimen>
+    <dimen name="stream_row_header_padding_vertical">5dip</dimen>
+    <dimen name="stream_comment_like_btn_padding_top">4dip</dimen>
+    <dimen name="stream_comment_like_btn_padding_bottom">4dip</dimen>
+    <dimen name="stream_comment_like_btn_padding_left">16dip</dimen>
+    <dimen name="stream_comment_like_btn_padding_right">16dip</dimen>
+    <dimen name="stream_item_padding">2dip</dimen>
+    <dimen name="stream_item_content_padding">6dip</dimen>
+    <dimen name="stream_foot_item_margin">4dip</dimen>
+
+    <!-- new design -->
+    <dimen name="left_menu_item_height">48dip</dimen>
+    <dimen name="left_menu_drawable_padding">10dip</dimen>
+    <dimen name="left_menu_left_padding">10dip</dimen>
+    <dimen name="left_menu_text_size">18dip</dimen>
+    <dimen name="left_menu_message_size">12dip</dimen>
+
+    <dimen name="login_item_top_margin">10dip</dimen>
+    <dimen name="login_sub_item_top_margin">5dip</dimen>
+    
+    <!-- user detail new design -->
+    <dimen name="user_detail_borqsid_right_margin">10dip</dimen>
+    <dimen name="user_detail_borqsid_bottom_margin">5dip</dimen>
+    <dimen name="user_detail_pic_left_margin">8dip</dimen>
+    <dimen name="user_detail_pic_height">80dip</dimen>
+    <dimen name="user_detail_pic_top_margin">8dip</dimen>
+    <dimen name="user_detail_top_bar_height">42dip</dimen>
+    <dimen name="user_detail_image_height">155dip</dimen>
+    
+    <!-- dialog list -->
+    <dimen name="dialog_list_item_height">42dip</dimen>
+    <dimen name="dialog_list_item_padding_left">10dip</dimen>
+
+    <dimen name="left_menu_category_item_height">30dip</dimen>
+    <dimen name="absent_app_category_item_height">43dip</dimen>
+
+    <dimen name="comment_setting_left_padding">20dip</dimen>
+    <dimen name="comment_setting_right_margin">20dip</dimen>
+
+    <dimen name="audio_layout_height">50dip</dimen>
+    <dimen name="audio_layout_width">260dip</dimen>
+    <dimen name="video_layout_height">150dip</dimen>
+
+    <dimen name="inline_search_left_padding">20dip</dimen>
+    <dimen name="exchange_card_paddingtop">0dip</dimen>
+    <dimen name="exchange_card_paddingbottom">10dip</dimen>
+    <dimen name="exchagne_card_button_paddingtop">0dip</dimen>
+    <dimen name="exchagne_card_button_paddingbottom">0dip</dimen>
+    <dimen name="exchagne_card_button_marginleft">20dip</dimen>
+    <dimen name="exchagne_card_button_marginright">20dip</dimen>
+    
+     <dimen name="head_title_text_size">18dp</dimen>
+     <dimen name="subtitle_text_size">14dp</dimen>
+    <!-- Top margin for action bar subtitles -->
+    <dimen name="subtitle_top_margin">-3dp</dimen>
+    <!-- Bottom margin for action bar subtitles -->
+    <dimen name="subtitle_bottom_margin">5dip</dimen>
+    
+    <dimen name="flipper_head_button_line_height">24.0dip</dimen>
+    <dimen name="flipper_head_button_width">54.0dip</dimen>
+    <dimen name="flipper_head_text_size">16.0sp</dimen>
+    <dimen name="flipper_head_height">48.0dip</dimen>
+    <dimen name="profile_span_height">1dip</dimen>
+    
+    <dimen name="default_list_item_height">60dip</dimen>
+    
+    <!-- event -->
+    <dimen name="event_cover_width">320dip</dimen>
+    <dimen name="event_cover_height">100dip</dimen>
+    <dimen name="event_cover_item_height">110dip</dimen>
+    <dimen name="event_cover_change_title_height">22dip</dimen>
+    <dimen name="event_name_text_size">16.0sp</dimen>
+    <dimen name="event_date_time_text_size">14.0sp</dimen>
+    <dimen name="event_location_text_size">14.0sp</dimen>
+    
+    <dimen name="privacy_dialog_item_height">60dip</dimen>
+    <dimen name="poll_item_height">70dip</dimen>
+    <dimen name="poll_left_time_size">13sp</dimen>
+    <dimen name="poll_create_time_size">12sp</dimen>
+
+    <dimen name="default_clicking_area_min_height">30dip</dimen>
+    <dimen name="default_clicking_area_min_width">48dip</dimen>
+    <dimen name="default_poll_header_height">84dip</dimen>
+    <dimen name="people_icon_corner">6.0dip</dimen>
+    
+    <dimen name="company_profile_icon">70dip</dimen>
+    
+    <dimen name="circle_profile_icon_width">70dip</dimen>
+    <dimen name="circle_profile_icon_height">70dip</dimen>
+
+    <dimen name="default_drawable_padding">4dip</dimen>
+    
+    <!-- page -->
+    <dimen name="page_card_min_width">320.0dip</dimen>
+    <dimen name="page_card_min_height">138.0dip</dimen>
+    <dimen name="page_card_padding">16.0dip</dimen>
+    <dimen name="page_card_avatar_size">80.0dip</dimen>
+    <dimen name="page_card_name_text_size">18.0sp</dimen>
+    <dimen name="page_card_fans_text_size">12.0sp</dimen>
+    <dimen name="page_card_circle_icon_padding_top">4.0dip</dimen>
+    <dimen name="page_card_gap_between_icon_and_circles">8.0dip</dimen>
+    <dimen name="page_card_gap_between_name_and_circles">4.0dip</dimen>
+     <dimen name="page_card_action_button_height">34.0dip</dimen>
+    <dimen name="page_card_action_button_min_width">100.0dip</dimen>
+    
+     <dimen name="filter_list_item_height">40.0dip</dimen>
+     
+     <dimen name="dropdownitem_text_padding_left">8dip</dimen>
+     <dimen name="dropdownitem_text_padding_right">8dip</dimen>
+     <dimen name="search_view_text_min_width">160dip</dimen>
+     <dimen name="dropdownitem_icon_width">32dip</dimen>
+     <dimen name="search_view_preferred_width">320dip</dimen>
+
+    <dimen name="inline_comment_padding_left">0dip</dimen>
+    
+    <!-- circle poll item view -->
+    <dimen name="circle_poll_item_height">48dip</dimen>
+    <dimen name="circle_poll_item_icon">32dip</dimen>
+    <dimen name="circle_poll_item_font">14sp</dimen>
+    
+    <dimen name="drop_down_item_width">200dip</dimen>
+    
+    <dimen name="bookmarkThumbnailWidth">90dip</dimen>
+    <dimen name="bookmarkThumbnailHeight">80dip</dimen>
+    <dimen name="combo_horizontalSpacing">6dip</dimen>
+    <dimen name="list_favicon_padding">5dip</dimen>
+    <dimen name="list_favicon_corner_radius">3dip</dimen>
+    <dimen name="favicon_size">16dip</dimen>
+    <dimen name="favicon_padded_size">20dip</dimen>
+    <dimen name="location_item_height">65dip</dimen>
+    <dimen name="locaiton_item_bottom_margin">-9dip</dimen>
+    <dimen name="compose_face_top_margin">-5dip</dimen>
+    
+    <dimen name="max_category_width">200dip</dimen>
+    <dimen name="category_padding_left">10dip</dimen>
+    <dimen name="category_padding_right">10dip</dimen>
+    
+    <dimen name="noti_count_text_size">12dip</dimen>
+    <dimen name="noti_title_icon_marge_left">12dip</dimen>
+    
+    <dimen name="search_dropdown_width">200dip</dimen>
+    
+    <dimen name="circle_grid_height">110dip</dimen>
+    <dimen name="create_circle_item_padding">20dip</dimen>
+    
+</resources>

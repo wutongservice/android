@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:id="@+id/id_pool_apk" android:paddingTop="4dp"
+	android:paddingBottom="4dp" android:gravity="center_vertical">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/id_pool_apk"
+		android:layout_marginTop="24dip" android:layout_marginLeft="6dip"
+		android:gravity="center_vertical" android:background="@drawable/widget_bg1">
+
+		<ImageView android:id="@+id/app_widget_post"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp" android:layout_marginTop="24dp"
+			android:layout_marginBottom="20dp" android:layout_marginRight="16dip"
+			android:src="@drawable/actionbar_icon_release_normal" />
+
+		<ImageView android:id="@+id/span_left" android:layout_width="2px"
+			android:layout_height="fill_parent" android:background="@drawable/widget_line"
+			android:layout_toRightOf="@id/app_widget_post" />
+
+		<TextView
+			android:id="@+id/app_widget_content" android:layout_width="200dip"
+			android:paddingTop="5dip" android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/span_left">
+		</TextView>
+
+		<ImageView android:id="@+id/span_right"
+			android:layout_width="2px" android:layout_height="fill_parent"
+			android:background="@drawable/widget_line" android:layout_toRightOf="@id/app_widget_content" />
+		<RelativeLayout android:id="@+id/app_widget_sel"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:paddingRight="10dip" android:paddingLeft="10dip"
+			android:paddingTop="8dip" android:paddingBottom="8dip"
+			android:layout_toRightOf="@id/span_right">
+
+
+			<ImageView android:id="@+id/widget_sel_up"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentTop="true" android:src="@drawable/widget_btn_up_bg" />
+
+			<ImageView android:id="@+id/widget_sel_down"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true" android:src="@drawable/widget_btn_down_bg" />
+
+		</RelativeLayout>
+	</RelativeLayout>
+
+	<ImageView android:id="@+id/widget_icon"
+		android:layout_width="40dp" android:layout_height="40dp"
+		android:src="@drawable/ic_qiupu_launcher" />
+
+
+</RelativeLayout>

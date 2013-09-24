@@ -1,0 +1,4 @@
+
+    <resources>
+        <string name="notification_app_label">NotificationService</string>        
+    </resources>

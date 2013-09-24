@@ -1,0 +1,21 @@
+
+To let those Apk always visible in Qiupu client, then be able to publish/backup via Borqs Cloud Service. We provide a back-door to get such goal:
+a. show the Apk even if it was built into native read-only /system/ by CM.
+b. show the Apk even if it did not consist any launcher icon in main menu or an Home app or Input method service.
+
+Case 1: if there is any activity in AndroidManifest.xml, simply append the intent filter to one of your activity
+<intent-filter>
+<action android:name="com.borqs.qiupu.action.BORQS_ITEM"/>
+<category android:name="android.intent.category.TEST" />
+</intent-filter>
+
+Case 2: if no any activity in AndroidManifest.xml, need to add a dump activity with the intent filter
+<activity android:name=".DumpQiupuItem">
+<intent-filter>
+<action android:name="com.borqs.qiupu.action.BORQS_ITEM"/>
+<category android:name="android.intent.category.TEST" />
+</intent-filter>
+</activity> 
+
+To make those activity visible as Bpc plugin app shortcut for case 1, append the other intent filter to Activity that have android.intent.action.MAIN.
+Refer to: doc/howto/howto-bpc-plugin-app-item.txt

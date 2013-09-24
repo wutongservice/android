@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/popup_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_below="@+id/arrow_fr"
+        android:layout_marginTop="-4dip"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:textColor="@drawable/ntf_head_bg"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.borqs.common.view.CustomListView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popup_title"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/ntf_body_bg"
+        android:cacheColorHint="@color/qiupu_list_color_cache_hint"
+        android:fadingEdgeLength="5dip"
+        android:fastScrollEnabled="true"
+        android:listSelector="?attr/listSelector"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_below="@id/popup_title"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/ntf_body_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@id/arrow_fr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/arrow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ntf_arrow_up" />
+
+        <ImageView
+            android:id="@+id/arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_down"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/circleListView" >
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:textColor="@color/lightgrey"
+            android:text="@string/wutong_home_picker_header"
+            android:textSize="16sp" />
+</RelativeLayout>

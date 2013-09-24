@@ -1,0 +1,56 @@
+<resources>
+	<string-array name="changelog_contacts_change_items_entries">
+		<item>@string/change_log_contacts_added</item>
+		<item>@string/change_log_contacts_updated</item>
+		<item>@string/change_log_contacts_deleted</item>
+	</string-array>
+    
+    <string-array name="change_request_common_type">
+        <item>MOBILE</item>
+        <item>HOME</item>
+        <item>WORK</item>
+        <item>OTHER</item>
+    </string-array>
+    
+    <!-- email -->
+    <string-array name="change_request_update_email_description">
+        <item>@string/change_request_mail_change</item>
+        <item>@string/change_request_home_email_change</item>
+        <item>@string/change_request_work_email_change</item>
+        <item>@string/change_request_other_email_change</item>
+    </string-array>
+    
+    <string-array name="change_request_add_email_description">
+        <item>@string/change_request_mail_add</item>
+        <item>@string/change_request_home_email_add</item>
+        <item>@string/change_request_work_email_add</item>
+        <item>@string/change_request_other_email_add</item>
+    </string-array>
+    
+    <!-- phone -->
+    <string-array name="change_request_update_phone_description">
+        <item>@string/change_request_mobile_phone_change</item>
+        <item>@string/change_request_home_phone_change</item>
+        <item>@string/change_request_work_phone_change</item>
+        <item>@string/change_request_other_phone_change</item>
+    </string-array>
+    
+    <string-array name="change_request_add_phone_description">
+        <item>@string/change_request_mobile_phone_add</item>
+        <item>@string/change_request_home_phone_add</item>
+        <item>@string/change_request_work_phone_add</item>
+        <item>@string/change_request_other_phone_add</item>
+    </string-array>
+    
+    <!-- web page -->
+    
+    <!-- name -->
+    <string-array name="change_request_update_name_description">
+        <item>@string/change_request_name_change</item>
+    </string-array>
+    
+    <string-array name="change_request_add_name_description">
+        <item>@string/change_request_name_add</item>
+    </string-array>
+   
+</resources>

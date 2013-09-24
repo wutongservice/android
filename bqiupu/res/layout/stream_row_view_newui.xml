@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/stream_row_padding_right"
+                android:paddingBottom="@dimen/stream_row_padding_bottom"
+        >
+
+    <ImageView android:id="@+id/user_icon"
+               android:layout_height="@dimen/stream_row_size_profile_icon"
+               android:layout_width="@dimen/stream_row_size_profile_icon"
+               android:layout_marginTop="0dip"
+               android:paddingTop="@dimen/stream_row_padding_vertical"
+               android:layout_marginLeft="3dp"
+               android:src="@drawable/default_user_icon"
+               android:layout_alignParentLeft="true">
+    </ImageView>
+    <FrameLayout android:id="@+id/user_icon_cover"
+                 android:layout_height="@dimen/stream_row_size_profile_icon"
+                 android:layout_width="@dimen/stream_row_size_profile_icon"
+                 android:layout_marginTop="0dip"
+                 android:paddingTop="@dimen/stream_row_padding_vertical"
+                 android:layout_marginLeft="3dip"
+                 android:clickable="true"
+                 android:background="@drawable/stream_photo_cover"
+                 android:layout_alignParentLeft="true"/>
+
+    <com.borqs.common.view.EsTextView android:id="@+id/poster_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:paddingTop="@dimen/stream_row_padding_vertical"
+              android:paddingLeft="@dimen/stream_row_offset_content_left"
+              android:textAppearance="@style/sns_username"/>
+       
+    <com.borqs.common.view.EsTextView android:id="@+id/post_privacy_property"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:minHeight="30dip"
+                      android:layout_toRightOf="@id/poster_name"
+                      android:layout_alignBaseline="@id/poster_name"
+                      android:singleLine="true"
+                      android:ellipsize="marquee"
+                      android:textAppearance="@style/sns_time"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical|left"/>
+
+    <!--<com.borqs.common.view.ExpendableTextPanel-->
+            <!--android:id="@+id/expandable_span"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/poster_name"-->
+            <!--android:paddingTop="@dimen/stream_row_padding_vertical"-->
+            <!--android:paddingLeft="@dimen/stream_row_offset_content_left"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+
+    <TextView android:id="@+id/post_time"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="@dimen/stream_row_padding_vertical"
+              android:paddingLeft="@dimen/stream_row_offset_content_left"
+              android:layout_below="@id/poster_name"
+              android:singleLine="true"
+              android:ellipsize="marquee"
+              android:textAppearance="@style/sns_time"
+              android:layout_gravity="center_vertical"
+              android:drawablePadding="@dimen/small_text_margin_left"
+              android:gravity="center_vertical|left"/>
+
+    <ViewStub
+            android:id="@+id/expandable_span"
+            android:inflatedId="@+id/expandable_span"
+
+            android:layout="@layout/default_expandable_text_panel_item"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/post_time"
+            android:layout_marginTop="@dimen/stream_row_padding_vertical"
+            android:layout_marginLeft="@dimen/stream_row_offset_content_left"/>
+
+    <LinearLayout
+            android:id="@+id/stream_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expandable_span"
+            android:paddingTop="@dimen/stream_row_padding_vertical"
+            android:paddingLeft="@dimen/stream_row_offset_content_left"
+            android:visibility="gone"/>
+
+    <include
+            android:id="@+id/stream_row_view_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stream_container"
+            layout="@layout/stream_row_view_footer"/>
+
+</RelativeLayout>

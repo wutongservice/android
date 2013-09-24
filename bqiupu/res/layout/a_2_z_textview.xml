@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/a_to_z"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/people_span_bg"
+    android:gravity="left|bottom"
+    android:textColor="@color/atoz_font"
+    android:textStyle="bold"
+    android:paddingLeft="@dimen/people_item_padding_left"/>

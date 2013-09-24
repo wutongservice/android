@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ * Copyright (C) 2007 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ -->
+<resources>
+
+    <declare-styleable name="AddressPad">
+        <attr name="titleTextColor" format="color"/>
+        <attr name="titleText" format="reference|string"/>
+        <attr name="addressBackground" format="reference|color"/>
+        <attr name="selectedAddressBackground" format="reference|color"/>
+        <attr name="auxiliaryButton" format="reference"/>
+        <attr name="auxiliaryButtonSelected" format="reference"/>
+        <attr name="auxiliaryButtonVisible" format="boolean"/>
+        <attr name="addresspadCursorVisible" format="boolean"/>
+        <attr name="keepWhitespace" format="boolean"/>
+        <attr name="allowDuplicated" format="boolean"/>
+        <attr name="multiSelection" format="boolean"/>
+        <attr name="inputSeparator" format="string"/>
+        <attr name="keepFullMode" format="boolean"/>
+        <attr name="showContextMenuOnClick" format="boolean"/>
+        <attr name="enableLongClickDeletion" format="boolean"/>
+        <attr name="textAppearanceListItemOne" format="reference"/>
+        <attr name="textAppearanceListItemTwo" format="reference"/>
+        <attr name="listPreferredItemHeight" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="AllAppsScreen">
+        <attr name="screen_number" format="integer"/>        
+    </declare-styleable> 
+    
+    <declare-styleable name="EsTextView">
+        <attr name="need_handler_click" format="integer"/>        
+    </declare-styleable>
+    
+    <declare-styleable name="AddressPadMini">
+        <!-- Separator, Default is ',' -->
+        <attr format="string" name="separator"/>
+        <!-- Competion threshold, Default is 2 -->
+        <attr format="integer|reference" name="threshold"/>
+        <!-- Address button backgroud -->
+        <attr name="addressBg"  format="reference|color"/>
+        <!-- Address button click backgroud -->
+        <attr name="selectedAddressBg" format="reference|color"/>
+        <!-- Address text color -->
+        <attr name="addressTextColor" format="reference|color"/>
+        <!-- Selected address text color -->
+        <attr name="selectedAddressTextColor" format="reference|color"/>
+        <!-- Cache size of duplication checking -->
+        <attr name="cacheSize"  format="integer|reference"/>
+        <!-- Expand when addresses more than specify count -->
+        <attr name="expandAt"   format="integer|reference"/>
+        <!-- Expand specify number of addresses on each click --> 
+        <attr name="expandStep" format="integer|reference"/>
+        <!-- Inner decorator type -->
+        <attr name="decoratorType">
+            <enum name="mail"       value="0"/>
+            <enum name="phone_mail" value="1"/>
+        </attr>
+        <!-- Read only mode -->
+        <attr name="readOnly" format="boolean"/>
+        <!-- Single line hint style -->
+        <attr name="singleLineHintStyle">
+            <enum name="text"       value="0"/>
+            <enum name="button"     value="1"/>
+        </attr>
+    <!-- =============================== -->
+    <!-- App package class attributes -->
+    <!-- =============================== -->
+    <eat-comment />
+    </declare-styleable>
+    
+    <declare-styleable name="Gallery1">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+      
+    
+     <string-array name="entries_week">
+        <item>Sun at</item>
+        <item>Mon at</item>
+        <item>Tue at</item>
+        <item>Wed at</item>
+        <item>Thu at</item>  
+        <item>Fri at</item>  
+        <item>Sat at</item>
+    </string-array>
+
+    <string-array name="entries_notification_list_preference">
+        <item>24 hours</item>
+        <item>12 hours</item>
+        <item>6 hours</item>
+        <item>1 hour</item>
+        <item>30 minutes</item>
+        <item>10 minutes</item>  
+    </string-array>
+    
+    <string-array name="entryvalues_notification_list_preference">
+        <item>1440</item>
+        <item>720</item>
+        <item>360</item>  
+        <item>60</item>
+        <item>30</item>
+        <item>10</item>  
+    </string-array>
+
+    <!--<string-array name="stream_type_list">-->
+        <!--<item>Plain Text</item>-->
+        <!--<item>Image</item>-->
+        <!--<item>Video</item>-->
+        <!--<item>Audio</item>-->
+        <!--<item>Book</item>-->
+        <!--<item>Application</item>-->
+        <!--<item>Link</item>-->
+        <!--<item>Application Link</item>-->
+        <!--<item>Application Comment</item>-->
+        <!--<item>Application Like</item>-->
+        <!--<item>Book Like</item>-->
+        <!--<item>Book Comment</item>-->
+        <!--<item>Friendship</item>-->
+        <!--<item>Music</item>-->
+        <!--<item>Music Comment</item>-->
+        <!--<item>Music Like</item>-->
+    <!--</string-array>-->
+
+    <string-array name="stream_app_key_list">
+        <item>All Stream</item>
+        <!-- types: plain text, Friendship -->
+        <item>Status</item>
+        <!-- types: photo share -->
+        <item>Photo</item>
+        <!-- types: app posts including share/comment/like -->
+        <item>App</item>
+        <!-- types: book posts including share/comment/like -->
+        <item>Book</item>
+        <!-- types: music posts including share/comment/like -->
+        <item>Music</item>
+        <!-- types: link share -->
+        <item>Link</item>
+    </string-array>
+    
+     <string-array name="birthday_dialog_pick">
+        <item>Edit birthday</item>
+        <item>Reset birthday</item>
+    </string-array>
+
+    <!--<string-array name="stream_app_value" translatable="false">-->
+        <!--&lt;!&ndash; types: plain text, Friendship &ndash;&gt;-->
+        <!--<item>Status</item>-->
+        <!--&lt;!&ndash; types: photo share &ndash;&gt;-->
+        <!--<item>Photo</item>-->
+        <!--&lt;!&ndash; types: app posts including share/comment/like &ndash;&gt;-->
+        <!--<item>App</item>-->
+        <!--&lt;!&ndash; types: book posts including share/comment/like &ndash;&gt;-->
+        <!--<item>Book</item>-->
+        <!--&lt;!&ndash; types: music posts including share/comment/like &ndash;&gt;-->
+        <!--<item>Music</item>-->
+        <!--&lt;!&ndash; types: link share &ndash;&gt;-->
+        <!--<item>Link</item>-->
+    <!--</string-array>-->
+    <!-- Qiupu app category -->
+    <string-array name="app_category_name">
+        <item name="personal">personal</item>
+        <item name="traffic">traffic</item>
+        <item name="sport">sport</item>
+        <item name="health ">health</item>
+        <item name="corp">corp</item>
+        <item name="wallpaper">wallpaper</item>
+        <item name="animation">animate</item>
+        <item name="medicine">medicine</item>
+        <item name="book">book</item>
+        <item name="weather">weather</item>
+        <item name="entertainment">entertain</item>
+        <item name="video">video</item>
+        <item name="toolkit">toolkit</item>
+        <item name="photograph">photo</item>
+        <item name="efficiency">efficient</item>
+        <item name="education">education</item>
+        <item name="news">news</item>
+        <item name="tour">tour</item>
+        <item name="life">life</item>
+        <item name="sns">sns</item>
+        <item name="widget">widget</item>
+        <item name="finance">finance</item>
+        <item name="shopping">shopping</item>
+        <item name="communicate">communicate</item>
+        <item name="music">music</item>
+        <item name="collect">collect</item>
+        <item name="default">default</item>
+        <item name="leasure">leasure</item>
+        <item name="sportgame">sportgame</item>
+        <!-- <item name="gwallpaper">gwallpaper</item> -->
+        <item name="match">match</item>
+        <item name="game">game</item>
+        <item name="longelligence">intelligent</item>
+       <!--  <item name="gwidget">gwidget</item> -->
+        <item name="card">card</item>
+    </string-array>
+
+    <string-array name="app_category_id">
+        <item name="category_personal">257</item>
+        <item name="category_trafic">258</item>
+        <item name="category_sport">259</item>
+        <item name="category_health">260</item>
+        <item name="category_corp">261</item>
+        <item name="category_wallpaper">262</item>
+        <item name="category_animation">263</item>
+        <item name="category_medicine">264</item>
+        <item name="category_book">265</item>
+        <item name="category_whether">266</item>
+        <item name="category_entertainment">267</item>
+        <item name="category_video">268</item>
+        <item name="category_toolkit">269</item>
+        <item name="category_photograph">270</item>
+        <item name="category_efficiency">271</item>
+        <item name="category_education">272</item>
+        <item name="category_news">273</item>
+        <item name="category_tour">274</item>
+        <item name="category_life">275</item>
+        <item name="category_sns">276</item>
+        <item name="category_widget">277</item>
+        <item name="category_finance">278</item>
+        <item name="category_shopping">279</item>
+        <item name="category_communication">280</item>
+        <item name="category_music">281</item>
+        <item name="category_collect">289</item>
+        <item name="category_default">290</item>
+        <item name="category_leisure">513</item>
+        <item name="category_sportgame">514</item>
+        <!-- <item name="category_gwallpaper">515</item> -->
+        <item name="category_match">516</item>
+        <item name="category_game">517</item>
+        <item name="category_longelligence">518</item>
+        <!-- <item name="category_gwidget">519</item> -->
+        <item name="category_card">520</item>
+    </string-array>
+
+    <string-array name="apps_category">
+        <item name="personal">personal</item>
+        <item name="traffic">traffic</item>
+        <item name="sport">sport</item>
+        <item name="health ">health</item>
+        <item name="corp">corp</item>
+        <item name="wallpaper">wallpaper</item>
+        <item name="animation">animate</item>
+        <item name="medicine">medicine</item>
+        <item name="book">book</item>
+        <item name="weather">weather</item>
+        <item name="entertainment">entertain</item>
+        <item name="video">video</item>
+        <item name="toolkit">toolkit</item>
+        <item name="photograph">photo</item>
+        <item name="efficiency">efficient</item>
+        <item name="education">education</item>
+        <item name="news">news</item>
+        <item name="tour">tour</item>
+        <item name="life">life</item>
+        <item name="sns">sns</item>
+        <item name="widget">widget</item>
+        <item name="finance">finance</item>
+        <item name="shopping">shopping</item>
+        <item name="communicate">communicate</item>
+        <item name="music">music</item>
+        <item name="collect">collect</item>
+        <item name="default">default</item>
+    </string-array>
+
+    <integer-array name="apps_id">
+        <item name="category_personal">257</item>
+        <item name="category_trafic">258</item>
+        <item name="category_sport">259</item>
+        <item name="category_health">260</item>
+        <item name="category_corp">261</item>
+        <item name="category_wallpaper">262</item>
+        <item name="category_animation">263</item>
+        <item name="category_medicine">264</item>
+        <item name="category_book">265</item>
+        <item name="category_whether">266</item>
+        <item name="category_entertainment">267</item>
+        <item name="category_video">268</item>
+        <item name="category_toolkit">269</item>
+        <item name="category_photograph">270</item>
+        <item name="category_efficiency">271</item>
+        <item name="category_education">272</item>
+        <item name="category_news">273</item>
+        <item name="category_tour">274</item>
+        <item name="category_life">275</item>
+        <item name="category_sns">276</item>
+        <item name="category_widget">277</item>
+        <item name="category_finance">278</item>
+        <item name="category_shopping">279</item>
+        <item name="category_communication">280</item>
+        <item name="category_music">281</item>
+        <item name="category_collect">289</item>
+        <item name="category_default">290</item>
+    </integer-array>
+
+    <string-array name="games_category">
+        <item name="leasure">leasure</item>
+        <item name="sportgame">sportgame</item>
+        <item name="gwallpaper">gwallpaper</item>
+        <item name="match">match</item>
+        <item name="game">game</item>
+        <item name="longelligence">intelligence</item>
+        <item name="gwidget">gwidget</item>
+        <item name="card">card</item>
+    </string-array>
+
+    <integer-array name="games_id">
+        <item name="category_leisure">513</item>
+        <item name="category_sportgame">514</item>
+        <item name="category_gwallpaper">515</item>
+        <item name="category_match">516</item>
+        <item name="category_game">517</item>
+        <item name="category_longelligence">518</item>
+        <item name="category_gwidget">519</item>
+        <item name="category_card">520</item>
+    </integer-array>
+
+    <string-array name="special_category">
+        <item name="tencent">QQ</item>
+        <item name="borqs">Borqs</item>
+        <item name="install">Install</item>
+        <item name="sns">SNS</item>
+    </string-array>
+
+    <integer-array name="special_id">
+        <item name="category_tencent">1003</item>
+        <item name="category_borqs">9527</item>
+        <item name="category_install">1002</item>
+        <item name="category_sns">1001</item>
+    </integer-array>
+
+    <string-array name="daren_category">
+        <item name="borqs_daren">Borqs Daren</item>
+        <item name="game_daren">Game Daren</item>
+        <item name="tools_daren">Tools Daren</item>
+    </string-array>
+
+    <integer-array name="daren_id">
+        <item name="category_borqs_daren">531</item>
+        <item name="category_game_daren">532</item>
+        <item name="category_tools_daren">533</item>
+    </integer-array>
+
+    <string-array name="visibility_name">
+        <item name="visibility_compose_anyone">Anyone</item>
+        <item name="visibility_dialog_contact">Recipient only</item>
+    </string-array>
+
+    <string-array name="apk_permission">
+        <item name="visibility_all">Everyone</item>
+        <item name="visibility_friends">Friends Only</item>
+        <item name="visibility_none">Hide</item>
+    </string-array>
+
+    <string-array name="add_friends_title">
+        <item name="from_fans_title">Fans</item>
+        <item name="from_contact_title">Contacts</item>
+        <item name="from_invite_title">Invite</item>
+    </string-array>
+
+    <string-array name="add_friends_detail">
+        <item name="from_fans_detail">Add friends from your fans.</item>
+        <item name="from_contact_detail">Add friends from your contacts.</item>
+        <item name="from_invite_detail">Invite friends to join by email or phone.</item>
+    </string-array>
+	
+    <string-array name="dialog_date_pick">
+        <item>Edit Date</item>
+        <item>Reset Date</item>
+    </string-array>
+    
+        <integer-array name="bind_errorcode">
+        <item name="bind_errorcode">400</item>
+        <item name="bind_hasbind_errorcode">401</item>
+        <item name="bind_bindmany_errorcode">402</item>
+    </integer-array>
+    
+        <string-array name="bind_error_message">
+        <item name="bind_errormessage">Bind Error</item>
+        <item name="bind_hasbind_errormessage">the phone or email has been binding</item>
+        <item name="bind_bindmany_errormessage">Most can only binding three phone or email</item>
+        </string-array>
+
+    <!-- left menu -->
+    <string-array name="left_menu_item_title">
+        <item name="dynamic_friends">Feeds</item>
+        <!-- <item name="personal_infomation">Profile</item> -->
+        <item name="album">Album</item>
+        <!-- <item name="message_center">Message Center</item> -->
+       <!--  <item name="company">@string/company</item> -->
+        <item name="friends">@string/tab_friends</item>
+        <item name="friends_circle">Circles</item>
+        <item name="event">Events</item>
+        <item name="poll">Poll</item>
+        <item name="find_friends">Find Friends</item>
+        <!-- <item name="exchange_card">Exchange vCard</item> -->
+        <!--<item name="dynamic_public">Public Feed</item>-->
+        <!-- <item name="application_recomment">App Box</item> -->
+        <!-- <item name="options">Options</item> -->
+    </string-array>
+    
+    <string-array name="user_detail_action">
+        <item name="request_concern">Attention</item>
+    	<item name="say_hi">Say Hi</item>
+    </string-array>
+
+    <string-array name="comment_setting">
+        <item name="comment_item">Comment</item>
+        <item name="like_item">Like</item>
+        <item name="reshare_item">Reshare</item>
+    </string-array>
+
+    <string-array name="media_play_selection">
+        <item name="play_item">Play</item>
+        <item name="download_item">Download</item>
+    </string-array>
+    
+    <string-array name="privacy_set_title">
+        <item name="privacy_set_open">Open</item>
+        <item name="privacy_set_closed">Closed</item>
+        <item name="privacy_set_secret">Secret</item>
+    </string-array>
+    
+     <string-array name="privacy_set_summary">
+        <item name="privacy_set_open_summary">Anyone can see it, who\'s in it, and what members post.</item>
+        <item name="privacy_set_closed_summary">Anyone can see it and who\'s in it. Only members see posts.</item>
+        <item name="privacy_set_secret_summary">Only members see it, who\'s in it, and what members post.</item>
+    </string-array>
+    
+    <string-array name="member_approve">
+         <item name="members_applyed_circle">members which applyed to join</item>
+         <item name="members_invited_circle">members which invited</item>
+     </string-array>
+    
+    <string-array name="join_permission">
+        <item name="join_permission_verified">Verify the join</item>
+        <item name="join_permission_to_join">Directly</item>
+        <item name="join_permission_forbid">Not allowed to apply to join</item>
+    </string-array>
+    
+     <string-array name="join_permission_summary">
+        <item name="join_permission_verified_summary">the apply need administrators approved</item>
+        <item name="join_permission_to_join_summary">Applicants can directly add</item>
+        <item name="join_permission_forbid_summary">Only by Administrator invited to join</item>
+    </string-array>
+    
+     <string-array name="ordinal_labels">
+        <item>first</item>
+        <item>second</item>
+        <item>third</item>
+        <item>fourth</item>
+        <item>last</item>
+    </string-array>
+    
+     <string-array name="reminder_minutes_labels">
+        <item>0 minutes</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>2 days</item>
+        <item>1 week</item>
+    </string-array>
+
+    <integer-array name="reminder_minutes_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+        <item>720</item>
+        <item>1440</item>
+        <item>2880</item>
+        <item>10080</item>
+    </integer-array>
+     
+    <string-array name="default_smiley_texts">
+      <item>:-)</item>   <!-- 0: Happy -->
+      <item>:-(</item>   <!-- 1: Sad -->
+      <item>;-)</item>   <!-- 2: Winking -->
+      <item>:-P</item>   <!-- 3: Tongue sticking out -->
+      <item>=-O</item>   <!-- 4: Surprised -->
+      <item>:-*</item>   <!-- 5: Kissing -->
+      <item>:O</item>    <!-- 6: Yelling -->
+      <item>B-)</item>   <!-- 7: Cool -->
+      <item>:-$</item>   <!-- 8: Money mouth -->
+      <item>:-!</item>   <!-- 9: Foot in mouth -->
+      <item>:-[</item>   <!-- 10: Embarrassed -->
+      <item>O:-)</item>  <!-- 11: Angel -->
+      <item>:-\\</item>  <!-- 12: Undecided -->
+      <item>:\'(</item>  <!-- 13: Crying -->
+      <item>:-X</item>   <!-- 14: Lips are sealed -->
+      <item>:-D</item>   <!-- 15: Laughing -->
+      <item>o_O</item>   <!-- 16: Confused -->
+      <item>&lt;3</item> <!-- 17: Heart -->
+      <item>x-(</item>   <!-- 18: Mad -->
+      <item>:-/</item>   <!-- 19: Smirk -->
+      <item>:-I</item>   <!-- 20: Poker face -->
+    </string-array>
+
+    <!-- NOTE: if you change anything about this array, you must make the corresponding change
+         to the array DEFAULT_SMILEY_RES_IDS in SmileyParser.java and to default_smiley_texts
+         above. -->
+    <string-array name="default_smiley_names">
+        <item>Happy</item>                   <!-- 0: :-) -->
+        <item>Sad</item>                     <!-- 1: :-( -->
+        <item>Winking</item>                 <!-- 2: ;-) -->
+        <item>Tongue sticking out</item>     <!-- 3: :-P -->
+        <item>Surprised</item>               <!-- 4: =-O -->
+        <item>Kissing</item>                 <!-- 5: :-* -->
+        <item>Yelling</item>                 <!-- 6: :O -->
+        <item>Cool</item>                    <!-- 7: B-) -->
+        <item>Money mouth</item>             <!-- 8: :-$ -->
+        <item>Foot in mouth</item>           <!-- 9: :-! -->
+        <item>Embarrassed</item>             <!-- 10: :-[ -->
+        <item>Angel</item>                   <!-- 11: O:-) -->
+        <item>Undecided</item>               <!-- 12: :-\\ -->
+        <item>Crying</item>                  <!-- 13: :\'( -->
+        <item>Lips are sealed</item>         <!-- 14: :-X -->
+        <item>Laughing</item>                <!-- 15: :-D -->
+        <item>Confused</item>                <!-- 16: o_O -->
+        <item>Heart</item>                   <!-- 17: <3 -->
+        <item>Mad</item>                     <!-- 18: x-( -->
+        <item>Smirk</item>                   <!-- 19: :-/ -->
+        <item>Poker face</item>              <!-- 20: :-I -->
+    </string-array>
+    
+     <string-array name="page_sub_title">
+         <item name="sub_type_company">Company</item>
+        <item name="sub_type_school">School</item>
+    </string-array>
+</resources>

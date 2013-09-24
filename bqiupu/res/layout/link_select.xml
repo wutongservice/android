@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" />
+	<EditText android:id="@+id/et_select"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar_container"
+        android:singleLine="true"
+        android:layout_margin="6dip"
+        android:text="http://"
+        />
+    
+    <GridView
+        android:id="@+id/link_listview"
+        android:layout_below="@id/et_select"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:numColumns="2"
+        android:gravity="center"
+        android:stretchMode="columnWidth"   
+        android:listSelector="?attr/listSelector"
+        android:fastScrollEnabled="true" />
+
+</RelativeLayout>

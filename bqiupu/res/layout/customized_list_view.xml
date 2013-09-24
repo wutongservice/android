@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <com.borqs.common.view.CustomListView xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="fill_parent" -->
+<!-- android:listSelector="@drawable/list_selector_background" -->
+<!-- android:cacheColorHint="@color/qiupu_list_color_cache_hint" -->
+<!-- android:persistentDrawingCache="animation|scrolling" -->
+<!-- android:layoutAnimation="@anim/layout_bottom_to_top_slide" -->
+<!-- android:background="@color/qiupu_list_color" -->
+<!-- /> -->
+<!-- commented as animator study was not complete -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paper_bg" >
+
+    <com.borqs.common.view.CustomListView
+        android:id="@+id/custom_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/qiupu_list_color_cache_hint"
+        android:divider="@null"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/list_selector_background"
+        android:paddingLeft="@dimen/stream_item_padding"
+        android:paddingRight="@dimen/stream_item_padding" />
+
+    <TextView
+        android:id="@+id/back_to_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/small_text_margin_bottom"
+        android:layout_marginRight="@dimen/default_margin"
+        android:drawableBottom="@drawable/back_to_top"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_top_stream"
+        android:textSize="@dimen/event_name_text_size"
+        android:visibility="gone" />
+
+</FrameLayout>

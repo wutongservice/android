@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/friendsListView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="@dimen/stream_row_size_profile_icon"
+        android:layout_height="@dimen/stream_row_size_profile_icon"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@id/role_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pin"
+        android:layout_alignBottom="@id/user_icon"
+        android:layout_alignLeft="@id/user_icon"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/white"
+        android:textSize="10dip"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/name_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/default_text_padding_left"
+        android:layout_toLeftOf="@+id/people_action_rl"
+        android:layout_toRightOf="@id/user_icon" >
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/peopleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:id="@+id/second_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="@style/sns_time"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@id/people_action_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right|center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/in_member_action"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/grant_member"
+                style="@style/list_item_icon"
+                android:src="@drawable/ic_btn_add_member" />
+
+            <ImageView
+                android:id="@+id/delete_member"
+                style="@style/list_item_icon"
+                android:layout_toRightOf="@id/grant_member"
+                android:src="@drawable/ic_btn_dismiss_person" />
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/apply_member_action"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/approve_member"
+                style="@style/list_item_icon"
+                android:src="@drawable/ic_btn_add_member" />
+
+            <ImageView
+                android:id="@+id/ignore_member"
+                style="@style/list_item_icon"
+                android:layout_toRightOf="@id/approve_member"
+                android:src="@drawable/ic_btn_dismiss_person" />
+        </RelativeLayout>
+        
+          <RelativeLayout
+            android:id="@+id/invite_member_action"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <!-- ImageView
+                android:id="@+id/may_know_add"
+                style="@style/list_item_icon"
+                android:src="@drawable/ic_btn_add_member" />
+
+            <ImageView
+                android:id="@+id/may_know_delete"
+                style="@style/list_item_icon"
+                android:layout_toRightOf="@id/may_know_add"
+                android:src="@drawable/ic_btn_dismiss_person" / -->
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@id/user_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+
+<resources>
+    <dimen name="allapps_cell_height">96dp</dimen>
+    <dimen name="allapps_text_paddingTop">6dp</dimen>
+    <dimen name="allapps_text_drawablePadding">8px</dimen>
+</resources>

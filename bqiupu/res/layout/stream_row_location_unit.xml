@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.borqs.common.view.EsTextView xmlns:android="http://schemas.android.com/apk/res/android"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:textAppearance="@style/sns_location"
+                                  android:layout_gravity="center_vertical"
+                                  android:gravity="center_vertical"
+                                  android:drawableLeft="@drawable/ic_location"
+                                  android:drawablePadding="@dimen/stream_row_padding_vertical"
+                                  android:visibility="gone"/>

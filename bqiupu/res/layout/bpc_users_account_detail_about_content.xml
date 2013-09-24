@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/user_detail_sv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="5dip"
+            android:background="#ffffff"
+            android:scrollbars="none">
+    <LinearLayout
+            android:id="@+id/add_friends_from_qiupu"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            
+        <LinearLayout
+                android:id="@+id/id_name"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="5dip" >
+                
+                <TextView
+                android:id="@+id/id_user_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/recommendate_friends"
+                android:background="?attr/buttonSelectableBackground"
+                android:drawableLeft="@drawable/create_contact"
+                android:gravity="left|center_vertical"
+                android:layout_weight="0.5"
+                android:visibility="gone" />
+
+            <TextView android:id="@id/recommendate_friends"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/friend_recomm"
+                      android:gravity="left|center_vertical"
+                      android:layout_weight="0.5"
+                      android:background="?attr/listSelector"
+                      android:drawableLeft="@drawable/icon_recommendation"/>
+        </LinearLayout>
+
+
+        <View android:id="@+id/span_relationship_top"
+              android:layout_width="fill_parent"
+              android:layout_height="2px"
+              android:layout_below="@id/profile_span"
+              android:background="@drawable/profile_bg_line"/>
+
+        <LinearLayout
+                android:id="@+id/id_relationship_fav"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+            <TextView android:id="@+id/id_concern"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/user_detail_concern"
+                      android:gravity="center"
+                      android:drawableRight="@drawable/widget_line"
+                      android:background="?attr/listSelector"
+                      android:layout_weight="1"/>
+
+            <TextView android:id="@+id/id_followers"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/user_detail_follower"
+                      android:drawableRight="@drawable/widget_line"
+                      android:gravity="center"
+                      android:background="?attr/listSelector"
+                      android:layout_weight="1"/>
+
+            <TextView android:id="@+id/id_favourites"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:layout_weight="1"
+                      android:background="?attr/listSelector"
+                      android:text="@string/user_detail_favourite"
+                      android:gravity="center"/>
+        </LinearLayout>
+
+        <View android:id="@+id/span_relationship_bottom"
+              android:layout_width="fill_parent"
+              android:layout_height="2px"
+              android:layout_marginBottom="5dip"
+              android:layout_below="@id/profile_span"
+              android:background="@drawable/profile_bg_line"/>
+
+        <RelativeLayout android:id="@+id/other_info_span"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:orientation="vertical" android:visibility="gone">
+
+            <TextView android:id="@+id/other_info_tv"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/base_info_title"
+                      android:gravity="bottom"
+                      android:textAppearance="@style/profile_info_title"/>
+
+            <View android:id="@+id/span_view_2"
+                  android:layout_width="fill_parent"
+                  android:layout_height="2px"
+                  android:layout_below="@id/other_info_tv"
+                  android:background="@drawable/profile_bg_line2"/>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/id_base_info"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginBottom="5dip">
+        </LinearLayout>
+		
+        <RelativeLayout android:id="@+id/phone_email_span"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:orientation="vertical" android:visibility="gone">
+
+            <TextView android:id="@+id/phone_email_tv"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/phone_email_title"
+                      android:gravity="bottom"
+                      android:textAppearance="@style/profile_info_title"/>
+
+            <ImageView android:id="@+id/add_phone_email"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="bottom"
+                       android:paddingLeft="8dip"
+                       android:paddingTop="8dip"
+                       android:paddingRight="8dip"
+                       android:layout_alignBottom="@id/phone_email_tv"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/add"
+                       android:background="?attr/listSelector"/>
+
+            <View android:id="@+id/span_view_1"
+                  android:layout_width="fill_parent"
+                  android:layout_height="2px"
+                  android:layout_below="@id/phone_email_tv"
+                  android:background="@drawable/profile_bg_line2"/>
+        </RelativeLayout>
+
+
+        <LinearLayout android:id="@+id/id_contact_info"
+                      android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="10dip"
+                      android:layout_marginLeft="10dip">
+        </LinearLayout>
+		<RelativeLayout android:id="@+id/work_info_span"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:orientation="vertical" android:visibility="gone">
+
+            <TextView android:id="@+id/work_info_tv"
+                      android:layout_width="fill_parent"
+                      android:layout_height="46dip"
+                      android:text="@string/work_experience"
+                      android:gravity="bottom"
+                      android:textAppearance="@style/profile_info_title"/>
+
+            <View 
+                  android:layout_width="fill_parent"
+                  android:layout_height="2px"
+                  android:layout_below="@+id/work_info_tv"
+                  android:background="@drawable/profile_bg_line2"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/layout_work_info"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_marginLeft="10dip">
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+    </LinearLayout>
+</ScrollView>
+

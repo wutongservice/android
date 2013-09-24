@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:id="@+id/invite_container"
+        style="@style/exchange_vcard_style" >
+
+        <ImageView
+            android:id="@+id/invite_icon"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/card_wait_icon" />
+
+        <TextView 
+            android:id="@+id/has_my_card_text"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/invite_icon"
+            android:layout_toRightOf="@id/invite_icon"
+            android:singleLine="true"
+            android:text="@string/exchange_request_header_title" />
+
+        <TextView 
+            android:id="@+id/invite_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/invite_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:textColor="@color/red"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/invite_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/send_card_container"
+        style="@style/exchange_vcard_style" >
+
+        <ImageView
+            android:id="@+id/send_icon"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/card_ok_icon" />
+
+        <TextView 
+            android:id="@+id/send_my_card_text"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/send_icon"
+            android:layout_toRightOf="@id/send_icon"
+            android:singleLine="true"
+            android:text="@string/exchange_send_header_title" />
+
+        <TextView 
+            android:id="@+id/send_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/send_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/send_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/receive_card_container"
+        style="@style/exchange_vcard_style"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/receive_icon"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/card_ok_icon" />
+
+        <TextView 
+            android:id="@+id/receive_my_card_text"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/receive_icon"
+            android:layout_toRightOf="@id/receive_icon"
+            android:singleLine="true"
+            android:text="@string/received_card_friends" />
+
+        <TextView 
+            android:id="@+id/receive_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/receive_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/receive_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/card_holder_container"
+        style="@style/exchange_vcard_style"
+        android:layout_marginBottom="5dip" >
+
+        <ImageView
+            android:id="@+id/holder_icon"
+            style="@style/user_profile_relationship_image"
+            android:src="@drawable/card_ok_icon" />
+
+        <TextView 
+            android:id="@+id/holder_my_card_text"
+            style="@style/user_profile_relationship_title"
+            android:layout_alignTop="@id/holder_icon"
+            android:layout_toRightOf="@id/holder_icon"
+            android:singleLine="true"
+            android:text="@string/card_holder_title" />
+
+        <TextView 
+            android:id="@+id/holder_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/holder_right"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:textSize="15.0sp" />
+
+        <ImageView
+            android:id="@+id/holder_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/commit_button_margin_right"
+            android:src="@drawable/chevron_grey" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/invite_btn"
+        style="@style/exchange_vcard_button_style"
+        android:text="@string/invite_friends_exchange_vcard" />
+
+    <TextView
+        android:id="@+id/nfc_btn"
+        style="@style/exchange_vcard_button_style"
+        android:text="@string/nfc_exchange_vcard" />
+
+    <TextView
+        android:id="@+id/shake_btn"
+        style="@style/exchange_vcard_button_style"
+        android:text="@string/shaking_exchange_vcard" />
+
+</LinearLayout>

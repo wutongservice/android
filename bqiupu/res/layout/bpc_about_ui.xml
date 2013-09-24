@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sns_about"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/qiupu_bg_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/head_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:paddingLeft="@dimen/title_bar_title_left_padding"
+        android:background="@drawable/actionbar_bg"
+        android:gravity="center"
+        android:text="@string/app_title"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/title_text_size"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/sns_about"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/default_about_activity_margin_top"
+                android:src="@drawable/about_logo" />
+
+            <TextView
+                android:id="@+id/version_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_about_activity_margin_top"
+                android:gravity="center"
+                android:text="@string/about_version_info"
+                android:textColor="@color/apk_detail_font" />
+
+            <include layout="@layout/default_expandable_text_panel_item"
+                        android:id="@+id/expandable_span"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_about_activity_margin_top"
+                        android:layout_marginLeft="@dimen/default_about_view_horizontal_margin"
+                        android:layout_marginRight="@dimen/default_about_view_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/official_website"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_about_view_horizontal_margin"
+                android:layout_marginRight="@dimen/default_about_view_horizontal_margin"
+                android:layout_marginTop="30dip"
+                android:autoLink="all"
+                android:gravity="center_vertical"
+                android:text="@string/about_official_website"
+                android:textColor="@color/apk_detail_font" />
+
+            <TextView
+                android:id="@+id/official_weibo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_about_view_horizontal_margin"
+                android:layout_marginRight="@dimen/default_about_view_horizontal_margin"
+                android:layout_marginTop="@dimen/default_about_activity_margin_top"
+                android:autoLink="all"
+                android:gravity="center_vertical"
+                android:text="@string/about_official_weibo"
+                android:textColor="@color/apk_detail_font" />
+
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:gravity="center"
+                android:text="@string/about_copyright"
+                android:textColor="@color/apk_detail_font" />
+            
+            <Button android:id="@+id/login_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_ok"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

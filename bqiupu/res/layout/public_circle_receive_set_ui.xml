@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_view"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:paddingRight="@dimen/default_text_padding_right"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <include 
+                android:id="@+id/enable_receive_rl"
+                layout="@layout/comment_setting_item"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/default_list_item_height" />
+
+            <!-- RelativeLayout
+                android:id="@+id/enable_receive_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/default_text_padding_top"
+                android:paddingBottom="@dimen/default_text_padding_bottom"
+                android:background="?attr/listSelector"  >
+
+                <TextView
+                    android:id="@+id/enable_receive_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/circle_receive_enable_label" />
+
+                <ToggleButton
+                    android:id="@+id/enable_receive_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/default_text_margin_right"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </RelativeLayout -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?attr/listDivider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_phone"
+                style="@style/circle_receive_set_style"
+                android:enabled="false" >
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/circle_add_receive_phone"
+                    android:textSize="18dip"
+                    android:enabled="false"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/phone_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/circle_add_receive_phone_summary"
+                    android:layout_below="@id/phone_tv" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?attr/listDivider" />
+
+            <RelativeLayout
+                android:id="@+id/layout_email"
+                style="@style/circle_receive_set_style"
+                android:enabled="false" >
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="@string/circle_add_receive_email"
+                    android:textSize="18dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/circle_add_receive_email_summary"
+                    android:layout_below="@id/email_tv" />
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="?attr/listDivider" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

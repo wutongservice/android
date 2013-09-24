@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+android:layout_height="wrap_content" >
+<View 
+    android:id="@+id/id_divider"
+         android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider"
+        android:layout_alignParentBottom="true" />
+<RelativeLayout 
+    android:layout_above="@id/id_divider"
+style="@style/circleListView" >
+
+<!--     <FrameLayout android:id="@+id/id_layout_icon" android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true">
+	    <ImageView
+	        android:id="@+id/id_circle_icon"
+	        android:layout_width="@dimen/stream_row_size_profile_icon"
+	        android:layout_height="@dimen/stream_row_size_profile_icon"
+	        />
+	    <ImageView android:background="@drawable/avatar_small_corner" 
+	        android:layout_width="@dimen/stream_row_size_profile_icon" android:layout_height="@dimen/stream_row_size_profile_icon" 
+	        />
+    </FrameLayout> -->
+	    <ImageView
+	        android:id="@+id/id_circle_icon"
+	        android:layout_width="@dimen/stream_row_size_profile_icon"
+	        android:layout_height="@dimen/stream_row_size_profile_icon"
+        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        />
+	<RelativeLayout android:id="@+id/id_layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/circle_right_action"
+        android:layout_toRightOf="@id/id_circle_icon"
+        android:paddingLeft="@dimen/default_text_padding_left"
+        android:gravity="center_vertical">
+	    
+    <TextView
+        android:id="@+id/id_circle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="@style/users_circles_name" 
+        />
+    <TextView
+            android:id="@+id/tv_member_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_circle_name"
+            android:layout_marginTop="4dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/lightgrey"
+            android:textSize="14dip" />
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/circle_right_action"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" >
+
+        <CheckBox
+            android:id="@+id/circle_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <ImageView
+            android:id="@+id/circle_delete"
+            style="@style/list_item_icon"
+            android:src="@drawable/subtract" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/create_new_circle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" >
+
+        <ImageView
+            android:id="@+id/id_create_circle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/ic_add_new_circle" />
+
+        <TextView
+            android:id="@+id/id_create_circle_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/id_create_circle_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/default_text_padding_left"
+            android:text="@string/create_new_circle"
+            android:textAppearance="@style/sns_create_new_circle" />
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

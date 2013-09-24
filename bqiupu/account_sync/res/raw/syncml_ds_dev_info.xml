@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<!-- Package : oms.android.syncml.ds -->
+<!--This file is used for list device infomation for PIM -->
+
+<properties>
+
+	<!-- Sample of add a entry -->
+	<!-- 
+		<entry key="key name">key value</entry>	
+	-->
+
+	<entry key="dev_man">Motorola</entry>
+	<entry key="dev_mod">MT620</entry>
+	<entry key="dev_swv">THTTD_N_01.01.03I</entry>
+	<entry key="dev_ver_dtd">1.1</entry>
+	<entry key="dev_oem"></entry>
+	<entry key="dev_fwv">THTTD_N_01.01.03I</entry>
+	<entry key="dev_hwv">p21</entry>
+	<entry key="dev_type">smartphone</entry>
+	<entry key="dev_utc">true</entry>
+	<entry key="dev_large_object">true</entry>
+	<entry key="dev_number_of_change">true</entry>
+	<comment>10*1024=10240</comment>
+	<entry key="dev_max_msg_size">10240</entry>
+	<comment>1024*1024=1048576</comment>
+	<entry key="dev_max_obj_size">1048576</entry>
+	<entry key="user_agent">MOT-MT620_TD/1.0 OPhone/2.5 (Linux; Android 2.2) Release/03.31.2011 Browser/WAP2.0 (AppleWebKit/533.1) Profile/MIDP-2.1 Configuration/CLDC-1.1</entry>
+	<entry key="sync_photo">true</entry>
+	<entry key="display_settings">true</entry>
+	<entry key="print_log">true</entry>
+</properties>

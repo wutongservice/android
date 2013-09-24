@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="contact_sync">联系人云同步</string>
+    <string name="contact_sync_add_detail_msg" formatted="false" >增加</string>
+    <string name="contact_sync_update_detail_msg" formatted="false" >修改</string>
+    <string name="contact_sync_delete_detail_msg" formatted="false" >删除</string>
+    <string name="contact_sync_count_more">等联系人</string>
+    <string name="contact_sync_change_other_more"><a>&lt;&lt;更多%s个人</a></string>
+
+</resources>

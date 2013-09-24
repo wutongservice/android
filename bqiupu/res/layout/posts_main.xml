@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/qiupu_list_color">
+        
+      <LinearLayout    
+      android:id="@+id/titlebar_container"
+      android:layout_width="fill_parent" 
+      android:layout_height="46dp" 
+      android:orientation="horizontal">
+      </LinearLayout>
+      
+      <LinearLayout
+	    android:id="@+id/compose_span"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"    
+	    android:layout_below="@id/titlebar_container" 
+	    android:gravity = "top"
+        android:visibility="gone"
+	    android:background="@drawable/oms_actionbar_background">  
+	          <LinearLayout
+		       android:id="@+id/pre_next_controller"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_weight="1.0"
+		       android:paddingTop="5px"
+		       android:paddingBottom="5px"
+		       android:layout_gravity="center_vertical"       
+		       android:orientation="horizontal">
+		       <EditText
+		                android:id="@+id/wall_message_editor"
+		                android:layout_width="fill_parent"       
+		                android:layout_height="wrap_content"
+		                android:minHeight="53dip"      
+		                android:autoText="true"                 
+		                android:capitalize="sentences"
+		                android:maxLines="10"
+		                android:textColor="#000000"
+		                android:hint="@string/status_update_compose"
+		                android:nextFocusRight="@+id/wall_post"
+		                android:background="@drawable/editbox_background"
+		                android:layout_gravity="center_vertical"/>
+		        </LinearLayout>
+          <Button android:id="@+id/wall_post"
+           android:layout_width="65dip"
+           android:layout_height="48dip" 
+           android:textSize="16dip"       
+           android:layout_alignParentRight="true"  
+           android:text="@string/status_share"     
+           android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    
+    <!-- 
+    <com.borqs.common.view.PageIndicatorLineStyleView 
+           android:id="@+id/page_line_indicator"
+           android:layout_width="fill_parent"   
+           android:layout_below="@id/compose_span"      
+           android:layout_height="6dp"/>
+           
+    <com.borqs.appbox.view.AllAppsScreen
+            android:id="@+id/workspace"
+            android:layout_below="@id/page_line_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            qiupu:screen_number="3">
+    </com.borqs.appbox.view.AllAppsScreen>
+    --> 
+     
+    <ListView
+          android:id="@+id/content"    
+ 		  android:layout_below="@id/compose_span" 		  
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:divider="@drawable/divider"
+          android:cacheColorHint="#00000000"
+          android:listSelector="@drawable/list_selector_background"/> 
+    
+</RelativeLayout>	        

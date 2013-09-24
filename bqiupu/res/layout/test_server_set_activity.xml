@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/header"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_margin="10dp"
+              android:background="@color/qiupu_list_color">
+
+    <TextView
+            android:id="@+id/prompt_text"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"/>
+
+    <TextView
+            android:id="@+id/warning_text"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="@string/test_server_url_set_warning"
+            android:layout_below="@+id/prompt_text"
+            android:textColor="#0000ff00"
+            android:layout_marginTop="10dip"
+            android:textAppearance="?android:attr/textAppearanceSmallInverse"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/action_buttons"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dip"
+                  android:layout_marginBottom="10dip"
+                  android:layout_below="@+id/warning_text"
+                  android:background="@color/qiupu_list_color">
+        <Button android:id="@+id/switch_ok_btn"
+                android:layout_width="134dip"
+                android:layout_height="42dip"
+                android:text="@string/test_server_url_set_exchange"
+                android:background="@drawable/apk_status_bg"
+                android:gravity="center"
+                android:layout_gravity="left"
+                android:layout_alignParentLeft="true"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                />
+        <Button android:id="@+id/switch_cancel_btn"
+                android:layout_width="134dip"
+                android:layout_height="42dip"
+                android:text="@string/label_cancel"
+                android:background="@drawable/apk_status_bg"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:layout_marginRight="10dp"
+                />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+

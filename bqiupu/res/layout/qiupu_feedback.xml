@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/share_ui"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+    <LinearLayout
+            android:id="@+id/titlebar_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal">
+    </LinearLayout>
+
+    <EditText android:id="@+id/feedback_content"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:autoText="true"
+              android:inputType="textCapSentences|textMultiLine"
+              android:scrollbarStyle="outsideInset"
+              android:scrollbars="vertical"
+              android:gravity="top"
+              android:hint="@string/feedback_hint"
+              android:layout_below="@id/titlebar_container"
+              android:layout_gravity="center_vertical"
+              android:layout_centerHorizontal="true"/>
+</RelativeLayout>

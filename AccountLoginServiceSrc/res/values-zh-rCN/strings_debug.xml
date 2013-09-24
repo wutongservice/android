@@ -1,0 +1,11 @@
+<resources>
+    <string name="account_pref_adv_setting">高级设置</string>
+    <string name="account_pref_borqs_debug_log">输出日志</string>
+    <string name="account_pref_borqs_debug_log_summary">打印调试日志</string>
+    <string name="account_pref_borqs_url_select">变更服务器</string>
+    <string name="account_pref_borqs_url_select_summary">切换帐号，会删除当前帐号！</string>
+    <string name="account_dialog_local_config_message">已检测到本地配置文件, 打算使用此配置文件内容? \n%1$s</string>
+    <string name="account_pref_borqs_url_current_setting">当前设置</string>
+    <string name="account_config_name">播思应用环境设置</string>
+    <string name="account_have_account_alert">你已经登录一个服务器，请手动删除帐号再切换服务器</string>
+</resources>

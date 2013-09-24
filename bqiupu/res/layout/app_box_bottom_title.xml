@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/header"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/title_bar_height"
+                android:background="@drawable/actionbar_bg">
+
+    <RelativeLayout
+            android:id="@+id/actions"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <FrameLayout
+                android:id="@+id/frame_left"
+                android:layout_width="50dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+            <ImageView
+                    android:id="@+id/head_action_left"
+                    style="@style/title_bar_icon"
+                    android:src="@drawable/actionbar_icon_sync_normal" />
+
+            <ProgressBar
+                    android:id="@+id/head_progress"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    style="?android:attr/progressBarStyle"
+                    android:progress="50"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:visibility="gone"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/frame_right"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+            <ImageView
+                    android:id="@+id/head_action_right"
+                    style="@style/title_bar_icon"
+                    android:src="@drawable/actionbar_icon_search_normal"/>
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_toRightOf="@+id/frame_left"
+                android:layout_toLeftOf="@+id/frame_right"
+                android:layout_centerVertical="true">
+            <ImageView
+                    android:id="@+id/head_action_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            
+            <TextView
+                    android:id="@+id/head_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/title_text_size"
+                    android:textAppearance="?android:attr/textAppearanceInverse"
+                    android:text="@string/home_appbox"
+                    android:gravity="center"
+                    android:maxLines="1"/>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

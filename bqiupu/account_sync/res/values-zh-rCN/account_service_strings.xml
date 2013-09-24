@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="borqs_account_label">播思</string>
+    <string name="account_settings_title_fmt">设置"</string>
+    <string name="account_settings_contact_sync_label">本地联系人变化同步提醒</string>
+    <string name="account_settings_contact_sync_summary_enabled">启动</string>
+    <string name="account_settings_contact_sync_summary_disabled">禁止</string>
+    <string name="invite_contact_label">添加到圈子</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="borqs_account_label">Borqs</string>
+    <string name="account_settings_title_fmt">"Settings"</string>
+    <string name="account_settings_contact_sync_label">Contact backup reminder</string>
+    <string name="account_settings_contact_sync_summary_enabled">Enabled</string>
+    <string name="account_settings_contact_sync_summary_disabled">Disabled</string>
+    <string name="invite_contact_label">Invite to circle</string>
+</resources>

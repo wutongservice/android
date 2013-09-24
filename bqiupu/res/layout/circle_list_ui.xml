@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white" >
+
+    <LinearLayout
+            android:id="@+id/titlebar_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:orientation="horizontal"
+            android:visibility="gone">
+    </LinearLayout>
+
+    <RelativeLayout
+            android:id="@+id/id_privacy_circle_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:paddingLeft="@dimen/people_item_padding_left"
+            android:paddingRight="@dimen/people_item_padding_right"
+            android:background="?attr/listSelector">
+        <ImageView
+                android:id="@+id/id_title_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_private_circle"/>
+
+        <LinearLayout
+                android:id="@+id/id_title_span_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@+id/id_arrow_icon"
+                android:layout_toRightOf="@id/id_title_icon"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+            <TextView android:id="@+id/Privacy_circle_tv"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="16sp"
+                      android:textColor="#333333"
+                      android:paddingLeft="10dp"
+                      android:text="@string/people_circle_summary"
+                      android:gravity="center_vertical"/>
+
+            <TextView android:id="@+id/Privacy_circle_summary"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="4dip"
+                      android:textAppearance="@style/sns_time"
+                      android:text="@string/privacy_circle_select_summary"
+                      android:paddingLeft="10dp"
+                      android:gravity="center_vertical"
+                      android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <CheckBox
+                android:id="@+id/id_privacy_circle_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/privacy_circle_itural"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/id_span_view"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:textColor="#ffffff"
+            android:text="@string/privacy_circle_select_summary"
+            android:background="#959595"/>
+
+    <RelativeLayout
+        android:id="@+id/id_all_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/circle_list"
+            android:layout_width="fill_parent"
+            android:layout_height="300dip"
+            android:layout_above="@+id/bottom"
+            android:divider="@null"
+            android:listSelector="?attr/listSelector"
+            android:paddingBottom="10dip"
+            android:paddingTop="5dip" />
+
+        <include
+            android:id="@+id/bottom"
+            android:layout_below="@id/circle_list"
+            layout="@layout/bottom_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

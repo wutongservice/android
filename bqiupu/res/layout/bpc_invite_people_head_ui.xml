@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/invite_by_phone_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/list_selector_background"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:paddingLeft="@dimen/large_text_padding_left" >
+
+        <ImageView
+            android:id="@+id/invite_by_phone_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/default_text_padding_right"
+            android:src="@drawable/phone_icon" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/invite_by_phone_icon" >
+
+            <TextView
+                android:id="@+id/invite_by_phone_text1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/invite_contact_with_phone"
+                android:textAppearance="?android:attr/textAppearance" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider" />
+
+    <RelativeLayout
+        android:id="@+id/invite_by_email_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:background="@drawable/list_selector_background"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:paddingLeft="@dimen/large_text_padding_left" >
+
+        <ImageView
+            android:id="@+id/invite_by_email_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/default_text_padding_right"
+            android:src="@drawable/email_icon" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/invite_by_email_icon" >
+
+            <TextView
+                android:id="@+id/invite_by_email_text1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/invite_contact_with_email"
+                android:textAppearance="?android:attr/textAppearance" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/account_pref_adv_setting">
+        <CheckBoxPreference android:key="key_borqs_debug_log"
+                            android:title="@string/account_pref_borqs_debug_log"
+                            android:summary="@string/account_pref_borqs_debug_log_summary"/>
+
+        <Preference android:key="key_select_borqs_url"
+                            android:title="@string/account_pref_borqs_url_select"
+                            android:summary="@string/account_pref_borqs_url_select_summary"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

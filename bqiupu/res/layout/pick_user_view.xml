@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/titlebar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.borqs.qiupu.fragment.FixedTabsView
+        android:id="@+id/indicator"
+        style="@style/second_fix_tab_style" />
+
+    <include
+        android:id="@+id/search_span"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/inline_search_span_view" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <include layout="@layout/bottom_layout" android:id="@id/bottom_btn" />
+
+</LinearLayout>

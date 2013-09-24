@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles>
+	<profile default="true" user="" password="" hide="false"
+		reserve="true">
+		<id>1</id>
+		<name read_only="true"></name>
+		<apn>default</apn>
+		<server_url>http://api.borqs.com/sync/syncml/funambol/ds</server_url>
+		<sync_item active="true">
+			<name>JContact</name>
+			<remote_uri>JCard</remote_uri>
+			<local_uri>content://contacts/people
+			</local_uri>
+			<type>text/x-vcard</type>
+		</sync_item>
+		<sync_item active="true">
+			<name>Event</name>
+			<remote_uri>cal</remote_uri>
+			<local_uri>content://calendar/events
+			</local_uri>
+			<type>text/x-vcalendar</type>
+		</sync_item>
+		<sync_item active="false">
+			<name>Task</name>
+			<remote_uri>task</remote_uri>
+			<local_uri>content://todo/todo_tasks
+			</local_uri>
+			<type>text/x-vcalendar</type>
+		</sync_item>
+	</profile>
+</profiles>

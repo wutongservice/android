@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/static_file_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/audio_layout_height"
+    android:background="@drawable/list_selector_background" >
+
+    <ImageView 
+        android:id="@+id/file_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/folder" />
+
+    <TextView
+        android:id="@+id/static_file_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:paddingLeft="5dip"
+        android:layout_toRightOf="@id/file_icon"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textAppearance="@style/sns_text_second_copy" />
+
+    <TextView
+        android:id="@+id/static_file_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dip"
+        android:layout_below="@id/static_file_title"
+        android:layout_toRightOf="@id/file_icon"
+        android:textAppearance="@style/sns_text_second_copy" />
+
+    <ImageView 
+        android:id="@+id/down_load_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_download_normal"
+        android:visibility="gone" />
+
+</RelativeLayout>
+<!-- 
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/qiupu_download_from_market"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/sns_text_second_copy"
+          android:layout_gravity="center_vertical"
+          android:text="@string/download_from_mm"
+          android:paddingTop="5dp"
+          android:drawablePadding="5dp"
+          android:gravity="center_vertical"
+          android:drawableLeft="@drawable/ic_mobile_market"/>
+ -->

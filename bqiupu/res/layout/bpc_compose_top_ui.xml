@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stream_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:background="@color/location_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/category_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/info_category_title_bg"
+            android:paddingLeft="@dimen/category_padding_left"
+            android:paddingBottom="@dimen/small_text_padding_bottom"
+            android:paddingRight="@dimen/category_padding_right"
+            android:paddingTop="@dimen/small_text_padding_top"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/category_title_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/info_category_icon"  />
+
+            <TextView
+                android:id="@+id/info_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/category_title_icon"
+                android:layout_marginLeft="@dimen/small_text_margin_left"
+                android:gravity="center"
+                android:maxWidth="@dimen/max_category_width"
+                android:singleLine="true"  />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/insert_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            android:paddingBottom="4dip" >
+
+            <ImageView
+                android:id="@+id/people_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/buttonSelectableBackground"
+                android:padding="4dip"
+                android:src="@drawable/share_at_icon" />
+
+            <ImageView
+                android:id="@+id/face_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_text_margin_left"
+                android:background="?attr/buttonSelectableBackground"
+                android:padding="4dip"
+                android:src="@drawable/share_face_icon" />
+
+            <ImageView
+                android:id="@+id/add_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/large_text_margin_left"
+                android:layout_marginRight="-2dip"
+                android:background="?attr/buttonSelectableBackground"
+                android:padding="4dip"
+                android:src="@drawable/share_add_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/id_stream_property"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/stream_property_layout" />
+
+    <include
+        android:id="@+id/bottom_layout"
+        layout="@layout/compose_bottom_layout" />
+
+    <include
+        android:id="@+id/face_layout"
+        layout="@layout/compose_face_layout" />
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider"
+        android:visibility="gone" />
+
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/compose_visibility_background"
+        android:layout_marginBottom="-12dip" >
+	    <CheckBox
+	        android:id="@+id/send_email_checkbox"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/default_text_padding_left"
+	        android:text="@string/send_email_tips"
+	        android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/compose_visibility_background" >
+	    <CheckBox
+	        android:id="@+id/send_sms_checkbox"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/default_text_padding_left"
+	        android:text="@string/send_sms_tips"
+	        android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stream_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:orientation="horizontal" />
+    
+    <View
+        android:id="@+id/divider_line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="@dimen/small_text_margin_top"
+        android:background="@drawable/divider" 
+        android:visibility="gone" />
+
+</LinearLayout>

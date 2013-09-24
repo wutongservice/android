@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/left_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_text_margin_left"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/creator_icon"
+                android:layout_width="@dimen/people_icon_width"
+                android:layout_height="@dimen/people_icon_height"
+                android:layout_gravity="center"
+                android:padding="4dip"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/poll_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_text_margin_right"
+            android:layout_toRightOf="@id/left_rl"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_text_padding_left" >
+
+            <RelativeLayout
+                android:id="@+id/create_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/creator_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="@style/sns_username" />
+
+                <TextView
+                    android:id="@+id/create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/poll_create_time_size"
+                    android:textColor="@color/lightgrey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/detail_header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/status_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/default_text_padding_right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/left_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/clock_icon"
+                    android:paddingRight="@dimen/default_text_padding_right"
+                    android:textSize="@dimen/poll_create_time_size"
+                    android:textColor="@color/lightgrey" />
+
+                <TextView
+                    android:id="@+id/left_ticket_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/poll_create_time_size"
+                    android:textColor="@color/lightgrey" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/description_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/top_layout"
+        android:paddingBottom="@dimen/default_text_padding_bottom"
+        android:paddingLeft="@dimen/large_text_padding_left"
+        android:paddingRight="@dimen/large_text_padding_right"
+        android:paddingTop="@dimen/small_text_padding_top" >
+
+        <com.borqs.common.view.EsTextView
+            android:id="@+id/description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightgrey"
+            android:textSize="@dimen/poll_left_time_size"
+            android:minLines="2" />
+
+        <ImageView
+            android:id="@+id/folder_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/description_text"
+            android:src="@drawable/down_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

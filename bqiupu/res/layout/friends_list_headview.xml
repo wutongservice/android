@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_list_layout_rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <include
+        android:id="@+id/search_span"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/inline_search_span_view"
+        android:hint="@string/hint_search_people" />
+
+    <RelativeLayout
+        android:id="@+id/id_add_people"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_below="@id/search_span"
+        android:visibility="gone"
+        android:background="?attr/listSelector" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_height"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_menu_add_people"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/people_item_padding_left"
+            android:text="@string/add_people_to_circle" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/id_search_people_from_internet"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottom_height"
+        android:layout_below="@id/search_span"
+        android:visibility="gone"
+        android:background="?attr/listSelector" >
+
+        <TextView
+            android:id="@+id/search_text"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bottom_height"
+            android:layout_marginLeft="@dimen/large_text_margin_left"
+            android:layout_marginRight="@dimen/large_text_margin_right"
+            android:layout_marginTop="@dimen/small_text_margin_top"
+            android:layout_marginBottom="@dimen/small_text_margin_bottom"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:background="@drawable/search_text_bg"
+            android:paddingLeft="@dimen/people_item_padding_left"  />
+    </RelativeLayout>
+
+</RelativeLayout>

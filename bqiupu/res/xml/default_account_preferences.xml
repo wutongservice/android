@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/acl_settings_title_fmt" />
+    <PreferenceScreen
+            android:key="merge_button"
+            android:title="@string/account_settings_entry"
+            android:summary="@string/account_settings_summary">
+        <intent
+                android:action="com.borqs.account.SETTINGS"
+                android:targetClass="com.borqs.account.login.ui.AccountSettingsActivity"
+                android:targetPackage="com.borqs.qiupu"
+                />
+    </PreferenceScreen>
+</PreferenceScreen>

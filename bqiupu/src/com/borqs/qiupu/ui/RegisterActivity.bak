@@ -1,0 +1,580 @@
+package com.borqs.qiupu.ui;
+
+import java.util.ArrayList;
+
+import twitter4j.AsyncQiupu;
+import twitter4j.ErrorResponse;
+import twitter4j.TwitterAdapter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterMethod;
+import twitter4j.UserSession;
+import twitter4j.conf.ConfigurationContext;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.RelativeLayout.LayoutParams;
+
+import com.borqs.qiupu.AccountListener;
+import com.borqs.qiupu.QiupuConfig;
+import com.borqs.qiupu.R;
+import com.borqs.qiupu.UserAccountObserver;
+import com.borqs.qiupu.db.QiupuORM;
+import com.borqs.qiupu.ui.adapter.UserMailListAdapter;
+import com.borqs.qiupu.util.StringUtil;
+
+public class RegisterActivity extends Activity implements AccountListener,TextWatcher {
+	 private static final String TAG = "Qiupu.RegisterActivity";
+	 protected QiupuORM orm;    
+	 private AutoCompleteTextView register_username_edt;
+	 private EditText register_pwd_edt;
+	 private EditText register_confirmpwd_edt;
+	 private EditText register_nickname_edt;
+	 private EditText register_phonenumber_edt; 
+	 private EditText register_urlname_edt;
+	 private EditText register_verify_edt;
+	
+	 private TextView username_error_msg_txt;
+	 private TextView nickname_error_msg_txt;
+	 private TextView pwd_error_msg_txt;
+	 private TextView confirmpwd_error_msg_txt;
+	 private TextView phonenumber_error_msg_txt;
+	 private TextView urlname_error_msg_txt;
+	 private TextView verify_error_msg_txt;
+	
+	 private TextView username_txv;
+	 private TextView pwd_txv;
+	 private TextView confirmpwd_txv;
+	 private TextView nickname_txv;
+	 private TextView phonenumber_txv;
+	 private TextView verify_txv;
+	 private TextView urlname_txv;
+	 
+	 private ImageView mImageView;
+	 private ListView  mListView;
+	 
+	 private ScrollView mScrollView;
+
+	 private Button   register_ok_btn;
+	 private Button   register_cancel_btn;
+	 private Handler mHandler;
+     
+	 private int step = 1;
+	 private Toast mToast;
+	 AsyncQiupu asyncQiupu ;
+	 private ArrayList<String> mUserMail = new ArrayList<String>();
+	 private ArrayAdapter<String> adapter;
+	 private UserMailListAdapter mUserMailListAdapter;
+	 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.register);
+		
+		mUserMail = getIntent().getExtras().getStringArrayList("UserMail");
+		
+		register_username_edt = (AutoCompleteTextView)findViewById(R.id.register_username_edt);
+		register_username_edt.setThreshold(1);
+	    register_username_edt.addTextChangedListener(this);
+	    
+		register_pwd_edt      = (EditText)findViewById(R.id.register_pwd_edt);
+		register_confirmpwd_edt = (EditText)findViewById(R.id.register_confirmpwd_edt);
+		register_nickname_edt = (EditText)findViewById(R.id.register_nickname_edt);
+		register_phonenumber_edt = (EditText)findViewById(R.id.register_phonenumber_edt);
+		register_verify_edt = (EditText)findViewById(R.id.register_verify_edt);
+		register_urlname_edt = (EditText)findViewById(R.id.register_urlname_edt);	    
+		
+		username_error_msg_txt = (TextView)findViewById(R.id.username_error_msg_txt);
+		nickname_error_msg_txt = (TextView)findViewById(R.id.nickname_error_msg_txt);
+	    pwd_error_msg_txt = (TextView)findViewById(R.id.pwd_error_msg_txt);
+		confirmpwd_error_msg_txt = (TextView)findViewById(R.id.confirmpwd_error_msg_txt);
+		phonenumber_error_msg_txt = (TextView)findViewById(R.id.phonenumber_error_msg_txt);
+	    verify_error_msg_txt = (TextView)findViewById(R.id.verify_error_msg_txt);
+	    urlname_error_msg_txt = (TextView)findViewById(R.id.urlname_error_msg_txt);
+	    username_txv = (TextView)findViewById(R.id.username_txv);
+	    
+	    mImageView = (ImageView) findViewById(R.id.login_list_mail);
+	    mImageView.setOnClickListener(new ListMailBtnClickListener());
+	    mListView  = (ListView)findViewById(R.id.register_mail_content);
+	    mUserMailListAdapter = new UserMailListAdapter(this);
+		mListView.setAdapter(mUserMailListAdapter);
+		mListView.setOnItemClickListener(new ListMailItemClickListener());
+	    
+		mScrollView = (ScrollView) findViewById(R.id.register_scroolview);
+		mScrollView.setOnTouchListener(new ScroolViewTouichListener());
+		
+	    pwd_txv = (TextView)findViewById(R.id.pwd_txv);
+	    confirmpwd_txv = (TextView)findViewById(R.id.confirmpwd_txv);
+	    phonenumber_txv = (TextView)findViewById(R.id.phonenumber_txv);
+	    nickname_txv = (TextView)findViewById(R.id.nickname_txv);
+	    verify_txv = (TextView)findViewById(R.id.verify_txv);
+	    urlname_txv = (TextView)findViewById(R.id.urlname_txv);
+	    
+		register_ok_btn       = (Button)findViewById(R.id.register_ok_btn);
+		register_cancel_btn   = (Button)findViewById(R.id.register_cancel_btn);
+		register_cancel_btn.setText(getString(R.string.register_cancel));
+	    mHandler = new RegisterHandler();
+	    mToast = Toast.makeText(this.getApplicationContext(), "", Toast.LENGTH_SHORT);
+	    hideVerifyView();
+	    
+	    orm = QiupuORM.getInstance(getApplicationContext());
+		asyncQiupu = new AsyncQiupu(ConfigurationContext.getInstance(),null,null);
+	    UserAccountObserver.registerAccountListener(RegisterActivity.class.getName(), this);
+	    
+		register_cancel_btn.setOnClickListener(new OnClickListener(){
+			public void onClick(View v) {
+				if(step == 2){
+					//skip verify
+					String last_login_name = orm.getSettingValue(QiupuORM.LAST_LOGIN_USER);
+    	    		String current_login_name = orm.getAccount().email;
+    	    		if(last_login_name!=null && current_login_name!=null && !last_login_name.equals(current_login_name)){
+    	    			orm.setLastLoginUser(orm.getAccount().email);
+    	    		    //TODO 	deleteApkinfo
+    	    			orm.deleteApkinfo();
+    	    		}
+				    UserAccountObserver.login();
+				}else{
+					RegisterActivity.this.finish();
+				}
+			}
+		});
+		
+		register_ok_btn.setOnClickListener(new OnClickListener(){
+			public void onClick(View v) {
+				register_ok_btn.setEnabled(false);
+				register_cancel_btn.setEnabled(false);
+				
+				if(step == 2){
+					verifyAccount();
+					verify_error_msg_txt.setVisibility(View.GONE);
+				}
+				else
+				{
+					registerAccount();
+				}
+			}	
+		});
+		
+		Intent intent = this.getIntent();
+		initViewByIntent(intent);
+	}
+    
+	private class ScroolViewTouichListener implements OnTouchListener{
+
+		public boolean onTouch(View arg0, MotionEvent arg1) {
+			Resources res = getResources();
+			float density = res.getDisplayMetrics().density;
+			LayoutParams params = new LayoutParams(mListView.getWidth(), mListView.getHeight());
+			params.topMargin = (int) ((90 * density) - mScrollView.getScrollY());
+			params.leftMargin = (int) (20 * density);
+			params.rightMargin = (int) (20 * density);
+			mListView.setLayoutParams(params);
+			mListView.setVisibility(View.GONE);
+			return false;
+		}
+		
+	}
+	
+	private class ListMailItemClickListener implements OnItemClickListener{
+
+		public void onItemClick(AdapterView<?> arg0, View view, int position,long arg3) {
+			register_username_edt.setText(mUserMail.get(position).toString());
+			mListView.setVisibility(View.GONE);
+			
+		}
+	}
+	
+	private class ListMailBtnClickListener implements OnClickListener{
+
+		public void onClick(View arg0) {
+			
+			if(mListView.getVisibility() == View.GONE){
+				mListView.setVisibility(View.VISIBLE);
+			}else{
+				mListView.setVisibility(View.GONE);
+			}
+			
+			if(mUserMail.size() > 0){
+				mUserMailListAdapter.setItems(mUserMail);
+				mUserMailListAdapter.notifyDataSetChanged();
+			}
+		}
+	}
+	
+	
+	
+	private void showToastMsg(String messsg){
+		Message msg = mHandler.obtainMessage(TOAST_MSG);
+		msg.getData().putString("message", messsg);
+		msg.sendToTarget();
+	}
+
+	private void initViewByIntent(Intent intent) {
+		step = intent.getIntExtra("step",1);
+		String username = intent.getStringExtra("username");
+		String password = intent.getStringExtra("password");
+		register_username_edt.setText(username);
+		register_pwd_edt.setText(password);
+		if(step == 2){
+			hideOtherViews();
+			showVerifyView();
+		}
+	}
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		initViewByIntent(intent);
+	}
+
+	
+	private void verifyAccount() {
+		final String username = register_username_edt.getText().toString();
+		final String pwd = register_pwd_edt.getText().toString();
+		final String verifyCode = register_verify_edt.getText().toString();
+		asyncQiupu.verifyAccountRegister(username,verifyCode,new TwitterAdapter(){
+			public void verifyAccountRegister(UserSession registerAccount) {
+				Log.d(TAG, "verifyAccountRegister successfully");
+				QiupuORM.Account account = new QiupuORM.Account();
+				account.email = username;
+				account.pwd = pwd;
+				account.session_id = registerAccount.session_id;
+				account.uid = registerAccount.uid;
+				Message msg = mHandler.obtainMessage(VERIFY_END);
+				try{
+					orm.updateAccount(account);
+                    msg.getData().putBoolean(IS_VERIFY_SUCCESS_KEY, true);
+				}catch(Exception e){
+					msg.getData().putBoolean(IS_VERIFY_SUCCESS_KEY, false);
+				}			
+                msg.sendToTarget();				
+			}
+			
+			public void onException(TwitterException ex,TwitterMethod method) {
+				Log.d(TAG,"register exception msg:"+ex.getMessage()+" status_code:"+ex.getStatusCode());
+				Message msg = mHandler.obtainMessage(VERIFY_END);
+				msg.getData().putBoolean(IS_VERIFY_SUCCESS_KEY, false);
+				msg.getData().putInt(STATUS_CODE_KEY, ex.getStatusCode());
+                msg.sendToTarget();
+               
+			}
+		});
+	}
+
+	private void registerAccount() {
+		//show process dialog
+		//asyncTwitter.registerAccount();
+		//check if input params are valid
+		//username must  be a email address
+		//pwd must be alpha number or characters
+		//nickname can not be null
+		//urlname must be alpha number or characters
+		
+		final String username = register_username_edt.getText().toString();
+		final String pwd = register_pwd_edt.getText().toString();
+		final String nickname = register_nickname_edt.getText().toString();
+		final String confirm_pwd = register_confirmpwd_edt.getText().toString();
+		final String phonenumber = register_phonenumber_edt.getText().toString();
+		final String urlname = register_urlname_edt.getText().toString();
+		
+		boolean valid = true;
+		if(StringUtil.isEmpty(nickname)){
+			valid = false;
+			nickname_error_msg_txt.setVisibility(View.VISIBLE);
+			nickname_error_msg_txt.setText(R.string.nickname_error_msg);
+		}
+		else
+		{
+			nickname_error_msg_txt.setVisibility(View.GONE);
+		}
+		
+		if(StringUtil.isEmpty(username) || !StringUtil.isValidEmail(username)){
+			valid = false;
+			username_error_msg_txt.setVisibility(View.VISIBLE);
+			username_error_msg_txt.setText(R.string.username_error_msg);
+		} else {
+			username_error_msg_txt.setVisibility(View.GONE);
+		}
+		
+		//urlname can be null, but if not null it must a valid url name
+		if(!StringUtil.isEmpty(urlname) && !StringUtil.isValidURLName(urlname)){
+			valid = false;
+			urlname_error_msg_txt.setVisibility(View.VISIBLE);
+			urlname_error_msg_txt.setText(R.string.urlname_error_msg);
+		}
+		else
+		{
+			urlname_error_msg_txt.setVisibility(View.GONE);
+		}
+		
+		if(StringUtil.isEmpty(pwd) || !StringUtil.isValidPwd(pwd)){
+			valid = false;
+			confirmpwd_error_msg_txt.setVisibility(View.GONE);
+			pwd_error_msg_txt.setVisibility(View.VISIBLE);
+			pwd_error_msg_txt.setText(R.string.pwd_error_msg);
+		} else {
+			pwd_error_msg_txt.setVisibility(View.GONE);
+			
+			if(StringUtil.isEmpty(confirm_pwd) || !confirm_pwd.equals(pwd)){
+				valid = false;
+				confirmpwd_error_msg_txt.setVisibility(View.VISIBLE);
+				confirmpwd_error_msg_txt.setText(R.string.confirmpwd_error_msg);
+			} else {
+				confirmpwd_error_msg_txt.setVisibility(View.GONE);
+			}
+		}
+		
+		if(!valid) {
+			register_ok_btn.setEnabled(true);
+			register_cancel_btn.setEnabled(true);
+			return;
+		}
+		
+		asyncQiupu.registerAccount(username,pwd,nickname,phonenumber, urlname, new TwitterAdapter(){
+			public void registerAccount(UserSession registerAccount) {
+				Log.d(TAG, "register successfully");
+				QiupuORM.Account account = new QiupuORM.Account();
+				account.email = username;
+				account.pwd = pwd;
+				account.session_id = registerAccount.session_id;
+				account.uid = registerAccount.uid;
+				account.urlname = registerAccount.urlname;
+				account.nickname = registerAccount.nickname;
+				Message msg = mHandler.obtainMessage(REGISTER_END);
+				try{
+					orm.updateAccount(account);
+                    msg.getData().putBoolean(IS_REGISTER_SUCCESS_KEY, true);
+                    
+                    //start to collect phoneinfo
+                    startCollectPhoneInfo();
+				}catch(Exception e){
+					msg.getData().putBoolean(IS_REGISTER_SUCCESS_KEY, false);
+				}
+			
+                msg.sendToTarget();
+			}
+
+			public void onException(TwitterException ex,TwitterMethod method) {
+				Log.d(TAG,"register exception msg:"+ex.getMessage()+" status_code:"+ex.getStatusCode());
+				Message msg = mHandler.obtainMessage(REGISTER_END);
+				msg.getData().putBoolean(IS_REGISTER_SUCCESS_KEY, false);
+				msg.getData().putInt(STATUS_CODE_KEY, ex.getStatusCode());
+                msg.sendToTarget();
+			}
+		});
+	}
+	
+	protected void startCollectPhoneInfo(){
+		Intent intent = new Intent();
+		intent.setAction(IntentUtil.ACTION_COLLECT_PHONE_INFO);
+		startService(intent);
+	}
+	
+	protected void onDestroy() {
+		super.onDestroy();
+		UserAccountObserver.unregisterAccountListener(RegisterActivity.class.getName());
+	}
+	
+	protected void onPause() {
+		super.onPause();
+	}
+	
+	protected void onResume() {
+		super.onResume();
+	}
+    
+	private final int REGISTER_END = 0;
+	private final int VERIFY_END = 1;
+	private final String IS_REGISTER_SUCCESS_KEY = "is_register_success";
+	private final String IS_VERIFY_SUCCESS_KEY = "is_verify_success";
+	private final String STATUS_CODE_KEY = "STATUS_CODE";
+	private final int TOAST_MSG = 2;
+	private class RegisterHandler extends Handler{
+	    public void handleMessage(Message msg) {
+	    	switch(msg.what){
+		    	case REGISTER_END:{
+			    	boolean is_register_success = msg.getData().getBoolean(IS_REGISTER_SUCCESS_KEY);
+			    	Log.d(TAG,"verify user end login success:"+is_register_success);
+			    	
+			    	if(is_register_success)
+			    	{
+			    		/*ignore verify
+			    		//RegisterActivity.this.finish();	  
+			    		//UserAccountObserver.login();
+			    		//input verify code to complete register
+			    		hideOtherViews();
+			    		showVerifyView();
+			    		step = 2; //entering step2
+						register_cancel_btn.setText(getString(R.string.skip_txt));*/
+			    		Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+			    		RegisterActivity.this.startActivity(intent);
+			    		RegisterActivity.this.finish();	 
+			    	}
+			    	else
+			    	{
+			    		int status_code = msg.getData().getInt(STATUS_CODE_KEY);
+			    		if(status_code == ErrorResponse.USER_EXISTED)
+			    		{
+			    			username_error_msg_txt.setVisibility(View.VISIBLE);
+			    			username_error_msg_txt.setText(R.string.user_exist_error_msg);
+			    		}
+			    		
+			    		//register failed
+			    		showToastMsg(getString(R.string.registe_failed_msg));
+			    	}
+			    	
+			    	register_ok_btn.setEnabled(true);
+					register_cancel_btn.setEnabled(true);
+					
+			    	break;
+			    }
+		    	case VERIFY_END:
+		    	{
+		    		boolean is_verify_success = msg.getData().getBoolean(IS_VERIFY_SUCCESS_KEY);
+			    	Log.d(TAG,"verify user end login success:"+is_verify_success);
+			    	if(is_verify_success){
+			    		UserAccountObserver.login();
+			    	}
+			    	else
+			    	{
+			    		verify_error_msg_txt.setVisibility(View.VISIBLE);
+			    		verify_error_msg_txt.setText(R.string.verify_code_error);
+			    	}
+			    	showToastMsg(getString(R.string.verify_failed_msg));
+			    	register_ok_btn.setEnabled(true);
+					register_cancel_btn.setEnabled(true);
+					
+		    	}
+		    	case TOAST_MSG:{
+		    		String msg_str = msg.getData().getString("message");
+		    		mToast.setText(msg_str);
+		    		mToast.show();
+		    		break;
+		    	}
+	    	}
+	    }
+		
+	}
+   
+	private void hideVerifyView(){
+		register_verify_edt.setVisibility(View.GONE);
+		verify_error_msg_txt.setVisibility(View.GONE);
+		verify_txv.setVisibility(View.GONE);
+	}
+	
+	private void showVerifyView(){
+		register_verify_edt.setVisibility(View.VISIBLE);
+		verify_txv.setVisibility(View.VISIBLE);
+	}
+	
+	private void hideOtherViews(){
+		register_username_edt.setVisibility(View.GONE);
+		register_pwd_edt.setVisibility(View.GONE);
+		register_confirmpwd_edt.setVisibility(View.GONE);
+		register_nickname_edt.setVisibility(View.GONE);
+		register_phonenumber_edt.setVisibility(View.GONE);
+		register_urlname_edt.setVisibility(View.GONE);
+ 
+		username_error_msg_txt.setVisibility(View.GONE);
+		nickname_error_msg_txt.setVisibility(View.GONE);
+		pwd_error_msg_txt.setVisibility(View.GONE);
+		confirmpwd_error_msg_txt.setVisibility(View.GONE);
+		phonenumber_error_msg_txt.setVisibility(View.GONE);
+		urlname_error_msg_txt.setVisibility(View.GONE);
+		
+		username_txv.setVisibility(View.GONE);
+		pwd_txv.setVisibility(View.GONE);
+		confirmpwd_txv.setVisibility(View.GONE);
+		nickname_txv.setVisibility(View.GONE);
+		phonenumber_txv.setVisibility(View.GONE);
+		urlname_txv.setVisibility(View.GONE);
+	}
+	
+	private void showOtherView(){
+		register_username_edt.setVisibility(View.VISIBLE);
+		register_pwd_edt.setVisibility(View.VISIBLE);
+		register_confirmpwd_edt.setVisibility(View.VISIBLE);
+		register_nickname_edt.setVisibility(View.VISIBLE);
+		register_phonenumber_edt.setVisibility(View.VISIBLE);
+ 
+//		username_error_msg_txt.setVisibility(View.GONE);
+//		nickname_error_msg_txt.setVisibility(View.GONE);
+//		pwd_error_msg_txt.setVisibility(View.GONE);
+//		confirmpwd_error_msg_txt.setVisibility(View.GONE);
+//		phonenumber_error_msg_txt.setVisibility(View.GONE);
+		
+		username_txv.setVisibility(View.VISIBLE);
+		pwd_txv.setVisibility(View.VISIBLE);
+		confirmpwd_txv.setVisibility(View.VISIBLE);
+		nickname_txv.setVisibility(View.VISIBLE);
+		phonenumber_txv.setVisibility(View.VISIBLE);
+	}
+    
+	public void onLogin() {
+		// TODO Auto-generated method stub
+		RegisterActivity.this.finish();
+	}
+
+	
+	public void onLogout() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void filterInvalidException(TwitterException ne) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onCancelLogin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void afterTextChanged(Editable arg0) {
+		
+	}
+
+	public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+			int arg3) {
+		
+	}
+	private String[] mailSuffix = new String[QiupuConfig.mailSuf.length];
+	public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+		String str = register_username_edt.getText().toString();
+		int len = str.length();
+		int size = QiupuConfig.mailSuf.length;
+		Log.d(TAG, "len: "+len);
+		if(str.indexOf("@")==str.lastIndexOf("@")){
+			if(len > 0 && str.charAt(len - 1)=='@'){
+				Log.d(TAG, "str: "+str.charAt(len - 1));
+				register_username_edt.setThreshold(len + 1);
+				for(int i = 0;i <size ; i++){
+					mailSuffix[i] = str + QiupuConfig.mailSuf[i];
+				}
+				adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,mailSuffix);
+				register_username_edt.setAdapter(adapter);
+			}
+		}
+	}
+}

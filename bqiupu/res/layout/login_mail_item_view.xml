@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/id_friend"
+    android:background="#fff7e7">
+    
+   		 <ImageView android:id="@+id/id_user_icon"
+	 		android:layout_width="0dp"
+	 		android:layout_height="50dp"
+	 		android:paddingLeft="5dp"
+	 		android:paddingTop="3dp"
+	 		android:paddingBottom="3dp"
+	 		android:layout_alignParentLeft="true"
+ 		 />   
+    
+       <TextView android:id="@+id/id_user_mail"
+           android:layout_width="230dip"
+           android:layout_height="wrap_content"
+           android:textAppearance="@style/sns_big_username"
+           android:paddingLeft="10dp"
+           android:paddingTop="13dp"
+           android:textSize="16sp"
+           android:gravity="center_vertical"
+           android:singleLine="true"
+           android:scrollHorizontally="true"  
+           android:layout_toRightOf="@id/id_user_icon"
+           >
+       </TextView>
+           
+        <ImageView android:id="@+id/id_user_mail_del"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:gravity="center"
+           android:layout_marginRight="15dp"
+           android:layout_marginTop="5dp"
+           >
+           
+       </ImageView>
+</RelativeLayout>

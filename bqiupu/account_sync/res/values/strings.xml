@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">account_sync</string>
+    <string name="contact_sync">Contacts cloud sync</string>
+
+    <string name="contact_sync_add_detail_msg" formatted="false" >Added</string>
+    <string name="contact_sync_update_detail_msg" formatted="false" >Updated</string>
+    <string name="contact_sync_delete_detail_msg" formatted="false" >Deteled</string>
+    <string name="contact_sync_count_more">and more</string>
+    <string name="contact_sync_change_other_more"><a>&lt;&lt;%s More</a></string>
+
+</resources>

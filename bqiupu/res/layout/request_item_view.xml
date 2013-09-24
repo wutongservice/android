@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/request_item" >
+
+    <RelativeLayout
+        android:id="@+id/id_vcard_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/business_card_bg" >
+
+        <RelativeLayout
+            android:id="@+id/id_vcard_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/business_card_sec_bg" >
+
+            <ImageView
+                android:id="@+id/id_user_icon"
+                android:layout_width="@dimen/vcard_icon_width"
+                android:layout_height="@dimen/vcard_icon_height"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/vcard_head_icon"
+                android:padding="@dimen/default_text_padding_left" />
+
+            <TextView
+                android:id="@+id/id_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/vcard_icon_height"
+                android:layout_alignLeft="@+id/vcard_info"
+                android:layout_toRightOf="@id/id_user_icon"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/id_default_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/id_user_name"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@id/vcard_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_user_icon"
+                android:layout_marginLeft="@dimen/vcard_info_margin_left"
+                android:layout_toRightOf="@id/id_user_icon" >
+
+                <TextView
+                    android:id="@+id/id_user_message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/id_user_name"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/id_vcard"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_user_message"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/vcard_info_padding_bottom"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_vcard_rl"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/small_text_padding_top"
+        android:textAppearance="@style/sns_time" />
+
+    <LinearLayout
+        android:id="@+id/id_action"
+        android:layout_width="@dimen/request_bottom_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_vcard_rl"
+        android:layout_marginBottom="@dimen/small_text_margin_bottom"
+        android:layout_marginRight="@dimen/default_text_margin_right"
+        android:layout_marginTop="@dimen/small_text_padding_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_action_ok"
+            style="@style/request_item_btn"
+            android:text="@string/label_ok" />
+
+        <TextView
+            android:id="@+id/id_action_cancel"
+            style="@style/request_item_btn"
+            android:text="@string/label_cancel" />
+    </LinearLayout>
+
+</RelativeLayout>

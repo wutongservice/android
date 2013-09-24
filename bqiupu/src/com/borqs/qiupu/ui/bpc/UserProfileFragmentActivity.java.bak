@@ -1,0 +1,710 @@
+package com.borqs.qiupu.ui.bpc;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import twitter4j.QiupuUser;
+import twitter4j.UserCircle;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.ServiceConnection;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.RemoteException;
+import android.provider.ContactsContract.Profile;
+import android.provider.ContactsContract.RawContacts;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+
+import com.borqs.account.commons.AccountServiceAdapter;
+import com.borqs.account.service.AccountServiceUtils;
+import com.borqs.common.SelectionItem;
+import com.borqs.common.adapter.UserProfileFragmentAdapter;
+import com.borqs.common.api.BpcApiUtils;
+import com.borqs.common.listener.ContactInfoActionListner;
+import com.borqs.common.listener.OnListItemClickListener;
+import com.borqs.common.util.DialogUtils;
+import com.borqs.common.util.IntentUtil;
+import com.borqs.common.view.CorpusSelectionItemView;
+import com.borqs.notification.INotificationService;
+import com.borqs.qiupu.QiupuConfig;
+import com.borqs.qiupu.R;
+import com.borqs.qiupu.cache.QiupuHelper;
+import com.borqs.qiupu.db.QiupuORM;
+import com.borqs.qiupu.fragment.FixedTabsView;
+import com.borqs.qiupu.fragment.ProfileShareSourceFragment;
+import com.borqs.qiupu.fragment.ProfileShareSourceFragment.ProfileShareSourceFragmentCallbackListener;
+import com.borqs.qiupu.fragment.StreamListFragment;
+import com.borqs.qiupu.fragment.StreamListFragment.StreamListFragmentCallBack;
+import com.borqs.qiupu.fragment.UserProfileInfoFragment;
+import com.borqs.qiupu.fragment.UserProfileInfoFragment.ProfileInfoFragmentListenerCallBack;
+import com.borqs.qiupu.fragment.UserProfileMainFragment;
+import com.borqs.qiupu.fragment.UserProfileMainFragment.UserProfileMainFragmentCallBack;
+import com.borqs.qiupu.ui.BasicActivity;
+import com.borqs.qiupu.util.LeftMenuMapping;
+import com.borqs.qiupu.util.StringUtil;
+import com.borqs.qiupu.util.ToastUtil;
+
+public class CopyOfUserProfileFragmentActivity extends ActionBarActivity  implements
+	OnListItemClickListener,ProfileInfoFragmentListenerCallBack,ContactInfoActionListner, StreamListFragmentCallBack
+	 ,ProfileShareSourceFragmentCallbackListener, UserProfileMainFragmentCallBack{
+
+	private static final String TAG = "Qiupu.UserProfileFragmentActivity";
+
+    private static final String DEFAULT_TAB       =  "DEFAULT_TAB";
+
+    private final static int TAB_INFO = 0;
+    private final static int TAB_NEWFEEDS = 1;
+    private final static int TAB_SOURCE = 2;
+    private final static int TAB_DEFAULT = TAB_NEWFEEDS;
+
+	private static final String CIRCLE_NAME  = "CIRCLE_NAME";
+    private static final String CIRCLE_ID    = "CIRCLE_ID";
+    
+    private UserProfileFragmentAdapter mAdapter;
+    private int mCurrentpage;
+
+    private Uri sharedImageUri;
+    private QiupuUser mUser;
+    private UserProfileInfoFragment mUserProfileInfoFragment;
+    private ProfileShareSourceFragment mProfileShareSourceFragment;
+    private static final int sdk_version_15 = 15;
+
+    StreamListFragment.MetaData mFragmentData = new StreamListFragment.MetaData();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    	Log.d(TAG, "onCreate");
+        enableLeftNav(getIntent().getBooleanExtra("supportLeftNavigation", false));
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.viewpager_profile_main);
+
+        parseActivityIntent(getIntent());
+        
+        if(QiupuConfig.isPublicCircleProfile(mUser.uid)) {
+            UserCircle circle = new UserCircle();
+            circle.circleid = mUser.uid;
+            circle.name = mUser.nick_name;
+            IntentUtil.startPublicCircleDetailIntent(this, circle);
+            finish();
+        }else {
+            if(QiupuConfig.isActivityId(mUser.uid)) {
+                ToastUtil.showShortToast(this, mHandler, String.format(getString(R.string.undefind_app_id), mUser.nick_name));
+                finish();
+            }
+            
+        }
+        mAdapter = new UserProfileFragmentAdapter(getSupportFragmentManager(), this);
+
+        ViewPager mPager = (ViewPager) findViewById(R.id.pager);
+        mPager.setAdapter(mAdapter);
+        mPager.setCurrentItem(mCurrentpage);
+        mPager.setOnPageChangeListener(pagerOnPageChangeListener);
+
+        FixedTabsView mIndicator = (FixedTabsView) findViewById(R.id.indicator);
+        mIndicator.setViewPager(mPager);
+        mIndicator.setSelectTab(mCurrentpage);
+        mIndicator.setAdapter(mAdapter);
+        mIndicator.setOnPageChangeListener(pagerOnPageChangeListener);
+        
+        mAdapter.setTabBtnBg(mCurrentpage);
+    }
+
+    @Override
+    protected void createHandler() {
+        mHandler = new Handler();
+    }
+
+    @Override
+    protected void loadSearch()
+    {
+        gotoSearchActivity();
+    }
+
+    private void parseActivityIntent(Intent intent) {
+        String url = getIntentURL(intent);
+        mCurrentpage = TAB_DEFAULT;
+        if (!isEmpty(url)) {
+            String uid = BpcApiUtils.parseSchemeValue(intent, BpcApiUtils.SEARCH_KEY_UID);
+
+            if (TextUtils.isEmpty(uid)) {
+                Log.i(TAG, "processIntent, unknown uid url: " + url);
+                mFragmentData.mUserId = QiupuConfig.USER_ID_ALL;
+            } else {
+                mFragmentData.mUserId = Long.parseLong(uid);
+                final String tab = BpcApiUtils.parseSchemeValue(intent, BpcApiUtils.SEARCH_KEY_TAB);
+                if (!TextUtils.isEmpty(tab)) {
+                    // TODO : handle target tab page
+                    if(tab.equals("info") || tab.equals("2")) {
+                        mCurrentpage = TAB_INFO;
+                    }else if(tab.equals("feed") || tab.equals("0")) {
+                        mCurrentpage = TAB_NEWFEEDS;
+                    }else if(tab.equals("source") || tab.equals("1")) {
+                        mCurrentpage = TAB_SOURCE;
+                    }else {
+                        Log.d(TAG, "parseActivityIntent, have no this tab: " + tab);
+                        
+                    }
+                }
+            }
+        }
+
+        Bundle bundle = intent.getExtras();
+        final String action = null == intent ? "" : intent.getAction();
+        boolean waitForLogin = false;
+        if (null != bundle) {
+            if (Intent.ACTION_SEND.equals(action) && bundle.containsKey(Intent.EXTRA_STREAM)) {
+                sharedImageUri = (Uri) bundle.getParcelable(Intent.EXTRA_STREAM);
+                if (ensureAccountLogin()) {
+                    mFragmentData.mUserId = getSaveUid();
+                } else {
+                    waitForLogin = true;
+                }
+            } else {
+                sharedImageUri = null;
+            }
+
+            if (mFragmentData.mUserId <= 0) {
+                mFragmentData.mUserId = bundle.getLong(BpcApiUtils.User.USER_ID);
+            }
+        } else {
+            sharedImageUri = null;
+        }
+
+        preSetupUserForId();
+
+        if (null != bundle) {
+            String bundleString = bundle.getString(BpcApiUtils.User.USER_NAME);
+            if (!TextUtils.isEmpty(bundleString)) {
+                mUser.nick_name = bundleString;
+            }
+
+            bundleString = bundle.getString(BpcApiUtils.User.USER_CIRCLE);
+            if (!TextUtils.isEmpty(bundleString)) {
+                mUser.circleName = bundleString;
+            }
+        }
+
+//        postSetupUserForId();
+
+        // add share source from db
+//        mUser.sharedResource = orm.queryShareSources(mUserid);
+        //        dataList.addAll(orm.queryShareSources(mUserid));
+
+        showLeftActionBtn(false);
+        showRightActionBtn(false);
+        alterMiddleActionBtnByComposer(R.drawable.ic_menu_moreoverflow, editProfileClick);
+
+        if (!waitForLogin) {
+            if (null != sharedImageUri) {
+                // TODO : handle target tab page
+//                tryCropProfileImage(sharedImageUri);
+            }
+        }
+
+        changeHeadTitle(mUser.nick_name);
+        mFragmentData.mFragmentTitle = getString(R.string.circle_detail_post);
+    }
+
+    private void preSetupUserForId() {
+        mUser = orm.queryOneUserInfo(mFragmentData.mUserId);
+        if (mUser == null){
+            mUser = new QiupuUser();
+            mUser.uid = mFragmentData.mUserId;
+        }
+    }
+
+    ViewPager.OnPageChangeListener pagerOnPageChangeListener = new ViewPager.OnPageChangeListener() {
+
+        @Override
+        public void onPageSelected(int page) {
+            mCurrentpage = page;
+            mAdapter.setTabBtnBg(mCurrentpage);
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int page) {
+        }
+    };
+
+
+//    public long getUserId(){
+//        return mUserid;
+//    }
+    
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+    	if(mUser != null) {
+    		outState = BpcApiUtils.getUserBundle(mUser.uid, mUser.nick_name, mUser.circleName);
+    	}
+    	super.onSaveInstanceState(outState);
+    };
+
+    @Override
+    protected void loadRefresh() {
+        Log.d(TAG, "currentpage: " + mCurrentpage);
+        mAdapter.loadRefresh(mCurrentpage);
+        queryUserOnlineStatus();
+    }
+
+    @Override
+    protected void uiLoadEnd() {
+        if (mAdapter.getLoadStatus(mCurrentpage)) {
+            showProgressBtn(false);
+            showLeftActionBtn(false);
+        }
+    }
+
+    @Override
+    public void onListItemClick(View view, Fragment fg) {
+
+    }
+
+    @Override
+    public StreamListFragment.MetaData getFragmentMetaData(int index) {
+        return mFragmentData;
+    }
+
+    @Override
+    public String getSerializeFilePath() {
+        return QiupuHelper.profile + mFragmentData.mUserId;
+    }
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
+
+    private void testSharedAccountPhotoCancelled() {
+        if (null != sharedImageUri) {
+            sharedImageUri = null;
+            finish();
+        }
+    }
+
+    private void startComposeIntent() {
+        IntentUtil.startComposeIntent(this, String.valueOf(mFragmentData.mUserId), true);
+    }
+
+    View.OnClickListener composeClick = new View.OnClickListener()
+	{
+		public void onClick(View arg0)
+		{
+            startComposeIntent();
+		}
+	};
+
+    private void editProfile() {
+        boolean done = false;
+//        if(QiupuConfig.IS_USER_CONTACT_EDIT && Integer.parseInt(sdkversion) >= sdk_version_15) {
+//        if(orm.isUseContactEditSettings() && Integer.parseInt(sdkversion) >= sdk_version_15) {
+//            done = doEdit(this);
+//        }
+
+        if (!done) {
+            Intent intent = new Intent(this, EditProfilesActivity.class);
+            mUser = orm.queryOneUserInfo(AccountServiceUtils.getBorqsAccountID());
+            intent.putExtra("bundle_userinfo", mUser);
+            startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE);
+        }
+    }
+    
+
+	View.OnClickListener editProfileClick = new View.OnClickListener() {
+        public void onClick(View v) {
+//            editProfile();
+//        	String[] strings = getResources().getStringArray(R.array.user_detail_action);
+//        	String[] items = getResources().getStringArray(R.array.user_detail_action);
+        	ArrayList<SelectionItem> items = new ArrayList<SelectionItem>();
+        	items.add(new SelectionItem("", getString(R.string.label_refresh)));
+//        	if(orm.isShowAlbumSettings()) {
+//        		items.add(new SelectionItem("", getString(R.string.home_album)));
+//        	}
+        	if(mUser.uid == AccountServiceUtils.getBorqsAccountID())
+    		{
+        		items.add(new SelectionItem("", getString(R.string.edit_profile_title)));
+    			items.add(new SelectionItem("", getString(R.string.edit_contact)));
+    		}
+    		else
+    		{
+    			items.add(new SelectionItem("", getString(R.string.say_hi)));
+//    			items.add(new SelectionItem("", getString(R.string.send_im_message)));
+    			items.add(new SelectionItem("", getString(R.string.share_compose_title)));
+    			if(canRemark()) {
+    			    items.add(new SelectionItem("", getString(R.string.update_remark)));
+    			}
+    		}
+//        	for(int i=0;i<strings.length;i++) {
+//        		items.add(i, strings[i]);
+//        	} 
+        	showCorpusSelectionDialog(items);
+        }
+    };
+
+    // TODO : handle profile edit result.
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode != RESULT_OK) {
+            if (requestCode == PHOTO_PICKED_WITH_DATA) {
+                testSharedAccountPhotoCancelled();
+            }
+            return;
+        }
+
+        switch (requestCode) {
+            case EDIT_PROFILE_REQUEST_CODE: {
+                mUser = orm.queryOneUserInfo(AccountServiceUtils.getBorqsAccountID());
+                if(mUserProfileInfoFragment != null) {
+                    mUserProfileInfoFragment.refreshUserInfo(mUser);
+                }
+                break;
+            }
+            default:
+                super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    public static void startUserDetailIntent(Context context, long uid, String nickName, String circleName) {
+    	startUserDetailIntent(context, TAB_NEWFEEDS, uid, nickName, circleName);
+//        startUserDetailIntent(context, TAB_INFO, uid, nickName, circleName);
+    }
+
+    public static void startUserDetailAboutIntent(Context context, long uid, String nickName) {
+        startUserDetailIntent(context, TAB_INFO, uid, nickName, "");
+    }
+
+
+    public static Intent buildUserDetailIntent(Context context, long uid, String nickName) {
+    	if((context instanceof CopyOfUserProfileFragmentActivity)) {
+//    		if(uid == getSaveUid()) {
+//    			return null;
+//    		}
+    		CopyOfUserProfileFragmentActivity myActivity = (CopyOfUserProfileFragmentActivity)context;
+    		if(myActivity.getUserInfo() != null) {
+    			if(myActivity.getUserInfo().uid == uid) {
+    				return null;
+    			}
+    		} 
+    	}
+        Intent intent = new Intent(context, CopyOfUserProfileFragmentActivity.class);
+        Bundle bundle = BpcApiUtils.getUserBundle(uid, nickName, null);
+        bundle.putInt(DEFAULT_TAB, TAB_NEWFEEDS);
+//        bundle.putInt(DEFAULT_TAB, TAB_INFO);
+        intent.putExtras(bundle);
+        if (BpcApiUtils.isActivityReadyForIntent(context, intent)) {
+            return intent;
+        } else {
+            Log.e(TAG, "buildUserDetailIntent, no valid activity for intent: " + intent);
+
+            return null;
+        }
+    }
+
+    private static void startUserDetailIntent(Context context, int tabIndex, long uid, String nickName, String circleName) {
+    	if((context instanceof CopyOfUserProfileFragmentActivity)) {
+//    		if(uid == getSaveUid()) {
+//    			return null;
+//    		}
+    		CopyOfUserProfileFragmentActivity myActivity = (CopyOfUserProfileFragmentActivity)context;
+    		if(myActivity.getUserInfo() != null) {
+    			if(myActivity.getUserInfo().uid == uid) {
+    				return;
+    			}
+    		} 
+    	}
+        Intent intent = new Intent(context, CopyOfUserProfileFragmentActivity.class);
+        Bundle bundle = BpcApiUtils.getUserBundle(uid, nickName, circleName);
+        if (tabIndex > 0) {
+            bundle.putInt(DEFAULT_TAB, tabIndex);
+        }
+        intent.putExtras(bundle);
+        if (BpcApiUtils.isActivityReadyForIntent(context, intent)) {
+            context.startActivity(intent);
+        } else {
+            Log.e(TAG, "startUserDetailIntent, no valid activity for intent: " + intent);
+        }
+    }
+
+    
+	@Override
+	public void getProfileInfoFragment(UserProfileInfoFragment fragment) {
+		mUserProfileInfoFragment = fragment;
+	}
+
+	@Override
+	public QiupuUser getUserInfo() {
+		return mUser;
+		
+	}
+
+	@Override
+	public void getProfileShareSourceFragment(ProfileShareSourceFragment fragment) {
+		mProfileShareSourceFragment = fragment;
+	}
+
+    @Override
+    public void updateContactInfoUi() {
+        // TODO Auto-generated method stub
+        
+    }
+
+	@Override
+	public void setLeftMenuPosition() {
+		mPosition = LeftMenuMapping.getPositionForActivity(this);
+		mTitle = getString(R.string.personal_infomation);
+	}
+	
+	private boolean doEdit(Context context) {
+        boolean done = false;
+
+        String SELECTION = RawContacts.ACCOUNT_NAME + "=? AND "
+                + RawContacts.ACCOUNT_TYPE + "=? AND " + RawContacts.DELETED
+                + "=?";
+        ContentResolver resolver = context.getContentResolver();
+        Cursor cursor = resolver.query(Profile.CONTENT_RAW_CONTACTS_URI,
+                new String[] { Profile._ID }, SELECTION, new String[] {
+                        AccountServiceAdapter.getUserID(context),
+                AccountServiceAdapter.BORQS_ACCOUNT_TYPE, "0" }, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            //raw contact id of me
+            long id = cursor.getLong(0);
+            Uri me = ContentUris.withAppendedId(
+                    Profile.CONTENT_RAW_CONTACTS_URI, id);
+            Intent intent = new Intent(Intent.ACTION_EDIT, me);
+            startActivity(intent);
+            done = true;
+        }
+
+        QiupuORM.closeCursor(cursor);
+        return done;
+    }
+
+    @Override
+    public void changeHeadTitle(String username) {
+        Log.d(TAG, "username : " + username);
+//        setHeadTitle(username);
+
+//        final String statusText = mOnlineStatus ? "(online)" : "(offline)";
+        if (mUserProfileInfoFragment != null) {
+            mUserProfileInfoFragment.resetOnlineStatus(mOnlineStatus);
+        }
+        setHeadTitle(getString(R.string.personal_infomation)/* + statusText*/);
+    }
+    
+	protected void showCorpusSelectionDialog(ArrayList<SelectionItem> items) {
+	    if(mMiddleActionBtn != null) {
+	        int location[] = new int[2];
+	        mMiddleActionBtn.getLocationInWindow(location);
+	        int x = location[0];
+	        int y = getResources().getDimensionPixelSize(R.dimen.title_bar_height);
+	        
+	        DialogUtils.showCorpusSelectionDialog(this, x, y, items, actionListItemClickListener);
+	    }
+	}
+	
+    private boolean canRemark() {
+        boolean canremark = false;
+        QiupuUser tmpUser = mUser;
+        if(mUserProfileInfoFragment != null) {
+            tmpUser = mUserProfileInfoFragment.getUserInfo();
+        }
+        
+        if(tmpUser != null && StringUtil.isValidString(tmpUser.circleId)) {
+            canremark = true;
+        }
+        return canremark; 
+    }
+    
+    OnItemClickListener actionListItemClickListener = new OnItemClickListener() {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            if(CorpusSelectionItemView.class.isInstance(view)) {
+                CorpusSelectionItemView item = (CorpusSelectionItemView) view;
+                onCorpusSelected(item.getText());             
+            }
+        }
+    };
+    
+    private void onCorpusSelected(String value) {
+        if (getString(R.string.label_refresh).equals(value)) {
+            loadRefresh();
+        } else if (getString(R.string.edit_profile_title).equals(value)) {
+            editProfile();
+	    } else if (getString(R.string.edit_contact).equals(value)) {
+	    	Intent intent = new Intent(this, EditProfileActivity.class);
+            mUser = orm.queryOneUserInfo(AccountServiceUtils.getBorqsAccountID());
+            intent.putExtra("bundle_userinfo", mUser);
+            startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE);
+	    }else if (getString(R.string.say_hi).equals(value)) {
+            if (mUserProfileInfoFragment != null) {
+                mUserProfileInfoFragment.postSayHi();
+//                sendInstanceMessage();
+            }
+        } else if (getString(R.string.share_compose_title).equals(value)) {
+            startComposeIntent();
+        } else if (getString(R.string.update_remark).equals(value)) {
+        	if (mUserProfileInfoFragment != null) {
+        		mUserProfileInfoFragment.showEditRemarkUI();
+        	}
+//        } else if (getString(R.string.home_album).equals(value)) {
+//        	Intent intent = new Intent(UserProfileFragmentActivity.this,AlbumActivity.class);
+//        	intent.putExtra("uid", mUser.uid);
+//        	startActivity(intent);
+        } else if (getString(R.string.send_im_message).equals(value)) {
+            Intent intent = new Intent(CopyOfUserProfileFragmentActivity.this, IMComposeActivity.class);
+//            intent.putExtra("to_name", mUser.nick_name);
+//            intent.putExtra("from_url", mUser.profile_image_url);
+            intent.putExtra("user", mUser);
+            intent.putExtra("to_url", QiupuORM.getInstance(this).getUserProfileImageUrl(getSaveUid()));
+            startActivity(intent);
+        } else {
+            Log.d(TAG, "unsupported item action!");
+        }
+    }
+
+    @Override
+    public long getCircleId() {
+        return -1;
+    }
+
+    @Override
+    public void changeshareSource(long uid) {
+        if(mProfileShareSourceFragment != null) {
+            mProfileShareSourceFragment.updateSourceItem(uid);
+        }
+        
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        bindService();
+
+        if (null == mIntentFilter) {
+            mIntentFilter = new IntentFilter();
+            mIntentFilter.addAction(ACTION_NOTIFICATION_NOTIFY);
+        }
+
+        if (null == mIntentReceiver) {
+            mIntentReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    if (intent.getAction().equals(ACTION_NOTIFICATION_NOTIFY)) {
+                        Bundle bundle = intent.getExtras();
+                        if (bundle != null) {
+                            Log.d(TAG, "Received appId = " + bundle.getString("app_id"));
+                            Log.d(TAG, "Received data = " +  bundle.getString("data"));
+                            Log.d(TAG, "From = " + bundle.getString("from"));
+                        }
+                    }
+                }
+            };
+        }
+
+        registerReceiver(mIntentReceiver, mIntentFilter);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (mNotificationService != null) {
+            mNotificationService = null;
+            unbindService(mConnection);
+        }
+        if (mIntentReceiver != null) {
+            unregisterReceiver(mIntentReceiver);
+        }
+    }
+
+    INotificationService mNotificationService;
+    BroadcastReceiver mIntentReceiver;
+    IntentFilter mIntentFilter;
+    private static final String ACTION_NOTIFICATION_NOTIFY = "com.borqs.notification.notify";
+    private ServiceConnection mConnection = new ServiceConnection() {
+        // Called when the connection with the service disconnects unexpectedly
+        public void onServiceDisconnected(ComponentName className) {
+            Log.e(TAG, "=========== Service has unexpectedly disconnected");
+            mNotificationService = null;
+        }
+
+        @Override
+        public void onServiceConnected(ComponentName arg0, IBinder arg1) {
+            // Following the example above for an AIDL interface,
+            // this gets an instance of the IRemoteInterface, which we can use to call on the service
+            Log.d(TAG, "=========== Service has expectedly connected");
+            mNotificationService = INotificationService.Stub.asInterface(arg1);
+            queryUserOnlineStatus();
+        }
+    };
+
+    private boolean mOnlineStatus;
+
+    void bindService() {
+        try {
+            Intent intent = new Intent();
+            intent.setAction("com.borqs.notification.StartService");
+            if (!bindService(intent, mConnection, BIND_AUTO_CREATE)) {
+                Log.w(TAG, "=============== bindService, failed.");
+            }
+        } catch (Exception ee) {
+            Log.e(TAG, "Exception : " + ee.getMessage());
+        }
+    }
+
+    private void sendInstanceMessage() {
+        if (null != mUser && null != mNotificationService) {
+            try {
+                mNotificationService.sendMessage(IntentUtil.WUTONG_NOTIFICATION_ID,
+                        String.valueOf(mUser.uid), getString(R.string.say_hi_content));
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private boolean queryUserOnlineStatus() {
+        mOnlineStatus = false;
+        if (null != mUser && null != mNotificationService) {
+            try {
+                Map ret = mNotificationService.queryUser(String.valueOf(mUser.uid), 0);
+                if (null == ret) {
+                    Log.w(TAG, "queryUserOnlineStatus, failed to query user, uid: " + mUser.uid);
+                } else {
+                    final String name = (String) ret.get("name");
+                    final String presence = (String) ret.get("presence");
+                    final String ip = (String) ret.get("ip");
+                    final String cap = (String) ret.get("capability");
+
+                    mOnlineStatus = presence.equals("1");
+                    Log.d(TAG, "queryUserOnlineStatus, result: name = " + name + ", presence = " + presence + ", ip = " + ip + ", cap = " + cap);
+                    changeHeadTitle(mUser.nick_name);
+                }
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+        return mOnlineStatus;
+    }
+
+	@Override
+	public void getProfileInfoFragment(UserProfileMainFragment fragment) {
+	}
+}

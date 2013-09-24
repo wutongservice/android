@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/profile_span"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_text_padding_left"
+    			android:paddingRight="@dimen/default_text_padding_right"
+                >
+
+    <RelativeLayout android:id="@+id/profile_span_left"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    >
+
+        <ImageView android:id="@+id/profile_img_ui"
+                   android:layout_width="fill_parent"
+                   android:layout_height="80dp"
+                   android:layout_centerHorizontal="true"/>
+
+        <TextView android:id="@+id/profile_edit_img"
+                  android:layout_width="fill_parent"
+                  android:layout_height="16dp"
+                  android:gravity="center"
+                  android:layout_centerHorizontal="true"
+                  android:layout_alignBottom="@id/profile_img_ui"
+                  android:text="@string/user_detail_edit_image"
+                  android:textSize="12dip"
+                  android:textColor="#c6c7c6"
+                  android:textStyle="bold"
+                  android:background="#70000000"
+                  android:visibility="gone"/>
+
+        <RelativeLayout android:id="@+id/id_circle_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_img_ui"
+                        android:paddingBottom="4dip"
+                        android:background="@drawable/circle_info_bg">
+
+            <ImageView android:id="@+id/circle_icon"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="4dip"
+                       android:src="@drawable/icon_ingroups"/>
+
+            <TextView android:id="@+id/id_user_circle"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="2dip"
+                      android:layout_toRightOf="@id/circle_icon"
+                      android:textAppearance="@style/sns_time"
+                      android:maxLines="2"
+                      android:ellipsize="end"/>
+
+        </RelativeLayout>
+
+        <ImageView android:id="@+id/edit_circle_icon"
+                   android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:layout_marginBottom="-2dip"
+                   android:layout_alignBottom="@id/id_circle_info"
+                   android:layout_alignRight="@id/profile_img_ui"
+                   android:src="@drawable/btn_more"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_span_left"
+            android:layout_margin="5dip"
+            android:layout_alignTop="@id/profile_span_left">
+
+        <EditText android:id="@+id/profile_username"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="top"
+                  android:linksClickable="false"
+                  android:hint="@string/update_profile_name_hint"
+                  android:textAppearance="@style/sns_username"/>
+		<EditText android:id="@+id/profile_user_status"
+		    	  android:hint="@string/my_profile_have_no_status"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/profile_username"
+                  android:layout_alignTop="@id/profile_span_left"
+                  android:layout_marginTop="5dip"
+            	  android:layout_marginRight="5dip"
+                  android:gravity="center_vertical"
+                  android:linksClickable="false"
+                  android:maxLines="3"
+                  android:textAppearance="@style/sns_link"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

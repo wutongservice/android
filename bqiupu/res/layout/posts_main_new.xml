@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:background="@color/bpc_backgroud">
+
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <LinearLayout
+                android:id="@+id/titlebar_container"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/title_bar_height"
+                android:orientation="horizontal"/>
+
+        <include layout="@layout/customized_list_view"
+                 android:layout_below="@id/titlebar_container"
+                 android:id="@+id/all_circles_stream"
+                 android:scrollbars="none"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                />
+    </RelativeLayout>
+
+
+    <!--<com.borqs.appbox.view.AllAppsScreen-->
+    <!--android:id="@+id/workspace"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_below="@+id/bottom_layout"-->
+    <!--android:layout_alignParentBottom="true">-->
+    <!--</com.borqs.appbox.view.AllAppsScreen>-->
+
+    <!--<RelativeLayout -->
+    <!--android:id="@id/bottom_layout"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="36dp"-->
+    <!--android:layout_gravity="bottom"        -->
+    <!--android:tag="bottom_style_oms25"-->
+    <!--android:layout_below="@id/titlebar_container"-->
+    <!--android:background="@drawable/tab_bg">-->
+    <!---->
+    <!--&lt;!&ndash; ImageView -->
+    <!--android:id="@+id/head_left_arr" -->
+    <!--android:layout_width="wrap_content" -->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:scaleType="center"-->
+    <!--android:layout_gravity="center_vertical|right"-->
+    <!--android:src="@drawable/left_arrow"-->
+    <!--android:focusable="true"-->
+    <!--android:clickable="true"/ &ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"                       -->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:addStatesFromChildren="true">-->
+    <!--<TextView-->
+    <!--android:id="@+id/posts_friends"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:textAppearance="@style/sns_title_text"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="@string/friends_streams"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/posts_public"-->
+    <!--android:layout_width="wrap_content"          -->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:textAppearance="@style/sns_title_text"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="@string/public_streams"/>-->
+
+    <!--</LinearLayout>               -->
+
+    <!--<com.borqs.common.view.PageIndicatorLineStyleView -->
+    <!--android:id="@id/page_line_indicator"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_height="4dp"/>-->
+
+    <!--</RelativeLayout>-->
+    <!---->
+    <!--<ImageView-->
+    <!--android:id="@+id/id_span_view"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="fill_parent"     -->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_below="@id/titlebar_container"-->
+    <!--android:background="@drawable/actionbar_shadow"/>-->
+
+    <include layout="@layout/default_enfoldment_view"/>
+</RelativeLayout>

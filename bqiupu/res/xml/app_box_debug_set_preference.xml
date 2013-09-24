@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_adv_setting">
+        <CheckBoxPreference android:key="key_borqs_debug_log"
+                            android:title="@string/pref_borqs_debug_log"
+                            android:summary="@string/pref_borqs_debug_log_summary"/>
+
+        <Preference android:key="key_select_borqs_url"
+                            android:title="@string/pref_borqs_url_select"
+                            android:summary="@string/pref_borqs_url_select_summary"/>
+        <!-- 
+        <CheckBoxPreference android:key="key_borqs_try_developing_feature"
+                            android:title="@string/pref_dev_feature"
+                            android:summary="@string/pref_dev_feature_summary"/-->
+
+        <!--<CheckBoxPreference android:key="key_stream_reforming_feature"-->
+                            <!--android:title="@string/key_stream_reforming_feature_title"-->
+                            <!--android:summary="@string/key_stream_reforming_feature_summary"/>-->
+
+        <CheckBoxPreference android:key="key_download_feature"
+                            android:title="@string/key_download_feature_title"
+                            android:summary="@string/key_download_feature_summary"/>
+        
+        <CheckBoxPreference android:key="key_simple_ui_feature"
+                            android:title="@string/key_simple_ui_feature_title"
+                            android:summary="@string/key_simple_ui_feature_summary"/>
+
+        <CheckBoxPreference android:key="key_tabui_feature"
+                            android:title="@string/key_tabui_feature_title"
+                            android:summary="@string/key_tabui_feature_summary"/>
+        
+        <CheckBoxPreference android:key="key_monthly_sprint_feature"
+                            android:title="@string/key_monthly_sprint_feature_title"
+                            android:summary="@string/key_monthly_sprint_feature_summary"/>
+        
+        <CheckBoxPreference android:key="key_monthly_new_platform_feature"
+                            android:title="@string/key_monthly_new_platform_feature_title" />
+
+        <CheckBoxPreference android:key="key_use_contact_edit"
+                            android:title="@string/key_use_contact_edit_title" />
+        <CheckBoxPreference android:key="key_show_album"
+                            android:title="@string/key_show_album_title" />
+        
+        <CheckBoxPreference android:key="key_open_public_circle"
+                            android:title="@string/key_use_public_circle_ui" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

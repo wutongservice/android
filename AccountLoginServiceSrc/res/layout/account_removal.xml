@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+        android:background="@color/acl_backgroud">
+    <FrameLayout android:layout_height="fill_parent"
+                 android:layout_width="fill_parent">
+        <LinearLayout
+                android:id="@+id/account_removal_confirm_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:visibility="visible"
+                android:orientation="vertical">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical|center_horizontal"
+                      android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                      android:text="@string/acl_removal_notice"
+                    />
+            <View android:layout_height="20dp" android:layout_width="fill_parent" />
+            <Button
+                android:id="@+id/account_removal_conform"
+                android:layout_height="@dimen/acl_bottom_button_height"
+                android:layout_width="@dimen/acl_bottom_button_width"
+                android:text="@string/acl_ok"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/account_removal_progress_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:visibility="gone">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dip"
+                    android:text="@string/acl_removal_contact_cleaning"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse"/>
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:indeterminate="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

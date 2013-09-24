@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.borqs.contacts_plus"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="14" android:maxSdkVersion="1000"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_STATS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.WRITE_PROFILE" />
+
+    <uses-permission android:name="com.borqs.accountservice.permission.ACCESS_PROVIDER"/>
+    
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    
+    <application android:label="@string/app_name" android:icon="@drawable/account_borqs_icon">
+        <service android:name="com.borqs.sync.service.SyncMLService"
+                 android:process="com.borqs.service.accountsync">
+        </service>
+
+
+        <service
+                android:name="com.borqs.sync.service.ContactsSyncAdapterService"
+                android:process="com.borqs.service.accountsync"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                       android:resource="@xml/account_syncadapter_contacts" />
+          <!--   <meta-data
+                    android:name="android.provider.CONTACTS_STRUCTURE"
+                    android:resource="@xml/contact_contacts" /> -->
+            <meta-data
+                    android:name="borqs.service.SyncAdapter"
+                    android:value="contacts"/>
+        </service>
+
+
+        <service android:name="com.borqs.profile.ProfileSyncService"
+                 android:label="@string/cmcc_app_name"/>
+
+        <!-- ******************************************************************************************** -->
+
+        <receiver android:name="com.borqs.sync.client.receiver.BorqsSyncHttpPushReceiver"
+                  android:process="com.borqs.service.accountsync"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="com.borqs.notification.notify" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.borqs.sync.client.receiver.ConnectivityChangeReceiver"
+                  android:process="com.borqs.service.accountsync"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.borqs.sync.client.receiver.AccountUpdateReceiver"
+                  android:enabled="false">
+            <intent-filter>
+                <action android:name="com.borqs.intent.action.ACCOUNT_LOGIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.borqs.action.OVERRIDE_CONTACTS_SERVICE"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.borqs.sync.client.receiver.ScheduleSyncService"
+                 android:process="com.borqs.service.accountsync">
+        </service>
+
+        <!--Sync Log-->
+        <activity
+            android:name="com.borqs.sync.client.activity.SyncMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SyncAppTheme"
+            android:label="@string/contact_sync"
+            android:process="com.borqs.service.accountsync">
+            <intent-filter >
+                <action android:name="com.borqs.account.action.SETTINGS_PLUGIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <!-- start borqsPlus -->
+        <activity
+                android:name="com.borqs.sync.client.activity.BorqsPlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:label="" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+                android:name="com.borqs.sync.client.activity.WutongPlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:icon="@drawable/contact_ic_sync_bpc_launcher"
+                android:label="@string/text_plus_label_wutong" >
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.borqsplus.profile"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+                android:name="com.borqs.sync.client.activity.OpenfacePlusTransitActivity"
+                android:screenOrientation="portrait"
+                android:process="com.borqs.service.accountsync"
+                android:icon="@drawable/contact_launch_vt_icon"
+                android:label="@string/text_plus_label_openface" >
+             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.borqsplus.openface"/>
+            </intent-filter>
+        </activity>
+        <!-- 
+        <receiver android:name="com.borqs.sync.client.download.AppDownloadReceiver"
+                  android:process="com.borqs.service.accountsync">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- end borqsPlus -->
+        <!-- End Account & Sync -->
+
+    </application>
+</manifest>

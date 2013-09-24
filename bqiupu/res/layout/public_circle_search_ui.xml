@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/search_span_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_box_height" >
+        
+        <EditText
+            android:id="@+id/search_span"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/search_bg"
+            android:gravity="center_vertical"
+            android:imeOptions="actionGo"
+            android:singleLine="true" />
+        
+        <ImageView
+            android:id="@id/search_do"
+            style="@style/search_title_bar_style"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/actionbar_icon_search_normal" />
+
+        <ImageView
+            android:id="@+id/btn_clear_text"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dip"
+            android:layout_toLeftOf="@+id/search_do"
+            android:src="@drawable/ic_input_delete"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_span_rl"
+        android:orientation="horizontal" />
+
+    <include
+        android:id="@+id/center_progress"
+        android:layout_centerInParent="true"
+        layout="@layout/center_process"
+        android:visibility="gone" />
+
+</RelativeLayout>
